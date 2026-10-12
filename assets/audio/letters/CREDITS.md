@@ -1,44 +1,34 @@
-# Letter audio - credits
+# Letter audio — credits
 
-Source: Wikimedia Commons ("Category:Arabic pronunciation"), files uploaded 2015 by User:Ruaa GHAREEB.
-License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/) - applies to every file in this folder.
-Processing: original .wav -> mono MP3 96 kbps (ffmpeg), no other edits.
-Local file names are positional (assigned by our app); original Commons names listed below.
+## Current clips (what the app plays)
 
-| local file | source page | source file |
+| letters | source | license |
 |---|---|---|
-| `alif.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Alif_A.wav) | `File:Alif A.wav` |
-| `alif-alt.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Alifp.wav) | `File:Alifp.wav` |
-| `ba.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Baaudio.wav) | `File:Baaudio.wav` |
-| `ta.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Taaudio.wav) | `File:Taaudio.wav` |
-| `tha.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Thaaudio.wav) | `File:Thaaudio.wav` |
-| `jim.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Jeemaudio.wav) | `File:Jeemaudio.wav` |
-| `ha.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Haaaudio.wav) | `File:Haaaudio.wav` |
-| `ha-alt.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Hap.wav) | `File:Hap.wav` |
-| `kha.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Khaaudio.wav) | `File:Khaaudio.wav` |
-| `dal.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Dalaudio.wav) | `File:Dalaudio.wav` |
-| `dhal.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Dzalaudio.wav) | `File:Dzalaudio.wav` |
-| `ra.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:RAAUDIO.wav) | `File:RAAUDIO.wav` |
-| `zay.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:ZaiAUDIO.wav) | `File:ZaiAUDIO.wav` |
-| `sin.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Senaudio.wav) | `File:Senaudio.wav` |
-| `shin.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Shenaudio.wav) | `File:Shenaudio.wav` |
-| `sad.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Sadaudio.wav) | `File:Sadaudio.wav` |
-| `dad.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Ddadaudio.wav) | `File:Ddadaudio.wav` |
-| `dad-alt.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Ddapro.wav) | `File:Ddapro.wav` |
-| `tta.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Ttaaudio.wav) | `File:Ttaaudio.wav` |
-| `zaa.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Dddaudio.wav) | `File:Dddaudio.wav` |
-| `zaa-alt.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Dddp.wav) | `File:Dddp.wav` |
-| `ayn.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Aaaudio.wav) | `File:Aaaudio.wav` |
-| `ayn-alt.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Aap.wav) | `File:Aap.wav` |
-| `ghayn.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Ghaudio.wav) | `File:Ghaudio.wav` |
-| `fa.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Faaudio.wav) | `File:Faaudio.wav` |
-| `qaf.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Qafaudio.wav) | `File:Qafaudio.wav` |
-| `kaf.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Kafaudio.wav) | `File:Kafaudio.wav` |
-| `lam.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Lamudio.wav) | `File:Lamudio.wav` |
-| `lam-alt.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Lampronn.wav) | `File:Lampronn.wav` |
-| `mim.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Maudio.wav) | `File:Maudio.wav` |
-| `nun.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Naudio.wav) | `File:Naudio.wav` |
-| `haa.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Haaudio.wav) | `File:Haaudio.wav` |
-| `haa-alt.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Hpron.wav) | `File:Hpron.wav` |
-| `waw.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Wawaudio.wav) | `File:Wawaudio.wav` |
-| `ya.mp3` | [Commons](https://commons.wikimedia.org/wiki/File:Yaaudio.wav) | `File:Yaaudio.wav` |
+| 27 letters (all except ظ) | GitHub: [razunatmohammed88-cyber/arabic-alphabet-audio](https://github.com/razunatmohammed88-cyber/arabic-alphabet-audio) | MIT |
+| ظ (`zaa.mp3`) | GitHub: [kholmatov/alfathon](https://github.com/kholmatov/alfathon) | MIT |
+
+Processing: loudness-normalized to −16 LUFS with ffmpeg `loudnorm` (true peak −1.5 dB), MP3 96 kbps.
+File names are our app's positional ids (`alif.mp3` … `ya.mp3`).
+
+Notes
+- The razun source names letters in its own transliteration; mappings used:
+  `haa'.mp3` → our `ha.mp3` (ح) and `haa.mp3` → our `haa.mp3` (ه), following the set's
+  convention that an apostrophe marks the emphatic letter (`taa'` = ط, `thaa'` = ظ). Verify by ear if ever in doubt.
+- `alfathon` supplies ظ (`zaa.mp3`) because the razun set has no unambiguous ظ file.
+- Superseded 2015 recordings removed after listening test (clipped peaks at 0 dBFS, strong high-frequency roll-off).
+
+## Alternate sets — kept for reference / future swaps (`audition/`)
+
+| folder | source | license | notes |
+|---|---|---|---|
+| `audition/current/` | Wikimedia Commons, "Category:Arabic pronunciation", uploaded 2015 by User:Ruaa GHAREEB | CC BY-SA 4.0 | the original set (superseded — clipped & muffled) |
+| `audition/speller/` | GitHub: [elsanussi-s-mneina/arabic-alphabet-audio-speller-html-js](https://github.com/elsanussi-s-mneina/arabic-alphabet-audio-speller-html-js) | MIT | recorded 2022 by the repo author; letter names with tanwiin endings ("alifun") |
+| `audition/razun/` | see above | MIT | full set; `thaa'.mp3` is very likely ظ (unused, unverified) |
+| `audition/alfathon/` | see above | MIT | missing ز |
+
+All clips in `audition/` are loudness-normalized (−16 LUFS) so comparisons are fair.
+
+## Old alternate takes (kept in this folder)
+
+`*-alt.mp3` files (`alif-alt`, `ha-alt`, `dad-alt`, `zaa-alt`, `ayn-alt`, `lam-alt`, `haa-alt`)
+come from the 2015 Wikimedia set — kept for reference only; the app does not use them.
