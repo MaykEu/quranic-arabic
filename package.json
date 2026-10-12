@@ -1,0 +1,9 @@
+{
+  "name": "quranic-arabic",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/",
+    "validate": "node tools/validate-data.mjs"
+  }
+}
