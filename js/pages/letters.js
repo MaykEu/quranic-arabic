@@ -107,6 +107,7 @@ function renderDetail(id) {
 
     <div class="row">
       <button type="button" class="btn" id="trace">Practice writing</button>
+      <a class="btn btn-ghost" href="words.html#build/${l.id}">Build words with this letter →</a>
     </div>`;
 
   main.querySelector('#back').addEventListener('click', renderGrid);

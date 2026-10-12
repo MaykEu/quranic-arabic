@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build mode QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/build.css">
+<style>
+  .stage-strip { display: flex; gap: 18px; flex-wrap: wrap; margin: 6px 0 14px; }
+  .stage-cell { text-align: center; }
+  .ribbon-mini { font-family: var(--font-ar); font-size: 44px; color: var(--brand2); direction: rtl; min-height: 70px; border-bottom: 2px dashed var(--line-strong); padding: 0 6px; }
+  .qa-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+  .qa-word { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; min-width: 130px; display: grid; gap: 2px; }
+  .qa-ar { font-family: var(--font-ar); font-size: 34px; color: var(--brand2); direction: rtl; }
+  .qa-gloss { font-size: 13px; color: var(--muted); }
+  .qa-bare { font-size: 12px; color: var(--muted); direction: rtl; font-family: var(--font-ar); }
+</style>
+</head>
+<body>
+<main>
+  <h2>Build mode QA</h2>
+  <p class="muted">Automated structural checks of all build words + visual strips of the live
+  shaping. Read results headlessly with <code>msedge --headless=new --dump-dom …/tests/build-qa.html</code>.</p>
+  <pre id="log" style="white-space:pre-wrap;font-size:12px">running…</pre>
+
+  <h3>Live shaping stages (each +1 letter re-shapes the whole row)</h3>
+  <div id="stages"></div>
+
+  <h3>All 40 words, fully vowelled (the reveal)</h3>
+  <div class="qa-grid" id="grid"></div>
+</main>
+<script type="module">
+import { buildIndex, bareForm, joinPlan } from '../js/lib/shaping.js';
+
+const data = await (await fetch('../data/build-words.json')).json();
+const letters = await (await fetch('../data/letters.json')).json();
+const index = buildIndex(letters);
+
+let fail = 0;
+const lines = [];
+for (const w of data.words) {
+  const issues = [];
+  if (bareForm(w.ar) !== w.bare) issues.push(`bare "${bareForm(w.ar)}" ≠ "${w.bare}"`);
+  const { ok, plan, missing } = joinPlan(w.bare, index);
+  if (!ok) issues.push('unknown letters: ' + missing.join(' '));
+  if (plan.map((p) => p.id).join() !== w.letters.join()) issues.push('letters mismatch');
+  for (const id of w.letters) {
+    const e = letters.find((l) => l.id === id);
+    if (!e) issues.push('no tile for ' + id);
+    if (e && !e.forms.isolated) issues.push('tile has no isolated form: ' + id);
+  }
+  if (issues.length) {
+    fail += 1;
+    lines.push(`FAIL ${w.bare}  →  ${issues.join('; ')}`);
+  } else {
+    lines.push(`PASS ${w.bare}  [${w.letters.join(' ')}]  ${w.gloss}  (${w.ref})`);
+  }
+}
+document.getElementById('log').textContent =
+  lines.join('\n') + `\n\n${fail ? `RESULT ${fail} FAILURES` : 'RESULT ALL ' + data.words.length + ' PASS'}`;
+document.body.dataset.qa = fail ? 'fail' : 'done';
+
+// live-shaping strips
+const stages = document.getElementById('stages');
+for (const bare of ['كتاب', 'طور', 'فرعون', 'يوم', 'باب']) {
+  const wrap = document.createElement('div');
+  wrap.className = 'stage-strip';
+  for (let n = 1; n <= bare.length; n++) {
+    const cell = document.createElement('div');
+    cell.className = 'stage-cell';
+    cell.innerHTML = `<div class="ribbon-mini">${bare.slice(0, n)}</div><div class="muted">${n}</div>`;
+    wrap.appendChild(cell);
+  }
+  stages.appendChild(wrap);
+}
+
+// all words, vowelled reveal
+const grid = document.getElementById('grid');
+for (const w of data.words) {
+  const d = document.createElement('div');
+  d.className = 'qa-word';
+  d.innerHTML = `
+    <span class="qa-ar" lang="ar" dir="rtl">${w.ar}</span>
+    <span class="qa-gloss">${w.gloss}</span>
+    <span class="qa-bare">${w.bare} · ${w.translit}</span>`;
+  grid.appendChild(d);
+}
+</script>
+</body>
+</html>

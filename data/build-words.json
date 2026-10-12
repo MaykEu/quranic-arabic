@@ -1,0 +1,612 @@
+{
+ "generated": "2026-10-12T20:04:36.850Z",
+ "count": 40,
+ "words": [
+  {
+   "bare": "يوم",
+   "ar": "يَوْمَ",
+   "translit": "yawma",
+   "gloss": "the Day",
+   "count": 213,
+   "ref": "2:113",
+   "audio": "wbw/002_113_028.mp3",
+   "letters": [
+    "ya",
+    "waw",
+    "mim"
+   ],
+   "first": "ya"
+  },
+  {
+   "bare": "عذاب",
+   "ar": "عَذَابٌ",
+   "translit": "ʿadhābun",
+   "gloss": "a punishment",
+   "count": 150,
+   "ref": "2:7",
+   "audio": "wbw/002_007_013.mp3",
+   "letters": [
+    "ayn",
+    "dhal",
+    "alif",
+    "ba"
+   ],
+   "first": "ayn"
+  },
+  {
+   "bare": "عند",
+   "ar": "عِندَ",
+   "translit": "ʿinda",
+   "gloss": "near",
+   "count": 119,
+   "ref": "2:191",
+   "audio": "wbw/002_191_016.mp3",
+   "letters": [
+    "ayn",
+    "nun",
+    "dal"
+   ],
+   "first": "ayn"
+  },
+  {
+   "bare": "خير",
+   "ar": "خَيْرٌۭ",
+   "translit": "khayrun",
+   "gloss": "better",
+   "count": 108,
+   "ref": "2:54",
+   "audio": "wbw/002_054_017.mp3",
+   "letters": [
+    "kha",
+    "ya",
+    "ra"
+   ],
+   "first": "kha"
+  },
+  {
+   "bare": "قبل",
+   "ar": "قَبْلُ",
+   "translit": "qablu",
+   "gloss": "before",
+   "count": 92,
+   "ref": "2:89",
+   "audio": "wbw/002_089_012.mp3",
+   "letters": [
+    "qaf",
+    "ba",
+    "lam"
+   ],
+   "first": "qaf"
+  },
+  {
+   "bare": "سبيل",
+   "ar": "سَبِيلِ",
+   "translit": "sabīli",
+   "gloss": "the way",
+   "count": 86,
+   "ref": "2:154",
+   "audio": "wbw/002_154_006.mp3",
+   "letters": [
+    "sin",
+    "ba",
+    "ya",
+    "lam"
+   ],
+   "first": "sin"
+  },
+  {
+   "bare": "خلق",
+   "ar": "خَلَقَ",
+   "translit": "khalaqa",
+   "gloss": "created",
+   "count": 82,
+   "ref": "2:29",
+   "audio": "wbw/002_029_003.mp3",
+   "letters": [
+    "kha",
+    "lam",
+    "qaf"
+   ],
+   "first": "kha"
+  },
+  {
+   "bare": "بين",
+   "ar": "بَيْنَ",
+   "translit": "bayna",
+   "gloss": "between",
+   "count": 79,
+   "ref": "2:68",
+   "audio": "wbw/002_068_020.mp3",
+   "letters": [
+    "ba",
+    "ya",
+    "nun"
+   ],
+   "first": "ba"
+  },
+  {
+   "bare": "قوم",
+   "ar": "قَوْمٌۭ",
+   "translit": "qawmun",
+   "gloss": "a people",
+   "count": 79,
+   "ref": "5:58",
+   "audio": "wbw/005_058_011.mp3",
+   "letters": [
+    "qaf",
+    "waw",
+    "mim"
+   ],
+   "first": "qaf"
+  },
+  {
+   "bare": "كيف",
+   "ar": "كَيْفَ",
+   "translit": "kayfa",
+   "gloss": "how",
+   "count": 62,
+   "ref": "2:259",
+   "audio": "wbw/002_259_058.mp3",
+   "letters": [
+    "kaf",
+    "ya",
+    "fa"
+   ],
+   "first": "kaf"
+  },
+  {
+   "bare": "فرعون",
+   "ar": "فِرْعَوْنَ",
+   "translit": "fir'ʿawna",
+   "gloss": "Firaun",
+   "count": 59,
+   "ref": "7:103",
+   "audio": "wbw/007_103_008.mp3",
+   "letters": [
+    "fa",
+    "ra",
+    "ayn",
+    "waw",
+    "nun"
+   ],
+   "first": "fa"
+  },
+  {
+   "bare": "علم",
+   "ar": "عِلْمَ",
+   "translit": "ʿil'ma",
+   "gloss": "knowledge",
+   "count": 41,
+   "ref": "2:32",
+   "audio": "wbw/002_032_004.mp3",
+   "letters": [
+    "ayn",
+    "lam",
+    "mim"
+   ],
+   "first": "ayn"
+  },
+  {
+   "bare": "نفس",
+   "ar": "نَفْسٌ",
+   "translit": "nafsun",
+   "gloss": "a soul",
+   "count": 40,
+   "ref": "2:123",
+   "audio": "wbw/002_123_005.mp3",
+   "letters": [
+    "nun",
+    "fa",
+    "sin"
+   ],
+   "first": "nun"
+  },
+  {
+   "bare": "ملك",
+   "ar": "مَلَكٌۭ",
+   "translit": "malakun",
+   "gloss": "an angel",
+   "count": 24,
+   "ref": "12:31",
+   "audio": "wbw/012_031_032.mp3",
+   "letters": [
+    "mim",
+    "lam",
+    "kaf"
+   ],
+   "first": "mim"
+  },
+  {
+   "bare": "نار",
+   "ar": "نَارِ",
+   "translit": "nāri",
+   "gloss": "the Fire",
+   "count": 13,
+   "ref": "9:109",
+   "audio": "wbw/009_109_021.mp3",
+   "letters": [
+    "nun",
+    "alif",
+    "ra"
+   ],
+   "first": "nun"
+  },
+  {
+   "bare": "رسل",
+   "ar": "رُسُلٌۭ",
+   "translit": "rusulun",
+   "gloss": "Messengers",
+   "count": 11,
+   "ref": "3:183",
+   "audio": "wbw/003_183_019.mp3",
+   "letters": [
+    "ra",
+    "sin",
+    "lam"
+   ],
+   "first": "ra"
+  },
+  {
+   "bare": "وجه",
+   "ar": "وَجْهِ",
+   "translit": "wajhi",
+   "gloss": "the face",
+   "count": 10,
+   "ref": "2:272",
+   "audio": "wbw/002_272_021.mp3",
+   "letters": [
+    "waw",
+    "jim",
+    "haa"
+   ],
+   "first": "waw"
+  },
+  {
+   "bare": "عين",
+   "ar": "عَيْنٍ",
+   "translit": "ʿaynin",
+   "gloss": "a spring",
+   "count": 10,
+   "ref": "18:86",
+   "audio": "wbw/018_086_009.mp3",
+   "letters": [
+    "ayn",
+    "ya",
+    "nun"
+   ],
+   "first": "ayn"
+  },
+  {
+   "bare": "دين",
+   "ar": "دِينِ",
+   "translit": "dīni",
+   "gloss": "the religion",
+   "count": 8,
+   "ref": "3:83",
+   "audio": "wbw/003_083_002.mp3",
+   "letters": [
+    "dal",
+    "ya",
+    "nun"
+   ],
+   "first": "dal"
+  },
+  {
+   "bare": "طين",
+   "ar": "طِينٍۢ",
+   "translit": "ṭīnin",
+   "gloss": "clay",
+   "count": 8,
+   "ref": "7:12",
+   "audio": "wbw/007_012_018.mp3",
+   "letters": [
+    "tta",
+    "ya",
+    "nun"
+   ],
+   "first": "tta"
+  },
+  {
+   "bare": "ظلم",
+   "ar": "ظُلْمَ",
+   "translit": "ẓul'ma",
+   "gloss": "injustice",
+   "count": 5,
+   "ref": "40:17",
+   "audio": "wbw/040_017_009.mp3",
+   "letters": [
+    "zaa",
+    "lam",
+    "mim"
+   ],
+   "first": "zaa"
+  },
+  {
+   "bare": "نور",
+   "ar": "نُورٌۭ",
+   "translit": "nūrun",
+   "gloss": "a light",
+   "count": 5,
+   "ref": "5:15",
+   "audio": "wbw/005_015_022.mp3",
+   "letters": [
+    "nun",
+    "waw",
+    "ra"
+   ],
+   "first": "nun"
+  },
+  {
+   "bare": "عبد",
+   "ar": "عَبْدٌ",
+   "translit": "ʿabdun",
+   "gloss": "a slave",
+   "count": 5,
+   "ref": "43:59",
+   "audio": "wbw/043_059_004.mp3",
+   "letters": [
+    "ayn",
+    "ba",
+    "dal"
+   ],
+   "first": "ayn"
+  },
+  {
+   "bare": "بيت",
+   "ar": "بَيْتٌۭ",
+   "translit": "baytun",
+   "gloss": "a house",
+   "count": 4,
+   "ref": "17:93",
+   "audio": "wbw/017_093_004.mp3",
+   "letters": [
+    "ba",
+    "ya",
+    "ta"
+   ],
+   "first": "ba"
+  },
+  {
+   "bare": "ريح",
+   "ar": "رِيحٌ",
+   "translit": "rīḥun",
+   "gloss": "a wind",
+   "count": 4,
+   "ref": "10:22",
+   "audio": "wbw/010_022_020.mp3",
+   "letters": [
+    "ra",
+    "ya",
+    "ha"
+   ],
+   "first": "ra"
+  },
+  {
+   "bare": "لسان",
+   "ar": "لِسَانِ",
+   "translit": "lisāni",
+   "gloss": "the tongue",
+   "count": 4,
+   "ref": "5:78",
+   "audio": "wbw/005_078_008.mp3",
+   "letters": [
+    "lam",
+    "sin",
+    "alif",
+    "nun"
+   ],
+   "first": "lam"
+  },
+  {
+   "bare": "جبل",
+   "ar": "جَبَلٍۢ",
+   "translit": "jabalin",
+   "gloss": "a mountain",
+   "count": 3,
+   "ref": "11:43",
+   "audio": "wbw/011_043_004.mp3",
+   "letters": [
+    "jim",
+    "ba",
+    "lam"
+   ],
+   "first": "jim"
+  },
+  {
+   "bare": "كتاب",
+   "ar": "كِتَابِ",
+   "translit": "kitābi",
+   "gloss": "the Book",
+   "count": 3,
+   "ref": "18:27",
+   "audio": "wbw/018_027_006.mp3",
+   "letters": [
+    "kaf",
+    "ta",
+    "alif",
+    "ba"
+   ],
+   "first": "kaf"
+  },
+  {
+   "bare": "حكم",
+   "ar": "حُكْمُ",
+   "translit": "ḥuk'mu",
+   "gloss": "the Judgment",
+   "count": 3,
+   "ref": "60:10",
+   "audio": "wbw/060_010_056.mp3",
+   "letters": [
+    "ha",
+    "kaf",
+    "mim"
+   ],
+   "first": "ha"
+  },
+  {
+   "bare": "فلك",
+   "ar": "فَلَكٍۢ",
+   "translit": "falakin",
+   "gloss": "an orbit",
+   "count": 2,
+   "ref": "21:33",
+   "audio": "wbw/021_033_011.mp3",
+   "letters": [
+    "fa",
+    "lam",
+    "kaf"
+   ],
+   "first": "fa"
+  },
+  {
+   "bare": "بحر",
+   "ar": "بَحْرٍۢ",
+   "translit": "baḥrin",
+   "gloss": "a sea",
+   "count": 1,
+   "ref": "24:40",
+   "audio": "wbw/024_040_004.mp3",
+   "letters": [
+    "ba",
+    "ha",
+    "ra"
+   ],
+   "first": "ba"
+  },
+  {
+   "bare": "سمع",
+   "ar": "سَمِعَ",
+   "translit": "samiʿa",
+   "gloss": "heard",
+   "count": 2,
+   "ref": "3:181",
+   "audio": "wbw/003_181_002.mp3",
+   "letters": [
+    "sin",
+    "mim",
+    "ayn"
+   ],
+   "first": "sin"
+  },
+  {
+   "bare": "صبر",
+   "ar": "صَبَرَ",
+   "translit": "ṣabara",
+   "gloss": "patient",
+   "count": 2,
+   "ref": "42:43",
+   "audio": "wbw/042_043_002.mp3",
+   "letters": [
+    "sad",
+    "ba",
+    "ra"
+   ],
+   "first": "sad"
+  },
+  {
+   "bare": "شكر",
+   "ar": "شَكَرَ",
+   "translit": "shakara",
+   "gloss": "grateful",
+   "count": 2,
+   "ref": "27:40",
+   "audio": "wbw/027_040_031.mp3",
+   "letters": [
+    "shin",
+    "kaf",
+    "ra"
+   ],
+   "first": "shin"
+  },
+  {
+   "bare": "قلب",
+   "ar": "قَلْبٌ",
+   "translit": "qalbun",
+   "gloss": "a heart",
+   "count": 2,
+   "ref": "50:37",
+   "audio": "wbw/050_037_008.mp3",
+   "letters": [
+    "qaf",
+    "lam",
+    "ba"
+   ],
+   "first": "qaf"
+  },
+  {
+   "bare": "عرش",
+   "ar": "عَرْشٌ",
+   "translit": "ʿarshun",
+   "gloss": "a throne",
+   "count": 2,
+   "ref": "27:23",
+   "audio": "wbw/027_023_010.mp3",
+   "letters": [
+    "ayn",
+    "ra",
+    "shin"
+   ],
+   "first": "ayn"
+  },
+  {
+   "bare": "لحم",
+   "ar": "لَحْمَ",
+   "translit": "laḥma",
+   "gloss": "the flesh",
+   "count": 2,
+   "ref": "6:145",
+   "audio": "wbw/006_145_020.mp3",
+   "letters": [
+    "lam",
+    "ha",
+    "mim"
+   ],
+   "first": "lam"
+  },
+  {
+   "bare": "ذنب",
+   "ar": "ذَنۢبٍۢ",
+   "translit": "dhanbin",
+   "gloss": "sin",
+   "count": 2,
+   "ref": "81:9",
+   "audio": "wbw/081_009_002.mp3",
+   "letters": [
+    "dhal",
+    "nun",
+    "ba"
+   ],
+   "first": "dhal"
+  },
+  {
+   "bare": "رزق",
+   "ar": "رِزْقٌۭ",
+   "translit": "riz'qun",
+   "gloss": "a provision",
+   "count": 1,
+   "ref": "37:41",
+   "audio": "wbw/037_041_003.mp3",
+   "letters": [
+    "ra",
+    "zay",
+    "qaf"
+   ],
+   "first": "ra"
+  },
+  {
+   "bare": "طور",
+   "ar": "طُورِ",
+   "translit": "ṭūri",
+   "gloss": "Mount Sinai",
+   "count": 1,
+   "ref": "23:20",
+   "audio": "wbw/023_020_004.mp3",
+   "letters": [
+    "tta",
+    "waw",
+    "ra"
+   ],
+   "first": "tta"
+  }
+ ]
+}

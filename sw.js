@@ -1,6 +1,6 @@
 // Service worker: offline app shell + runtime caches.
 // Bump VERSION whenever shipped files change (forces a clean re-cache).
-const VERSION = 'qa-v2';
+const VERSION = 'qa-v3';
 const AUDIO_CACHE = 'qa-audio-v1';
 const AUDIO_HOSTS = ['audio.qurancdn.com', 'cdn.islamic.network', 'everyayah.com'];
 const AUDIO_MAX_ENTRIES = 300;
@@ -8,15 +8,15 @@ const AUDIO_MAX_ENTRIES = 300;
 const SHELL = [
   './',
   'index.html', 'letters.html', 'words.html', 'verses.html', 'practice.html', 'progress.html', 'about.html',
-  'css/styles.css',
-  'js/lib/store.js', 'js/lib/audio.js', 'js/lib/srs.js', 'js/lib/progress.js', 'js/lib/hash.js', 'js/lib/data.js',
-  'js/ui/chrome.js', 'js/ui/player.js', 'js/ui/toast.js', 'js/ui/trace.js',
+  'css/styles.css', 'css/build.css',
+  'js/lib/store.js', 'js/lib/audio.js', 'js/lib/srs.js', 'js/lib/progress.js', 'js/lib/hash.js', 'js/lib/data.js', 'js/lib/shaping.js',
+  'js/ui/chrome.js', 'js/ui/player.js', 'js/ui/toast.js', 'js/ui/trace.js', 'js/ui/build-game.js',
   'js/pages/home.js', 'js/pages/letters.js', 'js/pages/words.js', 'js/pages/verses.js', 'js/pages/practice.js', 'js/pages/progress.js', 'js/pages/about.js',
   'manifest.json',
   'assets/fonts/amiri-arabic-400.woff2', 'assets/fonts/amiri-arabic-700.woff2',
   'assets/icons/icon-192.png', 'assets/icons/icon-512.png', 'assets/icons/apple-touch-icon.png', 'assets/icons/favicon.ico',
   'data/letters.json', 'data/harakat.json', 'data/reciters.json', 'data/grammar-terms.json', 'data/verse-notes.json',
-  'data/vocabulary.json', 'data/quran/index.json',
+  'data/vocabulary.json', 'data/build-words.json', 'data/quran/index.json',
 ];
 
 self.addEventListener('install', (event) => {

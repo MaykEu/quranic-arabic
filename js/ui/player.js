@@ -37,10 +37,11 @@ export function mountPlayer() {
 }
 
 // Play a URL with a human-readable label shown in the bar.
+// Safe to call even when the player bar has not been mounted (e.g. in tests).
 export function play(url, label = '') {
-  if (label) labelEl.textContent = label;
+  if (label && labelEl) labelEl.textContent = label;
   if (audio.src !== url) audio.src = url;
-  barEl.classList.add('on');
+  barEl?.classList.add('on');
   audio.play().catch(() => {});
   return audio;
 }

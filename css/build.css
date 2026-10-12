@@ -1,0 +1,145 @@
+/* Build mode + Words page extras (segmented control, tiles, ribbon). */
+
+/* ---------- segmented control (Words page modes) ---------- */
+.seg {
+  display: flex;
+  gap: 4px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px;
+  margin: 0 0 14px;
+  box-shadow: var(--shadow-1);
+}
+.seg a {
+  flex: 1;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 15px;
+  opacity: 0.62;
+  min-height: var(--touch);
+  display: grid;
+  place-items: center;
+}
+.seg a.active {
+  background: var(--brand2);
+  color: #fff;
+  opacity: 1;
+}
+[data-theme="dark"] .seg a.active { color: var(--brand-ink); }
+
+/* ---------- build: prompt ---------- */
+.build-card { display: grid; gap: 12px; }
+.build-prompt { text-align: center; }
+.bp-gloss { font-size: 22px; font-weight: 700; margin: 0 0 6px; }
+.bp-play { font-size: 15px; }
+
+/* ---------- the ribbon (live-joined word) ---------- */
+.ribbon {
+  min-height: 104px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-ar);
+  font-size: 64px;
+  line-height: 1.35;
+  color: var(--brand2);
+  direction: rtl;
+  border-bottom: 3px dashed var(--line-strong);
+  padding: 0 8px 8px;
+  overflow-wrap: anywhere;
+}
+.ribbon-empty { color: var(--line-strong); }
+.ribbon.pulse { animation: rbounce 0.22s ease; }
+@keyframes rbounce {
+  50% { transform: scale(1.05); }
+}
+.ribbon.shake { animation: rshake 0.32s ease; }
+@keyframes rshake {
+  25% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+
+/* ---------- progress dots ---------- */
+.dots { display: flex; gap: 7px; justify-content: center; }
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line-strong);
+  transition: background 0.15s;
+}
+.dot.on { background: var(--brand2); }
+
+/* ---------- tile rack ---------- */
+.tiles { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.tile {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-ar);
+  font-size: 34px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-1);
+  transition: transform 0.08s, opacity 0.15s;
+  padding: 0;
+}
+.tile:active { transform: scale(0.94); }
+.tile.used { visibility: hidden; }
+.tiles-alphabet .tile-s { width: 52px; height: 52px; font-size: 28px; }
+
+.build-actions { justify-content: center; }
+
+/* ---------- success ---------- */
+.success-word {
+  font-family: var(--font-ar);
+  font-size: 56px;
+  color: var(--brand);
+  margin: 4px 0;
+  line-height: 1.3;
+}
+
+/* ---------- word chips (set overview) ---------- */
+.word-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font-family: var(--font-ar);
+  font-size: 24px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  min-height: var(--touch);
+}
+.chip:active { transform: scale(0.96); }
+.chip-done {
+  background: var(--brand-soft);
+  border-color: var(--brand);
+}
+
+/* ---------- progress bar ---------- */
+.progbar {
+  height: 9px;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+  margin: 10px 0 6px;
+}
+.progbar i {
+  display: block;
+  height: 100%;
+  background: var(--brand);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.build-hint { color: var(--accent); }

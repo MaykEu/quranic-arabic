@@ -1,36 +1,49 @@
-// Words module: the 150 most frequent Quranic words — a tap-to-hear list plus
-// flashcard review with expanding-interval spaced repetition (see js/lib/srs.js).
+// Words module shell — three modes on one page:
+//   Browse  the 150 most frequent Quranic words (tap to hear)
+//   Review  flashcard recall with expanding-interval spaced repetition
+//   Build   assemble words from letter tiles (js/ui/build-game.js)
+// The mode lives in the URL hash (#browse / #review / #build), and Build
+// accepts a letter filter (#build/kaf) so other pages can deep-link into it.
 import { loadData } from '../lib/data.js';
 import { wbwFromRef } from '../lib/audio.js';
 import { play } from '../ui/player.js';
 import { mark } from '../lib/progress.js';
 import { load as loadSRS, review, dueIds } from '../lib/srs.js';
+import { mountBuild } from '../ui/build-game.js';
 
 const main = document.querySelector('main');
 const NEW_PER_SESSION = 10;
 let words = [];
-
-const PLAY_SVG = '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" stroke="none"><path d="M8 5v14l11-7z"/></svg>';
+let vocabLoaded = false;
 
 const esc = (s) =>
   String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-async function init() {
-  try {
-    const v = await loadData('vocabulary.json');
-    words = v.words;
-  } catch (e) {
-    main.innerHTML = `<section class="card"><p>Could not load vocabulary: ${e.message}</p></section>`;
-    return;
-  }
-  renderHome();
+const MODES = [
+  ['browse', 'Browse'],
+  ['review', 'Review'],
+  ['build', 'Build'],
+];
+
+function parseHash() {
+  const h = location.hash.replace(/^#/, '');
+  if (h.startsWith('build')) return { mode: 'build', letter: h.split('/')[1] || null };
+  if (h === 'review') return { mode: 'review', letter: null };
+  return { mode: 'browse', letter: null };
+}
+
+async function ensureVocab() {
+  if (vocabLoaded) return;
+  const v = await loadData('vocabulary.json');
+  words = v.words;
+  vocabLoaded = true;
 }
 
 const byRank = (id) => words.find((w) => String(w.rank) === String(id));
 
 function buildQueue() {
   const all = loadSRS();
-  const due = dueIds(all);
+  const due = dueIds(all).filter((id) => /^\d+$/.test(id));
   const fresh = words
     .filter((w) => !all[String(w.rank)])
     .slice(0, NEW_PER_SESSION)
@@ -38,33 +51,14 @@ function buildQueue() {
   return [...due, ...fresh];
 }
 
-function renderHome() {
-  const all = loadSRS();
-  const seen = Object.keys(all).length;
-  const known = Object.values(all).filter((e) => e.box >= 3).length;
-  const queue = buildQueue();
+// ---------- modes ----------
 
-  main.innerHTML = `
-    <h2>Words <span class="muted">· the top 150</span></h2>
+function renderBrowse(view) {
+  view.innerHTML = `
     <p class="muted">The most frequent words of the Qur'an — tap any word to hear it.</p>
-
-    <section class="card">
-      <div class="row stats-row">
-        <div class="stat center"><div class="n">${seen}</div><div class="l">seen</div></div>
-        <div class="stat center"><div class="n">${known}</div><div class="l">known</div></div>
-        <div class="stat center"><div class="n">${queue.length}</div><div class="l">in queue</div></div>
-      </div>
-      <div class="row">
-        <button type="button" class="btn" id="review" ${queue.length ? '' : 'disabled'}>${
-          queue.length ? `Review ${queue.length}` : 'All caught up for today'
-        }</button>
-      </div>
-    </section>
-
-    <h2 class="section-title">All words</h2>
     <div class="word-list" id="word-list"></div>`;
 
-  const list = main.querySelector('#word-list');
+  const list = view.querySelector('#word-list');
   for (const w of words) {
     const row = document.createElement('button');
     row.type = 'button';
@@ -83,12 +77,35 @@ function renderHome() {
     });
     list.appendChild(row);
   }
-
-  const btn = main.querySelector('#review');
-  if (queue.length) btn.addEventListener('click', () => startSession(queue));
 }
 
-function startSession(queue) {
+function renderReview(view) {
+  const all = loadSRS();
+  const seen = Object.keys(all).filter((id) => /^\d+$/.test(id)).length;
+  const known = Object.entries(all).filter(([id, e]) => /^\d+$/.test(id) && e.box >= 3).length;
+  const queue = buildQueue();
+
+  view.innerHTML = `
+    <section class="card">
+      <div class="row stats-row">
+        <div class="stat center"><div class="n">${seen}</div><div class="l">seen</div></div>
+        <div class="stat center"><div class="n">${known}</div><div class="l">known</div></div>
+        <div class="stat center"><div class="n">${queue.length}</div><div class="l">in queue</div></div>
+      </div>
+      <div class="row">
+        <button type="button" class="btn" id="review" ${queue.length ? '' : 'disabled'}>${
+          queue.length ? `Review ${queue.length}` : 'All caught up for today'
+        }</button>
+      </div>
+    </section>
+    <p class="muted">Flashcards: read the word, recall the meaning, then grade yourself honestly —
+    misses come back first (spacing: 1 · 3 · 7 · 14 · 30 days).</p>`;
+
+  const btn = view.querySelector('#review');
+  if (queue.length) btn.addEventListener('click', () => startSession(view, queue));
+}
+
+function startSession(view, queue) {
   let i = 0;
   let got = 0;
 
@@ -96,8 +113,8 @@ function startSession(queue) {
     if (i >= queue.length) return renderDone();
     const w = byRank(queue[i]);
 
-    main.innerHTML = `
-      <button type="button" class="btn btn-ghost back" id="exit">← All words</button>
+    view.innerHTML = `
+      <button type="button" class="btn btn-ghost back" id="exit">← Review</button>
       <p class="muted center">${i + 1} / ${queue.length}</p>
       <div class="flashcard" id="card" role="button" tabindex="0">
         <div class="fc-word" lang="ar" dir="rtl">${esc(w.ar)}</div>
@@ -110,8 +127,8 @@ function startSession(queue) {
         <button type="button" class="btn" id="know">Got it</button>
       </div>`;
 
-    const card = main.querySelector('#card');
-    const actions = main.querySelector('#actions');
+    const card = view.querySelector('#card');
+    const actions = view.querySelector('#actions');
     const reveal = () => {
       if (card.classList.contains('revealed')) return;
       card.classList.add('revealed');
@@ -127,9 +144,9 @@ function startSession(queue) {
       }
     });
 
-    main.querySelector('#exit').addEventListener('click', renderHome);
-    main.querySelector('#again').addEventListener('click', () => grade(w, false));
-    main.querySelector('#know').addEventListener('click', () => grade(w, true));
+    view.querySelector('#exit').addEventListener('click', backToReview);
+    view.querySelector('#again').addEventListener('click', () => grade(w, false));
+    view.querySelector('#know').addEventListener('click', () => grade(w, true));
   }
 
   function grade(w, good) {
@@ -141,21 +158,49 @@ function startSession(queue) {
     render();
   }
 
+  function backToReview() {
+    renderReview(view);
+  }
+
   function renderDone() {
-    main.innerHTML = `
-      <button type="button" class="btn btn-ghost back" id="exit">← All words</button>
+    view.innerHTML = `
+      <button type="button" class="btn btn-ghost back" id="exit">← Review</button>
       <section class="card center">
         <h2>Session done</h2>
         <p>${got} of ${queue.length} recalled. Words you missed will come back first next time.</p>
         <div class="row" style="justify-content:center">
-          <button type="button" class="btn" id="home">Back to words</button>
+          <button type="button" class="btn" id="home">Back to review</button>
         </div>
       </section>`;
-    main.querySelector('#exit').addEventListener('click', renderHome);
-    main.querySelector('#home').addEventListener('click', renderHome);
+    view.querySelector('#exit').addEventListener('click', backToReview);
+    view.querySelector('#home').addEventListener('click', backToReview);
   }
 
   render();
 }
 
-init();
+// ---------- router ----------
+
+async function render() {
+  const { mode, letter } = parseHash();
+  main.innerHTML = `
+    <nav class="seg" aria-label="Words sections">
+      ${MODES.map(([m, label]) => `<a href="#${m}" data-m="${m}" class="${m === mode ? 'active' : ''}">${label}</a>`).join('')}
+    </nav>
+    <div id="view"><p class="muted">Loading…</p></div>`;
+  const view = main.querySelector('#view');
+
+  if (mode === 'build') return mountBuild(view, { firstLetter: letter });
+
+  try {
+    await ensureVocab();
+  } catch (e) {
+    view.innerHTML = `<section class="card"><p>Could not load vocabulary: ${e.message}</p></section>`;
+    return;
+  }
+  if (mode === 'review') renderReview(view);
+  else renderBrowse(view);
+}
+
+window.addEventListener('hashchange', render);
+render();

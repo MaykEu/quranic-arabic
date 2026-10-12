@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build play-through QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/build.css">
+</head>
+<body>
+<main>
+  <p class="muted">Drives the real Build component through a session (menu → partial build → success).
+  Use ?mode=mid (stop after 2 letters) or ?mode=done (complete the word).
+  Screenshot with: <code>msedge --headless=new --screenshot=… --window-size=780,1500 URL</code></p>
+  <div id="play"></div>
+</main>
+<script type="module">
+import { mountBuild } from '../js/ui/build-game.js';
+import { buildIndex } from '../js/lib/shaping.js';
+
+const mode = new URLSearchParams(location.search).get('mode') || 'mid';
+const el = document.getElementById('play');
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const report = (s) => { document.body.dataset.qa = s; };
+
+const data = await (await fetch('../data/build-words.json')).json();
+const letters = await (await fetch('../data/letters.json')).json();
+const index = buildIndex(letters);
+
+try {
+  await mountBuild(el, {});
+  await sleep(120);
+
+  const go = el.querySelector('#go');
+  if (!go) throw new Error('no-go-button');
+
+  go.click();
+  await sleep(150);
+
+  // Derive the word actually on screen from its gloss (unique in this dataset).
+  const gloss = el.querySelector('.bp-gloss')?.textContent?.trim();
+  const w = data.words.find((x) => x.gloss === gloss);
+  if (!w) throw new Error('word-not-identified:' + gloss);
+
+  const tiles = [...el.querySelectorAll('.tile')];
+  if (!tiles.length) throw new Error('no-tiles');
+
+  let placed = 0;
+  const used = new Set();
+  for (const id of w.letters) {
+    if (mode === 'mid' && placed >= 2) break;
+    const ch = letters.find((l) => l.id === id).ar;
+    const tile = tiles.find((t) => t.textContent.trim() === ch && !used.has(t));
+    if (!tile) throw new Error('tile-not-found:' + id + ' for ' + w.bare);
+    used.add(tile);
+    tile.click();
+    placed += 1;
+    await sleep(120);
+  }
+  await sleep(mode === 'done' ? 700 : 250);
+
+  if (mode === 'done') {
+    const ok = !!el.querySelector('.success-word');
+    report(`done:${w.bare}:placed=${placed}:success=${ok}`);
+  } else {
+    const ribbon = el.querySelector('.ribbon-word')?.textContent || '';
+    report(`mid:${w.bare}:placed=${placed}:ribbon=${ribbon}`);
+  }
+} catch (e) {
+  report('error:' + e.message);
+}
+</script>
+</body>
+</html>
