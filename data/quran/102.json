@@ -1,0 +1,293 @@
+{
+ "id": 102,
+ "name_simple": "At-Takathur",
+ "name_arabic": "التكاثر",
+ "verses_count": 8,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6169,
+   "text": "أَلْهَىٰكُمُ ٱلتَّكَاثُرُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَلْهَىٰكُمُ",
+     "translit": "alhākumu",
+     "gloss": "Diverts you",
+     "audio": "wbw/102_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلتَّكَاثُرُ",
+     "translit": "l-takāthuru",
+     "gloss": "the competition to increase",
+     "audio": "wbw/102_001_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Competition in [worldly] increase diverts you",
+    "pickthall": "Rivalry in worldly increase distracteth you"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6170,
+   "text": "حَتَّىٰ زُرْتُمُ ٱلْمَقَابِرَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "حَتَّىٰ",
+     "translit": "ḥattā",
+     "gloss": "Until",
+     "audio": "wbw/102_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "زُرْتُمُ",
+     "translit": "zur'tumu",
+     "gloss": "you visit",
+     "audio": "wbw/102_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْمَقَابِرَ",
+     "translit": "l-maqābira",
+     "gloss": "the graves",
+     "audio": "wbw/102_002_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Until you visit the graveyards.",
+    "pickthall": "Until ye come to the graves."
+   }
+  },
+  {
+   "n": 3,
+   "global": 6171,
+   "text": "كَلَّا سَوْفَ تَعْلَمُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كَلَّا",
+     "translit": "kallā",
+     "gloss": "Nay",
+     "audio": "wbw/102_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "سَوْفَ",
+     "translit": "sawfa",
+     "gloss": "Soon",
+     "audio": "wbw/102_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "تَعْلَمُونَ",
+     "translit": "taʿlamūna",
+     "gloss": "you will know",
+     "audio": "wbw/102_003_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "No! You are going to know.",
+    "pickthall": "Nay, but ye will come to know!"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6172,
+   "text": "ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ثُمَّ",
+     "translit": "thumma",
+     "gloss": "Then",
+     "audio": "wbw/102_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "كَلَّا",
+     "translit": "kallā",
+     "gloss": "nay",
+     "audio": "wbw/102_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "سَوْفَ",
+     "translit": "sawfa",
+     "gloss": "Soon",
+     "audio": "wbw/102_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تَعْلَمُونَ",
+     "translit": "taʿlamūna",
+     "gloss": "you will know",
+     "audio": "wbw/102_004_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Then, no! You are going to know.",
+    "pickthall": "Nay, but ye will come to know!"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6173,
+   "text": "كَلَّا لَوْ تَعْلَمُونَ عِلْمَ ٱلْيَقِينِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كَلَّا",
+     "translit": "kallā",
+     "gloss": "Nay",
+     "audio": "wbw/102_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لَوْ",
+     "translit": "law",
+     "gloss": "If",
+     "audio": "wbw/102_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "تَعْلَمُونَ",
+     "translit": "taʿlamūna",
+     "gloss": "you know",
+     "audio": "wbw/102_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "عِلْمَ",
+     "translit": "ʿil'ma",
+     "gloss": "(with) a knowledge",
+     "audio": "wbw/102_005_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْيَقِينِ",
+     "translit": "l-yaqīni",
+     "gloss": "(of) certainty",
+     "audio": "wbw/102_005_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "No! If you only knew with knowledge of certainty...",
+    "pickthall": "Nay, would that ye knew (now) with a sure knowledge!"
+   }
+  },
+  {
+   "n": 6,
+   "global": 6174,
+   "text": "لَتَرَوُنَّ ٱلْجَحِيمَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "لَتَرَوُنَّ",
+     "translit": "latarawunna",
+     "gloss": "Surely you will see",
+     "audio": "wbw/102_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْجَحِيمَ",
+     "translit": "l-jaḥīma",
+     "gloss": "the Hellfire",
+     "audio": "wbw/102_006_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "You will surely see the Hellfire.",
+    "pickthall": "For ye will behold hell-fire."
+   }
+  },
+  {
+   "n": 7,
+   "global": 6175,
+   "text": "ثُمَّ لَتَرَوُنَّهَا عَيْنَ ٱلْيَقِينِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ثُمَّ",
+     "translit": "thumma",
+     "gloss": "Then",
+     "audio": "wbw/102_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لَتَرَوُنَّهَا",
+     "translit": "latarawunnahā",
+     "gloss": "surely you will see it",
+     "audio": "wbw/102_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَيْنَ",
+     "translit": "ʿayna",
+     "gloss": "(with the) eye",
+     "audio": "wbw/102_007_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْيَقِينِ",
+     "translit": "l-yaqīni",
+     "gloss": "(of) certainty",
+     "audio": "wbw/102_007_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Then you will surely see it with the eye of certainty.",
+    "pickthall": "Aye, ye will behold it with sure vision."
+   }
+  },
+  {
+   "n": 8,
+   "global": 6176,
+   "text": "ثُمَّ لَتُسْـَٔلُنَّ يَوْمَئِذٍ عَنِ ٱلنَّعِيمِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ثُمَّ",
+     "translit": "thumma",
+     "gloss": "Then",
+     "audio": "wbw/102_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لَتُسْـَٔلُنَّ",
+     "translit": "latus'alunna",
+     "gloss": "surely you will be asked",
+     "audio": "wbw/102_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يَوْمَئِذٍ",
+     "translit": "yawma-idhin",
+     "gloss": "that Day",
+     "audio": "wbw/102_008_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "عَنِ",
+     "translit": "ʿani",
+     "gloss": "about",
+     "audio": "wbw/102_008_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلنَّعِيمِ",
+     "translit": "l-naʿīmi",
+     "gloss": "the pleasures",
+     "audio": "wbw/102_008_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Then you will surely be asked that Day about pleasure.",
+    "pickthall": "Then, on that day, ye will be asked concerning pleasure."
+   }
+  }
+ ]
+}

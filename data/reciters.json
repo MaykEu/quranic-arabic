@@ -1,0 +1,6 @@
+[
+ {"id":"alafasy","label":"Mishary Rashid Alafasy","edition":"ar.alafasy","bitrate":128,"backup":"Alafasy_128kbps"},
+ {"id":"husary","label":"Mahmoud Khalil Al-Husary","edition":"ar.husary","bitrate":128,"backup":"Husary_128kbps"},
+ {"id":"minshawi","label":"Mohamed Siddiq Al-Minshawi","edition":"ar.minshawi","bitrate":128},
+ {"id":"abdulbasit","label":"Abdul Basit (Murattal)","edition":"ar.abdulbasitmurattal","bitrate":64}
+]

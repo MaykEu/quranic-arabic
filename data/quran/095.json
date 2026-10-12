@@ -1,0 +1,335 @@
+{
+ "id": 95,
+ "name_simple": "At-Tin",
+ "name_arabic": "التين",
+ "verses_count": 8,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6099,
+   "text": "وَٱلتِّينِ وَٱلزَّيْتُونِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلتِّينِ",
+     "translit": "wal-tīni",
+     "gloss": "By the fig",
+     "audio": "wbw/095_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَٱلزَّيْتُونِ",
+     "translit": "wal-zaytūni",
+     "gloss": "and the olive",
+     "audio": "wbw/095_001_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "By the fig and the olive",
+    "pickthall": "By the fig and the olive,"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6100,
+   "text": "وَطُورِ سِينِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَطُورِ",
+     "translit": "waṭūri",
+     "gloss": "And (the) Mount",
+     "audio": "wbw/095_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "سِينِينَ",
+     "translit": "sīnīna",
+     "gloss": "Sinai",
+     "audio": "wbw/095_002_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And [by] Mount Sinai",
+    "pickthall": "By Mount Sinai,"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6101,
+   "text": "وَهَـٰذَا ٱلْبَلَدِ ٱلْأَمِينِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَهَـٰذَا",
+     "translit": "wahādhā",
+     "gloss": "And this",
+     "audio": "wbw/095_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْبَلَدِ",
+     "translit": "l-baladi",
+     "gloss": "[the] city",
+     "audio": "wbw/095_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْأَمِينِ",
+     "translit": "l-amīni",
+     "gloss": "[the] secure",
+     "audio": "wbw/095_003_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And [by] this secure city [i.e., Makkah],",
+    "pickthall": "And by this land made safe;"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6102,
+   "text": "لَقَدْ خَلَقْنَا ٱلْإِنسَـٰنَ فِىٓ أَحْسَنِ تَقْوِيمٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "لَقَدْ",
+     "translit": "laqad",
+     "gloss": "Indeed",
+     "audio": "wbw/095_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "خَلَقْنَا",
+     "translit": "khalaqnā",
+     "gloss": "We created",
+     "audio": "wbw/095_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْإِنسَـٰنَ",
+     "translit": "l-insāna",
+     "gloss": "man",
+     "audio": "wbw/095_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فِىٓ",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/095_004_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "أَحْسَنِ",
+     "translit": "aḥsani",
+     "gloss": "(the) best",
+     "audio": "wbw/095_004_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "تَقْوِيمٍۢ",
+     "translit": "taqwīmin",
+     "gloss": "mould",
+     "audio": "wbw/095_004_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "We have certainly created man in the best of stature;",
+    "pickthall": "Surely We created man of the best stature"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6103,
+   "text": "ثُمَّ رَدَدْنَـٰهُ أَسْفَلَ سَـٰفِلِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ثُمَّ",
+     "translit": "thumma",
+     "gloss": "Then",
+     "audio": "wbw/095_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "رَدَدْنَـٰهُ",
+     "translit": "radadnāhu",
+     "gloss": "We returned him",
+     "audio": "wbw/095_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَسْفَلَ",
+     "translit": "asfala",
+     "gloss": "(to the) lowest",
+     "audio": "wbw/095_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "سَـٰفِلِينَ",
+     "translit": "sāfilīna",
+     "gloss": "(of the) low",
+     "audio": "wbw/095_005_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Then We return him to the lowest of the low,",
+    "pickthall": "Then we reduced him to the lowest of the low,"
+   }
+  },
+  {
+   "n": 6,
+   "global": 6104,
+   "text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِلَّا",
+     "translit": "illā",
+     "gloss": "Except",
+     "audio": "wbw/095_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/095_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ءَامَنُوا۟",
+     "translit": "āmanū",
+     "gloss": "believe",
+     "audio": "wbw/095_006_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَعَمِلُوا۟",
+     "translit": "waʿamilū",
+     "gloss": "and do",
+     "audio": "wbw/095_006_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلصَّـٰلِحَـٰتِ",
+     "translit": "l-ṣāliḥāti",
+     "gloss": "righteous deeds",
+     "audio": "wbw/095_006_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "فَلَهُمْ",
+     "translit": "falahum",
+     "gloss": "then for them",
+     "audio": "wbw/095_006_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "أَجْرٌ",
+     "translit": "ajrun",
+     "gloss": "(is a) reward",
+     "audio": "wbw/095_006_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "غَيْرُ",
+     "translit": "ghayru",
+     "gloss": "never",
+     "audio": "wbw/095_006_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "مَمْنُونٍۢ",
+     "translit": "mamnūnin",
+     "gloss": "ending",
+     "audio": "wbw/095_006_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Except for those who believe and do righteous deeds, for they will have a reward uninterrupted.",
+    "pickthall": "Save those who believe and do good works, and theirs is a reward unfailing."
+   }
+  },
+  {
+   "n": 7,
+   "global": 6105,
+   "text": "فَمَا يُكَذِّبُكَ بَعْدُ بِٱلدِّينِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَمَا",
+     "translit": "famā",
+     "gloss": "Then what",
+     "audio": "wbw/095_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يُكَذِّبُكَ",
+     "translit": "yukadhibuka",
+     "gloss": "causes you to deny",
+     "audio": "wbw/095_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بَعْدُ",
+     "translit": "baʿdu",
+     "gloss": "after (this)",
+     "audio": "wbw/095_007_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "بِٱلدِّينِ",
+     "translit": "bil-dīni",
+     "gloss": "the judgment",
+     "audio": "wbw/095_007_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So what yet causes you to deny the Recompense?",
+    "pickthall": "So who henceforth will give the lie to thee about the judgment?"
+   }
+  },
+  {
+   "n": 8,
+   "global": 6106,
+   "text": "أَلَيْسَ ٱللَّهُ بِأَحْكَمِ ٱلْحَـٰكِمِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَلَيْسَ",
+     "translit": "alaysa",
+     "gloss": "Is not",
+     "audio": "wbw/095_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱللَّهُ",
+     "translit": "l-lahu",
+     "gloss": "Allah",
+     "audio": "wbw/095_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بِأَحْكَمِ",
+     "translit": "bi-aḥkami",
+     "gloss": "(the) Most Just",
+     "audio": "wbw/095_008_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْحَـٰكِمِينَ",
+     "translit": "l-ḥākimīna",
+     "gloss": "(of) the Judges",
+     "audio": "wbw/095_008_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Is not Allāh the most just of judges?",
+    "pickthall": "Is not Allah the most conclusive of all judges?"
+   }
+  }
+ ]
+}

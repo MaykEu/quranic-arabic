@@ -1,0 +1,261 @@
+{
+ "id": 107,
+ "name_simple": "Al-Ma'un",
+ "name_arabic": "الماعون",
+ "verses_count": 7,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6198,
+   "text": "أَرَءَيْتَ ٱلَّذِى يُكَذِّبُ بِٱلدِّينِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَرَءَيْتَ",
+     "translit": "ara-ayta",
+     "gloss": "Have you seen",
+     "audio": "wbw/107_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِى",
+     "translit": "alladhī",
+     "gloss": "the one who",
+     "audio": "wbw/107_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يُكَذِّبُ",
+     "translit": "yukadhibu",
+     "gloss": "denies",
+     "audio": "wbw/107_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "بِٱلدِّينِ",
+     "translit": "bil-dīni",
+     "gloss": "the Judgment",
+     "audio": "wbw/107_001_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Have you seen the one who denies the Recompense?",
+    "pickthall": "Hast thou observed him who belieth religion?"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6199,
+   "text": "فَذَٰلِكَ ٱلَّذِى يَدُعُّ ٱلْيَتِيمَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَذَٰلِكَ",
+     "translit": "fadhālika",
+     "gloss": "Then that",
+     "audio": "wbw/107_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِى",
+     "translit": "alladhī",
+     "gloss": "(is) the one who",
+     "audio": "wbw/107_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يَدُعُّ",
+     "translit": "yaduʿʿu",
+     "gloss": "repulses",
+     "audio": "wbw/107_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْيَتِيمَ",
+     "translit": "l-yatīma",
+     "gloss": "the orphan",
+     "audio": "wbw/107_002_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "For that is the one who drives away the orphan",
+    "pickthall": "That is he who repelleth the orphan,"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6200,
+   "text": "وَلَا يَحُضُّ عَلَىٰ طَعَامِ ٱلْمِسْكِينِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "And (does) not",
+     "audio": "wbw/107_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَحُضُّ",
+     "translit": "yaḥuḍḍu",
+     "gloss": "feel the urge",
+     "audio": "wbw/107_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَلَىٰ",
+     "translit": "ʿalā",
+     "gloss": "to",
+     "audio": "wbw/107_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "طَعَامِ",
+     "translit": "ṭaʿāmi",
+     "gloss": "feed",
+     "audio": "wbw/107_003_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْمِسْكِينِ",
+     "translit": "l-mis'kīni",
+     "gloss": "the poor",
+     "audio": "wbw/107_003_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And does not encourage the feeding of the poor.",
+    "pickthall": "And urgeth not the feeding of the needy."
+   }
+  },
+  {
+   "n": 4,
+   "global": 6201,
+   "text": "فَوَيْلٌ لِّلْمُصَلِّينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَوَيْلٌۭ",
+     "translit": "fawaylun",
+     "gloss": "So woe",
+     "audio": "wbw/107_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لِّلْمُصَلِّينَ",
+     "translit": "lil'muṣallīna",
+     "gloss": "to those who pray",
+     "audio": "wbw/107_004_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So woe to those who pray",
+    "pickthall": "Ah, woe unto worshippers"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6202,
+   "text": "ٱلَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "Those who",
+     "audio": "wbw/107_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "هُمْ",
+     "translit": "hum",
+     "gloss": "[they]",
+     "audio": "wbw/107_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَن",
+     "translit": "ʿan",
+     "gloss": "about",
+     "audio": "wbw/107_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "صَلَاتِهِمْ",
+     "translit": "ṣalātihim",
+     "gloss": "their prayers",
+     "audio": "wbw/107_005_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "سَاهُونَ",
+     "translit": "sāhūna",
+     "gloss": "(are) neglectful",
+     "audio": "wbw/107_005_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "[But] who are heedless of their prayer -",
+    "pickthall": "Who are heedless of their prayer;"
+   }
+  },
+  {
+   "n": 6,
+   "global": 6203,
+   "text": "ٱلَّذِينَ هُمْ يُرَآءُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "Those who",
+     "audio": "wbw/107_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "هُمْ",
+     "translit": "hum",
+     "gloss": "[they]",
+     "audio": "wbw/107_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يُرَآءُونَ",
+     "translit": "yurāūna",
+     "gloss": "make show",
+     "audio": "wbw/107_006_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Those who make show [of their deeds]",
+    "pickthall": "Who would be seen (at worship)"
+   }
+  },
+  {
+   "n": 7,
+   "global": 6204,
+   "text": "وَيَمْنَعُونَ ٱلْمَاعُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَيَمْنَعُونَ",
+     "translit": "wayamnaʿūna",
+     "gloss": "And they deny",
+     "audio": "wbw/107_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْمَاعُونَ",
+     "translit": "l-māʿūna",
+     "gloss": "[the] small kindnesses",
+     "audio": "wbw/107_007_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And withhold [simple] assistance.",
+    "pickthall": "Yet refuse small kindnesses!"
+   }
+  }
+ ]
+}

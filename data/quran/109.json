@@ -1,0 +1,257 @@
+{
+ "id": 109,
+ "name_simple": "Al-Kafirun",
+ "name_arabic": "الكافرون",
+ "verses_count": 6,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6208,
+   "text": "قُلْ يَـٰٓأَيُّهَا ٱلْكَـٰفِرُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "قُلْ",
+     "translit": "qul",
+     "gloss": "Say",
+     "audio": "wbw/109_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَـٰٓأَيُّهَا",
+     "translit": "yāayyuhā",
+     "gloss": "O",
+     "audio": "wbw/109_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْكَـٰفِرُونَ",
+     "translit": "l-kāfirūna",
+     "gloss": "disbelievers",
+     "audio": "wbw/109_001_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Say, \"O disbelievers,",
+    "pickthall": "Say: O disbelievers!"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6209,
+   "text": "لَآ أَعْبُدُ مَا تَعْبُدُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "لَآ",
+     "translit": "lā",
+     "gloss": "Not",
+     "audio": "wbw/109_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَعْبُدُ",
+     "translit": "aʿbudu",
+     "gloss": "I worship",
+     "audio": "wbw/109_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/109_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تَعْبُدُونَ",
+     "translit": "taʿbudūna",
+     "gloss": "you worship",
+     "audio": "wbw/109_002_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "I do not worship what you worship.",
+    "pickthall": "I worship not that which ye worship;"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6210,
+   "text": "وَلَآ أَنتُمْ عَـٰبِدُونَ مَآ أَعْبُدُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَآ",
+     "translit": "walā",
+     "gloss": "And not",
+     "audio": "wbw/109_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَنتُمْ",
+     "translit": "antum",
+     "gloss": "you",
+     "audio": "wbw/109_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَـٰبِدُونَ",
+     "translit": "ʿābidūna",
+     "gloss": "(are) worshippers",
+     "audio": "wbw/109_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مَآ",
+     "translit": "mā",
+     "gloss": "(of) what",
+     "audio": "wbw/109_003_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "أَعْبُدُ",
+     "translit": "aʿbudu",
+     "gloss": "I worship",
+     "audio": "wbw/109_003_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Nor are you worshippers of what I worship.",
+    "pickthall": "Nor worship ye that which I worship."
+   }
+  },
+  {
+   "n": 4,
+   "global": 6211,
+   "text": "وَلَآ أَنَا۠ عَابِدٌ مَّا عَبَدتُّمْ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَآ",
+     "translit": "walā",
+     "gloss": "And not",
+     "audio": "wbw/109_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَنَا۠",
+     "translit": "anā",
+     "gloss": "I am",
+     "audio": "wbw/109_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَابِدٌۭ",
+     "translit": "ʿābidun",
+     "gloss": "a worshipper",
+     "audio": "wbw/109_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مَّا",
+     "translit": "mā",
+     "gloss": "(of) what",
+     "audio": "wbw/109_004_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "عَبَدتُّمْ",
+     "translit": "ʿabadttum",
+     "gloss": "you worship",
+     "audio": "wbw/109_004_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Nor will I be a worshipper of what you worship.",
+    "pickthall": "And I shall not worship that which ye worship."
+   }
+  },
+  {
+   "n": 5,
+   "global": 6212,
+   "text": "وَلَآ أَنتُمْ عَـٰبِدُونَ مَآ أَعْبُدُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَآ",
+     "translit": "walā",
+     "gloss": "And not",
+     "audio": "wbw/109_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَنتُمْ",
+     "translit": "antum",
+     "gloss": "you",
+     "audio": "wbw/109_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَـٰبِدُونَ",
+     "translit": "ʿābidūna",
+     "gloss": "(are) worshippers",
+     "audio": "wbw/109_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مَآ",
+     "translit": "mā",
+     "gloss": "(of) what",
+     "audio": "wbw/109_005_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "أَعْبُدُ",
+     "translit": "aʿbudu",
+     "gloss": "I worship",
+     "audio": "wbw/109_005_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Nor will you be worshippers of what I worship.",
+    "pickthall": "Nor will ye worship that which I worship."
+   }
+  },
+  {
+   "n": 6,
+   "global": 6213,
+   "text": "لَكُمْ دِينُكُمْ وَلِىَ دِينِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "لَكُمْ",
+     "translit": "lakum",
+     "gloss": "For you",
+     "audio": "wbw/109_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "دِينُكُمْ",
+     "translit": "dīnukum",
+     "gloss": "(is) your religion",
+     "audio": "wbw/109_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَلِىَ",
+     "translit": "waliya",
+     "gloss": "and for me",
+     "audio": "wbw/109_006_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "دِينِ",
+     "translit": "dīni",
+     "gloss": "(is) my religion",
+     "audio": "wbw/109_006_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "For you is your religion, and for me is my religion.\"",
+    "pickthall": "Unto you your religion, and unto me my religion."
+   }
+  }
+ ]
+}

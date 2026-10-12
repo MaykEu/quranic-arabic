@@ -1,0 +1,225 @@
+{
+ "id": 113,
+ "name_simple": "Al-Falaq",
+ "name_arabic": "الفلق",
+ "verses_count": 5,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6226,
+   "text": "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "قُلْ",
+     "translit": "qul",
+     "gloss": "Say",
+     "audio": "wbw/113_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَعُوذُ",
+     "translit": "aʿūdhu",
+     "gloss": "I seek refuge",
+     "audio": "wbw/113_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بِرَبِّ",
+     "translit": "birabbi",
+     "gloss": "in (the) Lord",
+     "audio": "wbw/113_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْفَلَقِ",
+     "translit": "l-falaqi",
+     "gloss": "(of) the dawn",
+     "audio": "wbw/113_001_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Say, \"I seek refuge in the Lord of daybreak",
+    "pickthall": "Say: I seek refuge in the Lord of the Daybreak"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6227,
+   "text": "مِن شَرِّ مَا خَلَقَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "From",
+     "audio": "wbw/113_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "شَرِّ",
+     "translit": "sharri",
+     "gloss": "(the) evil",
+     "audio": "wbw/113_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "(of) what",
+     "audio": "wbw/113_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "خَلَقَ",
+     "translit": "khalaqa",
+     "gloss": "He created",
+     "audio": "wbw/113_002_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "From the evil of that which He created",
+    "pickthall": "From the evil of that which He created;"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6228,
+   "text": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمِن",
+     "translit": "wamin",
+     "gloss": "And from",
+     "audio": "wbw/113_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "شَرِّ",
+     "translit": "sharri",
+     "gloss": "(the) evil",
+     "audio": "wbw/113_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "غَاسِقٍ",
+     "translit": "ghāsiqin",
+     "gloss": "(of) darkness",
+     "audio": "wbw/113_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "إِذَا",
+     "translit": "idhā",
+     "gloss": "when",
+     "audio": "wbw/113_003_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَقَبَ",
+     "translit": "waqaba",
+     "gloss": "it spreads",
+     "audio": "wbw/113_003_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And from the evil of darkness when it settles",
+    "pickthall": "From the evil of the darkness when it is intense,"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6229,
+   "text": "وَمِن شَرِّ ٱلنَّفَّـٰثَـٰتِ فِى ٱلْعُقَدِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمِن",
+     "translit": "wamin",
+     "gloss": "And from",
+     "audio": "wbw/113_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "شَرِّ",
+     "translit": "sharri",
+     "gloss": "(the) evil",
+     "audio": "wbw/113_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلنَّفَّـٰثَـٰتِ",
+     "translit": "l-nafāthāti",
+     "gloss": "(of) the blowers",
+     "audio": "wbw/113_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/113_004_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْعُقَدِ",
+     "translit": "l-ʿuqadi",
+     "gloss": "the knots",
+     "audio": "wbw/113_004_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And from the evil of the blowers in knots",
+    "pickthall": "And from the evil of malignant witchcraft,"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6230,
+   "text": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمِن",
+     "translit": "wamin",
+     "gloss": "And from",
+     "audio": "wbw/113_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "شَرِّ",
+     "translit": "sharri",
+     "gloss": "(the) evil",
+     "audio": "wbw/113_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "حَاسِدٍ",
+     "translit": "ḥāsidin",
+     "gloss": "(of) an envier",
+     "audio": "wbw/113_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "إِذَا",
+     "translit": "idhā",
+     "gloss": "when",
+     "audio": "wbw/113_005_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "حَسَدَ",
+     "translit": "ḥasada",
+     "gloss": "he envies",
+     "audio": "wbw/113_005_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And from the evil of an envier when he envies.\"",
+    "pickthall": "And from the evil of the envier when he envieth."
+   }
+  }
+ ]
+}

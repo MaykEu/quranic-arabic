@@ -1,0 +1,722 @@
+{
+ "id": 96,
+ "name_simple": "Al-'Alaq",
+ "name_arabic": "العلق",
+ "verses_count": 19,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6107,
+   "text": "ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱقْرَأْ",
+     "translit": "iq'ra",
+     "gloss": "Read",
+     "audio": "wbw/096_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "بِٱسْمِ",
+     "translit": "bi-is'mi",
+     "gloss": "in (the) name",
+     "audio": "wbw/096_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكَ",
+     "translit": "rabbika",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/096_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلَّذِى",
+     "translit": "alladhī",
+     "gloss": "the One Who",
+     "audio": "wbw/096_001_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "خَلَقَ",
+     "translit": "khalaqa",
+     "gloss": "created",
+     "audio": "wbw/096_001_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Recite in the name of your Lord who created",
+    "pickthall": "Read: In the name of thy Lord Who createth,"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6108,
+   "text": "خَلَقَ ٱلْإِنسَـٰنَ مِنْ عَلَقٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "خَلَقَ",
+     "translit": "khalaqa",
+     "gloss": "He created",
+     "audio": "wbw/096_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْإِنسَـٰنَ",
+     "translit": "l-insāna",
+     "gloss": "man",
+     "audio": "wbw/096_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مِنْ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/096_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "عَلَقٍ",
+     "translit": "ʿalaqin",
+     "gloss": "a clinging substance",
+     "audio": "wbw/096_002_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Created man from a clinging substance.",
+    "pickthall": "Createth man from a clot."
+   }
+  },
+  {
+   "n": 3,
+   "global": 6109,
+   "text": "ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱقْرَأْ",
+     "translit": "iq'ra",
+     "gloss": "Read",
+     "audio": "wbw/096_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَرَبُّكَ",
+     "translit": "warabbuka",
+     "gloss": "and your Lord",
+     "audio": "wbw/096_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْأَكْرَمُ",
+     "translit": "l-akramu",
+     "gloss": "(is) the Most Generous",
+     "audio": "wbw/096_003_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Recite, and your Lord is the most Generous -",
+    "pickthall": "Read: And thy Lord is the Most Bounteous,"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6110,
+   "text": "ٱلَّذِى عَلَّمَ بِٱلْقَلَمِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلَّذِى",
+     "translit": "alladhī",
+     "gloss": "The One Who",
+     "audio": "wbw/096_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَلَّمَ",
+     "translit": "ʿallama",
+     "gloss": "taught",
+     "audio": "wbw/096_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بِٱلْقَلَمِ",
+     "translit": "bil-qalami",
+     "gloss": "by the pen",
+     "audio": "wbw/096_004_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Who taught by the pen",
+    "pickthall": "Who teacheth by the pen,"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6111,
+   "text": "عَلَّمَ ٱلْإِنسَـٰنَ مَا لَمْ يَعْلَمْ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "عَلَّمَ",
+     "translit": "ʿallama",
+     "gloss": "Taught",
+     "audio": "wbw/096_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْإِنسَـٰنَ",
+     "translit": "l-insāna",
+     "gloss": "man",
+     "audio": "wbw/096_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/096_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَمْ",
+     "translit": "lam",
+     "gloss": "not",
+     "audio": "wbw/096_005_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "يَعْلَمْ",
+     "translit": "yaʿlam",
+     "gloss": "he knew",
+     "audio": "wbw/096_005_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Taught man that which he knew not.",
+    "pickthall": "Teacheth man that which he knew not."
+   }
+  },
+  {
+   "n": 6,
+   "global": 6112,
+   "text": "كَلَّآ إِنَّ ٱلْإِنسَـٰنَ لَيَطْغَىٰٓ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كَلَّآ",
+     "translit": "kallā",
+     "gloss": "Nay",
+     "audio": "wbw/096_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/096_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْإِنسَـٰنَ",
+     "translit": "l-insāna",
+     "gloss": "man",
+     "audio": "wbw/096_006_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَيَطْغَىٰٓ",
+     "translit": "layaṭghā",
+     "gloss": "surely transgresses",
+     "audio": "wbw/096_006_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "No! [But] indeed, man transgresses",
+    "pickthall": "Nay, but verily man is rebellious"
+   }
+  },
+  {
+   "n": 7,
+   "global": 6113,
+   "text": "أَن رَّءَاهُ ٱسْتَغْنَىٰٓ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَن",
+     "translit": "an",
+     "gloss": "That",
+     "audio": "wbw/096_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "رَّءَاهُ",
+     "translit": "raāhu",
+     "gloss": "he sees himself",
+     "audio": "wbw/096_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱسْتَغْنَىٰٓ",
+     "translit": "is'taghnā",
+     "gloss": "self-sufficient",
+     "audio": "wbw/096_007_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Because he sees himself self-sufficient.",
+    "pickthall": "That he thinketh himself independent!"
+   }
+  },
+  {
+   "n": 8,
+   "global": 6114,
+   "text": "إِنَّ إِلَىٰ رَبِّكَ ٱلرُّجْعَىٰٓ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/096_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِلَىٰ",
+     "translit": "ilā",
+     "gloss": "to",
+     "audio": "wbw/096_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكَ",
+     "translit": "rabbika",
+     "gloss": "your Lord",
+     "audio": "wbw/096_008_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلرُّجْعَىٰٓ",
+     "translit": "l-ruj'ʿā",
+     "gloss": "(is) the return",
+     "audio": "wbw/096_008_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, to your Lord is the return.",
+    "pickthall": "Lo! unto thy Lord is the return."
+   }
+  },
+  {
+   "n": 9,
+   "global": 6115,
+   "text": "أَرَءَيْتَ ٱلَّذِى يَنْهَىٰ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَرَءَيْتَ",
+     "translit": "ara-ayta",
+     "gloss": "Have you seen",
+     "audio": "wbw/096_009_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِى",
+     "translit": "alladhī",
+     "gloss": "the one who",
+     "audio": "wbw/096_009_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يَنْهَىٰ",
+     "translit": "yanhā",
+     "gloss": "forbids",
+     "audio": "wbw/096_009_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Have you seen the one who forbids",
+    "pickthall": "Hast thou seen him who dissuadeth"
+   }
+  },
+  {
+   "n": 10,
+   "global": 6116,
+   "text": "عَبْدًا إِذَا صَلَّىٰٓ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "عَبْدًا",
+     "translit": "ʿabdan",
+     "gloss": "A slave",
+     "audio": "wbw/096_010_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِذَا",
+     "translit": "idhā",
+     "gloss": "when",
+     "audio": "wbw/096_010_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "صَلَّىٰٓ",
+     "translit": "ṣallā",
+     "gloss": "he prays",
+     "audio": "wbw/096_010_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "A servant when he prays?",
+    "pickthall": "A slave when he prayeth?"
+   }
+  },
+  {
+   "n": 11,
+   "global": 6117,
+   "text": "أَرَءَيْتَ إِن كَانَ عَلَى ٱلْهُدَىٰٓ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَرَءَيْتَ",
+     "translit": "ara-ayta",
+     "gloss": "Have you seen",
+     "audio": "wbw/096_011_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِن",
+     "translit": "in",
+     "gloss": "if",
+     "audio": "wbw/096_011_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كَانَ",
+     "translit": "kāna",
+     "gloss": "he is",
+     "audio": "wbw/096_011_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "عَلَى",
+     "translit": "ʿalā",
+     "gloss": "upon",
+     "audio": "wbw/096_011_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْهُدَىٰٓ",
+     "translit": "l-hudā",
+     "gloss": "[the] guidance",
+     "audio": "wbw/096_011_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Have you seen if he is upon guidance",
+    "pickthall": "Hast thou seen if he relieth on the guidance (of Allah)"
+   }
+  },
+  {
+   "n": 12,
+   "global": 6118,
+   "text": "أَوْ أَمَرَ بِٱلتَّقْوَىٰٓ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَوْ",
+     "translit": "aw",
+     "gloss": "Or",
+     "audio": "wbw/096_012_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَمَرَ",
+     "translit": "amara",
+     "gloss": "he enjoins",
+     "audio": "wbw/096_012_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بِٱلتَّقْوَىٰٓ",
+     "translit": "bil-taqwā",
+     "gloss": "[of the] righteousness",
+     "audio": "wbw/096_012_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Or enjoins righteousness?",
+    "pickthall": "Or enjoineth piety?"
+   }
+  },
+  {
+   "n": 13,
+   "global": 6119,
+   "text": "أَرَءَيْتَ إِن كَذَّبَ وَتَوَلَّىٰٓ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَرَءَيْتَ",
+     "translit": "ara-ayta",
+     "gloss": "Have you seen",
+     "audio": "wbw/096_013_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِن",
+     "translit": "in",
+     "gloss": "if",
+     "audio": "wbw/096_013_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كَذَّبَ",
+     "translit": "kadhaba",
+     "gloss": "he denies",
+     "audio": "wbw/096_013_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَتَوَلَّىٰٓ",
+     "translit": "watawallā",
+     "gloss": "and turns away",
+     "audio": "wbw/096_013_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Have you seen if he denies and turns away -",
+    "pickthall": "Hast thou seen if he denieth (Allah's guidance) and is froward?"
+   }
+  },
+  {
+   "n": 14,
+   "global": 6120,
+   "text": "أَلَمْ يَعْلَم بِأَنَّ ٱللَّهَ يَرَىٰ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَلَمْ",
+     "translit": "alam",
+     "gloss": "Does not",
+     "audio": "wbw/096_014_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَعْلَم",
+     "translit": "yaʿlam",
+     "gloss": "he know",
+     "audio": "wbw/096_014_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بِأَنَّ",
+     "translit": "bi-anna",
+     "gloss": "that",
+     "audio": "wbw/096_014_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱللَّهَ",
+     "translit": "l-laha",
+     "gloss": "Allah",
+     "audio": "wbw/096_014_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "يَرَىٰ",
+     "translit": "yarā",
+     "gloss": "sees",
+     "audio": "wbw/096_014_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Does he not know that Allāh sees?",
+    "pickthall": "Is he then unaware that Allah seeth?"
+   }
+  },
+  {
+   "n": 15,
+   "global": 6121,
+   "text": "كَلَّا لَئِن لَّمْ يَنتَهِ لَنَسْفَعًۢا بِٱلنَّاصِيَةِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كَلَّا",
+     "translit": "kallā",
+     "gloss": "Nay",
+     "audio": "wbw/096_015_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لَئِن",
+     "translit": "la-in",
+     "gloss": "If",
+     "audio": "wbw/096_015_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "لَّمْ",
+     "translit": "lam",
+     "gloss": "not",
+     "audio": "wbw/096_015_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "يَنتَهِ",
+     "translit": "yantahi",
+     "gloss": "he desists",
+     "audio": "wbw/096_015_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "لَنَسْفَعًۢا",
+     "translit": "lanasfaʿan",
+     "gloss": "surely We will drag him",
+     "audio": "wbw/096_015_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "بِٱلنَّاصِيَةِ",
+     "translit": "bil-nāṣiyati",
+     "gloss": "by the forelock",
+     "audio": "wbw/096_015_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "No! If he does not desist, We will surely drag him by the forelock",
+    "pickthall": "Nay, but if he cease not We will seize him by the forelock -"
+   }
+  },
+  {
+   "n": 16,
+   "global": 6122,
+   "text": "نَاصِيَةٍ كَـٰذِبَةٍ خَاطِئَةٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "نَاصِيَةٍۢ",
+     "translit": "nāṣiyatin",
+     "gloss": "A forelock",
+     "audio": "wbw/096_016_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "كَـٰذِبَةٍ",
+     "translit": "kādhibatin",
+     "gloss": "lying",
+     "audio": "wbw/096_016_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "خَاطِئَةٍۢ",
+     "translit": "khāṭi-atin",
+     "gloss": "sinful",
+     "audio": "wbw/096_016_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "A lying, sinning forelock.",
+    "pickthall": "The lying, sinful forelock -"
+   }
+  },
+  {
+   "n": 17,
+   "global": 6123,
+   "text": "فَلْيَدْعُ نَادِيَهُۥ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَلْيَدْعُ",
+     "translit": "falyadʿu",
+     "gloss": "Then let him call",
+     "audio": "wbw/096_017_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "نَادِيَهُۥ",
+     "translit": "nādiyahu",
+     "gloss": "his associates",
+     "audio": "wbw/096_017_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Then let him call his associates;",
+    "pickthall": "Then let him call upon his henchmen!"
+   }
+  },
+  {
+   "n": 18,
+   "global": 6124,
+   "text": "سَنَدْعُ ٱلزَّبَانِيَةَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "سَنَدْعُ",
+     "translit": "sanadʿu",
+     "gloss": "We will call",
+     "audio": "wbw/096_018_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلزَّبَانِيَةَ",
+     "translit": "l-zabāniyata",
+     "gloss": "the Angels of Hell",
+     "audio": "wbw/096_018_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "We will call the angels of Hell.",
+    "pickthall": "We will call the guards of hell."
+   }
+  },
+  {
+   "n": 19,
+   "global": 6125,
+   "text": "كَلَّا لَا تُطِعْهُ وَٱسْجُدْ وَٱقْتَرِب ۩",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كَلَّا",
+     "translit": "kallā",
+     "gloss": "Nay",
+     "audio": "wbw/096_019_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لَا",
+     "translit": "lā",
+     "gloss": "(Do) not",
+     "audio": "wbw/096_019_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "تُطِعْهُ",
+     "translit": "tuṭiʿ'hu",
+     "gloss": "obey him",
+     "audio": "wbw/096_019_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَٱسْجُدْ",
+     "translit": "wa-us'jud",
+     "gloss": "But prostrate",
+     "audio": "wbw/096_019_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَٱقْتَرِب ۩",
+     "translit": "wa-iq'tarib",
+     "gloss": "and draw near (to Allah)",
+     "audio": "wbw/096_019_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "No! Do not obey him. But prostrate and draw near [to Allāh].",
+    "pickthall": "Nay, Obey not thou him. But prostrate thyself, and draw near (unto Allah)."
+   }
+  }
+ ]
+}

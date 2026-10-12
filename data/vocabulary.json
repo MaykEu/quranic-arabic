@@ -1,0 +1,1507 @@
+{
+ "generated": "2026-10-12T18:39:29.703Z",
+ "count": 150,
+ "total_tokens": 77429,
+ "words": [
+  {
+   "rank": 1,
+   "ar": "مِن",
+   "ar_norm": "من",
+   "translit": "min",
+   "gloss": "from",
+   "count": 2762,
+   "ref": "2:4",
+   "audio": "wbw/002_004_008.mp3"
+  },
+  {
+   "rank": 2,
+   "ar": "ٱللَّهِ",
+   "ar_norm": "لله",
+   "translit": "l-lahi",
+   "gloss": "(of) Allah",
+   "count": 1990,
+   "ref": "1:1",
+   "audio": "wbw/001_001_002.mp3"
+  },
+  {
+   "rank": 3,
+   "ar": "فِى",
+   "ar_norm": "فى",
+   "translit": "fī",
+   "gloss": "In",
+   "count": 1185,
+   "ref": "2:10",
+   "audio": "wbw/002_010_001.mp3"
+  },
+  {
+   "rank": 4,
+   "ar": "مَا",
+   "ar_norm": "ما",
+   "translit": "mā",
+   "gloss": "what",
+   "count": 1008,
+   "ref": "2:17",
+   "audio": "wbw/002_017_008.mp3"
+  },
+  {
+   "rank": 5,
+   "ar": "إِنَّ",
+   "ar_norm": "إن",
+   "translit": "inna",
+   "gloss": "Indeed",
+   "count": 953,
+   "ref": "2:6",
+   "audio": "wbw/002_006_001.mp3"
+  },
+  {
+   "rank": 6,
+   "ar": "ٱلَّذِينَ",
+   "ar_norm": "لذين",
+   "translit": "alladhīna",
+   "gloss": "(of) those",
+   "count": 811,
+   "ref": "1:7",
+   "audio": "wbw/001_007_002.mp3"
+  },
+  {
+   "rank": 7,
+   "ar": "لَا",
+   "ar_norm": "لا",
+   "translit": "lā",
+   "gloss": "no",
+   "count": 810,
+   "ref": "2:2",
+   "audio": "wbw/002_002_003.mp3"
+  },
+  {
+   "rank": 8,
+   "ar": "عَلَىٰ",
+   "ar_norm": "على",
+   "translit": "ʿalā",
+   "gloss": "(are) on",
+   "count": 684,
+   "ref": "2:5",
+   "audio": "wbw/002_005_002.mp3"
+  },
+  {
+   "rank": 9,
+   "ar": "إِلَّآ",
+   "ar_norm": "إلا",
+   "translit": "illā",
+   "gloss": "except",
+   "count": 664,
+   "ref": "2:9",
+   "audio": "wbw/002_009_007.mp3"
+  },
+  {
+   "rank": 10,
+   "ar": "وَلَا",
+   "ar_norm": "ولا",
+   "translit": "walā",
+   "gloss": "and not",
+   "count": 657,
+   "ref": "1:7",
+   "audio": "wbw/001_007_008.mp3"
+  },
+  {
+   "rank": 11,
+   "ar": "وَمَآ",
+   "ar_norm": "وما",
+   "translit": "wamā",
+   "gloss": "and what",
+   "count": 640,
+   "ref": "2:4",
+   "audio": "wbw/002_004_006.mp3"
+  },
+  {
+   "rank": 12,
+   "ar": "أَنَّ",
+   "ar_norm": "أن",
+   "translit": "anna",
+   "gloss": "that",
+   "count": 638,
+   "ref": "2:25",
+   "audio": "wbw/002_025_006.mp3"
+  },
+  {
+   "rank": 13,
+   "ar": "إِلَىٰ",
+   "ar_norm": "إلى",
+   "translit": "ilā",
+   "gloss": "with",
+   "count": 427,
+   "ref": "2:14",
+   "audio": "wbw/002_014_009.mp3"
+  },
+  {
+   "rank": 14,
+   "ar": "قَالَ",
+   "ar_norm": "قال",
+   "translit": "qāla",
+   "gloss": "said",
+   "count": 407,
+   "ref": "2:30",
+   "audio": "wbw/002_030_002.mp3"
+  },
+  {
+   "rank": 15,
+   "ar": "لَهُمْ",
+   "ar_norm": "لهم",
+   "translit": "lahum",
+   "gloss": "to them",
+   "count": 349,
+   "ref": "2:11",
+   "audio": "wbw/002_011_003.mp3"
+  },
+  {
+   "rank": 16,
+   "ar": "ثُمَّ",
+   "ar_norm": "ثم",
+   "translit": "thumma",
+   "gloss": "then",
+   "count": 340,
+   "ref": "2:28",
+   "audio": "wbw/002_028_008.mp3"
+  },
+  {
+   "rank": 17,
+   "ar": "وَمِنَ",
+   "ar_norm": "ومن",
+   "translit": "wamina",
+   "gloss": "And of",
+   "count": 337,
+   "ref": "2:8",
+   "audio": "wbw/002_008_001.mp3"
+  },
+  {
+   "rank": 18,
+   "ar": "كَانَ",
+   "ar_norm": "كان",
+   "translit": "kāna",
+   "gloss": "(there) has been",
+   "count": 323,
+   "ref": "2:75",
+   "audio": "wbw/002_075_007.mp3"
+  },
+  {
+   "rank": 19,
+   "ar": "بِمَآ",
+   "ar_norm": "بما",
+   "translit": "bimā",
+   "gloss": "in what",
+   "count": 296,
+   "ref": "2:4",
+   "audio": "wbw/002_004_003.mp3"
+  },
+  {
+   "rank": 20,
+   "ar": "لَكُمُ",
+   "ar_norm": "لكم",
+   "translit": "lakumu",
+   "gloss": "for you",
+   "count": 295,
+   "ref": "2:22",
+   "audio": "wbw/002_022_003.mp3"
+  },
+  {
+   "rank": 21,
+   "ar": "قُلْ",
+   "ar_norm": "قل",
+   "translit": "qul",
+   "gloss": "Say",
+   "count": 288,
+   "ref": "2:80",
+   "audio": "wbw/002_080_009.mp3"
+  },
+  {
+   "rank": 22,
+   "ar": "أَوْ",
+   "ar_norm": "أو",
+   "translit": "aw",
+   "gloss": "Or",
+   "count": 280,
+   "ref": "2:19",
+   "audio": "wbw/002_019_001.mp3"
+  },
+  {
+   "rank": 23,
+   "ar": "بِهِۦ",
+   "ar_norm": "به",
+   "translit": "bihi",
+   "gloss": "therewith",
+   "count": 279,
+   "ref": "2:22",
+   "audio": "wbw/002_022_013.mp3"
+  },
+  {
+   "rank": 24,
+   "ar": "ٱللَّهِ ۗ",
+   "ar_norm": "لله ",
+   "translit": "l-lahi",
+   "gloss": "Allah",
+   "count": 276,
+   "ref": "2:61",
+   "audio": "wbw/002_061_047.mp3"
+  },
+  {
+   "rank": 25,
+   "ar": "ٱلَّذِى",
+   "ar_norm": "لذى",
+   "translit": "alladhī",
+   "gloss": "(of) the one who",
+   "count": 269,
+   "ref": "2:17",
+   "audio": "wbw/002_017_003.mp3"
+  },
+  {
+   "rank": 26,
+   "ar": "ذَٰلِكَ",
+   "ar_norm": "ذلك",
+   "translit": "dhālika",
+   "gloss": "That",
+   "count": 268,
+   "ref": "2:2",
+   "audio": "wbw/002_002_001.mp3"
+  },
+  {
+   "rank": 27,
+   "ar": "وَٱللَّهُ",
+   "ar_norm": "ولله",
+   "translit": "wal-lahu",
+   "gloss": "And Allah",
+   "count": 267,
+   "ref": "2:19",
+   "audio": "wbw/002_019_018.mp3"
+  },
+  {
+   "rank": 28,
+   "ar": "هُمْ",
+   "ar_norm": "هم",
+   "translit": "hum",
+   "gloss": "they",
+   "count": 260,
+   "ref": "2:4",
+   "audio": "wbw/002_004_011.mp3"
+  },
+  {
+   "rank": 29,
+   "ar": "لَهُۥ",
+   "ar_norm": "له",
+   "translit": "lahu",
+   "gloss": "for him",
+   "count": 258,
+   "ref": "2:102",
+   "audio": "wbw/002_102_068.mp3"
+  },
+  {
+   "rank": 30,
+   "ar": "ءَامَنُوا۟",
+   "ar_norm": "ءامنوا",
+   "translit": "āmanū",
+   "gloss": "believe[d]",
+   "count": 255,
+   "ref": "2:9",
+   "audio": "wbw/002_009_004.mp3"
+  },
+  {
+   "rank": 31,
+   "ar": "وَإِن",
+   "ar_norm": "وإن",
+   "translit": "wa-in",
+   "gloss": "And if",
+   "count": 250,
+   "ref": "2:23",
+   "audio": "wbw/002_023_001.mp3"
+  },
+  {
+   "rank": 32,
+   "ar": "ٱلْأَرْضِ",
+   "ar_norm": "لأرض",
+   "translit": "l-arḍi",
+   "gloss": "the earth",
+   "count": 246,
+   "ref": "2:11",
+   "audio": "wbw/002_011_007.mp3"
+  },
+  {
+   "rank": 33,
+   "ar": "قَالُوٓا۟",
+   "ar_norm": "قالوا",
+   "translit": "qālū",
+   "gloss": "they say",
+   "count": 246,
+   "ref": "2:11",
+   "audio": "wbw/002_011_008.mp3"
+  },
+  {
+   "rank": 34,
+   "ar": "كُلِّ",
+   "ar_norm": "كل",
+   "translit": "kulli",
+   "gloss": "every",
+   "count": 244,
+   "ref": "2:20",
+   "audio": "wbw/002_020_026.mp3"
+  },
+  {
+   "rank": 35,
+   "ar": "هُوَ",
+   "ar_norm": "هو",
+   "translit": "huwa",
+   "gloss": "He",
+   "count": 239,
+   "ref": "2:29",
+   "audio": "wbw/002_029_001.mp3"
+  },
+  {
+   "rank": 36,
+   "ar": "كَانُوا۟",
+   "ar_norm": "كانوا",
+   "translit": "kānū",
+   "gloss": "they used to",
+   "count": 228,
+   "ref": "2:10",
+   "audio": "wbw/002_010_012.mp3"
+  },
+  {
+   "rank": 37,
+   "ar": "عَن",
+   "ar_norm": "عن",
+   "translit": "ʿan",
+   "gloss": "for",
+   "count": 223,
+   "ref": "2:48",
+   "audio": "wbw/002_048_006.mp3"
+  },
+  {
+   "rank": 38,
+   "ar": "إِذًۭا",
+   "ar_norm": "إذا",
+   "translit": "idhan",
+   "gloss": "(would) then",
+   "count": 221,
+   "ref": "2:145",
+   "audio": "wbw/002_145_034.mp3"
+  },
+  {
+   "rank": 39,
+   "ar": "يَوْمِ",
+   "ar_norm": "يوم",
+   "translit": "yawmi",
+   "gloss": "(of the) Day",
+   "count": 213,
+   "ref": "1:4",
+   "audio": "wbw/001_004_002.mp3"
+  },
+  {
+   "rank": 40,
+   "ar": "فِيهَآ",
+   "ar_norm": "فيها",
+   "translit": "fīhā",
+   "gloss": "therein",
+   "count": 207,
+   "ref": "2:25",
+   "audio": "wbw/002_025_033.mp3"
+  },
+  {
+   "rank": 41,
+   "ar": "عَلَيْهِمْ",
+   "ar_norm": "عليهم",
+   "translit": "ʿalayhim",
+   "gloss": "on them",
+   "count": 193,
+   "ref": "1:7",
+   "audio": "wbw/001_007_004.mp3"
+  },
+  {
+   "rank": 42,
+   "ar": "رَبُّكَ",
+   "ar_norm": "ربك",
+   "translit": "rabbuka",
+   "gloss": "your Lord",
+   "count": 193,
+   "ref": "2:30",
+   "audio": "wbw/002_030_003.mp3"
+  },
+  {
+   "rank": 43,
+   "ar": "كُنتُمْ",
+   "ar_norm": "كنتم",
+   "translit": "kuntum",
+   "gloss": "you are",
+   "count": 186,
+   "ref": "2:23",
+   "audio": "wbw/002_023_002.mp3"
+  },
+  {
+   "rank": 44,
+   "ar": "ٱلسَّمَـٰوَٰتِ",
+   "ar_norm": "لسموت",
+   "translit": "l-samāwāti",
+   "gloss": "(of) the heavens",
+   "count": 181,
+   "ref": "2:33",
+   "audio": "wbw/002_033_016.mp3"
+  },
+  {
+   "rank": 45,
+   "ar": "كَفَرُوا۟",
+   "ar_norm": "كفروا",
+   "translit": "kafarū",
+   "gloss": "disbelieve[d]",
+   "count": 178,
+   "ref": "2:6",
+   "audio": "wbw/002_006_003.mp3"
+  },
+  {
+   "rank": 46,
+   "ar": "لَمْ",
+   "ar_norm": "لم",
+   "translit": "lam",
+   "gloss": "not",
+   "count": 178,
+   "ref": "2:6",
+   "audio": "wbw/002_006_008.mp3"
+  },
+  {
+   "rank": 47,
+   "ar": "هَـٰذَا",
+   "ar_norm": "هذا",
+   "translit": "hādhā",
+   "gloss": "This (is)",
+   "count": 177,
+   "ref": "2:25",
+   "audio": "wbw/002_025_022.mp3"
+  },
+  {
+   "rank": 48,
+   "ar": "ٱلنَّاسِ",
+   "ar_norm": "لناس",
+   "translit": "l-nāsi",
+   "gloss": "the people",
+   "count": 173,
+   "ref": "2:8",
+   "audio": "wbw/002_008_002.mp3"
+  },
+  {
+   "rank": 49,
+   "ar": "وَهُوَ",
+   "ar_norm": "وهو",
+   "translit": "wahuwa",
+   "gloss": "And He",
+   "count": 169,
+   "ref": "2:29",
+   "audio": "wbw/002_029_017.mp3"
+  },
+  {
+   "rank": 50,
+   "ar": "فَإِن",
+   "ar_norm": "فإن",
+   "translit": "fa-in",
+   "gloss": "But if",
+   "count": 168,
+   "ref": "2:24",
+   "audio": "wbw/002_024_001.mp3"
+  },
+  {
+   "rank": 51,
+   "ar": "وَٱلَّذِينَ",
+   "ar_norm": "ولذين",
+   "translit": "wa-alladhīna",
+   "gloss": "And those who",
+   "count": 164,
+   "ref": "2:4",
+   "audio": "wbw/002_004_001.mp3"
+  },
+  {
+   "rank": 52,
+   "ar": "شَىْءٍۢ",
+   "ar_norm": "شىء",
+   "translit": "shayin",
+   "gloss": "thing",
+   "count": 164,
+   "ref": "2:20",
+   "audio": "wbw/002_020_027.mp3"
+  },
+  {
+   "rank": 53,
+   "ar": "إِذْ",
+   "ar_norm": "إذ",
+   "translit": "idh",
+   "gloss": "When",
+   "count": 164,
+   "ref": "2:131",
+   "audio": "wbw/002_131_001.mp3"
+  },
+  {
+   "rank": 54,
+   "ar": "ٱلْكِتَـٰبُ",
+   "ar_norm": "لكتب",
+   "translit": "l-kitābu",
+   "gloss": "(is) the book",
+   "count": 156,
+   "ref": "2:2",
+   "audio": "wbw/002_002_002.mp3"
+  },
+  {
+   "rank": 55,
+   "ar": "فَلَا",
+   "ar_norm": "فلا",
+   "translit": "falā",
+   "gloss": "So (do) not",
+   "count": 155,
+   "ref": "2:22",
+   "audio": "wbw/002_022_019.mp3"
+  },
+  {
+   "rank": 56,
+   "ar": "إِنَّا",
+   "ar_norm": "إنا",
+   "translit": "innā",
+   "gloss": "Indeed, we",
+   "count": 154,
+   "ref": "2:14",
+   "audio": "wbw/002_014_012.mp3"
+  },
+  {
+   "rank": 57,
+   "ar": "عَذَابٌ",
+   "ar_norm": "عذاب",
+   "translit": "ʿadhābun",
+   "gloss": "(is) a punishment",
+   "count": 150,
+   "ref": "2:7",
+   "audio": "wbw/002_007_013.mp3"
+  },
+  {
+   "rank": 58,
+   "ar": "عَلَيْكُمْ",
+   "ar_norm": "عليكم",
+   "translit": "ʿalaykum",
+   "gloss": "upon you",
+   "count": 150,
+   "ref": "2:40",
+   "audio": "wbw/002_040_007.mp3"
+  },
+  {
+   "rank": 59,
+   "ar": "إِنَّهُۥ",
+   "ar_norm": "إنه",
+   "translit": "innahu",
+   "gloss": "Indeed He",
+   "count": 147,
+   "ref": "2:37",
+   "audio": "wbw/002_037_009.mp3"
+  },
+  {
+   "rank": 60,
+   "ar": "بَعْدِ",
+   "ar_norm": "بعد",
+   "translit": "baʿdi",
+   "gloss": "after",
+   "count": 146,
+   "ref": "2:27",
+   "audio": "wbw/002_027_006.mp3"
+  },
+  {
+   "rank": 61,
+   "ar": "حَتَّىٰ",
+   "ar_norm": "حتى",
+   "translit": "ḥattā",
+   "gloss": "until",
+   "count": 142,
+   "ref": "2:55",
+   "audio": "wbw/002_055_007.mp3"
+  },
+  {
+   "rank": 62,
+   "ar": "وَهُمْ",
+   "ar_norm": "وهم",
+   "translit": "wahum",
+   "gloss": "and they",
+   "count": 137,
+   "ref": "2:25",
+   "audio": "wbw/002_025_037.mp3"
+  },
+  {
+   "rank": 63,
+   "ar": "يَـٰٓأَيُّهَا",
+   "ar_norm": "يأيها",
+   "translit": "yāayyuhā",
+   "gloss": "O",
+   "count": 134,
+   "ref": "2:21",
+   "audio": "wbw/002_021_001.mp3"
+  },
+  {
+   "rank": 64,
+   "ar": "مِّنْهُمْ",
+   "ar_norm": "منهم",
+   "translit": "min'hum",
+   "gloss": "of them",
+   "count": 134,
+   "ref": "2:75",
+   "audio": "wbw/002_075_009.mp3"
+  },
+  {
+   "rank": 65,
+   "ar": "عَلَيْهِ",
+   "ar_norm": "عليه",
+   "translit": "ʿalayhi",
+   "gloss": "on him",
+   "count": 134,
+   "ref": "2:158",
+   "audio": "wbw/002_158_016.mp3"
+  },
+  {
+   "rank": 66,
+   "ar": "أُو۟لَـٰٓئِكَ",
+   "ar_norm": "أولئك",
+   "translit": "ulāika",
+   "gloss": "Those",
+   "count": 133,
+   "ref": "2:5",
+   "audio": "wbw/002_005_001.mp3"
+  },
+  {
+   "rank": 67,
+   "ar": "إِنِّى",
+   "ar_norm": "إنى",
+   "translit": "innī",
+   "gloss": "Indeed, I (am)",
+   "count": 131,
+   "ref": "2:30",
+   "audio": "wbw/002_030_005.mp3"
+  },
+  {
+   "rank": 68,
+   "ar": "أَمْ",
+   "ar_norm": "أم",
+   "translit": "am",
+   "gloss": "or",
+   "count": 130,
+   "ref": "2:6",
+   "audio": "wbw/002_006_007.mp3"
+  },
+  {
+   "rank": 69,
+   "ar": "وَإِذَا",
+   "ar_norm": "وإذا",
+   "translit": "wa-idhā",
+   "gloss": "And when",
+   "count": 130,
+   "ref": "2:11",
+   "audio": "wbw/002_011_001.mp3"
+  },
+  {
+   "rank": 70,
+   "ar": "بِٱللَّهِ",
+   "ar_norm": "بلله",
+   "translit": "bil-lahi",
+   "gloss": "in Allah",
+   "count": 128,
+   "ref": "2:8",
+   "audio": "wbw/002_008_006.mp3"
+  },
+  {
+   "rank": 71,
+   "ar": "رَبِّ",
+   "ar_norm": "رب",
+   "translit": "rabbi",
+   "gloss": "the Lord",
+   "count": 127,
+   "ref": "1:2",
+   "audio": "wbw/001_002_003.mp3"
+  },
+  {
+   "rank": 72,
+   "ar": "بَل",
+   "ar_norm": "بل",
+   "translit": "bal",
+   "gloss": "Nay",
+   "count": 126,
+   "ref": "2:88",
+   "audio": "wbw/002_088_005.mp3"
+  },
+  {
+   "rank": 73,
+   "ar": "قَدْ",
+   "ar_norm": "قد",
+   "translit": "qad",
+   "gloss": "Indeed",
+   "count": 125,
+   "ref": "2:60",
+   "audio": "wbw/002_060_017.mp3"
+  },
+  {
+   "rank": 74,
+   "ar": "وَلَقَدْ",
+   "ar_norm": "ولقد",
+   "translit": "walaqad",
+   "gloss": "And indeed",
+   "count": 122,
+   "ref": "2:65",
+   "audio": "wbw/002_065_001.mp3"
+  },
+  {
+   "rank": 75,
+   "ar": "عِندَ",
+   "ar_norm": "عند",
+   "translit": "ʿinda",
+   "gloss": "with",
+   "count": 119,
+   "ref": "2:54",
+   "audio": "wbw/002_054_019.mp3"
+  },
+  {
+   "rank": 76,
+   "ar": "وَلَـٰكِن",
+   "ar_norm": "ولكن",
+   "translit": "walākin",
+   "gloss": "[and] but",
+   "count": 112,
+   "ref": "2:12",
+   "audio": "wbw/002_012_005.mp3"
+  },
+  {
+   "rank": 77,
+   "ar": "لِقَوْمٍۢ",
+   "ar_norm": "لقوم",
+   "translit": "liqawmin",
+   "gloss": "for people",
+   "count": 112,
+   "ref": "2:118",
+   "audio": "wbw/002_118_026.mp3"
+  },
+  {
+   "rank": 78,
+   "ar": "مِّمَّا",
+   "ar_norm": "مما",
+   "translit": "mimmā",
+   "gloss": "about what",
+   "count": 111,
+   "ref": "2:23",
+   "audio": "wbw/002_023_005.mp3"
+  },
+  {
+   "rank": 79,
+   "ar": "إِنَّمَا",
+   "ar_norm": "إنما",
+   "translit": "innamā",
+   "gloss": "Only",
+   "count": 110,
+   "ref": "2:11",
+   "audio": "wbw/002_011_009.mp3"
+  },
+  {
+   "rank": 80,
+   "ar": "خَيْرٌۭ",
+   "ar_norm": "خير",
+   "translit": "khayrun",
+   "gloss": "(is) better",
+   "count": 108,
+   "ref": "2:54",
+   "audio": "wbw/002_054_017.mp3"
+  },
+  {
+   "rank": 81,
+   "ar": "وَلَوْ",
+   "ar_norm": "ولو",
+   "translit": "walaw",
+   "gloss": "And if",
+   "count": 106,
+   "ref": "2:20",
+   "audio": "wbw/002_020_016.mp3"
+  },
+  {
+   "rank": 82,
+   "ar": "عَلِيمٌۭ",
+   "ar_norm": "عليم",
+   "translit": "ʿalīmun",
+   "gloss": "(is) All-Knowing",
+   "count": 106,
+   "ref": "2:29",
+   "audio": "wbw/002_029_020.mp3"
+  },
+  {
+   "rank": 83,
+   "ar": "وَٱلْأَرْضِ",
+   "ar_norm": "ولأرض",
+   "translit": "wal-arḍi",
+   "gloss": "and the earth",
+   "count": 104,
+   "ref": "2:33",
+   "audio": "wbw/002_033_017.mp3"
+  },
+  {
+   "rank": 84,
+   "ar": "مُوسَىٰٓ",
+   "ar_norm": "موسى",
+   "translit": "mūsā",
+   "gloss": "(for) Musa",
+   "count": 103,
+   "ref": "2:51",
+   "audio": "wbw/002_051_003.mp3"
+  },
+  {
+   "rank": 85,
+   "ar": "ٱلسَّمَآءِ",
+   "ar_norm": "لسماء",
+   "translit": "l-samāi",
+   "gloss": "the sky",
+   "count": 101,
+   "ref": "2:19",
+   "audio": "wbw/002_019_004.mp3"
+  },
+  {
+   "rank": 86,
+   "ar": "رَبَّنَا",
+   "ar_norm": "ربنا",
+   "translit": "rabbanā",
+   "gloss": "(saying), \"Our Lord",
+   "count": 101,
+   "ref": "2:127",
+   "audio": "wbw/002_127_008.mp3"
+  },
+  {
+   "rank": 87,
+   "ar": "أَلَآ",
+   "ar_norm": "ألا",
+   "translit": "alā",
+   "gloss": "Beware",
+   "count": 99,
+   "ref": "2:12",
+   "audio": "wbw/002_012_001.mp3"
+  },
+  {
+   "rank": 88,
+   "ar": "فَلَمَّآ",
+   "ar_norm": "فلما",
+   "translit": "falammā",
+   "gloss": "then, when",
+   "count": 99,
+   "ref": "2:17",
+   "audio": "wbw/002_017_006.mp3"
+  },
+  {
+   "rank": 89,
+   "ar": "فِيهِ",
+   "ar_norm": "فيه",
+   "translit": "fīhi",
+   "gloss": "in it (are)",
+   "count": 98,
+   "ref": "2:19",
+   "audio": "wbw/002_019_005.mp3"
+  },
+  {
+   "rank": 90,
+   "ar": "ٱلْمَنَّ",
+   "ar_norm": "لمن",
+   "translit": "l-mana",
+   "gloss": "[the] manna",
+   "count": 97,
+   "ref": "2:57",
+   "audio": "wbw/002_057_006.mp3"
+  },
+  {
+   "rank": 91,
+   "ar": "أُنزِلَ",
+   "ar_norm": "أنزل",
+   "translit": "unzila",
+   "gloss": "(is) sent down",
+   "count": 95,
+   "ref": "2:4",
+   "audio": "wbw/002_004_004.mp3"
+  },
+  {
+   "rank": 92,
+   "ar": "مِنكُمْ",
+   "ar_norm": "منكم",
+   "translit": "minkum",
+   "gloss": "among you",
+   "count": 94,
+   "ref": "2:65",
+   "audio": "wbw/002_065_005.mp3"
+  },
+  {
+   "rank": 93,
+   "ar": "ٱلدُّنْيَا",
+   "ar_norm": "لدنيا",
+   "translit": "l-dun'yā",
+   "gloss": "(of) the world",
+   "count": 92,
+   "ref": "2:86",
+   "audio": "wbw/002_086_005.mp3"
+  },
+  {
+   "rank": 94,
+   "ar": "قَبْلُ",
+   "ar_norm": "قبل",
+   "translit": "qablu",
+   "gloss": "before",
+   "count": 92,
+   "ref": "2:89",
+   "audio": "wbw/002_089_012.mp3"
+  },
+  {
+   "rank": 95,
+   "ar": "دُونِ",
+   "ar_norm": "دون",
+   "translit": "dūni",
+   "gloss": "other than",
+   "count": 91,
+   "ref": "2:23",
+   "audio": "wbw/002_023_016.mp3"
+  },
+  {
+   "rank": 96,
+   "ar": "خَلَقَ",
+   "ar_norm": "خلق",
+   "translit": "khalaqa",
+   "gloss": "created",
+   "count": 91,
+   "ref": "2:29",
+   "audio": "wbw/002_029_003.mp3"
+  },
+  {
+   "rank": 97,
+   "ar": "فَمَن",
+   "ar_norm": "فمن",
+   "translit": "faman",
+   "gloss": "then whoever",
+   "count": 89,
+   "ref": "2:38",
+   "audio": "wbw/002_038_010.mp3"
+  },
+  {
+   "rank": 98,
+   "ar": "رَبِّهِمْ",
+   "ar_norm": "ربهم",
+   "translit": "rabbihim",
+   "gloss": "their Lord",
+   "count": 89,
+   "ref": "2:46",
+   "audio": "wbw/002_046_005.mp3"
+  },
+  {
+   "rank": 99,
+   "ar": "فَإِذَآ",
+   "ar_norm": "فإذا",
+   "translit": "fa-idhā",
+   "gloss": "Then when",
+   "count": 87,
+   "ref": "2:196",
+   "audio": "wbw/002_196_038.mp3"
+  },
+  {
+   "rank": 100,
+   "ar": "يُؤْمِنُونَ",
+   "ar_norm": "يؤمنون",
+   "translit": "yu'minūna",
+   "gloss": "believe",
+   "count": 86,
+   "ref": "2:3",
+   "audio": "wbw/002_003_002.mp3"
+  },
+  {
+   "rank": 101,
+   "ar": "سَبِيلِ",
+   "ar_norm": "سبيل",
+   "translit": "sabīli",
+   "gloss": "(the) way",
+   "count": 86,
+   "ref": "2:154",
+   "audio": "wbw/002_154_006.mp3"
+  },
+  {
+   "rank": 102,
+   "ar": "فَمَا",
+   "ar_norm": "فما",
+   "translit": "famā",
+   "gloss": "So not",
+   "count": 84,
+   "ref": "2:16",
+   "audio": "wbw/002_016_006.mp3"
+  },
+  {
+   "rank": 103,
+   "ar": "ٱلْحَقُّ",
+   "ar_norm": "لحق",
+   "translit": "l-ḥaqu",
+   "gloss": "(is) the truth",
+   "count": 84,
+   "ref": "2:26",
+   "audio": "wbw/002_026_019.mp3"
+  },
+  {
+   "rank": 104,
+   "ar": "وَكَانَ",
+   "ar_norm": "وكان",
+   "translit": "wakāna",
+   "gloss": "and became",
+   "count": 84,
+   "ref": "2:34",
+   "audio": "wbw/002_034_011.mp3"
+  },
+  {
+   "rank": 105,
+   "ar": "كَذَٰلِكَ",
+   "ar_norm": "كذلك",
+   "translit": "kadhālika",
+   "gloss": "Like this",
+   "count": 84,
+   "ref": "2:73",
+   "audio": "wbw/002_073_005.mp3"
+  },
+  {
+   "rank": 106,
+   "ar": "مُّبِينٌ",
+   "ar_norm": "مبين",
+   "translit": "mubīnun",
+   "gloss": "clear",
+   "count": 84,
+   "ref": "2:168",
+   "audio": "wbw/002_168_017.mp3"
+  },
+  {
+   "rank": 107,
+   "ar": "تَعْمَلُونَ",
+   "ar_norm": "تعملون",
+   "translit": "taʿmalūna",
+   "gloss": "you do",
+   "count": 82,
+   "ref": "2:74",
+   "audio": "wbw/002_074_041.mp3"
+  },
+  {
+   "rank": 108,
+   "ar": "رَبِّىَ",
+   "ar_norm": "ربى",
+   "translit": "rabbiya",
+   "gloss": "My Lord",
+   "count": 82,
+   "ref": "2:258",
+   "audio": "wbw/002_258_016.mp3"
+  },
+  {
+   "rank": 109,
+   "ar": "يَعْلَمُونَ",
+   "ar_norm": "يعلمون",
+   "translit": "yaʿlamūna",
+   "gloss": "they know",
+   "count": 81,
+   "ref": "2:13",
+   "audio": "wbw/002_013_020.mp3"
+  },
+  {
+   "rank": 110,
+   "ar": "رَبَّكُمُ",
+   "ar_norm": "ربكم",
+   "translit": "rabbakumu",
+   "gloss": "your Lord",
+   "count": 81,
+   "ref": "2:21",
+   "audio": "wbw/002_021_004.mp3"
+  },
+  {
+   "rank": 111,
+   "ar": "وَقَالَ",
+   "ar_norm": "وقال",
+   "translit": "waqāla",
+   "gloss": "And said",
+   "count": 81,
+   "ref": "2:118",
+   "audio": "wbw/002_118_001.mp3"
+  },
+  {
+   "rank": 112,
+   "ar": "بَيْنَ",
+   "ar_norm": "بين",
+   "translit": "bayna",
+   "gloss": "(in) front",
+   "count": 79,
+   "ref": "2:66",
+   "audio": "wbw/002_066_004.mp3"
+  },
+  {
+   "rank": 113,
+   "ar": "لِّلَّذِينَ",
+   "ar_norm": "للذين",
+   "translit": "lilladhīna",
+   "gloss": "to those who",
+   "count": 79,
+   "ref": "2:79",
+   "audio": "wbw/002_079_002.mp3"
+  },
+  {
+   "rank": 114,
+   "ar": "لَوْ",
+   "ar_norm": "لو",
+   "translit": "law",
+   "gloss": "if",
+   "count": 79,
+   "ref": "2:96",
+   "audio": "wbw/002_096_012.mp3"
+  },
+  {
+   "rank": 115,
+   "ar": "قَوْمٍۢ",
+   "ar_norm": "قوم",
+   "translit": "qawmin",
+   "gloss": "(of) a people",
+   "count": 79,
+   "ref": "3:117",
+   "audio": "wbw/003_117_014.mp3"
+  },
+  {
+   "rank": 116,
+   "ar": "ٱلنَّارَ",
+   "ar_norm": "لنار",
+   "translit": "l-nāra",
+   "gloss": "the Fire",
+   "count": 76,
+   "ref": "2:24",
+   "audio": "wbw/002_024_007.mp3"
+  },
+  {
+   "rank": 117,
+   "ar": "لَنَآ",
+   "ar_norm": "لنا",
+   "translit": "lanā",
+   "gloss": "(is) for us",
+   "count": 76,
+   "ref": "2:32",
+   "audio": "wbw/002_032_005.mp3"
+  },
+  {
+   "rank": 118,
+   "ar": "أَنتُمْ",
+   "ar_norm": "أنتم",
+   "translit": "antum",
+   "gloss": "you",
+   "count": 76,
+   "ref": "2:85",
+   "audio": "wbw/002_085_002.mp3"
+  },
+  {
+   "rank": 119,
+   "ar": "لِّمَا",
+   "ar_norm": "لما",
+   "translit": "limā",
+   "gloss": "that which",
+   "count": 74,
+   "ref": "2:41",
+   "audio": "wbw/002_041_005.mp3"
+  },
+  {
+   "rank": 120,
+   "ar": "مِنْهَا",
+   "ar_norm": "منها",
+   "translit": "min'hā",
+   "gloss": "therefrom",
+   "count": 72,
+   "ref": "2:25",
+   "audio": "wbw/002_025_016.mp3"
+  },
+  {
+   "rank": 121,
+   "ar": "أَلَمْ",
+   "ar_norm": "ألم",
+   "translit": "alam",
+   "gloss": "Did not",
+   "count": 72,
+   "ref": "2:33",
+   "audio": "wbw/002_033_010.mp3"
+  },
+  {
+   "rank": 122,
+   "ar": "ٱلْعَذَابِ",
+   "ar_norm": "لعذاب",
+   "translit": "l-ʿadhābi",
+   "gloss": "torment",
+   "count": 72,
+   "ref": "2:49",
+   "audio": "wbw/002_049_008.mp3"
+  },
+  {
+   "rank": 123,
+   "ar": "مِنْهُ",
+   "ar_norm": "منه",
+   "translit": "min'hu",
+   "gloss": "from it",
+   "count": 72,
+   "ref": "2:60",
+   "audio": "wbw/002_060_012.mp3"
+  },
+  {
+   "rank": 124,
+   "ar": "يَعْلَمُ",
+   "ar_norm": "يعلم",
+   "translit": "yaʿlamu",
+   "gloss": "knows",
+   "count": 71,
+   "ref": "2:77",
+   "audio": "wbw/002_077_005.mp3"
+  },
+  {
+   "rank": 125,
+   "ar": "إِلَـٰهٌۭ",
+   "ar_norm": "إله",
+   "translit": "ilāhun",
+   "gloss": "(is) God",
+   "count": 71,
+   "ref": "2:163",
+   "audio": "wbw/002_163_002.mp3"
+  },
+  {
+   "rank": 126,
+   "ar": "ٱلْمُؤْمِنِينَ",
+   "ar_norm": "لمؤمنين",
+   "translit": "l-mu'minīna",
+   "gloss": "(to) the believers",
+   "count": 70,
+   "ref": "2:223",
+   "audio": "wbw/002_223_019.mp3"
+  },
+  {
+   "rank": 127,
+   "ar": "غَيْرِ",
+   "ar_norm": "غير",
+   "translit": "ghayri",
+   "gloss": "not (of)",
+   "count": 69,
+   "ref": "1:7",
+   "audio": "wbw/001_007_005.mp3"
+  },
+  {
+   "rank": 128,
+   "ar": "وَإِذْ",
+   "ar_norm": "وإذ",
+   "translit": "wa-idh",
+   "gloss": "And when",
+   "count": 68,
+   "ref": "2:30",
+   "audio": "wbw/002_030_001.mp3"
+  },
+  {
+   "rank": 129,
+   "ar": "وَأَنَّ",
+   "ar_norm": "وأن",
+   "translit": "wa-anna",
+   "gloss": "and [that]",
+   "count": 68,
+   "ref": "2:165",
+   "audio": "wbw/002_165_030.mp3"
+  },
+  {
+   "rank": 130,
+   "ar": "لَكَ",
+   "ar_norm": "لك",
+   "translit": "laka",
+   "gloss": "in you",
+   "count": 67,
+   "ref": "2:55",
+   "audio": "wbw/002_055_006.mp3"
+  },
+  {
+   "rank": 131,
+   "ar": "عَنْهُمُ",
+   "ar_norm": "عنهم",
+   "translit": "ʿanhumu",
+   "gloss": "for them",
+   "count": 67,
+   "ref": "2:86",
+   "audio": "wbw/002_086_010.mp3"
+  },
+  {
+   "rank": 132,
+   "ar": "هَلْ",
+   "ar_norm": "هل",
+   "translit": "hal",
+   "gloss": "Are",
+   "count": 67,
+   "ref": "2:210",
+   "audio": "wbw/002_210_001.mp3"
+  },
+  {
+   "rank": 133,
+   "ar": "إِلَيْهِ",
+   "ar_norm": "إليه",
+   "translit": "ilayhi",
+   "gloss": "to Him",
+   "count": 66,
+   "ref": "2:28",
+   "audio": "wbw/002_028_013.mp3"
+  },
+  {
+   "rank": 134,
+   "ar": "نَحْنُ",
+   "ar_norm": "نحن",
+   "translit": "naḥnu",
+   "gloss": "we",
+   "count": 65,
+   "ref": "2:11",
+   "audio": "wbw/002_011_010.mp3"
+  },
+  {
+   "rank": 135,
+   "ar": "ٱلَّتِى",
+   "ar_norm": "لتى",
+   "translit": "allatī",
+   "gloss": "whose",
+   "count": 65,
+   "ref": "2:24",
+   "audio": "wbw/002_024_008.mp3"
+  },
+  {
+   "rank": 136,
+   "ar": "أَنَا۠",
+   "ar_norm": "أنا",
+   "translit": "anā",
+   "gloss": "I",
+   "count": 65,
+   "ref": "2:258",
+   "audio": "wbw/002_258_021.mp3"
+  },
+  {
+   "rank": 137,
+   "ar": "ٱلظَّـٰلِمِينَ",
+   "ar_norm": "لظلمين",
+   "translit": "l-ẓālimīna",
+   "gloss": "the wrongdoers",
+   "count": 64,
+   "ref": "2:35",
+   "audio": "wbw/002_035_018.mp3"
+  },
+  {
+   "rank": 138,
+   "ar": "يَشَآءُ",
+   "ar_norm": "يشاء",
+   "translit": "yashāu",
+   "gloss": "He wills",
+   "count": 64,
+   "ref": "2:90",
+   "audio": "wbw/002_090_018.mp3"
+  },
+  {
+   "rank": 139,
+   "ar": "ٱلْعَزِيزُ",
+   "ar_norm": "لعزيز",
+   "translit": "l-ʿazīzu",
+   "gloss": "the All-Mighty",
+   "count": 64,
+   "ref": "2:129",
+   "audio": "wbw/002_129_016.mp3"
+  },
+  {
+   "rank": 140,
+   "ar": "يَوْمَئِذٍ",
+   "ar_norm": "يومئذ",
+   "translit": "yawma-idhin",
+   "gloss": "that day",
+   "count": 64,
+   "ref": "3:167",
+   "audio": "wbw/003_167_023.mp3"
+  },
+  {
+   "rank": 141,
+   "ar": "إِنَّهُمْ",
+   "ar_norm": "إنهم",
+   "translit": "innahum",
+   "gloss": "indeed they",
+   "count": 63,
+   "ref": "2:12",
+   "audio": "wbw/002_012_002.mp3"
+  },
+  {
+   "rank": 142,
+   "ar": "لَن",
+   "ar_norm": "لن",
+   "translit": "lan",
+   "gloss": "Never",
+   "count": 63,
+   "ref": "2:55",
+   "audio": "wbw/002_055_004.mp3"
+  },
+  {
+   "rank": 143,
+   "ar": "ٱلْحَيَوٰةِ",
+   "ar_norm": "لحيوة",
+   "translit": "l-ḥayati",
+   "gloss": "the life",
+   "count": 63,
+   "ref": "2:85",
+   "audio": "wbw/002_085_039.mp3"
+  },
+  {
+   "rank": 144,
+   "ar": "كِتَـٰبٌۭ",
+   "ar_norm": "كتب",
+   "translit": "kitābun",
+   "gloss": "a Book",
+   "count": 63,
+   "ref": "2:89",
+   "audio": "wbw/002_089_003.mp3"
+  },
+  {
+   "rank": 145,
+   "ar": "لِى",
+   "ar_norm": "لى",
+   "translit": "lī",
+   "gloss": "to Me",
+   "count": 63,
+   "ref": "2:152",
+   "audio": "wbw/002_152_004.mp3"
+  },
+  {
+   "rank": 146,
+   "ar": "كُنَّا",
+   "ar_norm": "كنا",
+   "translit": "kunnā",
+   "gloss": "We were",
+   "count": 63,
+   "ref": "4:97",
+   "audio": "wbw/004_097_012.mp3"
+  },
+  {
+   "rank": 147,
+   "ar": "جَنَّـٰتٍۢ",
+   "ar_norm": "جنت",
+   "translit": "jannātin",
+   "gloss": "(will be) Gardens",
+   "count": 62,
+   "ref": "2:25",
+   "audio": "wbw/002_025_008.mp3"
+  },
+  {
+   "rank": 148,
+   "ar": "كَيْفَ",
+   "ar_norm": "كيف",
+   "translit": "kayfa",
+   "gloss": "How",
+   "count": 62,
+   "ref": "2:28",
+   "audio": "wbw/002_028_001.mp3"
+  },
+  {
+   "rank": 149,
+   "ar": "أَصْحَـٰبُ",
+   "ar_norm": "أصحب",
+   "translit": "aṣḥābu",
+   "gloss": "(are the) companions",
+   "count": 62,
+   "ref": "2:39",
+   "audio": "wbw/002_039_006.mp3"
+  },
+  {
+   "rank": 150,
+   "ar": "ٱلْعَـٰلَمِينَ",
+   "ar_norm": "لعلمين",
+   "translit": "l-ʿālamīna",
+   "gloss": "of the universe",
+   "count": 61,
+   "ref": "1:2",
+   "audio": "wbw/001_002_004.mp3"
+  }
+ ]
+}

@@ -1,0 +1,3008 @@
+{
+ "id": 54,
+ "name_simple": "Al-Qamar",
+ "name_arabic": "القمر",
+ "verses_count": 55,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 4847,
+   "text": "ٱقْتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلْقَمَرُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱقْتَرَبَتِ",
+     "translit": "iq'tarabati",
+     "gloss": "Has come near",
+     "audio": "wbw/054_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلسَّاعَةُ",
+     "translit": "l-sāʿatu",
+     "gloss": "the Hour",
+     "audio": "wbw/054_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَٱنشَقَّ",
+     "translit": "wa-inshaqqa",
+     "gloss": "and has split",
+     "audio": "wbw/054_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْقَمَرُ",
+     "translit": "l-qamaru",
+     "gloss": "the moon",
+     "audio": "wbw/054_001_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The Hour has come near, and the moon has split [in two].",
+    "pickthall": "The hour drew nigh and the moon was rent in twain."
+   }
+  },
+  {
+   "n": 2,
+   "global": 4848,
+   "text": "وَإِن يَرَوْا۟ ءَايَةً يُعْرِضُوا۟ وَيَقُولُوا۟ سِحْرٌ مُّسْتَمِرٌّ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَإِن",
+     "translit": "wa-in",
+     "gloss": "And if",
+     "audio": "wbw/054_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَرَوْا۟",
+     "translit": "yaraw",
+     "gloss": "they see",
+     "audio": "wbw/054_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ءَايَةًۭ",
+     "translit": "āyatan",
+     "gloss": "a Sign",
+     "audio": "wbw/054_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "يُعْرِضُوا۟",
+     "translit": "yuʿ'riḍū",
+     "gloss": "they turn away",
+     "audio": "wbw/054_002_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَيَقُولُوا۟",
+     "translit": "wayaqūlū",
+     "gloss": "and say",
+     "audio": "wbw/054_002_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "سِحْرٌۭ",
+     "translit": "siḥ'run",
+     "gloss": "Magic",
+     "audio": "wbw/054_002_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "مُّسْتَمِرٌّۭ",
+     "translit": "mus'tamirrun",
+     "gloss": "continuing",
+     "audio": "wbw/054_002_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And if they see a sign [i.e., miracle], they turn away and say, \"Passing magic.\"",
+    "pickthall": "And if they behold a portent they turn away and say: Prolonged illusion."
+   }
+  },
+  {
+   "n": 3,
+   "global": 4849,
+   "text": "وَكَذَّبُوا۟ وَٱتَّبَعُوٓا۟ أَهْوَآءَهُمْ ۚ وَكُلُّ أَمْرٍ مُّسْتَقِرٌّ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَكَذَّبُوا۟",
+     "translit": "wakadhabū",
+     "gloss": "And they denied",
+     "audio": "wbw/054_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَٱتَّبَعُوٓا۟",
+     "translit": "wa-ittabaʿū",
+     "gloss": "and followed",
+     "audio": "wbw/054_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَهْوَآءَهُمْ ۚ",
+     "translit": "ahwāahum",
+     "gloss": "their desires",
+     "audio": "wbw/054_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَكُلُّ",
+     "translit": "wakullu",
+     "gloss": "but (for) every",
+     "audio": "wbw/054_003_005.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "أَمْرٍۢ",
+     "translit": "amrin",
+     "gloss": "matter",
+     "audio": "wbw/054_003_006.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مُّسْتَقِرٌّۭ",
+     "translit": "mus'taqirrun",
+     "gloss": "(will be a) settlement",
+     "audio": "wbw/054_003_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And they denied and followed their inclinations. But for every matter is a [time of] settlement.",
+    "pickthall": "They denied (the Truth) and followed their own lusts. Yet everything will come to a decision"
+   }
+  },
+  {
+   "n": 4,
+   "global": 4850,
+   "text": "وَلَقَدْ جَآءَهُم مِّنَ ٱلْأَنۢبَآءِ مَا فِيهِ مُزْدَجَرٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَقَدْ",
+     "translit": "walaqad",
+     "gloss": "And certainly",
+     "audio": "wbw/054_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "جَآءَهُم",
+     "translit": "jāahum",
+     "gloss": "has come to them",
+     "audio": "wbw/054_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مِّنَ",
+     "translit": "mina",
+     "gloss": "of",
+     "audio": "wbw/054_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْأَنۢبَآءِ",
+     "translit": "l-anbāi",
+     "gloss": "the information",
+     "audio": "wbw/054_004_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "wherein",
+     "audio": "wbw/054_004_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "فِيهِ",
+     "translit": "fīhi",
+     "gloss": "wherein",
+     "audio": "wbw/054_004_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "مُزْدَجَرٌ",
+     "translit": "muz'dajarun",
+     "gloss": "(is) deterrence",
+     "audio": "wbw/054_004_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And there has already come to them of information that in which there is deterrence.",
+    "pickthall": "And surely there hath come unto them news whereof the purport should deter,"
+   }
+  },
+  {
+   "n": 5,
+   "global": 4851,
+   "text": "حِكْمَةٌۢ بَـٰلِغَةٌ ۖ فَمَا تُغْنِ ٱلنُّذُرُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "حِكْمَةٌۢ",
+     "translit": "ḥik'matun",
+     "gloss": "Wisdom",
+     "audio": "wbw/054_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "بَـٰلِغَةٌۭ ۖ",
+     "translit": "bālighatun",
+     "gloss": "perfect",
+     "audio": "wbw/054_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَمَا",
+     "translit": "famā",
+     "gloss": "but not",
+     "audio": "wbw/054_005_004.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُغْنِ",
+     "translit": "tugh'ni",
+     "gloss": "will avail",
+     "audio": "wbw/054_005_005.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلنُّذُرُ",
+     "translit": "l-nudhuru",
+     "gloss": "the warnings",
+     "audio": "wbw/054_005_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Extensive wisdom - but warning does not avail [them].",
+    "pickthall": "Effective wisdom; but warnings avail not."
+   }
+  },
+  {
+   "n": 6,
+   "global": 4852,
+   "text": "فَتَوَلَّ عَنْهُمْ ۘ يَوْمَ يَدْعُ ٱلدَّاعِ إِلَىٰ شَىْءٍ نُّكُرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَتَوَلَّ",
+     "translit": "fatawalla",
+     "gloss": "So turn away",
+     "audio": "wbw/054_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَنْهُمْ ۘ",
+     "translit": "ʿanhum",
+     "gloss": "from them",
+     "audio": "wbw/054_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يَوْمَ",
+     "translit": "yawma",
+     "gloss": "(The) Day",
+     "audio": "wbw/054_006_004.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "يَدْعُ",
+     "translit": "yadʿu",
+     "gloss": "will call",
+     "audio": "wbw/054_006_005.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلدَّاعِ",
+     "translit": "l-dāʿi",
+     "gloss": "the caller",
+     "audio": "wbw/054_006_006.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "إِلَىٰ",
+     "translit": "ilā",
+     "gloss": "to",
+     "audio": "wbw/054_006_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "شَىْءٍۢ",
+     "translit": "shayin",
+     "gloss": "a thing",
+     "audio": "wbw/054_006_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "نُّكُرٍ",
+     "translit": "nukurin",
+     "gloss": "terrible",
+     "audio": "wbw/054_006_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So leave them, [O Muḥammad]. The Day the Caller calls to something forbidding,",
+    "pickthall": "So withdraw from them (O Muhammad) on the day when the Summoner summoneth unto a painful thing."
+   }
+  },
+  {
+   "n": 7,
+   "global": 4853,
+   "text": "خُشَّعًا أَبْصَـٰرُهُمْ يَخْرُجُونَ مِنَ ٱلْأَجْدَاثِ كَأَنَّهُمْ جَرَادٌ مُّنتَشِرٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "خُشَّعًا",
+     "translit": "khushaʿan",
+     "gloss": "(Will be) humbled",
+     "audio": "wbw/054_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَبْصَـٰرُهُمْ",
+     "translit": "abṣāruhum",
+     "gloss": "their eyes",
+     "audio": "wbw/054_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يَخْرُجُونَ",
+     "translit": "yakhrujūna",
+     "gloss": "they will come forth",
+     "audio": "wbw/054_007_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِنَ",
+     "translit": "mina",
+     "gloss": "from",
+     "audio": "wbw/054_007_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْأَجْدَاثِ",
+     "translit": "l-ajdāthi",
+     "gloss": "the graves",
+     "audio": "wbw/054_007_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "كَأَنَّهُمْ",
+     "translit": "ka-annahum",
+     "gloss": "as if they (were)",
+     "audio": "wbw/054_007_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "جَرَادٌۭ",
+     "translit": "jarādun",
+     "gloss": "locusts",
+     "audio": "wbw/054_007_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "مُّنتَشِرٌۭ",
+     "translit": "muntashirun",
+     "gloss": "spreading",
+     "audio": "wbw/054_007_008.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Their eyes humbled, they will emerge from the graves as if they were locusts spreading,",
+    "pickthall": "With downcast eyes, they come forth from the graves as they were locusts spread abroad,"
+   }
+  },
+  {
+   "n": 8,
+   "global": 4854,
+   "text": "مُّهْطِعِينَ إِلَى ٱلدَّاعِ ۖ يَقُولُ ٱلْكَـٰفِرُونَ هَـٰذَا يَوْمٌ عَسِرٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مُّهْطِعِينَ",
+     "translit": "muh'ṭiʿīna",
+     "gloss": "Racing ahead",
+     "audio": "wbw/054_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِلَى",
+     "translit": "ilā",
+     "gloss": "towards",
+     "audio": "wbw/054_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلدَّاعِ ۖ",
+     "translit": "l-dāʿi",
+     "gloss": "the caller",
+     "audio": "wbw/054_008_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "يَقُولُ",
+     "translit": "yaqūlu",
+     "gloss": "Will say",
+     "audio": "wbw/054_008_005.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْكَـٰفِرُونَ",
+     "translit": "l-kāfirūna",
+     "gloss": "the disbelievers",
+     "audio": "wbw/054_008_006.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "هَـٰذَا",
+     "translit": "hādhā",
+     "gloss": "This",
+     "audio": "wbw/054_008_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "يَوْمٌ",
+     "translit": "yawmun",
+     "gloss": "(is) a Day",
+     "audio": "wbw/054_008_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "عَسِرٌۭ",
+     "translit": "ʿasirun",
+     "gloss": "difficult",
+     "audio": "wbw/054_008_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Racing ahead toward the Caller. The disbelievers will say, \"This is a difficult Day.\"",
+    "pickthall": "Hastening toward the summoner; the disbelievers say: This is a hard day."
+   }
+  },
+  {
+   "n": 9,
+   "global": 4855,
+   "text": "۞ كَذَّبَتْ قَبْلَهُمْ قَوْمُ نُوحٍ فَكَذَّبُوا۟ عَبْدَنَا وَقَالُوا۟ مَجْنُونٌ وَٱزْدُجِرَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "۞ كَذَّبَتْ",
+     "translit": "kadhabat",
+     "gloss": "Denied",
+     "audio": "wbw/054_009_002.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "قَبْلَهُمْ",
+     "translit": "qablahum",
+     "gloss": "before them",
+     "audio": "wbw/054_009_003.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "قَوْمُ",
+     "translit": "qawmu",
+     "gloss": "(the) people",
+     "audio": "wbw/054_009_004.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "نُوحٍۢ",
+     "translit": "nūḥin",
+     "gloss": "(of) Nuh",
+     "audio": "wbw/054_009_005.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "فَكَذَّبُوا۟",
+     "translit": "fakadhabū",
+     "gloss": "and they denied",
+     "audio": "wbw/054_009_006.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "عَبْدَنَا",
+     "translit": "ʿabdanā",
+     "gloss": "Our slave",
+     "audio": "wbw/054_009_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "وَقَالُوا۟",
+     "translit": "waqālū",
+     "gloss": "and said",
+     "audio": "wbw/054_009_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "مَجْنُونٌۭ",
+     "translit": "majnūnun",
+     "gloss": "A madman",
+     "audio": "wbw/054_009_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "وَٱزْدُجِرَ",
+     "translit": "wa-uz'dujira",
+     "gloss": "and he was repelled",
+     "audio": "wbw/054_009_010.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The people of Noah denied before them, and they denied Our servant and said, \"A madman,\" and he was repelled.",
+    "pickthall": "The folk of Noah denied before them, yea, they denied Our slave and said: A madman; and he was repulsed."
+   }
+  },
+  {
+   "n": 10,
+   "global": 4856,
+   "text": "فَدَعَا رَبَّهُۥٓ أَنِّى مَغْلُوبٌ فَٱنتَصِرْ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَدَعَا",
+     "translit": "fadaʿā",
+     "gloss": "So he called",
+     "audio": "wbw/054_010_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "رَبَّهُۥٓ",
+     "translit": "rabbahu",
+     "gloss": "his Lord",
+     "audio": "wbw/054_010_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَنِّى",
+     "translit": "annī",
+     "gloss": "I am",
+     "audio": "wbw/054_010_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مَغْلُوبٌۭ",
+     "translit": "maghlūbun",
+     "gloss": "one overpowered",
+     "audio": "wbw/054_010_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "فَٱنتَصِرْ",
+     "translit": "fa-intaṣir",
+     "gloss": "so help",
+     "audio": "wbw/054_010_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So he invoked his Lord, \"Indeed, I am overpowered, so help.\"",
+    "pickthall": "So he cried unto his Lord, saying: I am vanquished, so give help."
+   }
+  },
+  {
+   "n": 11,
+   "global": 4857,
+   "text": "فَفَتَحْنَآ أَبْوَٰبَ ٱلسَّمَآءِ بِمَآءٍ مُّنْهَمِرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَفَتَحْنَآ",
+     "translit": "fafataḥnā",
+     "gloss": "So We opened",
+     "audio": "wbw/054_011_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَبْوَٰبَ",
+     "translit": "abwāba",
+     "gloss": "(the) gates",
+     "audio": "wbw/054_011_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلسَّمَآءِ",
+     "translit": "l-samāi",
+     "gloss": "(of) heaven",
+     "audio": "wbw/054_011_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "بِمَآءٍۢ",
+     "translit": "bimāin",
+     "gloss": "with water",
+     "audio": "wbw/054_011_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مُّنْهَمِرٍۢ",
+     "translit": "mun'hamirin",
+     "gloss": "pouring down",
+     "audio": "wbw/054_011_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Then We opened the gates of the heaven with rain pouring down",
+    "pickthall": "Then opened We the gates of heaven with pouring water"
+   }
+  },
+  {
+   "n": 12,
+   "global": 4858,
+   "text": "وَفَجَّرْنَا ٱلْأَرْضَ عُيُونًا فَٱلْتَقَى ٱلْمَآءُ عَلَىٰٓ أَمْرٍ قَدْ قُدِرَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَفَجَّرْنَا",
+     "translit": "wafajjarnā",
+     "gloss": "And We caused to burst",
+     "audio": "wbw/054_012_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْأَرْضَ",
+     "translit": "l-arḍa",
+     "gloss": "the earth",
+     "audio": "wbw/054_012_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عُيُونًۭا",
+     "translit": "ʿuyūnan",
+     "gloss": "(with) springs",
+     "audio": "wbw/054_012_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَٱلْتَقَى",
+     "translit": "fal-taqā",
+     "gloss": "so met",
+     "audio": "wbw/054_012_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْمَآءُ",
+     "translit": "l-māu",
+     "gloss": "the water(s)",
+     "audio": "wbw/054_012_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "عَلَىٰٓ",
+     "translit": "ʿalā",
+     "gloss": "for",
+     "audio": "wbw/054_012_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "أَمْرٍۢ",
+     "translit": "amrin",
+     "gloss": "a matter",
+     "audio": "wbw/054_012_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "قَدْ",
+     "translit": "qad",
+     "gloss": "already",
+     "audio": "wbw/054_012_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "قُدِرَ",
+     "translit": "qudira",
+     "gloss": "predestined",
+     "audio": "wbw/054_012_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And caused the earth to burst with springs, and the waters met for a matter already predestined.",
+    "pickthall": "And caused the earth to gush forth springs, so that the waters met for a predestined purpose."
+   }
+  },
+  {
+   "n": 13,
+   "global": 4859,
+   "text": "وَحَمَلْنَـٰهُ عَلَىٰ ذَاتِ أَلْوَٰحٍ وَدُسُرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَحَمَلْنَـٰهُ",
+     "translit": "waḥamalnāhu",
+     "gloss": "And We carried him",
+     "audio": "wbw/054_013_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَلَىٰ",
+     "translit": "ʿalā",
+     "gloss": "on",
+     "audio": "wbw/054_013_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ذَاتِ",
+     "translit": "dhāti",
+     "gloss": "(ark) made of planks",
+     "audio": "wbw/054_013_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أَلْوَٰحٍۢ",
+     "translit": "alwāḥin",
+     "gloss": "(ark) made of planks",
+     "audio": "wbw/054_013_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَدُسُرٍۢ",
+     "translit": "wadusurin",
+     "gloss": "and nails",
+     "audio": "wbw/054_013_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And We carried him on a [construction of] planks and nails,",
+    "pickthall": "And We carried him upon a thing of planks and nails,"
+   }
+  },
+  {
+   "n": 14,
+   "global": 4860,
+   "text": "تَجْرِى بِأَعْيُنِنَا جَزَآءً لِّمَن كَانَ كُفِرَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "تَجْرِى",
+     "translit": "tajrī",
+     "gloss": "Sailing",
+     "audio": "wbw/054_014_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "بِأَعْيُنِنَا",
+     "translit": "bi-aʿyuninā",
+     "gloss": "before Our eyes",
+     "audio": "wbw/054_014_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "جَزَآءًۭ",
+     "translit": "jazāan",
+     "gloss": "a reward",
+     "audio": "wbw/054_014_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لِّمَن",
+     "translit": "liman",
+     "gloss": "for (he) who",
+     "audio": "wbw/054_014_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "كَانَ",
+     "translit": "kāna",
+     "gloss": "was",
+     "audio": "wbw/054_014_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "كُفِرَ",
+     "translit": "kufira",
+     "gloss": "denied",
+     "audio": "wbw/054_014_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Sailing under Our observation as reward for he who had been denied.",
+    "pickthall": "That ran (upon the waters) in Our sight, as a reward for him who was rejected."
+   }
+  },
+  {
+   "n": 15,
+   "global": 4861,
+   "text": "وَلَقَد تَّرَكْنَـٰهَآ ءَايَةً فَهَلْ مِن مُّدَّكِرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَقَد",
+     "translit": "walaqad",
+     "gloss": "And certainly",
+     "audio": "wbw/054_015_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "تَّرَكْنَـٰهَآ",
+     "translit": "taraknāhā",
+     "gloss": "We left it",
+     "audio": "wbw/054_015_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ءَايَةًۭ",
+     "translit": "āyatan",
+     "gloss": "(as) a Sign",
+     "audio": "wbw/054_015_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَهَلْ",
+     "translit": "fahal",
+     "gloss": "so is (there)",
+     "audio": "wbw/054_015_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "any",
+     "audio": "wbw/054_015_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مُّدَّكِرٍۢ",
+     "translit": "muddakirin",
+     "gloss": "who will receive admonition",
+     "audio": "wbw/054_015_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And We left it as a sign, so is there any who will remember?",
+    "pickthall": "And verily We left it as a token; but is there any that remembereth?"
+   }
+  },
+  {
+   "n": 16,
+   "global": 4862,
+   "text": "فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَكَيْفَ",
+     "translit": "fakayfa",
+     "gloss": "So how",
+     "audio": "wbw/054_016_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "كَانَ",
+     "translit": "kāna",
+     "gloss": "was",
+     "audio": "wbw/054_016_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَذَابِى",
+     "translit": "ʿadhābī",
+     "gloss": "My punishment",
+     "audio": "wbw/054_016_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَنُذُرِ",
+     "translit": "wanudhuri",
+     "gloss": "and My warnings",
+     "audio": "wbw/054_016_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And how [severe] were My punishment and warning.",
+    "pickthall": "Then see how (dreadful) was My punishment after My warnings!"
+   }
+  },
+  {
+   "n": 17,
+   "global": 4863,
+   "text": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَقَدْ",
+     "translit": "walaqad",
+     "gloss": "And certainly",
+     "audio": "wbw/054_017_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَسَّرْنَا",
+     "translit": "yassarnā",
+     "gloss": "We have made easy",
+     "audio": "wbw/054_017_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْقُرْءَانَ",
+     "translit": "l-qur'āna",
+     "gloss": "the Quran",
+     "audio": "wbw/054_017_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لِلذِّكْرِ",
+     "translit": "lildhik'ri",
+     "gloss": "for remembrance",
+     "audio": "wbw/054_017_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "فَهَلْ",
+     "translit": "fahal",
+     "gloss": "so is (there)",
+     "audio": "wbw/054_017_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "any",
+     "audio": "wbw/054_017_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "مُّدَّكِرٍۢ",
+     "translit": "muddakirin",
+     "gloss": "who will receive admonition",
+     "audio": "wbw/054_017_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And We have certainly made the Qur’ān easy for remembrance, so is there any who will remember?",
+    "pickthall": "And in truth We have made the Qur'an easy to remember; but is there any that remembereth?"
+   }
+  },
+  {
+   "n": 18,
+   "global": 4864,
+   "text": "كَذَّبَتْ عَادٌ فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كَذَّبَتْ",
+     "translit": "kadhabat",
+     "gloss": "Denied",
+     "audio": "wbw/054_018_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَادٌۭ",
+     "translit": "ʿādun",
+     "gloss": "Aad",
+     "audio": "wbw/054_018_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَكَيْفَ",
+     "translit": "fakayfa",
+     "gloss": "so how",
+     "audio": "wbw/054_018_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "كَانَ",
+     "translit": "kāna",
+     "gloss": "was",
+     "audio": "wbw/054_018_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "عَذَابِى",
+     "translit": "ʿadhābī",
+     "gloss": "My punishment",
+     "audio": "wbw/054_018_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَنُذُرِ",
+     "translit": "wanudhuri",
+     "gloss": "and My warnings",
+     "audio": "wbw/054_018_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "ʿAad denied; and how [severe] were My punishment and warning.",
+    "pickthall": "(The tribe of) A'ad rejected warnings. Then how (dreadful) was My punishment after My warnings."
+   }
+  },
+  {
+   "n": 19,
+   "global": 4865,
+   "text": "إِنَّآ أَرْسَلْنَا عَلَيْهِمْ رِيحًا صَرْصَرًا فِى يَوْمِ نَحْسٍ مُّسْتَمِرٍّ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّآ",
+     "translit": "innā",
+     "gloss": "Indeed, We",
+     "audio": "wbw/054_019_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَرْسَلْنَا",
+     "translit": "arsalnā",
+     "gloss": "[We] sent",
+     "audio": "wbw/054_019_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَلَيْهِمْ",
+     "translit": "ʿalayhim",
+     "gloss": "upon them",
+     "audio": "wbw/054_019_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "رِيحًۭا",
+     "translit": "rīḥan",
+     "gloss": "a wind",
+     "audio": "wbw/054_019_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "صَرْصَرًۭا",
+     "translit": "ṣarṣaran",
+     "gloss": "furious",
+     "audio": "wbw/054_019_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "on",
+     "audio": "wbw/054_019_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "يَوْمِ",
+     "translit": "yawmi",
+     "gloss": "a day",
+     "audio": "wbw/054_019_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "نَحْسٍۢ",
+     "translit": "naḥsin",
+     "gloss": "(of) misfortune",
+     "audio": "wbw/054_019_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "مُّسْتَمِرٍّۢ",
+     "translit": "mus'tamirrin",
+     "gloss": "continuous",
+     "audio": "wbw/054_019_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, We sent upon them a screaming wind on a day of continuous misfortune,",
+    "pickthall": "Lo! We let loose on them a raging wind on a day of constant calamity,"
+   }
+  },
+  {
+   "n": 20,
+   "global": 4866,
+   "text": "تَنزِعُ ٱلنَّاسَ كَأَنَّهُمْ أَعْجَازُ نَخْلٍ مُّنقَعِرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "تَنزِعُ",
+     "translit": "tanziʿu",
+     "gloss": "Plucking out",
+     "audio": "wbw/054_020_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلنَّاسَ",
+     "translit": "l-nāsa",
+     "gloss": "men",
+     "audio": "wbw/054_020_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كَأَنَّهُمْ",
+     "translit": "ka-annahum",
+     "gloss": "as if they (were)",
+     "audio": "wbw/054_020_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أَعْجَازُ",
+     "translit": "aʿjāzu",
+     "gloss": "trunks",
+     "audio": "wbw/054_020_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "نَخْلٍۢ",
+     "translit": "nakhlin",
+     "gloss": "(of) date-palms",
+     "audio": "wbw/054_020_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مُّنقَعِرٍۢ",
+     "translit": "munqaʿirin",
+     "gloss": "uprooted",
+     "audio": "wbw/054_020_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Extracting the people as if they were trunks of palm trees uprooted.",
+    "pickthall": "Sweeping men away as though they were uprooted trunks of palm-trees."
+   }
+  },
+  {
+   "n": 21,
+   "global": 4867,
+   "text": "فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَكَيْفَ",
+     "translit": "fakayfa",
+     "gloss": "So how",
+     "audio": "wbw/054_021_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "كَانَ",
+     "translit": "kāna",
+     "gloss": "was",
+     "audio": "wbw/054_021_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَذَابِى",
+     "translit": "ʿadhābī",
+     "gloss": "My punishment",
+     "audio": "wbw/054_021_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَنُذُرِ",
+     "translit": "wanudhuri",
+     "gloss": "and My warnings",
+     "audio": "wbw/054_021_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And how [severe] were My punishment and warning.",
+    "pickthall": "Then see how (dreadful) was My punishment after My warnings!"
+   }
+  },
+  {
+   "n": 22,
+   "global": 4868,
+   "text": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَقَدْ",
+     "translit": "walaqad",
+     "gloss": "And certainly",
+     "audio": "wbw/054_022_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَسَّرْنَا",
+     "translit": "yassarnā",
+     "gloss": "We have made easy",
+     "audio": "wbw/054_022_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْقُرْءَانَ",
+     "translit": "l-qur'āna",
+     "gloss": "the Quran",
+     "audio": "wbw/054_022_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لِلذِّكْرِ",
+     "translit": "lildhik'ri",
+     "gloss": "for remembrance",
+     "audio": "wbw/054_022_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "فَهَلْ",
+     "translit": "fahal",
+     "gloss": "so is (there)",
+     "audio": "wbw/054_022_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "any",
+     "audio": "wbw/054_022_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "مُّدَّكِرٍۢ",
+     "translit": "muddakirin",
+     "gloss": "who will receive admonition",
+     "audio": "wbw/054_022_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And We have certainly made the Qur’ān easy for remembrance, so is there any who will remember?",
+    "pickthall": "And in truth We have made the Qur'an easy to remember; but is there any that remembereth?"
+   }
+  },
+  {
+   "n": 23,
+   "global": 4869,
+   "text": "كَذَّبَتْ ثَمُودُ بِٱلنُّذُرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كَذَّبَتْ",
+     "translit": "kadhabat",
+     "gloss": "Denied",
+     "audio": "wbw/054_023_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ثَمُودُ",
+     "translit": "thamūdu",
+     "gloss": "Thamud",
+     "audio": "wbw/054_023_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بِٱلنُّذُرِ",
+     "translit": "bil-nudhuri",
+     "gloss": "the warnings",
+     "audio": "wbw/054_023_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Thamūd denied the warning.",
+    "pickthall": "(The tribe of) Thamud rejected warnings"
+   }
+  },
+  {
+   "n": 24,
+   "global": 4870,
+   "text": "فَقَالُوٓا۟ أَبَشَرًا مِّنَّا وَٰحِدًا نَّتَّبِعُهُۥٓ إِنَّآ إِذًا لَّفِى ضَلَـٰلٍ وَسُعُرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَقَالُوٓا۟",
+     "translit": "faqālū",
+     "gloss": "And said",
+     "audio": "wbw/054_024_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَبَشَرًۭا",
+     "translit": "abasharan",
+     "gloss": "Is (it) a human being",
+     "audio": "wbw/054_024_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مِّنَّا",
+     "translit": "minnā",
+     "gloss": "among us",
+     "audio": "wbw/054_024_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَٰحِدًۭا",
+     "translit": "wāḥidan",
+     "gloss": "one",
+     "audio": "wbw/054_024_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "نَّتَّبِعُهُۥٓ",
+     "translit": "nattabiʿuhu",
+     "gloss": "(that) we should follow him",
+     "audio": "wbw/054_024_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "إِنَّآ",
+     "translit": "innā",
+     "gloss": "Indeed, we",
+     "audio": "wbw/054_024_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "إِذًۭا",
+     "translit": "idhan",
+     "gloss": "then",
+     "audio": "wbw/054_024_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "لَّفِى",
+     "translit": "lafī",
+     "gloss": "(will be) surely in",
+     "audio": "wbw/054_024_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ضَلَـٰلٍۢ",
+     "translit": "ḍalālin",
+     "gloss": "error",
+     "audio": "wbw/054_024_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "وَسُعُرٍ",
+     "translit": "wasuʿurin",
+     "gloss": "and madness",
+     "audio": "wbw/054_024_010.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And said, \"Is it one human being among us that we should follow? Indeed, we would then be in error and madness.",
+    "pickthall": "For they said; Is it a mortal man, alone among us, that we are to follow? Then indeed we should fall into error and madness."
+   }
+  },
+  {
+   "n": 25,
+   "global": 4871,
+   "text": "أَءُلْقِىَ ٱلذِّكْرُ عَلَيْهِ مِنۢ بَيْنِنَا بَلْ هُوَ كَذَّابٌ أَشِرٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَءُلْقِىَ",
+     "translit": "a-ul'qiya",
+     "gloss": "Has been sent",
+     "audio": "wbw/054_025_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلذِّكْرُ",
+     "translit": "l-dhik'ru",
+     "gloss": "the Reminder",
+     "audio": "wbw/054_025_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَلَيْهِ",
+     "translit": "ʿalayhi",
+     "gloss": "to him",
+     "audio": "wbw/054_025_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِنۢ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/054_025_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "بَيْنِنَا",
+     "translit": "bayninā",
+     "gloss": "among us",
+     "audio": "wbw/054_025_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "بَلْ",
+     "translit": "bal",
+     "gloss": "Nay",
+     "audio": "wbw/054_025_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "هُوَ",
+     "translit": "huwa",
+     "gloss": "he",
+     "audio": "wbw/054_025_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "كَذَّابٌ",
+     "translit": "kadhābun",
+     "gloss": "(is) a liar",
+     "audio": "wbw/054_025_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "أَشِرٌۭ",
+     "translit": "ashirun",
+     "gloss": "insolent",
+     "audio": "wbw/054_025_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Has the message been sent down upon him from among us? Rather, he is an insolent liar.\"",
+    "pickthall": "Hath the remembrance been given unto him alone among us? Nay, but he is a rash liar."
+   }
+  },
+  {
+   "n": 26,
+   "global": 4872,
+   "text": "سَيَعْلَمُونَ غَدًا مَّنِ ٱلْكَذَّابُ ٱلْأَشِرُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "سَيَعْلَمُونَ",
+     "translit": "sayaʿlamūna",
+     "gloss": "They will know",
+     "audio": "wbw/054_026_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "غَدًۭا",
+     "translit": "ghadan",
+     "gloss": "tomorrow",
+     "audio": "wbw/054_026_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَّنِ",
+     "translit": "mani",
+     "gloss": "who",
+     "audio": "wbw/054_026_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْكَذَّابُ",
+     "translit": "l-kadhābu",
+     "gloss": "(is) the liar",
+     "audio": "wbw/054_026_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْأَشِرُ",
+     "translit": "l-ashiru",
+     "gloss": "the insolent one",
+     "audio": "wbw/054_026_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "They will know tomorrow who is the insolent liar.",
+    "pickthall": "(Unto their warner it was said): To-morrow they will know who is the rash liar."
+   }
+  },
+  {
+   "n": 27,
+   "global": 4873,
+   "text": "إِنَّا مُرْسِلُوا۟ ٱلنَّاقَةِ فِتْنَةً لَّهُمْ فَٱرْتَقِبْهُمْ وَٱصْطَبِرْ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّا",
+     "translit": "innā",
+     "gloss": "Indeed, We",
+     "audio": "wbw/054_027_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مُرْسِلُوا۟",
+     "translit": "mur'silū",
+     "gloss": "(are) sending",
+     "audio": "wbw/054_027_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلنَّاقَةِ",
+     "translit": "l-nāqati",
+     "gloss": "the she-camel",
+     "audio": "wbw/054_027_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فِتْنَةًۭ",
+     "translit": "fit'natan",
+     "gloss": "(as) a trial",
+     "audio": "wbw/054_027_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "لَّهُمْ",
+     "translit": "lahum",
+     "gloss": "for them",
+     "audio": "wbw/054_027_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "فَٱرْتَقِبْهُمْ",
+     "translit": "fa-ir'taqib'hum",
+     "gloss": "so watch them",
+     "audio": "wbw/054_027_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "وَٱصْطَبِرْ",
+     "translit": "wa-iṣ'ṭabir",
+     "gloss": "and be patient",
+     "audio": "wbw/054_027_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, We are sending the she-camel as trial for them, so watch them and be patient.",
+    "pickthall": "Lo! We are sending the she-camel as a test for them; so watch them and have patience;"
+   }
+  },
+  {
+   "n": 28,
+   "global": 4874,
+   "text": "وَنَبِّئْهُمْ أَنَّ ٱلْمَآءَ قِسْمَةٌۢ بَيْنَهُمْ ۖ كُلُّ شِرْبٍ مُّحْتَضَرٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَنَبِّئْهُمْ",
+     "translit": "wanabbi'hum",
+     "gloss": "And inform them",
+     "audio": "wbw/054_028_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَنَّ",
+     "translit": "anna",
+     "gloss": "that",
+     "audio": "wbw/054_028_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْمَآءَ",
+     "translit": "l-māa",
+     "gloss": "the water",
+     "audio": "wbw/054_028_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "قِسْمَةٌۢ",
+     "translit": "qis'matun",
+     "gloss": "(is) to be shared",
+     "audio": "wbw/054_028_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "بَيْنَهُمْ ۖ",
+     "translit": "baynahum",
+     "gloss": "between them",
+     "audio": "wbw/054_028_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "كُلُّ",
+     "translit": "kullu",
+     "gloss": "each",
+     "audio": "wbw/054_028_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "شِرْبٍۢ",
+     "translit": "shir'bin",
+     "gloss": "drink",
+     "audio": "wbw/054_028_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "مُّحْتَضَرٌۭ",
+     "translit": "muḥ'taḍarun",
+     "gloss": "attended",
+     "audio": "wbw/054_028_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And inform them that the water is shared between them, each [day of] drink attended [by turn].",
+    "pickthall": "And inform them that the water is to be shared between (her and) them. Every drinking will be witnessed."
+   }
+  },
+  {
+   "n": 29,
+   "global": 4875,
+   "text": "فَنَادَوْا۟ صَاحِبَهُمْ فَتَعَاطَىٰ فَعَقَرَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَنَادَوْا۟",
+     "translit": "fanādaw",
+     "gloss": "But they called",
+     "audio": "wbw/054_029_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "صَاحِبَهُمْ",
+     "translit": "ṣāḥibahum",
+     "gloss": "their companion",
+     "audio": "wbw/054_029_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَتَعَاطَىٰ",
+     "translit": "fataʿāṭā",
+     "gloss": "and he took",
+     "audio": "wbw/054_029_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَعَقَرَ",
+     "translit": "faʿaqara",
+     "gloss": "and hamstrung",
+     "audio": "wbw/054_029_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "But they called their companion, and he dared and hamstrung [her].",
+    "pickthall": "But they call their comrade and he took and hamstrung (her)."
+   }
+  },
+  {
+   "n": 30,
+   "global": 4876,
+   "text": "فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَكَيْفَ",
+     "translit": "fakayfa",
+     "gloss": "So how",
+     "audio": "wbw/054_030_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "كَانَ",
+     "translit": "kāna",
+     "gloss": "was",
+     "audio": "wbw/054_030_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَذَابِى",
+     "translit": "ʿadhābī",
+     "gloss": "My punishment",
+     "audio": "wbw/054_030_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَنُذُرِ",
+     "translit": "wanudhuri",
+     "gloss": "and My warnings",
+     "audio": "wbw/054_030_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And how [severe] were My punishment and warning.",
+    "pickthall": "Then see how (dreadful) was My punishment after My warnings!"
+   }
+  },
+  {
+   "n": 31,
+   "global": 4877,
+   "text": "إِنَّآ أَرْسَلْنَا عَلَيْهِمْ صَيْحَةً وَٰحِدَةً فَكَانُوا۟ كَهَشِيمِ ٱلْمُحْتَظِرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّآ",
+     "translit": "innā",
+     "gloss": "Indeed, We",
+     "audio": "wbw/054_031_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَرْسَلْنَا",
+     "translit": "arsalnā",
+     "gloss": "[We] sent",
+     "audio": "wbw/054_031_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَلَيْهِمْ",
+     "translit": "ʿalayhim",
+     "gloss": "upon them",
+     "audio": "wbw/054_031_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "صَيْحَةًۭ",
+     "translit": "ṣayḥatan",
+     "gloss": "thunderous blast",
+     "audio": "wbw/054_031_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَٰحِدَةًۭ",
+     "translit": "wāḥidatan",
+     "gloss": "single",
+     "audio": "wbw/054_031_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "فَكَانُوا۟",
+     "translit": "fakānū",
+     "gloss": "and they became",
+     "audio": "wbw/054_031_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "كَهَشِيمِ",
+     "translit": "kahashīmi",
+     "gloss": "like dry twig fragments",
+     "audio": "wbw/054_031_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "ٱلْمُحْتَظِرِ",
+     "translit": "l-muḥ'taẓiri",
+     "gloss": "(used by) a fence builder",
+     "audio": "wbw/054_031_008.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, We sent upon them one shriek [i.e., blast from the sky], and they became like the dry twig fragments of an [animal] pen.",
+    "pickthall": "Lo! We sent upon them one Shout, and they became as the dry twigs (rejected by) the builder of a cattle-fold."
+   }
+  },
+  {
+   "n": 32,
+   "global": 4878,
+   "text": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَقَدْ",
+     "translit": "walaqad",
+     "gloss": "And certainly",
+     "audio": "wbw/054_032_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَسَّرْنَا",
+     "translit": "yassarnā",
+     "gloss": "We have made easy",
+     "audio": "wbw/054_032_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْقُرْءَانَ",
+     "translit": "l-qur'āna",
+     "gloss": "the Quran",
+     "audio": "wbw/054_032_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لِلذِّكْرِ",
+     "translit": "lildhik'ri",
+     "gloss": "for remembrance",
+     "audio": "wbw/054_032_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "فَهَلْ",
+     "translit": "fahal",
+     "gloss": "so is (there)",
+     "audio": "wbw/054_032_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "any",
+     "audio": "wbw/054_032_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "مُّدَّكِرٍۢ",
+     "translit": "muddakirin",
+     "gloss": "who will receive admonition",
+     "audio": "wbw/054_032_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And We have certainly made the Qur’ān easy for remembrance, so is there any who will remember?",
+    "pickthall": "And in truth We have made the Qur'an easy to remember; but is there any that remembereth?"
+   }
+  },
+  {
+   "n": 33,
+   "global": 4879,
+   "text": "كَذَّبَتْ قَوْمُ لُوطٍۭ بِٱلنُّذُرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كَذَّبَتْ",
+     "translit": "kadhabat",
+     "gloss": "Denied",
+     "audio": "wbw/054_033_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "قَوْمُ",
+     "translit": "qawmu",
+     "gloss": "(the) people",
+     "audio": "wbw/054_033_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "لُوطٍۭ",
+     "translit": "lūṭin",
+     "gloss": "(of) Lut",
+     "audio": "wbw/054_033_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "بِٱلنُّذُرِ",
+     "translit": "bil-nudhuri",
+     "gloss": "the warnings",
+     "audio": "wbw/054_033_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The people of Lot denied the warning.",
+    "pickthall": "The folk of Lot rejected warnings."
+   }
+  },
+  {
+   "n": 34,
+   "global": 4880,
+   "text": "إِنَّآ أَرْسَلْنَا عَلَيْهِمْ حَاصِبًا إِلَّآ ءَالَ لُوطٍ ۖ نَّجَّيْنَـٰهُم بِسَحَرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّآ",
+     "translit": "innā",
+     "gloss": "Indeed, We",
+     "audio": "wbw/054_034_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَرْسَلْنَا",
+     "translit": "arsalnā",
+     "gloss": "[We] sent",
+     "audio": "wbw/054_034_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَلَيْهِمْ",
+     "translit": "ʿalayhim",
+     "gloss": "upon them",
+     "audio": "wbw/054_034_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "حَاصِبًا",
+     "translit": "ḥāṣiban",
+     "gloss": "a storm of stones",
+     "audio": "wbw/054_034_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "إِلَّآ",
+     "translit": "illā",
+     "gloss": "except",
+     "audio": "wbw/054_034_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ءَالَ",
+     "translit": "āla",
+     "gloss": "(the) family",
+     "audio": "wbw/054_034_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "لُوطٍۢ ۖ",
+     "translit": "lūṭin",
+     "gloss": "(of) Lut",
+     "audio": "wbw/054_034_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "نَّجَّيْنَـٰهُم",
+     "translit": "najjaynāhum",
+     "gloss": "We saved them",
+     "audio": "wbw/054_034_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "بِسَحَرٍۢ",
+     "translit": "bisaḥarin",
+     "gloss": "by dawn",
+     "audio": "wbw/054_034_010.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, We sent upon them a storm of stones, except the family of Lot - We saved them before dawn.",
+    "pickthall": "Lo! We sent a storm of stones upon them (all) save the family of Lot, whom We rescued in the last watch of the night,"
+   }
+  },
+  {
+   "n": 35,
+   "global": 4881,
+   "text": "نِّعْمَةً مِّنْ عِندِنَا ۚ كَذَٰلِكَ نَجْزِى مَن شَكَرَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "نِّعْمَةًۭ",
+     "translit": "niʿ'matan",
+     "gloss": "(As) a favor",
+     "audio": "wbw/054_035_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مِّنْ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/054_035_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عِندِنَا ۚ",
+     "translit": "ʿindinā",
+     "gloss": "Us",
+     "audio": "wbw/054_035_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "كَذَٰلِكَ",
+     "translit": "kadhālika",
+     "gloss": "Thus",
+     "audio": "wbw/054_035_005.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "نَجْزِى",
+     "translit": "najzī",
+     "gloss": "We reward",
+     "audio": "wbw/054_035_006.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مَن",
+     "translit": "man",
+     "gloss": "(one) who",
+     "audio": "wbw/054_035_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "شَكَرَ",
+     "translit": "shakara",
+     "gloss": "(is) grateful",
+     "audio": "wbw/054_035_008.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "As favor from Us. Thus do We reward he who is grateful.",
+    "pickthall": "As grace from Us. Thus We reward him who giveth thanks."
+   }
+  },
+  {
+   "n": 36,
+   "global": 4882,
+   "text": "وَلَقَدْ أَنذَرَهُم بَطْشَتَنَا فَتَمَارَوْا۟ بِٱلنُّذُرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَقَدْ",
+     "translit": "walaqad",
+     "gloss": "And certainly",
+     "audio": "wbw/054_036_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَنذَرَهُم",
+     "translit": "andharahum",
+     "gloss": "he warned them",
+     "audio": "wbw/054_036_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بَطْشَتَنَا",
+     "translit": "baṭshatanā",
+     "gloss": "(of) Our seizure",
+     "audio": "wbw/054_036_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَتَمَارَوْا۟",
+     "translit": "fatamāraw",
+     "gloss": "but they disputed",
+     "audio": "wbw/054_036_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "بِٱلنُّذُرِ",
+     "translit": "bil-nudhuri",
+     "gloss": "the warnings",
+     "audio": "wbw/054_036_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And he had already warned them of Our assault, but they disputed the warning.",
+    "pickthall": "And he indeed had warned them of Our blow, but they did doubt the warnings."
+   }
+  },
+  {
+   "n": 37,
+   "global": 4883,
+   "text": "وَلَقَدْ رَٰوَدُوهُ عَن ضَيْفِهِۦ فَطَمَسْنَآ أَعْيُنَهُمْ فَذُوقُوا۟ عَذَابِى وَنُذُرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَقَدْ",
+     "translit": "walaqad",
+     "gloss": "And certainly",
+     "audio": "wbw/054_037_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "رَٰوَدُوهُ",
+     "translit": "rāwadūhu",
+     "gloss": "they demanded from him",
+     "audio": "wbw/054_037_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَن",
+     "translit": "ʿan",
+     "gloss": "they demanded from him",
+     "audio": "wbw/054_037_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ضَيْفِهِۦ",
+     "translit": "ḍayfihi",
+     "gloss": "his guests",
+     "audio": "wbw/054_037_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "فَطَمَسْنَآ",
+     "translit": "faṭamasnā",
+     "gloss": "so We blinded",
+     "audio": "wbw/054_037_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "أَعْيُنَهُمْ",
+     "translit": "aʿyunahum",
+     "gloss": "their eyes",
+     "audio": "wbw/054_037_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فَذُوقُوا۟",
+     "translit": "fadhūqū",
+     "gloss": "So taste",
+     "audio": "wbw/054_037_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "عَذَابِى",
+     "translit": "ʿadhābī",
+     "gloss": "My punishment",
+     "audio": "wbw/054_037_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "وَنُذُرِ",
+     "translit": "wanudhuri",
+     "gloss": "and My warnings",
+     "audio": "wbw/054_037_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And they had demanded from him his guests, but We obliterated their eyes, [saying], \"Taste My punishment and warning.\"",
+    "pickthall": "They even asked of him his guests for an ill purpose. Then We blinded their eyes (and said): Taste now My punishment after My warnings!"
+   }
+  },
+  {
+   "n": 38,
+   "global": 4884,
+   "text": "وَلَقَدْ صَبَّحَهُم بُكْرَةً عَذَابٌ مُّسْتَقِرٌّ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَقَدْ",
+     "translit": "walaqad",
+     "gloss": "And certainly",
+     "audio": "wbw/054_038_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "صَبَّحَهُم",
+     "translit": "ṣabbaḥahum",
+     "gloss": "seized them in the morning",
+     "audio": "wbw/054_038_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بُكْرَةً",
+     "translit": "buk'ratan",
+     "gloss": "early",
+     "audio": "wbw/054_038_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "عَذَابٌۭ",
+     "translit": "ʿadhābun",
+     "gloss": "a punishment",
+     "audio": "wbw/054_038_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مُّسْتَقِرٌّۭ",
+     "translit": "mus'taqirrun",
+     "gloss": "abiding",
+     "audio": "wbw/054_038_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And there came upon them by morning an abiding punishment.",
+    "pickthall": "And in truth the punishment decreed befell them early in the morning."
+   }
+  },
+  {
+   "n": 39,
+   "global": 4885,
+   "text": "فَذُوقُوا۟ عَذَابِى وَنُذُرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَذُوقُوا۟",
+     "translit": "fadhūqū",
+     "gloss": "So taste",
+     "audio": "wbw/054_039_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَذَابِى",
+     "translit": "ʿadhābī",
+     "gloss": "My punishment",
+     "audio": "wbw/054_039_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَنُذُرِ",
+     "translit": "wanudhuri",
+     "gloss": "and My warnings",
+     "audio": "wbw/054_039_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So taste My punishment and warning.",
+    "pickthall": "Now taste My punishment after My warnings!"
+   }
+  },
+  {
+   "n": 40,
+   "global": 4886,
+   "text": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَقَدْ",
+     "translit": "walaqad",
+     "gloss": "And certainly",
+     "audio": "wbw/054_040_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَسَّرْنَا",
+     "translit": "yassarnā",
+     "gloss": "We have made easy",
+     "audio": "wbw/054_040_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْقُرْءَانَ",
+     "translit": "l-qur'āna",
+     "gloss": "the Quran",
+     "audio": "wbw/054_040_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لِلذِّكْرِ",
+     "translit": "lildhik'ri",
+     "gloss": "for remembrance",
+     "audio": "wbw/054_040_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "فَهَلْ",
+     "translit": "fahal",
+     "gloss": "so is (there)",
+     "audio": "wbw/054_040_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "any",
+     "audio": "wbw/054_040_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "مُّدَّكِرٍۢ",
+     "translit": "muddakirin",
+     "gloss": "who will receive admonition",
+     "audio": "wbw/054_040_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And We have certainly made the Qur’ān easy for remembrance, so is there any who will remember?",
+    "pickthall": "And in truth We have made the Qur'an easy to remember; but is there any that remembereth?"
+   }
+  },
+  {
+   "n": 41,
+   "global": 4887,
+   "text": "وَلَقَدْ جَآءَ ءَالَ فِرْعَوْنَ ٱلنُّذُرُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَقَدْ",
+     "translit": "walaqad",
+     "gloss": "And certainly",
+     "audio": "wbw/054_041_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "جَآءَ",
+     "translit": "jāa",
+     "gloss": "came",
+     "audio": "wbw/054_041_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ءَالَ",
+     "translit": "āla",
+     "gloss": "(to the) people",
+     "audio": "wbw/054_041_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فِرْعَوْنَ",
+     "translit": "fir'ʿawna",
+     "gloss": "(of) Firaun",
+     "audio": "wbw/054_041_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلنُّذُرُ",
+     "translit": "l-nudhuru",
+     "gloss": "warnings",
+     "audio": "wbw/054_041_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And there certainly came to the people of Pharaoh warning.",
+    "pickthall": "And warnings came in truth unto the house of Pharaoh"
+   }
+  },
+  {
+   "n": 42,
+   "global": 4888,
+   "text": "كَذَّبُوا۟ بِـَٔايَـٰتِنَا كُلِّهَا فَأَخَذْنَـٰهُمْ أَخْذَ عَزِيزٍ مُّقْتَدِرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كَذَّبُوا۟",
+     "translit": "kadhabū",
+     "gloss": "They denied",
+     "audio": "wbw/054_042_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "بِـَٔايَـٰتِنَا",
+     "translit": "biāyātinā",
+     "gloss": "Our Signs",
+     "audio": "wbw/054_042_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كُلِّهَا",
+     "translit": "kullihā",
+     "gloss": "all of them",
+     "audio": "wbw/054_042_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَأَخَذْنَـٰهُمْ",
+     "translit": "fa-akhadhnāhum",
+     "gloss": "so We seized them",
+     "audio": "wbw/054_042_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "أَخْذَ",
+     "translit": "akhdha",
+     "gloss": "(with) a seizure",
+     "audio": "wbw/054_042_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "عَزِيزٍۢ",
+     "translit": "ʿazīzin",
+     "gloss": "(of) All-Mighty",
+     "audio": "wbw/054_042_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "مُّقْتَدِرٍ",
+     "translit": "muq'tadirin",
+     "gloss": "(the) Powerful One",
+     "audio": "wbw/054_042_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "They denied Our signs, all of them, so We seized them with a seizure of one Exalted in Might and Perfect in Ability.",
+    "pickthall": "Who denied Our revelations, every one. Therefore We grasped them with the grasp of the Mighty, the Powerful."
+   }
+  },
+  {
+   "n": 43,
+   "global": 4889,
+   "text": "أَكُفَّارُكُمْ خَيْرٌ مِّنْ أُو۟لَـٰٓئِكُمْ أَمْ لَكُم بَرَآءَةٌ فِى ٱلزُّبُرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَكُفَّارُكُمْ",
+     "translit": "akuffārukum",
+     "gloss": "Are your disbelievers",
+     "audio": "wbw/054_043_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "خَيْرٌۭ",
+     "translit": "khayrun",
+     "gloss": "better",
+     "audio": "wbw/054_043_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مِّنْ",
+     "translit": "min",
+     "gloss": "than",
+     "audio": "wbw/054_043_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أُو۟لَـٰٓئِكُمْ",
+     "translit": "ulāikum",
+     "gloss": "those",
+     "audio": "wbw/054_043_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "أَمْ",
+     "translit": "am",
+     "gloss": "or",
+     "audio": "wbw/054_043_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "لَكُم",
+     "translit": "lakum",
+     "gloss": "for you",
+     "audio": "wbw/054_043_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "بَرَآءَةٌۭ",
+     "translit": "barāatun",
+     "gloss": "(is) an exemption",
+     "audio": "wbw/054_043_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/054_043_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ٱلزُّبُرِ",
+     "translit": "l-zuburi",
+     "gloss": "the Scriptures",
+     "audio": "wbw/054_043_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Are your disbelievers better than those [former ones], or have you immunity in the scriptures?",
+    "pickthall": "Are your disbelievers better than those, or have ye some immunity in the scriptures?"
+   }
+  },
+  {
+   "n": 44,
+   "global": 4890,
+   "text": "أَمْ يَقُولُونَ نَحْنُ جَمِيعٌ مُّنتَصِرٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَمْ",
+     "translit": "am",
+     "gloss": "Or",
+     "audio": "wbw/054_044_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَقُولُونَ",
+     "translit": "yaqūlūna",
+     "gloss": "(do) they say",
+     "audio": "wbw/054_044_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "نَحْنُ",
+     "translit": "naḥnu",
+     "gloss": "We",
+     "audio": "wbw/054_044_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "جَمِيعٌۭ",
+     "translit": "jamīʿun",
+     "gloss": "(are) an assembly",
+     "audio": "wbw/054_044_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مُّنتَصِرٌۭ",
+     "translit": "muntaṣirun",
+     "gloss": "helping (each other)",
+     "audio": "wbw/054_044_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Or do they say, \"We are an assembly supporting [each other]\"?",
+    "pickthall": "Or say they: We are a host victorious?"
+   }
+  },
+  {
+   "n": 45,
+   "global": 4891,
+   "text": "سَيُهْزَمُ ٱلْجَمْعُ وَيُوَلُّونَ ٱلدُّبُرَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "سَيُهْزَمُ",
+     "translit": "sayuh'zamu",
+     "gloss": "Soon will be defeated",
+     "audio": "wbw/054_045_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْجَمْعُ",
+     "translit": "l-jamʿu",
+     "gloss": "(their) assembly",
+     "audio": "wbw/054_045_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَيُوَلُّونَ",
+     "translit": "wayuwallūna",
+     "gloss": "and they will turn",
+     "audio": "wbw/054_045_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلدُّبُرَ",
+     "translit": "l-dubura",
+     "gloss": "(their) backs",
+     "audio": "wbw/054_045_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "[Their] assembly will be defeated, and they will turn their backs [in retreat].",
+    "pickthall": "The hosts will all be routed and will turn and flee."
+   }
+  },
+  {
+   "n": 46,
+   "global": 4892,
+   "text": "بَلِ ٱلسَّاعَةُ مَوْعِدُهُمْ وَٱلسَّاعَةُ أَدْهَىٰ وَأَمَرُّ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "بَلِ",
+     "translit": "bali",
+     "gloss": "Nay",
+     "audio": "wbw/054_046_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلسَّاعَةُ",
+     "translit": "l-sāʿatu",
+     "gloss": "the Hour",
+     "audio": "wbw/054_046_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَوْعِدُهُمْ",
+     "translit": "mawʿiduhum",
+     "gloss": "(is) their promised time",
+     "audio": "wbw/054_046_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَٱلسَّاعَةُ",
+     "translit": "wal-sāʿatu",
+     "gloss": "and the Hour",
+     "audio": "wbw/054_046_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "أَدْهَىٰ",
+     "translit": "adhā",
+     "gloss": "(will be) more grievous",
+     "audio": "wbw/054_046_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَأَمَرُّ",
+     "translit": "wa-amarru",
+     "gloss": "and more bitter",
+     "audio": "wbw/054_046_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "But the Hour is their appointment [for due punishment], and the Hour is more disastrous and more bitter.",
+    "pickthall": "Nay, but the Hour (of doom) is their appointed tryst, and the Hour will be more wretched and more bitter (than their earthly failure)."
+   }
+  },
+  {
+   "n": 47,
+   "global": 4893,
+   "text": "إِنَّ ٱلْمُجْرِمِينَ فِى ضَلَـٰلٍ وَسُعُرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/054_047_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْمُجْرِمِينَ",
+     "translit": "l-muj'rimīna",
+     "gloss": "the criminals",
+     "audio": "wbw/054_047_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "(are) in",
+     "audio": "wbw/054_047_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ضَلَـٰلٍۢ",
+     "translit": "ḍalālin",
+     "gloss": "an error",
+     "audio": "wbw/054_047_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَسُعُرٍۢ",
+     "translit": "wasuʿurin",
+     "gloss": "and madness",
+     "audio": "wbw/054_047_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, the criminals are in error and madness..",
+    "pickthall": "Lo! the guilty are in error and madness."
+   }
+  },
+  {
+   "n": 48,
+   "global": 4894,
+   "text": "يَوْمَ يُسْحَبُونَ فِى ٱلنَّارِ عَلَىٰ وُجُوهِهِمْ ذُوقُوا۟ مَسَّ سَقَرَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "يَوْمَ",
+     "translit": "yawma",
+     "gloss": "(The) Day",
+     "audio": "wbw/054_048_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يُسْحَبُونَ",
+     "translit": "yus'ḥabūna",
+     "gloss": "they will be dragged",
+     "audio": "wbw/054_048_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "into",
+     "audio": "wbw/054_048_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلنَّارِ",
+     "translit": "l-nāri",
+     "gloss": "the Fire",
+     "audio": "wbw/054_048_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "عَلَىٰ",
+     "translit": "ʿalā",
+     "gloss": "on",
+     "audio": "wbw/054_048_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وُجُوهِهِمْ",
+     "translit": "wujūhihim",
+     "gloss": "their faces",
+     "audio": "wbw/054_048_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "ذُوقُوا۟",
+     "translit": "dhūqū",
+     "gloss": "Taste",
+     "audio": "wbw/054_048_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "مَسَّ",
+     "translit": "massa",
+     "gloss": "(the) touch",
+     "audio": "wbw/054_048_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "سَقَرَ",
+     "translit": "saqara",
+     "gloss": "(of) Hell",
+     "audio": "wbw/054_048_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The Day they are dragged into the Fire on their faces [it will be said], \"Taste the touch of Saqar.\"",
+    "pickthall": "On the day when they are dragged into the Fire upon their faces (it is said unto them): Feel the touch of hell."
+   }
+  },
+  {
+   "n": 49,
+   "global": 4895,
+   "text": "إِنَّا كُلَّ شَىْءٍ خَلَقْنَـٰهُ بِقَدَرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّا",
+     "translit": "innā",
+     "gloss": "Indeed, [We]",
+     "audio": "wbw/054_049_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "كُلَّ",
+     "translit": "kulla",
+     "gloss": "every",
+     "audio": "wbw/054_049_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "شَىْءٍ",
+     "translit": "shayin",
+     "gloss": "thing",
+     "audio": "wbw/054_049_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "خَلَقْنَـٰهُ",
+     "translit": "khalaqnāhu",
+     "gloss": "We created it",
+     "audio": "wbw/054_049_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "بِقَدَرٍۢ",
+     "translit": "biqadarin",
+     "gloss": "by a measure",
+     "audio": "wbw/054_049_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, all things We created with predestination.",
+    "pickthall": "Lo! We have created every thing by measure."
+   }
+  },
+  {
+   "n": 50,
+   "global": 4896,
+   "text": "وَمَآ أَمْرُنَآ إِلَّا وَٰحِدَةٌ كَلَمْحٍۭ بِٱلْبَصَرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمَآ",
+     "translit": "wamā",
+     "gloss": "And not",
+     "audio": "wbw/054_050_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَمْرُنَآ",
+     "translit": "amrunā",
+     "gloss": "(is) Our Command",
+     "audio": "wbw/054_050_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "إِلَّا",
+     "translit": "illā",
+     "gloss": "but",
+     "audio": "wbw/054_050_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَٰحِدَةٌۭ",
+     "translit": "wāḥidatun",
+     "gloss": "one",
+     "audio": "wbw/054_050_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "كَلَمْحٍۭ",
+     "translit": "kalamḥin",
+     "gloss": "like the twinkling",
+     "audio": "wbw/054_050_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "بِٱلْبَصَرِ",
+     "translit": "bil-baṣari",
+     "gloss": "(of) the eye",
+     "audio": "wbw/054_050_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And Our command is but one, like a glance of the eye.",
+    "pickthall": "And Our commandment is but one (commandment), as the twinkling of an eye."
+   }
+  },
+  {
+   "n": 51,
+   "global": 4897,
+   "text": "وَلَقَدْ أَهْلَكْنَآ أَشْيَاعَكُمْ فَهَلْ مِن مُّدَّكِرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَقَدْ",
+     "translit": "walaqad",
+     "gloss": "And certainly",
+     "audio": "wbw/054_051_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَهْلَكْنَآ",
+     "translit": "ahlaknā",
+     "gloss": "We destroyed",
+     "audio": "wbw/054_051_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَشْيَاعَكُمْ",
+     "translit": "ashyāʿakum",
+     "gloss": "your kinds",
+     "audio": "wbw/054_051_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَهَلْ",
+     "translit": "fahal",
+     "gloss": "so is (there)",
+     "audio": "wbw/054_051_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "any",
+     "audio": "wbw/054_051_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مُّدَّكِرٍۢ",
+     "translit": "muddakirin",
+     "gloss": "who will receive admonition",
+     "audio": "wbw/054_051_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And We have already destroyed your kinds, so is there any who will remember?",
+    "pickthall": "And verily We have destroyed your fellows; but is there any that remembereth?"
+   }
+  },
+  {
+   "n": 52,
+   "global": 4898,
+   "text": "وَكُلُّ شَىْءٍ فَعَلُوهُ فِى ٱلزُّبُرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَكُلُّ",
+     "translit": "wakullu",
+     "gloss": "And every",
+     "audio": "wbw/054_052_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "شَىْءٍۢ",
+     "translit": "shayin",
+     "gloss": "thing",
+     "audio": "wbw/054_052_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَعَلُوهُ",
+     "translit": "faʿalūhu",
+     "gloss": "they did",
+     "audio": "wbw/054_052_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "(is) in",
+     "audio": "wbw/054_052_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلزُّبُرِ",
+     "translit": "l-zuburi",
+     "gloss": "the written records",
+     "audio": "wbw/054_052_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And everything they did is in written records.",
+    "pickthall": "And every thing they did is in the scriptures,"
+   }
+  },
+  {
+   "n": 53,
+   "global": 4899,
+   "text": "وَكُلُّ صَغِيرٍ وَكَبِيرٍ مُّسْتَطَرٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَكُلُّ",
+     "translit": "wakullu",
+     "gloss": "And every",
+     "audio": "wbw/054_053_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "صَغِيرٍۢ",
+     "translit": "ṣaghīrin",
+     "gloss": "small",
+     "audio": "wbw/054_053_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَكَبِيرٍۢ",
+     "translit": "wakabīrin",
+     "gloss": "and big",
+     "audio": "wbw/054_053_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مُّسْتَطَرٌ",
+     "translit": "mus'taṭarun",
+     "gloss": "(is) written down",
+     "audio": "wbw/054_053_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And every small and great [thing] is inscribed.",
+    "pickthall": "And every small and great thing is recorded."
+   }
+  },
+  {
+   "n": 54,
+   "global": 4900,
+   "text": "إِنَّ ٱلْمُتَّقِينَ فِى جَنَّـٰتٍ وَنَهَرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/054_054_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْمُتَّقِينَ",
+     "translit": "l-mutaqīna",
+     "gloss": "the righteous",
+     "audio": "wbw/054_054_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "(will be) in",
+     "audio": "wbw/054_054_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "جَنَّـٰتٍۢ",
+     "translit": "jannātin",
+     "gloss": "gardens",
+     "audio": "wbw/054_054_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَنَهَرٍۢ",
+     "translit": "wanaharin",
+     "gloss": "and river",
+     "audio": "wbw/054_054_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, the righteous will be among gardens and rivers,",
+    "pickthall": "Lo! the righteous will dwell among gardens and rivers,"
+   }
+  },
+  {
+   "n": 55,
+   "global": 4901,
+   "text": "فِى مَقْعَدِ صِدْقٍ عِندَ مَلِيكٍ مُّقْتَدِرٍۭ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "In",
+     "audio": "wbw/054_055_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مَقْعَدِ",
+     "translit": "maqʿadi",
+     "gloss": "a seat",
+     "audio": "wbw/054_055_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "صِدْقٍ",
+     "translit": "ṣid'qin",
+     "gloss": "(of) honor",
+     "audio": "wbw/054_055_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "عِندَ",
+     "translit": "ʿinda",
+     "gloss": "near",
+     "audio": "wbw/054_055_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مَلِيكٍۢ",
+     "translit": "malīkin",
+     "gloss": "a King",
+     "audio": "wbw/054_055_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مُّقْتَدِرٍۭ",
+     "translit": "muq'tadirin",
+     "gloss": "Most Powerful",
+     "audio": "wbw/054_055_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "In a seat of honor near a Sovereign, Perfect in Ability.",
+    "pickthall": "Firmly established in the favour of a Mighty King."
+   }
+  }
+ ]
+}

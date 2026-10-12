@@ -1,0 +1,382 @@
+{
+ "id": 101,
+ "name_simple": "Al-Qari'ah",
+ "name_arabic": "القارعة",
+ "verses_count": 11,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6158,
+   "text": "ٱلْقَارِعَةُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلْقَارِعَةُ",
+     "translit": "al-qāriʿatu",
+     "gloss": "The Striking Calamity",
+     "audio": "wbw/101_001_001.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The Striking Calamity -",
+    "pickthall": "The Calamity!"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6159,
+   "text": "مَا ٱلْقَارِعَةُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "What",
+     "audio": "wbw/101_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْقَارِعَةُ",
+     "translit": "l-qāriʿatu",
+     "gloss": "(is) the Striking Calamity",
+     "audio": "wbw/101_002_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "What is the Striking Calamity?",
+    "pickthall": "What is the Calamity?"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6160,
+   "text": "وَمَآ أَدْرَىٰكَ مَا ٱلْقَارِعَةُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمَآ",
+     "translit": "wamā",
+     "gloss": "And what",
+     "audio": "wbw/101_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَدْرَىٰكَ",
+     "translit": "adrāka",
+     "gloss": "will make you know",
+     "audio": "wbw/101_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/101_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْقَارِعَةُ",
+     "translit": "l-qāriʿatu",
+     "gloss": "(is) the Striking Calamity",
+     "audio": "wbw/101_003_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And what can make you know what is the Striking Calamity?",
+    "pickthall": "Ah, what will convey unto thee what the Calamity is!"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6161,
+   "text": "يَوْمَ يَكُونُ ٱلنَّاسُ كَٱلْفَرَاشِ ٱلْمَبْثُوثِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "يَوْمَ",
+     "translit": "yawma",
+     "gloss": "(The) Day",
+     "audio": "wbw/101_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَكُونُ",
+     "translit": "yakūnu",
+     "gloss": "will be",
+     "audio": "wbw/101_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلنَّاسُ",
+     "translit": "l-nāsu",
+     "gloss": "the mankind",
+     "audio": "wbw/101_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "كَٱلْفَرَاشِ",
+     "translit": "kal-farāshi",
+     "gloss": "like moths",
+     "audio": "wbw/101_004_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْمَبْثُوثِ",
+     "translit": "l-mabthūthi",
+     "gloss": "scattered",
+     "audio": "wbw/101_004_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "It is the Day when people will be like moths, dispersed,",
+    "pickthall": "A day wherein mankind will be as thickly-scattered moths"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6162,
+   "text": "وَتَكُونُ ٱلْجِبَالُ كَٱلْعِهْنِ ٱلْمَنفُوشِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَتَكُونُ",
+     "translit": "watakūnu",
+     "gloss": "And will be",
+     "audio": "wbw/101_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْجِبَالُ",
+     "translit": "l-jibālu",
+     "gloss": "the mountains",
+     "audio": "wbw/101_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كَٱلْعِهْنِ",
+     "translit": "kal-ʿih'ni",
+     "gloss": "like wool",
+     "audio": "wbw/101_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْمَنفُوشِ",
+     "translit": "l-manfūshi",
+     "gloss": "fluffed up",
+     "audio": "wbw/101_005_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And the mountains will be like wool, fluffed up.",
+    "pickthall": "And the mountains will become as carded wool."
+   }
+  },
+  {
+   "n": 6,
+   "global": 6163,
+   "text": "فَأَمَّا مَن ثَقُلَتْ مَوَٰزِينُهُۥ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَأَمَّا",
+     "translit": "fa-ammā",
+     "gloss": "Then as for",
+     "audio": "wbw/101_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مَن",
+     "translit": "man",
+     "gloss": "(him) whose",
+     "audio": "wbw/101_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ثَقُلَتْ",
+     "translit": "thaqulat",
+     "gloss": "(are) heavy",
+     "audio": "wbw/101_006_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مَوَٰزِينُهُۥ",
+     "translit": "mawāzīnuhu",
+     "gloss": "his scales",
+     "audio": "wbw/101_006_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Then as for one whose scales are heavy [with good deeds],",
+    "pickthall": "Then, as for him whose scales are heavy (with good works),"
+   }
+  },
+  {
+   "n": 7,
+   "global": 6164,
+   "text": "فَهُوَ فِى عِيشَةٍ رَّاضِيَةٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَهُوَ",
+     "translit": "fahuwa",
+     "gloss": "Then he",
+     "audio": "wbw/101_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "(will be) in",
+     "audio": "wbw/101_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عِيشَةٍۢ",
+     "translit": "ʿīshatin",
+     "gloss": "a life",
+     "audio": "wbw/101_007_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "رَّاضِيَةٍۢ",
+     "translit": "rāḍiyatin",
+     "gloss": "pleasant",
+     "audio": "wbw/101_007_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "He will be in a pleasant life.",
+    "pickthall": "He will live a pleasant life."
+   }
+  },
+  {
+   "n": 8,
+   "global": 6165,
+   "text": "وَأَمَّا مَنْ خَفَّتْ مَوَٰزِينُهُۥ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَأَمَّا",
+     "translit": "wa-ammā",
+     "gloss": "But as for",
+     "audio": "wbw/101_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مَنْ",
+     "translit": "man",
+     "gloss": "(him) whose",
+     "audio": "wbw/101_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "خَفَّتْ",
+     "translit": "khaffat",
+     "gloss": "(are) light",
+     "audio": "wbw/101_008_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مَوَٰزِينُهُۥ",
+     "translit": "mawāzīnuhu",
+     "gloss": "his scales",
+     "audio": "wbw/101_008_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "But as for one whose scales are light,",
+    "pickthall": "But as for him whose scales are light,"
+   }
+  },
+  {
+   "n": 9,
+   "global": 6166,
+   "text": "فَأُمُّهُۥ هَاوِيَةٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَأُمُّهُۥ",
+     "translit": "fa-ummuhu",
+     "gloss": "His abode",
+     "audio": "wbw/101_009_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "هَاوِيَةٌۭ",
+     "translit": "hāwiyatun",
+     "gloss": "(will be the) Pit",
+     "audio": "wbw/101_009_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "His refuge will be an abyss.",
+    "pickthall": "A bereft and Hungry One will be his mother,"
+   }
+  },
+  {
+   "n": 10,
+   "global": 6167,
+   "text": "وَمَآ أَدْرَىٰكَ مَا هِيَهْ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمَآ",
+     "translit": "wamā",
+     "gloss": "And what",
+     "audio": "wbw/101_010_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَدْرَىٰكَ",
+     "translit": "adrāka",
+     "gloss": "will make you know",
+     "audio": "wbw/101_010_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/101_010_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "هِيَهْ",
+     "translit": "hiyah",
+     "gloss": "it is",
+     "audio": "wbw/101_010_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And what can make you know what that is?",
+    "pickthall": "Ah, what will convey unto thee what she is! -"
+   }
+  },
+  {
+   "n": 11,
+   "global": 6168,
+   "text": "نَارٌ حَامِيَةٌۢ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "نَارٌ",
+     "translit": "nārun",
+     "gloss": "A Fire",
+     "audio": "wbw/101_011_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "حَامِيَةٌۢ",
+     "translit": "ḥāmiyatun",
+     "gloss": "intensely hot",
+     "audio": "wbw/101_011_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "It is a Fire, intensely hot.",
+    "pickthall": "Raging Fire."
+   }
+  }
+ ]
+}

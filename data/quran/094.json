@@ -1,0 +1,286 @@
+{
+ "id": 94,
+ "name_simple": "Ash-Sharh",
+ "name_arabic": "الشرح",
+ "verses_count": 8,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6091,
+   "text": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَلَمْ",
+     "translit": "alam",
+     "gloss": "Have not",
+     "audio": "wbw/094_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "نَشْرَحْ",
+     "translit": "nashraḥ",
+     "gloss": "We expanded",
+     "audio": "wbw/094_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "لَكَ",
+     "translit": "laka",
+     "gloss": "for you",
+     "audio": "wbw/094_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "صَدْرَكَ",
+     "translit": "ṣadraka",
+     "gloss": "your breast",
+     "audio": "wbw/094_001_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Did We not expand for you, [O Muḥammad], your breast?",
+    "pickthall": "Have We not caused thy bosom to dilate,"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6092,
+   "text": "وَوَضَعْنَا عَنكَ وِزْرَكَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَوَضَعْنَا",
+     "translit": "wawaḍaʿnā",
+     "gloss": "And We removed",
+     "audio": "wbw/094_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَنكَ",
+     "translit": "ʿanka",
+     "gloss": "from you",
+     "audio": "wbw/094_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وِزْرَكَ",
+     "translit": "wiz'raka",
+     "gloss": "your burden",
+     "audio": "wbw/094_002_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And We removed from you your burden",
+    "pickthall": "And eased thee of the burden"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6093,
+   "text": "ٱلَّذِىٓ أَنقَضَ ظَهْرَكَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلَّذِىٓ",
+     "translit": "alladhī",
+     "gloss": "Which",
+     "audio": "wbw/094_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَنقَضَ",
+     "translit": "anqaḍa",
+     "gloss": "weighed upon",
+     "audio": "wbw/094_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ظَهْرَكَ",
+     "translit": "ẓahraka",
+     "gloss": "your back",
+     "audio": "wbw/094_003_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Which had weighed upon your back",
+    "pickthall": "Which weighed down thy back;"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6094,
+   "text": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَرَفَعْنَا",
+     "translit": "warafaʿnā",
+     "gloss": "And We raised high",
+     "audio": "wbw/094_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لَكَ",
+     "translit": "laka",
+     "gloss": "for you",
+     "audio": "wbw/094_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ذِكْرَكَ",
+     "translit": "dhik'raka",
+     "gloss": "your reputation",
+     "audio": "wbw/094_004_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And raised high for you your repute.",
+    "pickthall": "And exalted thy fame?"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6095,
+   "text": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَإِنَّ",
+     "translit": "fa-inna",
+     "gloss": "So indeed",
+     "audio": "wbw/094_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مَعَ",
+     "translit": "maʿa",
+     "gloss": "with",
+     "audio": "wbw/094_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْعُسْرِ",
+     "translit": "l-ʿus'ri",
+     "gloss": "the hardship",
+     "audio": "wbw/094_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "يُسْرًا",
+     "translit": "yus'ran",
+     "gloss": "(is) ease",
+     "audio": "wbw/094_005_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "For indeed, with hardship [will be] ease [i.e., relief].",
+    "pickthall": "But lo! with hardship goeth ease,"
+   }
+  },
+  {
+   "n": 6,
+   "global": 6096,
+   "text": "إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/094_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مَعَ",
+     "translit": "maʿa",
+     "gloss": "with",
+     "audio": "wbw/094_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْعُسْرِ",
+     "translit": "l-ʿus'ri",
+     "gloss": "the hardship",
+     "audio": "wbw/094_006_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "يُسْرًۭا",
+     "translit": "yus'ran",
+     "gloss": "(is) ease",
+     "audio": "wbw/094_006_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, with hardship [will be] ease.",
+    "pickthall": "Lo! with hardship goeth ease;"
+   }
+  },
+  {
+   "n": 7,
+   "global": 6097,
+   "text": "فَإِذَا فَرَغْتَ فَٱنصَبْ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَإِذَا",
+     "translit": "fa-idhā",
+     "gloss": "So when",
+     "audio": "wbw/094_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "فَرَغْتَ",
+     "translit": "faraghta",
+     "gloss": "you have finished",
+     "audio": "wbw/094_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَٱنصَبْ",
+     "translit": "fa-inṣab",
+     "gloss": "then labor hard",
+     "audio": "wbw/094_007_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So when you have finished [your duties], then stand up [for worship].",
+    "pickthall": "So when thou art relieved, still toil"
+   }
+  },
+  {
+   "n": 8,
+   "global": 6098,
+   "text": "وَإِلَىٰ رَبِّكَ فَٱرْغَب",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَإِلَىٰ",
+     "translit": "wa-ilā",
+     "gloss": "And to",
+     "audio": "wbw/094_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "رَبِّكَ",
+     "translit": "rabbika",
+     "gloss": "your Lord",
+     "audio": "wbw/094_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَٱرْغَب",
+     "translit": "fa-ir'ghab",
+     "gloss": "turn your attention",
+     "audio": "wbw/094_008_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And to your Lord direct [your] longing.",
+    "pickthall": "And strive to please thy Lord."
+   }
+  }
+ ]
+}

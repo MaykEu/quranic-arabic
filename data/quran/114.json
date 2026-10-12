@@ -1,0 +1,215 @@
+{
+ "id": 114,
+ "name_simple": "An-Nas",
+ "name_arabic": "الناس",
+ "verses_count": 6,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6231,
+   "text": "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "قُلْ",
+     "translit": "qul",
+     "gloss": "Say",
+     "audio": "wbw/114_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَعُوذُ",
+     "translit": "aʿūdhu",
+     "gloss": "I seek refuge",
+     "audio": "wbw/114_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بِرَبِّ",
+     "translit": "birabbi",
+     "gloss": "in (the) Lord",
+     "audio": "wbw/114_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلنَّاسِ",
+     "translit": "l-nāsi",
+     "gloss": "(of) mankind",
+     "audio": "wbw/114_001_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Say, \"I seek refuge in the Lord of mankind,",
+    "pickthall": "Say: I seek refuge in the Lord of mankind,"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6232,
+   "text": "مَلِكِ ٱلنَّاسِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مَلِكِ",
+     "translit": "maliki",
+     "gloss": "(The) King",
+     "audio": "wbw/114_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلنَّاسِ",
+     "translit": "l-nāsi",
+     "gloss": "(of) mankind",
+     "audio": "wbw/114_002_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The Sovereign of mankind,",
+    "pickthall": "The King of mankind,"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6233,
+   "text": "إِلَـٰهِ ٱلنَّاسِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِلَـٰهِ",
+     "translit": "ilāhi",
+     "gloss": "(The) God",
+     "audio": "wbw/114_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلنَّاسِ",
+     "translit": "l-nāsi",
+     "gloss": "(of) mankind",
+     "audio": "wbw/114_003_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The God of mankind,",
+    "pickthall": "The God of mankind,"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6234,
+   "text": "مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "From",
+     "audio": "wbw/114_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "شَرِّ",
+     "translit": "sharri",
+     "gloss": "(the) evil",
+     "audio": "wbw/114_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْوَسْوَاسِ",
+     "translit": "l-waswāsi",
+     "gloss": "(of) the whisperer",
+     "audio": "wbw/114_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْخَنَّاسِ",
+     "translit": "l-khanāsi",
+     "gloss": "the one who withdraws",
+     "audio": "wbw/114_004_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "From the evil of the retreating whisperer -",
+    "pickthall": "From the evil of the sneaking whisperer,"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6235,
+   "text": "ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلَّذِى",
+     "translit": "alladhī",
+     "gloss": "The one who",
+     "audio": "wbw/114_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يُوَسْوِسُ",
+     "translit": "yuwaswisu",
+     "gloss": "whispers",
+     "audio": "wbw/114_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/114_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "صُدُورِ",
+     "translit": "ṣudūri",
+     "gloss": "(the) breasts",
+     "audio": "wbw/114_005_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلنَّاسِ",
+     "translit": "l-nāsi",
+     "gloss": "(of) mankind",
+     "audio": "wbw/114_005_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Who whispers [evil] into the breasts of mankind -",
+    "pickthall": "Who whispereth in the hearts of mankind,"
+   }
+  },
+  {
+   "n": 6,
+   "global": 6236,
+   "text": "مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مِنَ",
+     "translit": "mina",
+     "gloss": "From",
+     "audio": "wbw/114_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْجِنَّةِ",
+     "translit": "l-jinati",
+     "gloss": "the jinn",
+     "audio": "wbw/114_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَٱلنَّاسِ",
+     "translit": "wal-nāsi",
+     "gloss": "and men",
+     "audio": "wbw/114_006_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "From among the jinn and mankind\".",
+    "pickthall": "Of the jinn and of mankind."
+   }
+  }
+ ]
+}

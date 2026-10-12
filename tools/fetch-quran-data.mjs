@@ -31,6 +31,11 @@ async function getJson(url, tries = 3) {
   }
 }
 
+// Known upstream quirks in quran.com word-by-word audio (verified 2026-10-12):
+// 36:52 word 7 arrives with an empty audio_url; the verse has one extra pause-mark
+// segment (_007), so the word is file _008. Mirrors the fix in data/quran/036.json.
+const AUDIO_FIXES = { "36:52:7": "wbw/036_052_008.mp3" };
+
 const clean = (s) =>
   (s ?? '')
     .replace(/^\uFEFF/, '')                 // BOM guard (seen in fallback sources)
@@ -84,7 +89,8 @@ for (const ch of chapters.slice(0, limit)) {
           translit: clean(w.transliteration?.text ?? ''),
           gloss: clean(w.translation?.text ?? ''),
           audio:
-            w.audio_url ??
+            AUDIO_FIXES[`${ch.id}:${v.verse_number}:${w.position}`] ||
+            w.audio_url ||
             `wbw/${String(ch.id).padStart(3, '0')}_${String(v.verse_number).padStart(3, '0')}_${String(w.position).padStart(3, '0')}.mp3`,
         }));
       const tr = {};

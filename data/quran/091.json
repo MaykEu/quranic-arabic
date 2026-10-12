@@ -1,0 +1,552 @@
+{
+ "id": 91,
+ "name_simple": "Ash-Shams",
+ "name_arabic": "الشمس",
+ "verses_count": 15,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6044,
+   "text": "وَٱلشَّمْسِ وَضُحَىٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلشَّمْسِ",
+     "translit": "wal-shamsi",
+     "gloss": "By the sun",
+     "audio": "wbw/091_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَضُحَىٰهَا",
+     "translit": "waḍuḥāhā",
+     "gloss": "and its brightness",
+     "audio": "wbw/091_001_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "By the sun and its brightness",
+    "pickthall": "By the sun and his brightness,"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6045,
+   "text": "وَٱلْقَمَرِ إِذَا تَلَىٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلْقَمَرِ",
+     "translit": "wal-qamari",
+     "gloss": "And the moon",
+     "audio": "wbw/091_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِذَا",
+     "translit": "idhā",
+     "gloss": "when",
+     "audio": "wbw/091_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "تَلَىٰهَا",
+     "translit": "talāhā",
+     "gloss": "it follows it",
+     "audio": "wbw/091_002_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And [by] the moon when it follows it",
+    "pickthall": "And the moon when she followeth him,"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6046,
+   "text": "وَٱلنَّهَارِ إِذَا جَلَّىٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلنَّهَارِ",
+     "translit": "wal-nahāri",
+     "gloss": "And the day",
+     "audio": "wbw/091_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِذَا",
+     "translit": "idhā",
+     "gloss": "when",
+     "audio": "wbw/091_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "جَلَّىٰهَا",
+     "translit": "jallāhā",
+     "gloss": "it displays it",
+     "audio": "wbw/091_003_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And [by] the day when it displays it",
+    "pickthall": "And the day when it revealeth him,"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6047,
+   "text": "وَٱلَّيْلِ إِذَا يَغْشَىٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلَّيْلِ",
+     "translit": "wa-al-layli",
+     "gloss": "And the night",
+     "audio": "wbw/091_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِذَا",
+     "translit": "idhā",
+     "gloss": "when",
+     "audio": "wbw/091_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يَغْشَىٰهَا",
+     "translit": "yaghshāhā",
+     "gloss": "it covers it",
+     "audio": "wbw/091_004_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And [by] the night when it covers [i.e., conceals] it",
+    "pickthall": "And the night when it enshroudeth him,"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6048,
+   "text": "وَٱلسَّمَآءِ وَمَا بَنَىٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلسَّمَآءِ",
+     "translit": "wal-samāi",
+     "gloss": "And the heaven",
+     "audio": "wbw/091_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "and (He) Who",
+     "audio": "wbw/091_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بَنَىٰهَا",
+     "translit": "banāhā",
+     "gloss": "constructed it",
+     "audio": "wbw/091_005_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And [by] the sky and He who constructed it",
+    "pickthall": "And the heaven and Him Who built it,"
+   }
+  },
+  {
+   "n": 6,
+   "global": 6049,
+   "text": "وَٱلْأَرْضِ وَمَا طَحَىٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلْأَرْضِ",
+     "translit": "wal-arḍi",
+     "gloss": "And the earth",
+     "audio": "wbw/091_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "and by (He) Who",
+     "audio": "wbw/091_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "طَحَىٰهَا",
+     "translit": "ṭaḥāhā",
+     "gloss": "spread it",
+     "audio": "wbw/091_006_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And [by] the earth and He who spread it",
+    "pickthall": "And the earth and Him Who spread it,"
+   }
+  },
+  {
+   "n": 7,
+   "global": 6050,
+   "text": "وَنَفْسٍ وَمَا سَوَّىٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَنَفْسٍۢ",
+     "translit": "wanafsin",
+     "gloss": "And (the) soul",
+     "audio": "wbw/091_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "and (He) Who",
+     "audio": "wbw/091_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "سَوَّىٰهَا",
+     "translit": "sawwāhā",
+     "gloss": "proportioned it",
+     "audio": "wbw/091_007_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And [by] the soul and He who proportioned it",
+    "pickthall": "And a soul and Him Who perfected it"
+   }
+  },
+  {
+   "n": 8,
+   "global": 6051,
+   "text": "فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَىٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَأَلْهَمَهَا",
+     "translit": "fa-alhamahā",
+     "gloss": "And He inspired it",
+     "audio": "wbw/091_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "فُجُورَهَا",
+     "translit": "fujūrahā",
+     "gloss": "(to distinguish) its wickedness",
+     "audio": "wbw/091_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَتَقْوَىٰهَا",
+     "translit": "wataqwāhā",
+     "gloss": "and its righteousness",
+     "audio": "wbw/091_008_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And inspired it [with discernment of] its wickedness and its righteousness,",
+    "pickthall": "And inspired it (with conscience of) what is wrong for it and (what is) right for it."
+   }
+  },
+  {
+   "n": 9,
+   "global": 6052,
+   "text": "قَدْ أَفْلَحَ مَن زَكَّىٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "قَدْ",
+     "translit": "qad",
+     "gloss": "Indeed",
+     "audio": "wbw/091_009_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَفْلَحَ",
+     "translit": "aflaḥa",
+     "gloss": "he succeeds",
+     "audio": "wbw/091_009_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَن",
+     "translit": "man",
+     "gloss": "who",
+     "audio": "wbw/091_009_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "زَكَّىٰهَا",
+     "translit": "zakkāhā",
+     "gloss": "purifies it",
+     "audio": "wbw/091_009_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "He has succeeded who purifies it,",
+    "pickthall": "He is indeed successful who causeth it to grow,"
+   }
+  },
+  {
+   "n": 10,
+   "global": 6053,
+   "text": "وَقَدْ خَابَ مَن دَسَّىٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَقَدْ",
+     "translit": "waqad",
+     "gloss": "And indeed",
+     "audio": "wbw/091_010_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "خَابَ",
+     "translit": "khāba",
+     "gloss": "he fails",
+     "audio": "wbw/091_010_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَن",
+     "translit": "man",
+     "gloss": "who",
+     "audio": "wbw/091_010_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "دَسَّىٰهَا",
+     "translit": "dassāhā",
+     "gloss": "buries it",
+     "audio": "wbw/091_010_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And he has failed who instills it [with corruption].",
+    "pickthall": "And he is indeed a failure who stunteth it."
+   }
+  },
+  {
+   "n": 11,
+   "global": 6054,
+   "text": "كَذَّبَتْ ثَمُودُ بِطَغْوَىٰهَآ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كَذَّبَتْ",
+     "translit": "kadhabat",
+     "gloss": "Denied",
+     "audio": "wbw/091_011_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ثَمُودُ",
+     "translit": "thamūdu",
+     "gloss": "Thamud",
+     "audio": "wbw/091_011_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بِطَغْوَىٰهَآ",
+     "translit": "biṭaghwāhā",
+     "gloss": "by their transgression",
+     "audio": "wbw/091_011_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Thamūd denied [their prophet] by reason of their transgression,",
+    "pickthall": "(The tribe of) Thamud denied (the truth) in their rebellious pride,"
+   }
+  },
+  {
+   "n": 12,
+   "global": 6055,
+   "text": "إِذِ ٱنۢبَعَثَ أَشْقَىٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِذِ",
+     "translit": "idhi",
+     "gloss": "When",
+     "audio": "wbw/091_012_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱنۢبَعَثَ",
+     "translit": "inbaʿatha",
+     "gloss": "(was) sent forth",
+     "audio": "wbw/091_012_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَشْقَىٰهَا",
+     "translit": "ashqāhā",
+     "gloss": "(the) most wicked of them",
+     "audio": "wbw/091_012_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "When the most wretched of them was sent forth.",
+    "pickthall": "When the basest of them broke forth"
+   }
+  },
+  {
+   "n": 13,
+   "global": 6056,
+   "text": "فَقَالَ لَهُمْ رَسُولُ ٱللَّهِ نَاقَةَ ٱللَّهِ وَسُقْيَـٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَقَالَ",
+     "translit": "faqāla",
+     "gloss": "But said",
+     "audio": "wbw/091_013_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لَهُمْ",
+     "translit": "lahum",
+     "gloss": "to them",
+     "audio": "wbw/091_013_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَسُولُ",
+     "translit": "rasūlu",
+     "gloss": "(the) Messenger",
+     "audio": "wbw/091_013_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱللَّهِ",
+     "translit": "l-lahi",
+     "gloss": "(of) Allah",
+     "audio": "wbw/091_013_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "نَاقَةَ",
+     "translit": "nāqata",
+     "gloss": "(It is the) she-camel",
+     "audio": "wbw/091_013_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ٱللَّهِ",
+     "translit": "l-lahi",
+     "gloss": "(of) Allah",
+     "audio": "wbw/091_013_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "وَسُقْيَـٰهَا",
+     "translit": "wasuq'yāhā",
+     "gloss": "and her drink",
+     "audio": "wbw/091_013_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And the messenger of Allāh [i.e., Ṣāliḥ] said to them, \"[Do not harm] the she-camel of Allāh or [prevent her from] her drink.\"",
+    "pickthall": "And the messenger of Allah said: It is the she-camel of Allah, so let her drink!"
+   }
+  },
+  {
+   "n": 14,
+   "global": 6057,
+   "text": "فَكَذَّبُوهُ فَعَقَرُوهَا فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنۢبِهِمْ فَسَوَّىٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَكَذَّبُوهُ",
+     "translit": "fakadhabūhu",
+     "gloss": "But they denied him",
+     "audio": "wbw/091_014_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "فَعَقَرُوهَا",
+     "translit": "faʿaqarūhā",
+     "gloss": "and they hamstrung her",
+     "audio": "wbw/091_014_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَدَمْدَمَ",
+     "translit": "fadamdama",
+     "gloss": "So destroyed",
+     "audio": "wbw/091_014_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "عَلَيْهِمْ",
+     "translit": "ʿalayhim",
+     "gloss": "them",
+     "audio": "wbw/091_014_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "رَبُّهُم",
+     "translit": "rabbuhum",
+     "gloss": "their Lord",
+     "audio": "wbw/091_014_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "بِذَنۢبِهِمْ",
+     "translit": "bidhanbihim",
+     "gloss": "for their sin",
+     "audio": "wbw/091_014_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فَسَوَّىٰهَا",
+     "translit": "fasawwāhā",
+     "gloss": "and leveled them",
+     "audio": "wbw/091_014_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "But they denied him and hamstrung her. So their Lord brought down upon them destruction for their sin and made it equal [upon all of them].",
+    "pickthall": "But they denied him, and they hamstrung her, so Allah doomed them for their sin and rased (their dwellings)."
+   }
+  },
+  {
+   "n": 15,
+   "global": 6058,
+   "text": "وَلَا يَخَافُ عُقْبَـٰهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "And not",
+     "audio": "wbw/091_015_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَخَافُ",
+     "translit": "yakhāfu",
+     "gloss": "He fears",
+     "audio": "wbw/091_015_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عُقْبَـٰهَا",
+     "translit": "ʿuq'bāhā",
+     "gloss": "its consequences",
+     "audio": "wbw/091_015_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And He does not fear the consequence thereof.",
+    "pickthall": "He dreadeth not the sequel (of events)."
+   }
+  }
+ ]
+}

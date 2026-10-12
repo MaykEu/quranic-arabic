@@ -1,0 +1,349 @@
+{
+ "id": 99,
+ "name_simple": "Az-Zalzalah",
+ "name_arabic": "الزلزلة",
+ "verses_count": 8,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6139,
+   "text": "إِذَا زُلْزِلَتِ ٱلْأَرْضُ زِلْزَالَهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِذَا",
+     "translit": "idhā",
+     "gloss": "When",
+     "audio": "wbw/099_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "زُلْزِلَتِ",
+     "translit": "zul'zilati",
+     "gloss": "is shaken",
+     "audio": "wbw/099_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْأَرْضُ",
+     "translit": "l-arḍu",
+     "gloss": "the earth",
+     "audio": "wbw/099_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "زِلْزَالَهَا",
+     "translit": "zil'zālahā",
+     "gloss": "(with) its earthquake",
+     "audio": "wbw/099_001_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "When the earth is shaken with its [final] earthquake",
+    "pickthall": "When Earth is shaken with her (final) earthquake"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6140,
+   "text": "وَأَخْرَجَتِ ٱلْأَرْضُ أَثْقَالَهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَأَخْرَجَتِ",
+     "translit": "wa-akhrajati",
+     "gloss": "And brings forth",
+     "audio": "wbw/099_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْأَرْضُ",
+     "translit": "l-arḍu",
+     "gloss": "the earth",
+     "audio": "wbw/099_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَثْقَالَهَا",
+     "translit": "athqālahā",
+     "gloss": "its burdens",
+     "audio": "wbw/099_002_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And the earth discharges its burdens",
+    "pickthall": "And Earth yieldeth up her burdens,"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6141,
+   "text": "وَقَالَ ٱلْإِنسَـٰنُ مَا لَهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَقَالَ",
+     "translit": "waqāla",
+     "gloss": "And says",
+     "audio": "wbw/099_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْإِنسَـٰنُ",
+     "translit": "l-insānu",
+     "gloss": "man",
+     "audio": "wbw/099_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "What",
+     "audio": "wbw/099_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَهَا",
+     "translit": "lahā",
+     "gloss": "(is) with it",
+     "audio": "wbw/099_003_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And man says, \"What is [wrong] with it?\" -",
+    "pickthall": "And man saith: What aileth her?"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6142,
+   "text": "يَوْمَئِذٍ تُحَدِّثُ أَخْبَارَهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "يَوْمَئِذٍۢ",
+     "translit": "yawma-idhin",
+     "gloss": "That Day",
+     "audio": "wbw/099_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "تُحَدِّثُ",
+     "translit": "tuḥaddithu",
+     "gloss": "it will report",
+     "audio": "wbw/099_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَخْبَارَهَا",
+     "translit": "akhbārahā",
+     "gloss": "its news",
+     "audio": "wbw/099_004_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "That Day, it will report its news",
+    "pickthall": "That day she will relate her chronicles,"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6143,
+   "text": "بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "بِأَنَّ",
+     "translit": "bi-anna",
+     "gloss": "Because",
+     "audio": "wbw/099_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "رَبَّكَ",
+     "translit": "rabbaka",
+     "gloss": "your Lord",
+     "audio": "wbw/099_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَوْحَىٰ",
+     "translit": "awḥā",
+     "gloss": "inspired",
+     "audio": "wbw/099_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَهَا",
+     "translit": "lahā",
+     "gloss": "[to] it",
+     "audio": "wbw/099_005_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Because your Lord has inspired [i.e., commanded] it.",
+    "pickthall": "Because thy Lord inspireth her."
+   }
+  },
+  {
+   "n": 6,
+   "global": 6144,
+   "text": "يَوْمَئِذٍ يَصْدُرُ ٱلنَّاسُ أَشْتَاتًا لِّيُرَوْا۟ أَعْمَـٰلَهُمْ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "يَوْمَئِذٍۢ",
+     "translit": "yawma-idhin",
+     "gloss": "That Day",
+     "audio": "wbw/099_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَصْدُرُ",
+     "translit": "yaṣduru",
+     "gloss": "will proceed",
+     "audio": "wbw/099_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلنَّاسُ",
+     "translit": "l-nāsu",
+     "gloss": "the mankind",
+     "audio": "wbw/099_006_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أَشْتَاتًۭا",
+     "translit": "ashtātan",
+     "gloss": "(in) scattered groups",
+     "audio": "wbw/099_006_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "لِّيُرَوْا۟",
+     "translit": "liyuraw",
+     "gloss": "to be shown",
+     "audio": "wbw/099_006_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "أَعْمَـٰلَهُمْ",
+     "translit": "aʿmālahum",
+     "gloss": "their deeds",
+     "audio": "wbw/099_006_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "That Day, the people will depart separated [into categories] to be shown [the result of] their deeds.",
+    "pickthall": "That day mankind will issue forth in scattered groups to be shown their deeds."
+   }
+  },
+  {
+   "n": 7,
+   "global": 6145,
+   "text": "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُۥ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَمَن",
+     "translit": "faman",
+     "gloss": "So whoever",
+     "audio": "wbw/099_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَعْمَلْ",
+     "translit": "yaʿmal",
+     "gloss": "does",
+     "audio": "wbw/099_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مِثْقَالَ",
+     "translit": "mith'qāla",
+     "gloss": "(equal to the) weight",
+     "audio": "wbw/099_007_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ذَرَّةٍ",
+     "translit": "dharratin",
+     "gloss": "(of) an atom",
+     "audio": "wbw/099_007_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "خَيْرًۭا",
+     "translit": "khayran",
+     "gloss": "good",
+     "audio": "wbw/099_007_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "يَرَهُۥ",
+     "translit": "yarahu",
+     "gloss": "will see it",
+     "audio": "wbw/099_007_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So whoever does an atom's weight of good will see it,",
+    "pickthall": "And whoso doeth good an atom's weight will see it then,"
+   }
+  },
+  {
+   "n": 8,
+   "global": 6146,
+   "text": "وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُۥ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمَن",
+     "translit": "waman",
+     "gloss": "And whoever",
+     "audio": "wbw/099_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَعْمَلْ",
+     "translit": "yaʿmal",
+     "gloss": "does",
+     "audio": "wbw/099_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مِثْقَالَ",
+     "translit": "mith'qāla",
+     "gloss": "(equal to the) weight",
+     "audio": "wbw/099_008_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ذَرَّةٍۢ",
+     "translit": "dharratin",
+     "gloss": "(of) an atom",
+     "audio": "wbw/099_008_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "شَرًّۭا",
+     "translit": "sharran",
+     "gloss": "evil",
+     "audio": "wbw/099_008_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "يَرَهُۥ",
+     "translit": "yarahu",
+     "gloss": "will see it",
+     "audio": "wbw/099_008_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And whoever does an atom's weight of evil will see it.",
+    "pickthall": "And whoso doeth ill an atom's weight will see it then."
+   }
+  }
+ ]
+}

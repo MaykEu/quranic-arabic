@@ -1,0 +1,12 @@
+[
+ {"id":"ism","term":"ism (noun)","arabic":"اِسْم","gist":"A noun: a person, thing or concept."},
+ {"id":"fil","term":"fiʿl (verb)","arabic":"فِعْل","gist":"A verb: past, present or imperative."},
+ {"id":"harf","term":"ḥarf (particle)","arabic":"حَرْف","gist":"A small word with a grammatical function (and, in, by...)."},
+ {"id":"jarr","term":"ḥarf jarr (preposition)","arabic":"حَرْف جَرّ","gist":"Prepositions like bi-, li-, min, fī, ʿalā. The noun after them is majrūr."},
+ {"id":"majrur","term":"majrūr (genitive)","arabic":"مَجْرُور","gist":"Genitive case - usually an -i ending; used after prepositions and in possessives."},
+ {"id":"marfu","term":"marfūʿ (nominative)","arabic":"مَرْفُوع","gist":"Nominative case - usually an -u ending; marks subjects and predicates."},
+ {"id":"idafa","term":"iḍāfa (possessive)","arabic":"إِضَافَة","gist":"Possessive construction 'X of Y': the second word is majrūr (genitive)."},
+ {"id":"madi","term":"fiʿl māḍī (past)","arabic":"فِعْل مَاضِي","gist":"Past-tense verb."},
+ {"id":"mudari","term":"fiʿl muḍāriʿ (present)","arabic":"فِعْل مُضَارِع","gist":"Present / imperfect verb - 'he does / is doing'."},
+ {"id":"amr","term":"amr (imperative)","arabic":"أَمْر","gist":"Command form of the verb - 'say!', 'read!'."}
+]

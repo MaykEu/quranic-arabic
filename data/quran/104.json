@@ -1,0 +1,339 @@
+{
+ "id": 104,
+ "name_simple": "Al-Humazah",
+ "name_arabic": "الهمزة",
+ "verses_count": 9,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6180,
+   "text": "وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَيْلٌۭ",
+     "translit": "waylun",
+     "gloss": "Woe",
+     "audio": "wbw/104_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لِّكُلِّ",
+     "translit": "likulli",
+     "gloss": "to every",
+     "audio": "wbw/104_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "هُمَزَةٍۢ",
+     "translit": "humazatin",
+     "gloss": "slanderer",
+     "audio": "wbw/104_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لُّمَزَةٍ",
+     "translit": "lumazatin",
+     "gloss": "backbiter",
+     "audio": "wbw/104_001_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Woe to every scorner and mocker",
+    "pickthall": "Woe unto every slandering traducer,"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6181,
+   "text": "ٱلَّذِى جَمَعَ مَالًا وَعَدَّدَهُۥ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلَّذِى",
+     "translit": "alladhī",
+     "gloss": "The one who",
+     "audio": "wbw/104_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "جَمَعَ",
+     "translit": "jamaʿa",
+     "gloss": "collects",
+     "audio": "wbw/104_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَالًۭا",
+     "translit": "mālan",
+     "gloss": "wealth",
+     "audio": "wbw/104_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَعَدَّدَهُۥ",
+     "translit": "waʿaddadahu",
+     "gloss": "and counts it",
+     "audio": "wbw/104_002_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Who collects wealth and [continuously] counts it.",
+    "pickthall": "Who hath gathered wealth (of this world) and arranged it."
+   }
+  },
+  {
+   "n": 3,
+   "global": 6182,
+   "text": "يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "يَحْسَبُ",
+     "translit": "yaḥsabu",
+     "gloss": "Thinking",
+     "audio": "wbw/104_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَنَّ",
+     "translit": "anna",
+     "gloss": "that",
+     "audio": "wbw/104_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَالَهُۥٓ",
+     "translit": "mālahu",
+     "gloss": "his wealth",
+     "audio": "wbw/104_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أَخْلَدَهُۥ",
+     "translit": "akhladahu",
+     "gloss": "will make him immortal",
+     "audio": "wbw/104_003_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "He thinks that his wealth will make him immortal.",
+    "pickthall": "He thinketh that his wealth will render him immortal."
+   }
+  },
+  {
+   "n": 4,
+   "global": 6183,
+   "text": "كَلَّا ۖ لَيُنۢبَذَنَّ فِى ٱلْحُطَمَةِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كَلَّا ۖ",
+     "translit": "kallā",
+     "gloss": "Nay",
+     "audio": "wbw/104_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لَيُنۢبَذَنَّ",
+     "translit": "layunbadhanna",
+     "gloss": "Surely he will be thrown",
+     "audio": "wbw/104_004_003.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/104_004_004.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْحُطَمَةِ",
+     "translit": "l-ḥuṭamati",
+     "gloss": "the Crusher",
+     "audio": "wbw/104_004_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "No! He will surely be thrown into the Crusher.",
+    "pickthall": "Nay, but verily he will be flung to the Consuming One."
+   }
+  },
+  {
+   "n": 5,
+   "global": 6184,
+   "text": "وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمَآ",
+     "translit": "wamā",
+     "gloss": "And what",
+     "audio": "wbw/104_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَدْرَىٰكَ",
+     "translit": "adrāka",
+     "gloss": "will make you know",
+     "audio": "wbw/104_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/104_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْحُطَمَةُ",
+     "translit": "l-ḥuṭamatu",
+     "gloss": "the Crusher (is)",
+     "audio": "wbw/104_005_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And what can make you know what is the Crusher?",
+    "pickthall": "Ah, what will convey unto thee what the Consuming One is!"
+   }
+  },
+  {
+   "n": 6,
+   "global": 6185,
+   "text": "نَارُ ٱللَّهِ ٱلْمُوقَدَةُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "نَارُ",
+     "translit": "nāru",
+     "gloss": "A Fire",
+     "audio": "wbw/104_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱللَّهِ",
+     "translit": "l-lahi",
+     "gloss": "Allah",
+     "audio": "wbw/104_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْمُوقَدَةُ",
+     "translit": "l-mūqadatu",
+     "gloss": "kindled",
+     "audio": "wbw/104_006_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "It is the fire of Allāh, [eternally] fueled,",
+    "pickthall": "(It is) the fire of Allah, kindled,"
+   }
+  },
+  {
+   "n": 7,
+   "global": 6186,
+   "text": "ٱلَّتِى تَطَّلِعُ عَلَى ٱلْأَفْـِٔدَةِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلَّتِى",
+     "translit": "allatī",
+     "gloss": "Which",
+     "audio": "wbw/104_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "تَطَّلِعُ",
+     "translit": "taṭṭaliʿu",
+     "gloss": "mounts up",
+     "audio": "wbw/104_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَلَى",
+     "translit": "ʿalā",
+     "gloss": "to",
+     "audio": "wbw/104_007_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْأَفْـِٔدَةِ",
+     "translit": "l-afidati",
+     "gloss": "the hearts",
+     "audio": "wbw/104_007_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Which mounts directed at the hearts.",
+    "pickthall": "Which leapeth up over the hearts (of men)."
+   }
+  },
+  {
+   "n": 8,
+   "global": 6187,
+   "text": "إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّهَا",
+     "translit": "innahā",
+     "gloss": "Indeed, it",
+     "audio": "wbw/104_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَلَيْهِم",
+     "translit": "ʿalayhim",
+     "gloss": "(will be) upon them",
+     "audio": "wbw/104_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مُّؤْصَدَةٌۭ",
+     "translit": "mu'ṣadatun",
+     "gloss": "closed over",
+     "audio": "wbw/104_008_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, it [i.e., Hellfire] will be closed down upon them",
+    "pickthall": "Lo! it is closed in on them"
+   }
+  },
+  {
+   "n": 9,
+   "global": 6188,
+   "text": "فِى عَمَدٍ مُّمَدَّدَةٍۭ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "In",
+     "audio": "wbw/104_009_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَمَدٍۢ",
+     "translit": "ʿamadin",
+     "gloss": "columns",
+     "audio": "wbw/104_009_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مُّمَدَّدَةٍۭ",
+     "translit": "mumaddadatin",
+     "gloss": "extended",
+     "audio": "wbw/104_009_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "In extended columns.",
+    "pickthall": "In outstretched columns."
+   }
+  }
+ ]
+}

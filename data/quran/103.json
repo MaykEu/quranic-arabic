@@ -1,0 +1,140 @@
+{
+ "id": 103,
+ "name_simple": "Al-'Asr",
+ "name_arabic": "العصر",
+ "verses_count": 3,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6177,
+   "text": "وَٱلْعَصْرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلْعَصْرِ",
+     "translit": "wal-ʿaṣri",
+     "gloss": "By the time",
+     "audio": "wbw/103_001_001.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "By time,",
+    "pickthall": "By the declining day,"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6178,
+   "text": "إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/103_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْإِنسَـٰنَ",
+     "translit": "l-insāna",
+     "gloss": "mankind",
+     "audio": "wbw/103_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "لَفِى",
+     "translit": "lafī",
+     "gloss": "(is) surely, in",
+     "audio": "wbw/103_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "خُسْرٍ",
+     "translit": "khus'rin",
+     "gloss": "loss",
+     "audio": "wbw/103_002_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, mankind is in loss,",
+    "pickthall": "Lo! man is a state of loss,"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6179,
+   "text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِلَّا",
+     "translit": "illā",
+     "gloss": "Except",
+     "audio": "wbw/103_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/103_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ءَامَنُوا۟",
+     "translit": "āmanū",
+     "gloss": "believe",
+     "audio": "wbw/103_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَعَمِلُوا۟",
+     "translit": "waʿamilū",
+     "gloss": "and do",
+     "audio": "wbw/103_003_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلصَّـٰلِحَـٰتِ",
+     "translit": "l-ṣāliḥāti",
+     "gloss": "righteous deeds",
+     "audio": "wbw/103_003_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَتَوَاصَوْا۟",
+     "translit": "watawāṣaw",
+     "gloss": "and enjoin (each other)",
+     "audio": "wbw/103_003_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "بِٱلْحَقِّ",
+     "translit": "bil-ḥaqi",
+     "gloss": "to the truth",
+     "audio": "wbw/103_003_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَتَوَاصَوْا۟",
+     "translit": "watawāṣaw",
+     "gloss": "and enjoin (each other)",
+     "audio": "wbw/103_003_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "بِٱلصَّبْرِ",
+     "translit": "bil-ṣabri",
+     "gloss": "to [the] patience",
+     "audio": "wbw/103_003_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.",
+    "pickthall": "Save those who believe and do good works, and exhort one another to truth and exhort one another to endurance."
+   }
+  }
+ ]
+}

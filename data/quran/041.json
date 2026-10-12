@@ -1,0 +1,6161 @@
+{
+ "id": 41,
+ "name_simple": "Fussilat",
+ "name_arabic": "فصلت",
+ "verses_count": 54,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 4219,
+   "text": "حمٓ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "حمٓ",
+     "translit": "hha-meem",
+     "gloss": "Ha Meem",
+     "audio": "wbw/041_001_001.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Ḥā, Meem.",
+    "pickthall": "Ha. Mim."
+   }
+  },
+  {
+   "n": 2,
+   "global": 4220,
+   "text": "تَنزِيلٌ مِّنَ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "تَنزِيلٌۭ",
+     "translit": "tanzīlun",
+     "gloss": "A revelation",
+     "audio": "wbw/041_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مِّنَ",
+     "translit": "mina",
+     "gloss": "from",
+     "audio": "wbw/041_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلرَّحْمَـٰنِ",
+     "translit": "l-raḥmāni",
+     "gloss": "the Most Gracious",
+     "audio": "wbw/041_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلرَّحِيمِ",
+     "translit": "l-raḥīmi",
+     "gloss": "the Most Merciful",
+     "audio": "wbw/041_002_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "[This is] a revelation from the Entirely Merciful, the Especially Merciful -",
+    "pickthall": "A revelation from the Beneficent, the Merciful,"
+   }
+  },
+  {
+   "n": 3,
+   "global": 4221,
+   "text": "كِتَـٰبٌ فُصِّلَتْ ءَايَـٰتُهُۥ قُرْءَانًا عَرَبِيًّا لِّقَوْمٍ يَعْلَمُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كِتَـٰبٌۭ",
+     "translit": "kitābun",
+     "gloss": "A Book",
+     "audio": "wbw/041_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "فُصِّلَتْ",
+     "translit": "fuṣṣilat",
+     "gloss": "are detailed",
+     "audio": "wbw/041_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ءَايَـٰتُهُۥ",
+     "translit": "āyātuhu",
+     "gloss": "its Verses",
+     "audio": "wbw/041_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "قُرْءَانًا",
+     "translit": "qur'ānan",
+     "gloss": "a Quran",
+     "audio": "wbw/041_003_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "عَرَبِيًّۭا",
+     "translit": "ʿarabiyyan",
+     "gloss": "(in) Arabic",
+     "audio": "wbw/041_003_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "لِّقَوْمٍۢ",
+     "translit": "liqawmin",
+     "gloss": "for a people",
+     "audio": "wbw/041_003_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "يَعْلَمُونَ",
+     "translit": "yaʿlamūna",
+     "gloss": "(who) know",
+     "audio": "wbw/041_003_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "A Book whose verses have been detailed, an Arabic Qur’ān for a people who know,",
+    "pickthall": "A Scripture whereof the verses are expounded, a Lecture in Arabic for people who have knowledge,"
+   }
+  },
+  {
+   "n": 4,
+   "global": 4222,
+   "text": "بَشِيرًا وَنَذِيرًا فَأَعْرَضَ أَكْثَرُهُمْ فَهُمْ لَا يَسْمَعُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "بَشِيرًۭا",
+     "translit": "bashīran",
+     "gloss": "A giver of glad tidings",
+     "audio": "wbw/041_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَنَذِيرًۭا",
+     "translit": "wanadhīran",
+     "gloss": "and a warner",
+     "audio": "wbw/041_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَأَعْرَضَ",
+     "translit": "fa-aʿraḍa",
+     "gloss": "but turn away",
+     "audio": "wbw/041_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أَكْثَرُهُمْ",
+     "translit": "aktharuhum",
+     "gloss": "most of them",
+     "audio": "wbw/041_004_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "فَهُمْ",
+     "translit": "fahum",
+     "gloss": "so they",
+     "audio": "wbw/041_004_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "لَا",
+     "translit": "lā",
+     "gloss": "(do) not",
+     "audio": "wbw/041_004_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "يَسْمَعُونَ",
+     "translit": "yasmaʿūna",
+     "gloss": "hear",
+     "audio": "wbw/041_004_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "As a giver of good tidings and a warner; but most of them turn away, so they do not hear.",
+    "pickthall": "Good tidings and a warning. But most of them turn away so that they hear not."
+   }
+  },
+  {
+   "n": 5,
+   "global": 4223,
+   "text": "وَقَالُوا۟ قُلُوبُنَا فِىٓ أَكِنَّةٍ مِّمَّا تَدْعُونَآ إِلَيْهِ وَفِىٓ ءَاذَانِنَا وَقْرٌ وَمِنۢ بَيْنِنَا وَبَيْنِكَ حِجَابٌ فَٱعْمَلْ إِنَّنَا عَـٰمِلُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَقَالُوا۟",
+     "translit": "waqālū",
+     "gloss": "And they say",
+     "audio": "wbw/041_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "قُلُوبُنَا",
+     "translit": "qulūbunā",
+     "gloss": "Our hearts",
+     "audio": "wbw/041_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِىٓ",
+     "translit": "fī",
+     "gloss": "(are) in",
+     "audio": "wbw/041_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أَكِنَّةٍۢ",
+     "translit": "akinnatin",
+     "gloss": "coverings",
+     "audio": "wbw/041_005_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مِّمَّا",
+     "translit": "mimmā",
+     "gloss": "from what",
+     "audio": "wbw/041_005_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "تَدْعُونَآ",
+     "translit": "tadʿūnā",
+     "gloss": "you call us",
+     "audio": "wbw/041_005_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "إِلَيْهِ",
+     "translit": "ilayhi",
+     "gloss": "to it",
+     "audio": "wbw/041_005_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَفِىٓ",
+     "translit": "wafī",
+     "gloss": "and in",
+     "audio": "wbw/041_005_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ءَاذَانِنَا",
+     "translit": "ādhāninā",
+     "gloss": "our ears",
+     "audio": "wbw/041_005_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "وَقْرٌۭ",
+     "translit": "waqrun",
+     "gloss": "(is) deafness",
+     "audio": "wbw/041_005_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "وَمِنۢ",
+     "translit": "wamin",
+     "gloss": "and between us",
+     "audio": "wbw/041_005_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "بَيْنِنَا",
+     "translit": "bayninā",
+     "gloss": "and between us",
+     "audio": "wbw/041_005_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "وَبَيْنِكَ",
+     "translit": "wabaynika",
+     "gloss": "and between you",
+     "audio": "wbw/041_005_013.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "حِجَابٌۭ",
+     "translit": "ḥijābun",
+     "gloss": "(is) a screen",
+     "audio": "wbw/041_005_014.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "فَٱعْمَلْ",
+     "translit": "fa-iʿ'mal",
+     "gloss": "So work",
+     "audio": "wbw/041_005_015.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "إِنَّنَا",
+     "translit": "innanā",
+     "gloss": "indeed, we",
+     "audio": "wbw/041_005_016.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "عَـٰمِلُونَ",
+     "translit": "ʿāmilūna",
+     "gloss": "(are) working",
+     "audio": "wbw/041_005_017.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And they say, \"Our hearts are within coverings [i.e., screened] from that to which you invite us, and in our ears is deafness, and between us and you is a partition, so work; indeed, we are working.\"",
+    "pickthall": "And they say: Our hearts are protected from that unto which thou (O Muhammad) callest us, and in our ears there is a deafness, and between us and thee there is a veil. Act, then. Lo! we also shall be acting."
+   }
+  },
+  {
+   "n": 6,
+   "global": 4224,
+   "text": "قُلْ إِنَّمَآ أَنَا۠ بَشَرٌ مِّثْلُكُمْ يُوحَىٰٓ إِلَىَّ أَنَّمَآ إِلَـٰهُكُمْ إِلَـٰهٌ وَٰحِدٌ فَٱسْتَقِيمُوٓا۟ إِلَيْهِ وَٱسْتَغْفِرُوهُ ۗ وَوَيْلٌ لِّلْمُشْرِكِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "قُلْ",
+     "translit": "qul",
+     "gloss": "Say",
+     "audio": "wbw/041_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِنَّمَآ",
+     "translit": "innamā",
+     "gloss": "Only",
+     "audio": "wbw/041_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَنَا۠",
+     "translit": "anā",
+     "gloss": "I am",
+     "audio": "wbw/041_006_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "بَشَرٌۭ",
+     "translit": "basharun",
+     "gloss": "a man",
+     "audio": "wbw/041_006_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مِّثْلُكُمْ",
+     "translit": "mith'lukum",
+     "gloss": "like you",
+     "audio": "wbw/041_006_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "يُوحَىٰٓ",
+     "translit": "yūḥā",
+     "gloss": "it is revealed",
+     "audio": "wbw/041_006_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "إِلَىَّ",
+     "translit": "ilayya",
+     "gloss": "to me",
+     "audio": "wbw/041_006_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "أَنَّمَآ",
+     "translit": "annamā",
+     "gloss": "that",
+     "audio": "wbw/041_006_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "إِلَـٰهُكُمْ",
+     "translit": "ilāhukum",
+     "gloss": "your god",
+     "audio": "wbw/041_006_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "إِلَـٰهٌۭ",
+     "translit": "ilāhun",
+     "gloss": "(is) God",
+     "audio": "wbw/041_006_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "وَٰحِدٌۭ",
+     "translit": "wāḥidun",
+     "gloss": "One",
+     "audio": "wbw/041_006_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "فَٱسْتَقِيمُوٓا۟",
+     "translit": "fa-is'taqīmū",
+     "gloss": "so take a Straight Path",
+     "audio": "wbw/041_006_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "إِلَيْهِ",
+     "translit": "ilayhi",
+     "gloss": "to Him",
+     "audio": "wbw/041_006_013.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "وَٱسْتَغْفِرُوهُ ۗ",
+     "translit": "wa-is'taghfirūhu",
+     "gloss": "and ask His forgiveness",
+     "audio": "wbw/041_006_014.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "وَوَيْلٌۭ",
+     "translit": "wawaylun",
+     "gloss": "And woe",
+     "audio": "wbw/041_006_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "لِّلْمُشْرِكِينَ",
+     "translit": "lil'mush'rikīna",
+     "gloss": "to the polytheists",
+     "audio": "wbw/041_006_017.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Say, [O Muḥammad], \"I am only a man like you to whom it has been revealed that your god is but one God; so take a straight course to Him and seek His forgiveness.\" And woe to those who associate others with Allāh",
+    "pickthall": "Say (unto them O Muhammad): I am only a mortal like you. It is inspired in me that your Allah is One Allah, therefor take the straight path unto Him and seek forgiveness of Him. And woe unto the idolaters,"
+   }
+  },
+  {
+   "n": 7,
+   "global": 4225,
+   "text": "ٱلَّذِينَ لَا يُؤْتُونَ ٱلزَّكَوٰةَ وَهُم بِٱلْـَٔاخِرَةِ هُمْ كَـٰفِرُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "Those who",
+     "audio": "wbw/041_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لَا",
+     "translit": "lā",
+     "gloss": "(do) not",
+     "audio": "wbw/041_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يُؤْتُونَ",
+     "translit": "yu'tūna",
+     "gloss": "give",
+     "audio": "wbw/041_007_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلزَّكَوٰةَ",
+     "translit": "l-zakata",
+     "gloss": "the zakah",
+     "audio": "wbw/041_007_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَهُم",
+     "translit": "wahum",
+     "gloss": "and they",
+     "audio": "wbw/041_007_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "بِٱلْـَٔاخِرَةِ",
+     "translit": "bil-ākhirati",
+     "gloss": "in the Hereafter",
+     "audio": "wbw/041_007_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "هُمْ",
+     "translit": "hum",
+     "gloss": "they",
+     "audio": "wbw/041_007_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "كَـٰفِرُونَ",
+     "translit": "kāfirūna",
+     "gloss": "(are) disbelievers",
+     "audio": "wbw/041_007_008.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Those who do not give zakāh, and in the Hereafter they are disbelievers.",
+    "pickthall": "Who give not the poor-due, and who are disbelievers in the Hereafter."
+   }
+  },
+  {
+   "n": 8,
+   "global": 4226,
+   "text": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/041_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/041_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ءَامَنُوا۟",
+     "translit": "āmanū",
+     "gloss": "believe",
+     "audio": "wbw/041_008_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَعَمِلُوا۟",
+     "translit": "waʿamilū",
+     "gloss": "and do",
+     "audio": "wbw/041_008_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلصَّـٰلِحَـٰتِ",
+     "translit": "l-ṣāliḥāti",
+     "gloss": "righteous deeds",
+     "audio": "wbw/041_008_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "لَهُمْ",
+     "translit": "lahum",
+     "gloss": "for them",
+     "audio": "wbw/041_008_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "أَجْرٌ",
+     "translit": "ajrun",
+     "gloss": "(is) a reward",
+     "audio": "wbw/041_008_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "غَيْرُ",
+     "translit": "ghayru",
+     "gloss": "never ending",
+     "audio": "wbw/041_008_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "مَمْنُونٍۢ",
+     "translit": "mamnūnin",
+     "gloss": "never ending",
+     "audio": "wbw/041_008_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, those who believe and do righteous deeds - for them is a reward uninterrupted.",
+    "pickthall": "Lo! as for those who believe and do good works, for them is a reward enduring."
+   }
+  },
+  {
+   "n": 9,
+   "global": 4227,
+   "text": "۞ قُلْ أَئِنَّكُمْ لَتَكْفُرُونَ بِٱلَّذِى خَلَقَ ٱلْأَرْضَ فِى يَوْمَيْنِ وَتَجْعَلُونَ لَهُۥٓ أَندَادًا ۚ ذَٰلِكَ رَبُّ ٱلْعَـٰلَمِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "۞ قُلْ",
+     "translit": "qul",
+     "gloss": "Say",
+     "audio": "wbw/041_009_002.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَئِنَّكُمْ",
+     "translit": "a-innakum",
+     "gloss": "Do you indeed",
+     "audio": "wbw/041_009_003.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "لَتَكْفُرُونَ",
+     "translit": "latakfurūna",
+     "gloss": "[surely] disbelieve",
+     "audio": "wbw/041_009_004.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "بِٱلَّذِى",
+     "translit": "bi-alladhī",
+     "gloss": "in the One Who",
+     "audio": "wbw/041_009_005.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "خَلَقَ",
+     "translit": "khalaqa",
+     "gloss": "created",
+     "audio": "wbw/041_009_006.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ٱلْأَرْضَ",
+     "translit": "l-arḍa",
+     "gloss": "the earth",
+     "audio": "wbw/041_009_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/041_009_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "يَوْمَيْنِ",
+     "translit": "yawmayni",
+     "gloss": "two periods",
+     "audio": "wbw/041_009_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "وَتَجْعَلُونَ",
+     "translit": "watajʿalūna",
+     "gloss": "and you set up",
+     "audio": "wbw/041_009_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "لَهُۥٓ",
+     "translit": "lahu",
+     "gloss": "with Him",
+     "audio": "wbw/041_009_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "أَندَادًۭا ۚ",
+     "translit": "andādan",
+     "gloss": "rivals",
+     "audio": "wbw/041_009_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "ذَٰلِكَ",
+     "translit": "dhālika",
+     "gloss": "That",
+     "audio": "wbw/041_009_014.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "رَبُّ",
+     "translit": "rabbu",
+     "gloss": "(is the) Lord",
+     "audio": "wbw/041_009_015.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "ٱلْعَـٰلَمِينَ",
+     "translit": "l-ʿālamīna",
+     "gloss": "(of) the worlds",
+     "audio": "wbw/041_009_016.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Say, \"Do you indeed disbelieve in He who created the earth in two days and attribute to Him equals? That is the Lord of the worlds.\"",
+    "pickthall": "Say (O Muhammad, unto the idolaters): Disbelieve ye verily in Him Who created the earth in two Days, and ascribe ye unto Him rivals? He (and none else) is the Lord of the Worlds."
+   }
+  },
+  {
+   "n": 10,
+   "global": 4228,
+   "text": "وَجَعَلَ فِيهَا رَوَٰسِىَ مِن فَوْقِهَا وَبَـٰرَكَ فِيهَا وَقَدَّرَ فِيهَآ أَقْوَٰتَهَا فِىٓ أَرْبَعَةِ أَيَّامٍ سَوَآءً لِّلسَّآئِلِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَجَعَلَ",
+     "translit": "wajaʿala",
+     "gloss": "And He placed",
+     "audio": "wbw/041_010_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "فِيهَا",
+     "translit": "fīhā",
+     "gloss": "therein",
+     "audio": "wbw/041_010_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَوَٰسِىَ",
+     "translit": "rawāsiya",
+     "gloss": "firmly-set mountains",
+     "audio": "wbw/041_010_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "above it",
+     "audio": "wbw/041_010_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "فَوْقِهَا",
+     "translit": "fawqihā",
+     "gloss": "above it",
+     "audio": "wbw/041_010_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَبَـٰرَكَ",
+     "translit": "wabāraka",
+     "gloss": "and He blessed",
+     "audio": "wbw/041_010_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فِيهَا",
+     "translit": "fīhā",
+     "gloss": "therein",
+     "audio": "wbw/041_010_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَقَدَّرَ",
+     "translit": "waqaddara",
+     "gloss": "and determined",
+     "audio": "wbw/041_010_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "فِيهَآ",
+     "translit": "fīhā",
+     "gloss": "therein",
+     "audio": "wbw/041_010_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "أَقْوَٰتَهَا",
+     "translit": "aqwātahā",
+     "gloss": "its sustenance",
+     "audio": "wbw/041_010_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "فِىٓ",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/041_010_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "أَرْبَعَةِ",
+     "translit": "arbaʿati",
+     "gloss": "four",
+     "audio": "wbw/041_010_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "أَيَّامٍۢ",
+     "translit": "ayyāmin",
+     "gloss": "periods",
+     "audio": "wbw/041_010_013.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "سَوَآءًۭ",
+     "translit": "sawāan",
+     "gloss": "equal",
+     "audio": "wbw/041_010_014.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "لِّلسَّآئِلِينَ",
+     "translit": "lilssāilīna",
+     "gloss": "for those who ask",
+     "audio": "wbw/041_010_015.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And He placed on it [i.e., the earth] firmly set mountains over its surface, and He blessed it and determined therein its [creatures'] sustenance in four days without distinction - for [the information of] those who ask.",
+    "pickthall": "He placed therein firm hills rising above it, and blessed it and measured therein its sustenance in four Days, alike for (all) who ask;"
+   }
+  },
+  {
+   "n": 11,
+   "global": 4229,
+   "text": "ثُمَّ ٱسْتَوَىٰٓ إِلَى ٱلسَّمَآءِ وَهِىَ دُخَانٌ فَقَالَ لَهَا وَلِلْأَرْضِ ٱئْتِيَا طَوْعًا أَوْ كَرْهًا قَالَتَآ أَتَيْنَا طَآئِعِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ثُمَّ",
+     "translit": "thumma",
+     "gloss": "Then",
+     "audio": "wbw/041_011_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱسْتَوَىٰٓ",
+     "translit": "is'tawā",
+     "gloss": "He directed (Himself)",
+     "audio": "wbw/041_011_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "إِلَى",
+     "translit": "ilā",
+     "gloss": "towards",
+     "audio": "wbw/041_011_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلسَّمَآءِ",
+     "translit": "l-samāi",
+     "gloss": "the heaven",
+     "audio": "wbw/041_011_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَهِىَ",
+     "translit": "wahiya",
+     "gloss": "while it (was)",
+     "audio": "wbw/041_011_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "دُخَانٌۭ",
+     "translit": "dukhānun",
+     "gloss": "smoke",
+     "audio": "wbw/041_011_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فَقَالَ",
+     "translit": "faqāla",
+     "gloss": "and He said",
+     "audio": "wbw/041_011_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "لَهَا",
+     "translit": "lahā",
+     "gloss": "to it",
+     "audio": "wbw/041_011_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "وَلِلْأَرْضِ",
+     "translit": "walil'arḍi",
+     "gloss": "and to the earth",
+     "audio": "wbw/041_011_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "ٱئْتِيَا",
+     "translit": "i'tiyā",
+     "gloss": "Come both of you",
+     "audio": "wbw/041_011_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "طَوْعًا",
+     "translit": "ṭawʿan",
+     "gloss": "willingly",
+     "audio": "wbw/041_011_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "أَوْ",
+     "translit": "aw",
+     "gloss": "or",
+     "audio": "wbw/041_011_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "كَرْهًۭا",
+     "translit": "karhan",
+     "gloss": "unwillingly",
+     "audio": "wbw/041_011_013.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "قَالَتَآ",
+     "translit": "qālatā",
+     "gloss": "They both said",
+     "audio": "wbw/041_011_014.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "أَتَيْنَا",
+     "translit": "ataynā",
+     "gloss": "We come",
+     "audio": "wbw/041_011_015.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "طَآئِعِينَ",
+     "translit": "ṭāiʿīna",
+     "gloss": "willingly",
+     "audio": "wbw/041_011_016.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Then He directed Himself to the heaven while it was smoke and said to it and to the earth, \"Come [into being], willingly or by compulsion.\" They said, \"We have come willingly.\"",
+    "pickthall": "Then turned He to the heaven when it was smoke, and said unto it and unto the earth: Come both of you, willingly or loth. They said: We come, obedient."
+   }
+  },
+  {
+   "n": 12,
+   "global": 4230,
+   "text": "فَقَضَىٰهُنَّ سَبْعَ سَمَـٰوَاتٍ فِى يَوْمَيْنِ وَأَوْحَىٰ فِى كُلِّ سَمَآءٍ أَمْرَهَا ۚ وَزَيَّنَّا ٱلسَّمَآءَ ٱلدُّنْيَا بِمَصَـٰبِيحَ وَحِفْظًا ۚ ذَٰلِكَ تَقْدِيرُ ٱلْعَزِيزِ ٱلْعَلِيمِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَقَضَىٰهُنَّ",
+     "translit": "faqaḍāhunna",
+     "gloss": "Then He completed them",
+     "audio": "wbw/041_012_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "سَبْعَ",
+     "translit": "sabʿa",
+     "gloss": "(as) seven",
+     "audio": "wbw/041_012_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "سَمَـٰوَاتٍۢ",
+     "translit": "samāwātin",
+     "gloss": "heavens",
+     "audio": "wbw/041_012_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/041_012_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "يَوْمَيْنِ",
+     "translit": "yawmayni",
+     "gloss": "two periods",
+     "audio": "wbw/041_012_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَأَوْحَىٰ",
+     "translit": "wa-awḥā",
+     "gloss": "and He revealed",
+     "audio": "wbw/041_012_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/041_012_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "كُلِّ",
+     "translit": "kulli",
+     "gloss": "each",
+     "audio": "wbw/041_012_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "سَمَآءٍ",
+     "translit": "samāin",
+     "gloss": "heaven",
+     "audio": "wbw/041_012_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "أَمْرَهَا ۚ",
+     "translit": "amrahā",
+     "gloss": "its affair",
+     "audio": "wbw/041_012_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "وَزَيَّنَّا",
+     "translit": "wazayyannā",
+     "gloss": "And We adorned",
+     "audio": "wbw/041_012_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "ٱلسَّمَآءَ",
+     "translit": "l-samāa",
+     "gloss": "the heaven",
+     "audio": "wbw/041_012_013.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "ٱلدُّنْيَا",
+     "translit": "l-dun'yā",
+     "gloss": "[the world]",
+     "audio": "wbw/041_012_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "بِمَصَـٰبِيحَ",
+     "translit": "bimaṣābīḥa",
+     "gloss": "with lamps",
+     "audio": "wbw/041_012_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "وَحِفْظًۭا ۚ",
+     "translit": "waḥif'ẓan",
+     "gloss": "and (to) guard",
+     "audio": "wbw/041_012_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "ذَٰلِكَ",
+     "translit": "dhālika",
+     "gloss": "That",
+     "audio": "wbw/041_012_018.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "تَقْدِيرُ",
+     "translit": "taqdīru",
+     "gloss": "(is the) Decree",
+     "audio": "wbw/041_012_019.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "ٱلْعَزِيزِ",
+     "translit": "l-ʿazīzi",
+     "gloss": "(of) the All-Mighty",
+     "audio": "wbw/041_012_020.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "ٱلْعَلِيمِ",
+     "translit": "l-ʿalīmi",
+     "gloss": "the All-Knower",
+     "audio": "wbw/041_012_021.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And He completed them as seven heavens within two days and inspired [i.e., made known] in each heaven its command. And We adorned the nearest heaven with lamps [i.e., stars, for beauty] and as protection. That is the determination of the Exalted in Might, the Knowing.",
+    "pickthall": "Then He ordained them seven heavens in two Days and inspired in each heaven its mandate; and We decked the nether heaven with lamps, and rendered it inviolable. That is the measuring of the Mighty, the Knower."
+   }
+  },
+  {
+   "n": 13,
+   "global": 4231,
+   "text": "فَإِنْ أَعْرَضُوا۟ فَقُلْ أَنذَرْتُكُمْ صَـٰعِقَةً مِّثْلَ صَـٰعِقَةِ عَادٍ وَثَمُودَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَإِنْ",
+     "translit": "fa-in",
+     "gloss": "But if",
+     "audio": "wbw/041_013_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَعْرَضُوا۟",
+     "translit": "aʿraḍū",
+     "gloss": "they turn away",
+     "audio": "wbw/041_013_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَقُلْ",
+     "translit": "faqul",
+     "gloss": "then say",
+     "audio": "wbw/041_013_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أَنذَرْتُكُمْ",
+     "translit": "andhartukum",
+     "gloss": "I have warned you",
+     "audio": "wbw/041_013_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "صَـٰعِقَةًۭ",
+     "translit": "ṣāʿiqatan",
+     "gloss": "(of) a thunderbolt",
+     "audio": "wbw/041_013_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مِّثْلَ",
+     "translit": "mith'la",
+     "gloss": "like",
+     "audio": "wbw/041_013_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "صَـٰعِقَةِ",
+     "translit": "ṣāʿiqati",
+     "gloss": "(the) thunderbolt",
+     "audio": "wbw/041_013_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "عَادٍۢ",
+     "translit": "ʿādin",
+     "gloss": "(of) Aad",
+     "audio": "wbw/041_013_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "وَثَمُودَ",
+     "translit": "wathamūda",
+     "gloss": "and Thamud",
+     "audio": "wbw/041_013_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "But if they turn away, then say, \"I have warned you of a thunderbolt like the thunderbolt [that struck] ʿAad and Thamūd.",
+    "pickthall": "But if they turn away, then say: I warn you of a thunderbolt like the thunderbolt (which fell of old upon the tribes) of A'ad and Thamud;"
+   }
+  },
+  {
+   "n": 14,
+   "global": 4232,
+   "text": "إِذْ جَآءَتْهُمُ ٱلرُّسُلُ مِنۢ بَيْنِ أَيْدِيهِمْ وَمِنْ خَلْفِهِمْ أَلَّا تَعْبُدُوٓا۟ إِلَّا ٱللَّهَ ۖ قَالُوا۟ لَوْ شَآءَ رَبُّنَا لَأَنزَلَ مَلَـٰٓئِكَةً فَإِنَّا بِمَآ أُرْسِلْتُم بِهِۦ كَـٰفِرُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِذْ",
+     "translit": "idh",
+     "gloss": "When",
+     "audio": "wbw/041_014_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "جَآءَتْهُمُ",
+     "translit": "jāathumu",
+     "gloss": "came to them",
+     "audio": "wbw/041_014_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلرُّسُلُ",
+     "translit": "l-rusulu",
+     "gloss": "the Messengers",
+     "audio": "wbw/041_014_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِنۢ",
+     "translit": "min",
+     "gloss": "from before them",
+     "audio": "wbw/041_014_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "بَيْنِ",
+     "translit": "bayni",
+     "gloss": "from before them",
+     "audio": "wbw/041_014_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "أَيْدِيهِمْ",
+     "translit": "aydīhim",
+     "gloss": "from before them",
+     "audio": "wbw/041_014_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "وَمِنْ",
+     "translit": "wamin",
+     "gloss": "and from",
+     "audio": "wbw/041_014_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "خَلْفِهِمْ",
+     "translit": "khalfihim",
+     "gloss": "behind them",
+     "audio": "wbw/041_014_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "أَلَّا",
+     "translit": "allā",
+     "gloss": "(saying) \"Do not",
+     "audio": "wbw/041_014_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "تَعْبُدُوٓا۟",
+     "translit": "taʿbudū",
+     "gloss": "worship",
+     "audio": "wbw/041_014_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "إِلَّا",
+     "translit": "illā",
+     "gloss": "except",
+     "audio": "wbw/041_014_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "ٱللَّهَ ۖ",
+     "translit": "l-laha",
+     "gloss": "Allah",
+     "audio": "wbw/041_014_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "قَالُوا۟",
+     "translit": "qālū",
+     "gloss": "They said",
+     "audio": "wbw/041_014_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "لَوْ",
+     "translit": "law",
+     "gloss": "If",
+     "audio": "wbw/041_014_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "شَآءَ",
+     "translit": "shāa",
+     "gloss": "(had) willed",
+     "audio": "wbw/041_014_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "رَبُّنَا",
+     "translit": "rabbunā",
+     "gloss": "our Lord",
+     "audio": "wbw/041_014_017.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "لَأَنزَلَ",
+     "translit": "la-anzala",
+     "gloss": "surely, He (would have) sent down",
+     "audio": "wbw/041_014_018.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "مَلَـٰٓئِكَةًۭ",
+     "translit": "malāikatan",
+     "gloss": "Angels",
+     "audio": "wbw/041_014_019.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "فَإِنَّا",
+     "translit": "fa-innā",
+     "gloss": "So indeed, we",
+     "audio": "wbw/041_014_020.mp3"
+    },
+    {
+     "n": 20,
+     "ar": "بِمَآ",
+     "translit": "bimā",
+     "gloss": "in what",
+     "audio": "wbw/041_014_021.mp3"
+    },
+    {
+     "n": 21,
+     "ar": "أُرْسِلْتُم",
+     "translit": "ur'sil'tum",
+     "gloss": "you have been sent",
+     "audio": "wbw/041_014_022.mp3"
+    },
+    {
+     "n": 22,
+     "ar": "بِهِۦ",
+     "translit": "bihi",
+     "gloss": "with",
+     "audio": "wbw/041_014_023.mp3"
+    },
+    {
+     "n": 23,
+     "ar": "كَـٰفِرُونَ",
+     "translit": "kāfirūna",
+     "gloss": "(are) disbelievers",
+     "audio": "wbw/041_014_024.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "[That occurred] when the messengers had come to them before them and after them, [saying], \"Worship not except Allāh.\" They said, \"If our Lord had willed, He would have sent down the angels, so indeed we, in that with which you have been sent, are disbelievers.\"",
+    "pickthall": "When their messengers came unto them from before them and behind them, saying: Worship none but Allah! they said: If our Lord had willed, He surely would have sent down angels (unto us), so lo! we are disbelievers in that wherewith ye have been sent."
+   }
+  },
+  {
+   "n": 15,
+   "global": 4233,
+   "text": "فَأَمَّا عَادٌ فَٱسْتَكْبَرُوا۟ فِى ٱلْأَرْضِ بِغَيْرِ ٱلْحَقِّ وَقَالُوا۟ مَنْ أَشَدُّ مِنَّا قُوَّةً ۖ أَوَلَمْ يَرَوْا۟ أَنَّ ٱللَّهَ ٱلَّذِى خَلَقَهُمْ هُوَ أَشَدُّ مِنْهُمْ قُوَّةً ۖ وَكَانُوا۟ بِـَٔايَـٰتِنَا يَجْحَدُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَأَمَّا",
+     "translit": "fa-ammā",
+     "gloss": "Then as for",
+     "audio": "wbw/041_015_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَادٌۭ",
+     "translit": "ʿādun",
+     "gloss": "Aad",
+     "audio": "wbw/041_015_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَٱسْتَكْبَرُوا۟",
+     "translit": "fa-is'takbarū",
+     "gloss": "they were arrogant",
+     "audio": "wbw/041_015_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/041_015_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْأَرْضِ",
+     "translit": "l-arḍi",
+     "gloss": "the land",
+     "audio": "wbw/041_015_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "بِغَيْرِ",
+     "translit": "bighayri",
+     "gloss": "without",
+     "audio": "wbw/041_015_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "ٱلْحَقِّ",
+     "translit": "l-ḥaqi",
+     "gloss": "[the] right",
+     "audio": "wbw/041_015_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَقَالُوا۟",
+     "translit": "waqālū",
+     "gloss": "and they said",
+     "audio": "wbw/041_015_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "مَنْ",
+     "translit": "man",
+     "gloss": "Who",
+     "audio": "wbw/041_015_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "أَشَدُّ",
+     "translit": "ashaddu",
+     "gloss": "(is) mightier",
+     "audio": "wbw/041_015_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "مِنَّا",
+     "translit": "minnā",
+     "gloss": "than us",
+     "audio": "wbw/041_015_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "قُوَّةً ۖ",
+     "translit": "quwwatan",
+     "gloss": "(in) strength",
+     "audio": "wbw/041_015_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "أَوَلَمْ",
+     "translit": "awalam",
+     "gloss": "Do not",
+     "audio": "wbw/041_015_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "يَرَوْا۟",
+     "translit": "yaraw",
+     "gloss": "they see",
+     "audio": "wbw/041_015_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "أَنَّ",
+     "translit": "anna",
+     "gloss": "that",
+     "audio": "wbw/041_015_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "ٱللَّهَ",
+     "translit": "l-laha",
+     "gloss": "Allah",
+     "audio": "wbw/041_015_017.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "ٱلَّذِى",
+     "translit": "alladhī",
+     "gloss": "the One Who",
+     "audio": "wbw/041_015_018.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "خَلَقَهُمْ",
+     "translit": "khalaqahum",
+     "gloss": "created them",
+     "audio": "wbw/041_015_019.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "هُوَ",
+     "translit": "huwa",
+     "gloss": "He",
+     "audio": "wbw/041_015_020.mp3"
+    },
+    {
+     "n": 20,
+     "ar": "أَشَدُّ",
+     "translit": "ashaddu",
+     "gloss": "(is) Mightier",
+     "audio": "wbw/041_015_021.mp3"
+    },
+    {
+     "n": 21,
+     "ar": "مِنْهُمْ",
+     "translit": "min'hum",
+     "gloss": "than them",
+     "audio": "wbw/041_015_022.mp3"
+    },
+    {
+     "n": 22,
+     "ar": "قُوَّةًۭ ۖ",
+     "translit": "quwwatan",
+     "gloss": "(in) strength",
+     "audio": "wbw/041_015_023.mp3"
+    },
+    {
+     "n": 23,
+     "ar": "وَكَانُوا۟",
+     "translit": "wakānū",
+     "gloss": "But they used to",
+     "audio": "wbw/041_015_025.mp3"
+    },
+    {
+     "n": 24,
+     "ar": "بِـَٔايَـٰتِنَا",
+     "translit": "biāyātinā",
+     "gloss": "in Our Signs",
+     "audio": "wbw/041_015_026.mp3"
+    },
+    {
+     "n": 25,
+     "ar": "يَجْحَدُونَ",
+     "translit": "yajḥadūna",
+     "gloss": "deny",
+     "audio": "wbw/041_015_027.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "As for ʿAad, they were arrogant upon the earth without right and said, \"Who is greater than us in strength?\" Did they not consider that Allāh who created them was greater than them in strength? But they were rejecting Our signs.",
+    "pickthall": "As for A'ad, they were arrogant in the land without right, and they said: Who is mightier than us in power? Could they not see that Allah Who created them, He was mightier than them in power? And they denied Our revelations."
+   }
+  },
+  {
+   "n": 16,
+   "global": 4234,
+   "text": "فَأَرْسَلْنَا عَلَيْهِمْ رِيحًا صَرْصَرًا فِىٓ أَيَّامٍ نَّحِسَاتٍ لِّنُذِيقَهُمْ عَذَابَ ٱلْخِزْىِ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا ۖ وَلَعَذَابُ ٱلْـَٔاخِرَةِ أَخْزَىٰ ۖ وَهُمْ لَا يُنصَرُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَأَرْسَلْنَا",
+     "translit": "fa-arsalnā",
+     "gloss": "So We sent",
+     "audio": "wbw/041_016_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَلَيْهِمْ",
+     "translit": "ʿalayhim",
+     "gloss": "upon them",
+     "audio": "wbw/041_016_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رِيحًۭا",
+     "translit": "rīḥan",
+     "gloss": "a wind",
+     "audio": "wbw/041_016_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "صَرْصَرًۭا",
+     "translit": "ṣarṣaran",
+     "gloss": "furious",
+     "audio": "wbw/041_016_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "فِىٓ",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/041_016_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "أَيَّامٍۢ",
+     "translit": "ayyāmin",
+     "gloss": "(the) days",
+     "audio": "wbw/041_016_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "نَّحِسَاتٍۢ",
+     "translit": "naḥisātin",
+     "gloss": "(of) misfortune",
+     "audio": "wbw/041_016_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "لِّنُذِيقَهُمْ",
+     "translit": "linudhīqahum",
+     "gloss": "that We may make them taste",
+     "audio": "wbw/041_016_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "عَذَابَ",
+     "translit": "ʿadhāba",
+     "gloss": "(the) punishment",
+     "audio": "wbw/041_016_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "ٱلْخِزْىِ",
+     "translit": "l-khiz'yi",
+     "gloss": "(of) disgrace",
+     "audio": "wbw/041_016_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/041_016_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "ٱلْحَيَوٰةِ",
+     "translit": "l-ḥayati",
+     "gloss": "the life",
+     "audio": "wbw/041_016_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "ٱلدُّنْيَا ۖ",
+     "translit": "l-dun'yā",
+     "gloss": "(of) the world",
+     "audio": "wbw/041_016_013.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "وَلَعَذَابُ",
+     "translit": "walaʿadhābu",
+     "gloss": "And surely, (the) punishment",
+     "audio": "wbw/041_016_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "ٱلْـَٔاخِرَةِ",
+     "translit": "l-ākhirati",
+     "gloss": "(of) the Hereafter",
+     "audio": "wbw/041_016_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "أَخْزَىٰ ۖ",
+     "translit": "akhzā",
+     "gloss": "(is) more disgracing",
+     "audio": "wbw/041_016_017.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "وَهُمْ",
+     "translit": "wahum",
+     "gloss": "and they",
+     "audio": "wbw/041_016_019.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "لَا",
+     "translit": "lā",
+     "gloss": "will not be helped",
+     "audio": "wbw/041_016_020.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "يُنصَرُونَ",
+     "translit": "yunṣarūna",
+     "gloss": "will not be helped",
+     "audio": "wbw/041_016_021.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So We sent upon them a screaming wind during days of misfortune to make them taste the punishment of disgrace in the worldly life; but the punishment of the Hereafter is more disgracing, and they will not be helped.",
+    "pickthall": "Therefor We let loose on them a raging wind in evil days, that We might make them taste the torment of disgrace in the life of the world. And verily the doom of the Hereafter will be more shameful, and they will not be helped."
+   }
+  },
+  {
+   "n": 17,
+   "global": 4235,
+   "text": "وَأَمَّا ثَمُودُ فَهَدَيْنَـٰهُمْ فَٱسْتَحَبُّوا۟ ٱلْعَمَىٰ عَلَى ٱلْهُدَىٰ فَأَخَذَتْهُمْ صَـٰعِقَةُ ٱلْعَذَابِ ٱلْهُونِ بِمَا كَانُوا۟ يَكْسِبُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَأَمَّا",
+     "translit": "wa-ammā",
+     "gloss": "And as for",
+     "audio": "wbw/041_017_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ثَمُودُ",
+     "translit": "thamūdu",
+     "gloss": "Thamud",
+     "audio": "wbw/041_017_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَهَدَيْنَـٰهُمْ",
+     "translit": "fahadaynāhum",
+     "gloss": "We guided them",
+     "audio": "wbw/041_017_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَٱسْتَحَبُّوا۟",
+     "translit": "fa-is'taḥabbū",
+     "gloss": "but they preferred",
+     "audio": "wbw/041_017_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْعَمَىٰ",
+     "translit": "l-ʿamā",
+     "gloss": "[the] blindness",
+     "audio": "wbw/041_017_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "عَلَى",
+     "translit": "ʿalā",
+     "gloss": "over",
+     "audio": "wbw/041_017_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "ٱلْهُدَىٰ",
+     "translit": "l-hudā",
+     "gloss": "the guidance",
+     "audio": "wbw/041_017_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "فَأَخَذَتْهُمْ",
+     "translit": "fa-akhadhathum",
+     "gloss": "so seized them",
+     "audio": "wbw/041_017_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "صَـٰعِقَةُ",
+     "translit": "ṣāʿiqatu",
+     "gloss": "a thunderbolt",
+     "audio": "wbw/041_017_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "ٱلْعَذَابِ",
+     "translit": "l-ʿadhābi",
+     "gloss": "(of) the punishment",
+     "audio": "wbw/041_017_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "ٱلْهُونِ",
+     "translit": "l-hūni",
+     "gloss": "humiliating",
+     "audio": "wbw/041_017_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "بِمَا",
+     "translit": "bimā",
+     "gloss": "for what",
+     "audio": "wbw/041_017_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "كَانُوا۟",
+     "translit": "kānū",
+     "gloss": "they used to",
+     "audio": "wbw/041_017_013.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "يَكْسِبُونَ",
+     "translit": "yaksibūna",
+     "gloss": "earn",
+     "audio": "wbw/041_017_014.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And as for Thamūd, We guided them, but they preferred blindness over guidance, so the thunderbolt of humiliating punishment seized them for what they used to earn.",
+    "pickthall": "And as for Thamud, We gave them guidance, but they preferred blindness to the guidance, so the bolt of the doom of humiliation overtook them because of what they used to earn."
+   }
+  },
+  {
+   "n": 18,
+   "global": 4236,
+   "text": "وَنَجَّيْنَا ٱلَّذِينَ ءَامَنُوا۟ وَكَانُوا۟ يَتَّقُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَنَجَّيْنَا",
+     "translit": "wanajjaynā",
+     "gloss": "And We saved",
+     "audio": "wbw/041_018_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/041_018_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ءَامَنُوا۟",
+     "translit": "āmanū",
+     "gloss": "believed",
+     "audio": "wbw/041_018_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَكَانُوا۟",
+     "translit": "wakānū",
+     "gloss": "and used to",
+     "audio": "wbw/041_018_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "يَتَّقُونَ",
+     "translit": "yattaqūna",
+     "gloss": "fear (Allah)",
+     "audio": "wbw/041_018_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And We saved those who believed and used to fear Allāh.",
+    "pickthall": "And We delivered those who believed and used to keep their duty to Allah."
+   }
+  },
+  {
+   "n": 19,
+   "global": 4237,
+   "text": "وَيَوْمَ يُحْشَرُ أَعْدَآءُ ٱللَّهِ إِلَى ٱلنَّارِ فَهُمْ يُوزَعُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَيَوْمَ",
+     "translit": "wayawma",
+     "gloss": "And (the) Day",
+     "audio": "wbw/041_019_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يُحْشَرُ",
+     "translit": "yuḥ'sharu",
+     "gloss": "will be gathered",
+     "audio": "wbw/041_019_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَعْدَآءُ",
+     "translit": "aʿdāu",
+     "gloss": "(the) enemies",
+     "audio": "wbw/041_019_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱللَّهِ",
+     "translit": "l-lahi",
+     "gloss": "(of) Allah",
+     "audio": "wbw/041_019_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "إِلَى",
+     "translit": "ilā",
+     "gloss": "to",
+     "audio": "wbw/041_019_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ٱلنَّارِ",
+     "translit": "l-nāri",
+     "gloss": "the Fire",
+     "audio": "wbw/041_019_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فَهُمْ",
+     "translit": "fahum",
+     "gloss": "then they",
+     "audio": "wbw/041_019_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "يُوزَعُونَ",
+     "translit": "yūzaʿūna",
+     "gloss": "will be assembled in rows",
+     "audio": "wbw/041_019_008.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And [mention, O Muḥammad], the Day when the enemies of Allāh will be gathered to the Fire while they are [driven], assembled in rows,",
+    "pickthall": "And (make mention of) the day when the enemies of Allah are gathered unto the Fire, they are driven on"
+   }
+  },
+  {
+   "n": 20,
+   "global": 4238,
+   "text": "حَتَّىٰٓ إِذَا مَا جَآءُوهَا شَهِدَ عَلَيْهِمْ سَمْعُهُمْ وَأَبْصَـٰرُهُمْ وَجُلُودُهُم بِمَا كَانُوا۟ يَعْمَلُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "حَتَّىٰٓ",
+     "translit": "ḥattā",
+     "gloss": "Until",
+     "audio": "wbw/041_020_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِذَا",
+     "translit": "idhā",
+     "gloss": "when",
+     "audio": "wbw/041_020_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "when",
+     "audio": "wbw/041_020_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "جَآءُوهَا",
+     "translit": "jāūhā",
+     "gloss": "they come to it",
+     "audio": "wbw/041_020_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "شَهِدَ",
+     "translit": "shahida",
+     "gloss": "(will) testify",
+     "audio": "wbw/041_020_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "عَلَيْهِمْ",
+     "translit": "ʿalayhim",
+     "gloss": "against them",
+     "audio": "wbw/041_020_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "سَمْعُهُمْ",
+     "translit": "samʿuhum",
+     "gloss": "their hearing",
+     "audio": "wbw/041_020_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَأَبْصَـٰرُهُمْ",
+     "translit": "wa-abṣāruhum",
+     "gloss": "and their sight",
+     "audio": "wbw/041_020_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "وَجُلُودُهُم",
+     "translit": "wajulūduhum",
+     "gloss": "and their skins",
+     "audio": "wbw/041_020_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "بِمَا",
+     "translit": "bimā",
+     "gloss": "(as) to what",
+     "audio": "wbw/041_020_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "كَانُوا۟",
+     "translit": "kānū",
+     "gloss": "they used to",
+     "audio": "wbw/041_020_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "يَعْمَلُونَ",
+     "translit": "yaʿmalūna",
+     "gloss": "do",
+     "audio": "wbw/041_020_012.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Until, when they reach it, their hearing and their eyes and their skins will testify against them of what they used to do.",
+    "pickthall": "Till, when they reach it, their ears and their eyes and their skins testify against them as to what they used to do."
+   }
+  },
+  {
+   "n": 21,
+   "global": 4239,
+   "text": "وَقَالُوا۟ لِجُلُودِهِمْ لِمَ شَهِدتُّمْ عَلَيْنَا ۖ قَالُوٓا۟ أَنطَقَنَا ٱللَّهُ ٱلَّذِىٓ أَنطَقَ كُلَّ شَىْءٍ وَهُوَ خَلَقَكُمْ أَوَّلَ مَرَّةٍ وَإِلَيْهِ تُرْجَعُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَقَالُوا۟",
+     "translit": "waqālū",
+     "gloss": "And they will say",
+     "audio": "wbw/041_021_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لِجُلُودِهِمْ",
+     "translit": "lijulūdihim",
+     "gloss": "to their skins",
+     "audio": "wbw/041_021_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "لِمَ",
+     "translit": "lima",
+     "gloss": "Why do",
+     "audio": "wbw/041_021_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "شَهِدتُّمْ",
+     "translit": "shahidttum",
+     "gloss": "you testify",
+     "audio": "wbw/041_021_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "عَلَيْنَا ۖ",
+     "translit": "ʿalaynā",
+     "gloss": "against us",
+     "audio": "wbw/041_021_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "قَالُوٓا۟",
+     "translit": "qālū",
+     "gloss": "They will say",
+     "audio": "wbw/041_021_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "أَنطَقَنَا",
+     "translit": "anṭaqanā",
+     "gloss": "Allah made us speak",
+     "audio": "wbw/041_021_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "ٱللَّهُ",
+     "translit": "l-lahu",
+     "gloss": "Allah made us speak",
+     "audio": "wbw/041_021_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ٱلَّذِىٓ",
+     "translit": "alladhī",
+     "gloss": "the One Who",
+     "audio": "wbw/041_021_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "أَنطَقَ",
+     "translit": "anṭaqa",
+     "gloss": "makes speak",
+     "audio": "wbw/041_021_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "كُلَّ",
+     "translit": "kulla",
+     "gloss": "every",
+     "audio": "wbw/041_021_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "شَىْءٍۢ",
+     "translit": "shayin",
+     "gloss": "thing",
+     "audio": "wbw/041_021_013.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "وَهُوَ",
+     "translit": "wahuwa",
+     "gloss": "and He",
+     "audio": "wbw/041_021_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "خَلَقَكُمْ",
+     "translit": "khalaqakum",
+     "gloss": "created you",
+     "audio": "wbw/041_021_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "أَوَّلَ",
+     "translit": "awwala",
+     "gloss": "(the) first",
+     "audio": "wbw/041_021_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "مَرَّةٍۢ",
+     "translit": "marratin",
+     "gloss": "time",
+     "audio": "wbw/041_021_017.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "وَإِلَيْهِ",
+     "translit": "wa-ilayhi",
+     "gloss": "and to Him",
+     "audio": "wbw/041_021_018.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "تُرْجَعُونَ",
+     "translit": "tur'jaʿūna",
+     "gloss": "you will be returned",
+     "audio": "wbw/041_021_019.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And they will say to their skins, \"Why have you testified against us?\" They will say, \"We were made to speak by Allāh, who has made everything speak; and He created you the first time, and to Him you are returned.",
+    "pickthall": "And they say unto their skins: Why testify ye against us? They say: Allah hath given us speech Who giveth speech to all things, and Who created you at the first, and unto Whom ye are returned."
+   }
+  },
+  {
+   "n": 22,
+   "global": 4240,
+   "text": "وَمَا كُنتُمْ تَسْتَتِرُونَ أَن يَشْهَدَ عَلَيْكُمْ سَمْعُكُمْ وَلَآ أَبْصَـٰرُكُمْ وَلَا جُلُودُكُمْ وَلَـٰكِن ظَنَنتُمْ أَنَّ ٱللَّهَ لَا يَعْلَمُ كَثِيرًا مِّمَّا تَعْمَلُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "And not",
+     "audio": "wbw/041_022_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "كُنتُمْ",
+     "translit": "kuntum",
+     "gloss": "you were",
+     "audio": "wbw/041_022_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "تَسْتَتِرُونَ",
+     "translit": "tastatirūna",
+     "gloss": "covering yourselves",
+     "audio": "wbw/041_022_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أَن",
+     "translit": "an",
+     "gloss": "lest",
+     "audio": "wbw/041_022_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "يَشْهَدَ",
+     "translit": "yashhada",
+     "gloss": "testify",
+     "audio": "wbw/041_022_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "عَلَيْكُمْ",
+     "translit": "ʿalaykum",
+     "gloss": "against you",
+     "audio": "wbw/041_022_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "سَمْعُكُمْ",
+     "translit": "samʿukum",
+     "gloss": "your hearing",
+     "audio": "wbw/041_022_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَلَآ",
+     "translit": "walā",
+     "gloss": "and not",
+     "audio": "wbw/041_022_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "أَبْصَـٰرُكُمْ",
+     "translit": "abṣārukum",
+     "gloss": "your sight",
+     "audio": "wbw/041_022_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "and not",
+     "audio": "wbw/041_022_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "جُلُودُكُمْ",
+     "translit": "julūdukum",
+     "gloss": "your skins",
+     "audio": "wbw/041_022_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "وَلَـٰكِن",
+     "translit": "walākin",
+     "gloss": "but",
+     "audio": "wbw/041_022_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "ظَنَنتُمْ",
+     "translit": "ẓanantum",
+     "gloss": "you assumed",
+     "audio": "wbw/041_022_013.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "أَنَّ",
+     "translit": "anna",
+     "gloss": "that",
+     "audio": "wbw/041_022_014.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "ٱللَّهَ",
+     "translit": "l-laha",
+     "gloss": "Allah",
+     "audio": "wbw/041_022_015.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "لَا",
+     "translit": "lā",
+     "gloss": "(does) not",
+     "audio": "wbw/041_022_016.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "يَعْلَمُ",
+     "translit": "yaʿlamu",
+     "gloss": "know",
+     "audio": "wbw/041_022_017.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "كَثِيرًۭا",
+     "translit": "kathīran",
+     "gloss": "much",
+     "audio": "wbw/041_022_018.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "مِّمَّا",
+     "translit": "mimmā",
+     "gloss": "of what",
+     "audio": "wbw/041_022_019.mp3"
+    },
+    {
+     "n": 20,
+     "ar": "تَعْمَلُونَ",
+     "translit": "taʿmalūna",
+     "gloss": "you do",
+     "audio": "wbw/041_022_020.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And you were not covering [i.e., protecting] yourselves, lest your hearing testify against you or your sight or your skins, but you assumed that Allāh does not know much of what you do.",
+    "pickthall": "Ye did not hide yourselves lest your ears and your eyes and your skins should testify against you, but ye deemed that Allah knew not much of what ye did."
+   }
+  },
+  {
+   "n": 23,
+   "global": 4241,
+   "text": "وَذَٰلِكُمْ ظَنُّكُمُ ٱلَّذِى ظَنَنتُم بِرَبِّكُمْ أَرْدَىٰكُمْ فَأَصْبَحْتُم مِّنَ ٱلْخَـٰسِرِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَذَٰلِكُمْ",
+     "translit": "wadhālikum",
+     "gloss": "And that",
+     "audio": "wbw/041_023_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ظَنُّكُمُ",
+     "translit": "ẓannukumu",
+     "gloss": "(was) your assumption",
+     "audio": "wbw/041_023_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلَّذِى",
+     "translit": "alladhī",
+     "gloss": "which",
+     "audio": "wbw/041_023_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ظَنَنتُم",
+     "translit": "ẓanantum",
+     "gloss": "you assumed",
+     "audio": "wbw/041_023_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "بِرَبِّكُمْ",
+     "translit": "birabbikum",
+     "gloss": "about your Lord",
+     "audio": "wbw/041_023_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "أَرْدَىٰكُمْ",
+     "translit": "ardākum",
+     "gloss": "It has ruined you",
+     "audio": "wbw/041_023_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فَأَصْبَحْتُم",
+     "translit": "fa-aṣbaḥtum",
+     "gloss": "and you have become",
+     "audio": "wbw/041_023_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "مِّنَ",
+     "translit": "mina",
+     "gloss": "of",
+     "audio": "wbw/041_023_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ٱلْخَـٰسِرِينَ",
+     "translit": "l-khāsirīna",
+     "gloss": "the losers",
+     "audio": "wbw/041_023_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And that was your assumption which you assumed about your Lord. It has brought you to ruin, and you have become among the losers.\"",
+    "pickthall": "That, your thought which ye did think about your Lord, hath ruined you; and ye find yourselves (this day) among the lost."
+   }
+  },
+  {
+   "n": 24,
+   "global": 4242,
+   "text": "فَإِن يَصْبِرُوا۟ فَٱلنَّارُ مَثْوًى لَّهُمْ ۖ وَإِن يَسْتَعْتِبُوا۟ فَمَا هُم مِّنَ ٱلْمُعْتَبِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَإِن",
+     "translit": "fa-in",
+     "gloss": "Then if",
+     "audio": "wbw/041_024_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَصْبِرُوا۟",
+     "translit": "yaṣbirū",
+     "gloss": "they endure",
+     "audio": "wbw/041_024_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَٱلنَّارُ",
+     "translit": "fal-nāru",
+     "gloss": "the Fire",
+     "audio": "wbw/041_024_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مَثْوًۭى",
+     "translit": "mathwan",
+     "gloss": "(is) an abode",
+     "audio": "wbw/041_024_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "لَّهُمْ ۖ",
+     "translit": "lahum",
+     "gloss": "for them",
+     "audio": "wbw/041_024_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَإِن",
+     "translit": "wa-in",
+     "gloss": "and if",
+     "audio": "wbw/041_024_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "يَسْتَعْتِبُوا۟",
+     "translit": "yastaʿtibū",
+     "gloss": "they ask for favor",
+     "audio": "wbw/041_024_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "فَمَا",
+     "translit": "famā",
+     "gloss": "then not",
+     "audio": "wbw/041_024_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "هُم",
+     "translit": "hum",
+     "gloss": "they",
+     "audio": "wbw/041_024_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "مِّنَ",
+     "translit": "mina",
+     "gloss": "(will be) of",
+     "audio": "wbw/041_024_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "ٱلْمُعْتَبِينَ",
+     "translit": "l-muʿ'tabīna",
+     "gloss": "those who receive favor",
+     "audio": "wbw/041_024_012.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So [even] if they are patient, the Fire is a residence for them; and if they ask to appease [Allāh], they will not be of those who are allowed to appease.",
+    "pickthall": "And though they are resigned, yet the Fire is still their home; and if they ask for favour, yet they are not of those unto whom favour can be shown."
+   }
+  },
+  {
+   "n": 25,
+   "global": 4243,
+   "text": "۞ وَقَيَّضْنَا لَهُمْ قُرَنَآءَ فَزَيَّنُوا۟ لَهُم مَّا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَحَقَّ عَلَيْهِمُ ٱلْقَوْلُ فِىٓ أُمَمٍ قَدْ خَلَتْ مِن قَبْلِهِم مِّنَ ٱلْجِنِّ وَٱلْإِنسِ ۖ إِنَّهُمْ كَانُوا۟ خَـٰسِرِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "۞ وَقَيَّضْنَا",
+     "translit": "waqayyaḍnā",
+     "gloss": "And We have destined",
+     "audio": "wbw/041_025_002.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لَهُمْ",
+     "translit": "lahum",
+     "gloss": "for them",
+     "audio": "wbw/041_025_003.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "قُرَنَآءَ",
+     "translit": "quranāa",
+     "gloss": "companions",
+     "audio": "wbw/041_025_004.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَزَيَّنُوا۟",
+     "translit": "fazayyanū",
+     "gloss": "(who) made fair-seeming",
+     "audio": "wbw/041_025_005.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "لَهُم",
+     "translit": "lahum",
+     "gloss": "to them",
+     "audio": "wbw/041_025_006.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مَّا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/041_025_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "بَيْنَ",
+     "translit": "bayna",
+     "gloss": "(was) before them",
+     "audio": "wbw/041_025_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "أَيْدِيهِمْ",
+     "translit": "aydīhim",
+     "gloss": "(was) before them",
+     "audio": "wbw/041_025_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "and what",
+     "audio": "wbw/041_025_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "خَلْفَهُمْ",
+     "translit": "khalfahum",
+     "gloss": "(was) behind them",
+     "audio": "wbw/041_025_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "وَحَقَّ",
+     "translit": "waḥaqqa",
+     "gloss": "and (is) justified",
+     "audio": "wbw/041_025_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "عَلَيْهِمُ",
+     "translit": "ʿalayhimu",
+     "gloss": "against them",
+     "audio": "wbw/041_025_013.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "ٱلْقَوْلُ",
+     "translit": "l-qawlu",
+     "gloss": "the Word",
+     "audio": "wbw/041_025_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "فِىٓ",
+     "translit": "fī",
+     "gloss": "among",
+     "audio": "wbw/041_025_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "أُمَمٍۢ",
+     "translit": "umamin",
+     "gloss": "nations",
+     "audio": "wbw/041_025_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "قَدْ",
+     "translit": "qad",
+     "gloss": "(that have) passed away",
+     "audio": "wbw/041_025_017.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "خَلَتْ",
+     "translit": "khalat",
+     "gloss": "(that have) passed away",
+     "audio": "wbw/041_025_018.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "before them",
+     "audio": "wbw/041_025_019.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "قَبْلِهِم",
+     "translit": "qablihim",
+     "gloss": "before them",
+     "audio": "wbw/041_025_020.mp3"
+    },
+    {
+     "n": 20,
+     "ar": "مِّنَ",
+     "translit": "mina",
+     "gloss": "of",
+     "audio": "wbw/041_025_021.mp3"
+    },
+    {
+     "n": 21,
+     "ar": "ٱلْجِنِّ",
+     "translit": "l-jini",
+     "gloss": "the jinn",
+     "audio": "wbw/041_025_022.mp3"
+    },
+    {
+     "n": 22,
+     "ar": "وَٱلْإِنسِ ۖ",
+     "translit": "wal-insi",
+     "gloss": "and the men",
+     "audio": "wbw/041_025_023.mp3"
+    },
+    {
+     "n": 23,
+     "ar": "إِنَّهُمْ",
+     "translit": "innahum",
+     "gloss": "Indeed, they",
+     "audio": "wbw/041_025_025.mp3"
+    },
+    {
+     "n": 24,
+     "ar": "كَانُوا۟",
+     "translit": "kānū",
+     "gloss": "were",
+     "audio": "wbw/041_025_026.mp3"
+    },
+    {
+     "n": 25,
+     "ar": "خَـٰسِرِينَ",
+     "translit": "khāsirīna",
+     "gloss": "losers",
+     "audio": "wbw/041_025_027.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And We appointed for them companions who made attractive to them what was before them and what was behind them [of sin], and the word [i.e., decree] has come into effect upon them among nations which had passed on before them of jinn and men. Indeed, they [all] were losers.",
+    "pickthall": "And We assigned them comrades (in the world), who made their present and their past fairseeming unto them. And the Word concerning nations of the jinn and humankind who passed away before them hath effect for them. Lo! they were ever losers."
+   }
+  },
+  {
+   "n": 26,
+   "global": 4244,
+   "text": "وَقَالَ ٱلَّذِينَ كَفَرُوا۟ لَا تَسْمَعُوا۟ لِهَـٰذَا ٱلْقُرْءَانِ وَٱلْغَوْا۟ فِيهِ لَعَلَّكُمْ تَغْلِبُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَقَالَ",
+     "translit": "waqāla",
+     "gloss": "And said",
+     "audio": "wbw/041_026_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/041_026_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كَفَرُوا۟",
+     "translit": "kafarū",
+     "gloss": "disbelieve",
+     "audio": "wbw/041_026_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَا",
+     "translit": "lā",
+     "gloss": "(Do) not",
+     "audio": "wbw/041_026_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "تَسْمَعُوا۟",
+     "translit": "tasmaʿū",
+     "gloss": "listen",
+     "audio": "wbw/041_026_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "لِهَـٰذَا",
+     "translit": "lihādhā",
+     "gloss": "to this",
+     "audio": "wbw/041_026_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "ٱلْقُرْءَانِ",
+     "translit": "l-qur'āni",
+     "gloss": "Quran",
+     "audio": "wbw/041_026_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَٱلْغَوْا۟",
+     "translit": "wal-ghaw",
+     "gloss": "and make noise",
+     "audio": "wbw/041_026_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "فِيهِ",
+     "translit": "fīhi",
+     "gloss": "therein",
+     "audio": "wbw/041_026_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "لَعَلَّكُمْ",
+     "translit": "laʿallakum",
+     "gloss": "so that you may",
+     "audio": "wbw/041_026_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "تَغْلِبُونَ",
+     "translit": "taghlibūna",
+     "gloss": "overcome",
+     "audio": "wbw/041_026_011.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And those who disbelieve say, \"Do not listen to this Qur’ān and speak noisily during [the recitation of] it that perhaps you will overcome.\"",
+    "pickthall": "Those who disbelieve say: Heed not this Qur'an, and drown the hearing of it; haply ye may conquer."
+   }
+  },
+  {
+   "n": 27,
+   "global": 4245,
+   "text": "فَلَنُذِيقَنَّ ٱلَّذِينَ كَفَرُوا۟ عَذَابًا شَدِيدًا وَلَنَجْزِيَنَّهُمْ أَسْوَأَ ٱلَّذِى كَانُوا۟ يَعْمَلُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَلَنُذِيقَنَّ",
+     "translit": "falanudhīqanna",
+     "gloss": "But surely We will cause to taste",
+     "audio": "wbw/041_027_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/041_027_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كَفَرُوا۟",
+     "translit": "kafarū",
+     "gloss": "disbelieve",
+     "audio": "wbw/041_027_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "عَذَابًۭا",
+     "translit": "ʿadhāban",
+     "gloss": "a punishment",
+     "audio": "wbw/041_027_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "شَدِيدًۭا",
+     "translit": "shadīdan",
+     "gloss": "severe",
+     "audio": "wbw/041_027_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَلَنَجْزِيَنَّهُمْ",
+     "translit": "walanajziyannahum",
+     "gloss": "and surely We will recompense them",
+     "audio": "wbw/041_027_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "أَسْوَأَ",
+     "translit": "aswa-a",
+     "gloss": "(the) worst",
+     "audio": "wbw/041_027_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "ٱلَّذِى",
+     "translit": "alladhī",
+     "gloss": "(of) what",
+     "audio": "wbw/041_027_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "كَانُوا۟",
+     "translit": "kānū",
+     "gloss": "they used to",
+     "audio": "wbw/041_027_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "يَعْمَلُونَ",
+     "translit": "yaʿmalūna",
+     "gloss": "do",
+     "audio": "wbw/041_027_010.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "But We will surely cause those who disbelieve to taste a severe punishment, and We will surely recompense them for the worst of what they had been doing.",
+    "pickthall": "But verily We shall cause those who disbelieve to taste an awful doom, and verily We shall requite them the worst of what they used to do."
+   }
+  },
+  {
+   "n": 28,
+   "global": 4246,
+   "text": "ذَٰلِكَ جَزَآءُ أَعْدَآءِ ٱللَّهِ ٱلنَّارُ ۖ لَهُمْ فِيهَا دَارُ ٱلْخُلْدِ ۖ جَزَآءًۢ بِمَا كَانُوا۟ بِـَٔايَـٰتِنَا يَجْحَدُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ذَٰلِكَ",
+     "translit": "dhālika",
+     "gloss": "That",
+     "audio": "wbw/041_028_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "جَزَآءُ",
+     "translit": "jazāu",
+     "gloss": "(is the) recompense",
+     "audio": "wbw/041_028_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَعْدَآءِ",
+     "translit": "aʿdāi",
+     "gloss": "(of the) enemies",
+     "audio": "wbw/041_028_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱللَّهِ",
+     "translit": "l-lahi",
+     "gloss": "(of) Allah",
+     "audio": "wbw/041_028_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلنَّارُ ۖ",
+     "translit": "l-nāru",
+     "gloss": "the Fire",
+     "audio": "wbw/041_028_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "لَهُمْ",
+     "translit": "lahum",
+     "gloss": "for them",
+     "audio": "wbw/041_028_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فِيهَا",
+     "translit": "fīhā",
+     "gloss": "therein",
+     "audio": "wbw/041_028_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "دَارُ",
+     "translit": "dāru",
+     "gloss": "(is the) home",
+     "audio": "wbw/041_028_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ٱلْخُلْدِ ۖ",
+     "translit": "l-khul'di",
+     "gloss": "(of) the eternity",
+     "audio": "wbw/041_028_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "جَزَآءًۢ",
+     "translit": "jazāan",
+     "gloss": "(as) recompense",
+     "audio": "wbw/041_028_012.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "بِمَا",
+     "translit": "bimā",
+     "gloss": "for what",
+     "audio": "wbw/041_028_013.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "كَانُوا۟",
+     "translit": "kānū",
+     "gloss": "they used to",
+     "audio": "wbw/041_028_014.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "بِـَٔايَـٰتِنَا",
+     "translit": "biāyātinā",
+     "gloss": "of Our Verses",
+     "audio": "wbw/041_028_015.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "يَجْحَدُونَ",
+     "translit": "yajḥadūna",
+     "gloss": "reject",
+     "audio": "wbw/041_028_016.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "That is the recompense of the enemies of Allāh - the Fire. For them therein is the home of eternity as recompense for what they, of Our verses, were rejecting.",
+    "pickthall": "That is the reward of Allah's enemies: the Fire. Therein is their immortal home, payment forasmuch as they denied Our revelations."
+   }
+  },
+  {
+   "n": 29,
+   "global": 4247,
+   "text": "وَقَالَ ٱلَّذِينَ كَفَرُوا۟ رَبَّنَآ أَرِنَا ٱلَّذَيْنِ أَضَلَّانَا مِنَ ٱلْجِنِّ وَٱلْإِنسِ نَجْعَلْهُمَا تَحْتَ أَقْدَامِنَا لِيَكُونَا مِنَ ٱلْأَسْفَلِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَقَالَ",
+     "translit": "waqāla",
+     "gloss": "And (will) say",
+     "audio": "wbw/041_029_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/041_029_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كَفَرُوا۟",
+     "translit": "kafarū",
+     "gloss": "disbelieve",
+     "audio": "wbw/041_029_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "رَبَّنَآ",
+     "translit": "rabbanā",
+     "gloss": "Our Lord",
+     "audio": "wbw/041_029_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "أَرِنَا",
+     "translit": "arinā",
+     "gloss": "Show us",
+     "audio": "wbw/041_029_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ٱلَّذَيْنِ",
+     "translit": "alladhayni",
+     "gloss": "those who",
+     "audio": "wbw/041_029_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "أَضَلَّانَا",
+     "translit": "aḍallānā",
+     "gloss": "misled us",
+     "audio": "wbw/041_029_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "مِنَ",
+     "translit": "mina",
+     "gloss": "of",
+     "audio": "wbw/041_029_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ٱلْجِنِّ",
+     "translit": "l-jini",
+     "gloss": "the jinn",
+     "audio": "wbw/041_029_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "وَٱلْإِنسِ",
+     "translit": "wal-insi",
+     "gloss": "and the men",
+     "audio": "wbw/041_029_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "نَجْعَلْهُمَا",
+     "translit": "najʿalhumā",
+     "gloss": "(so) we may put them",
+     "audio": "wbw/041_029_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "تَحْتَ",
+     "translit": "taḥta",
+     "gloss": "under",
+     "audio": "wbw/041_029_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "أَقْدَامِنَا",
+     "translit": "aqdāminā",
+     "gloss": "our feet",
+     "audio": "wbw/041_029_013.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "لِيَكُونَا",
+     "translit": "liyakūnā",
+     "gloss": "that they be",
+     "audio": "wbw/041_029_014.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "مِنَ",
+     "translit": "mina",
+     "gloss": "of",
+     "audio": "wbw/041_029_015.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "ٱلْأَسْفَلِينَ",
+     "translit": "l-asfalīna",
+     "gloss": "the lowest",
+     "audio": "wbw/041_029_016.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And those who disbelieved will [then] say, \"Our Lord, show us those who misled us of the jinn and men [so] we may put them under our feet that they will be among the lowest.\"",
+    "pickthall": "And those who disbelieve will say: Our Lord! Show us those who beguiled us of the jinn and humankind. We will place them underneath our feet that they may be among the nethermost."
+   }
+  },
+  {
+   "n": 30,
+   "global": 4248,
+   "text": "إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَـٰمُوا۟ تَتَنَزَّلُ عَلَيْهِمُ ٱلْمَلَـٰٓئِكَةُ أَلَّا تَخَافُوا۟ وَلَا تَحْزَنُوا۟ وَأَبْشِرُوا۟ بِٱلْجَنَّةِ ٱلَّتِى كُنتُمْ تُوعَدُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/041_030_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/041_030_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "قَالُوا۟",
+     "translit": "qālū",
+     "gloss": "say",
+     "audio": "wbw/041_030_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "رَبُّنَا",
+     "translit": "rabbunā",
+     "gloss": "Our Lord",
+     "audio": "wbw/041_030_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱللَّهُ",
+     "translit": "l-lahu",
+     "gloss": "(is) Allah",
+     "audio": "wbw/041_030_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ثُمَّ",
+     "translit": "thumma",
+     "gloss": "then",
+     "audio": "wbw/041_030_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "ٱسْتَقَـٰمُوا۟",
+     "translit": "is'taqāmū",
+     "gloss": "stand firm",
+     "audio": "wbw/041_030_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "تَتَنَزَّلُ",
+     "translit": "tatanazzalu",
+     "gloss": "will descend",
+     "audio": "wbw/041_030_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "عَلَيْهِمُ",
+     "translit": "ʿalayhimu",
+     "gloss": "on them",
+     "audio": "wbw/041_030_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "ٱلْمَلَـٰٓئِكَةُ",
+     "translit": "l-malāikatu",
+     "gloss": "the Angels",
+     "audio": "wbw/041_030_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "أَلَّا",
+     "translit": "allā",
+     "gloss": "(Do) not",
+     "audio": "wbw/041_030_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "تَخَافُوا۟",
+     "translit": "takhāfū",
+     "gloss": "fear",
+     "audio": "wbw/041_030_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "and (do) not",
+     "audio": "wbw/041_030_013.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "تَحْزَنُوا۟",
+     "translit": "taḥzanū",
+     "gloss": "grieve",
+     "audio": "wbw/041_030_014.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "وَأَبْشِرُوا۟",
+     "translit": "wa-abshirū",
+     "gloss": "but receive the glad tidings",
+     "audio": "wbw/041_030_015.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "بِٱلْجَنَّةِ",
+     "translit": "bil-janati",
+     "gloss": "of Paradise",
+     "audio": "wbw/041_030_016.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "ٱلَّتِى",
+     "translit": "allatī",
+     "gloss": "which",
+     "audio": "wbw/041_030_017.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "كُنتُمْ",
+     "translit": "kuntum",
+     "gloss": "you were",
+     "audio": "wbw/041_030_018.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "تُوعَدُونَ",
+     "translit": "tūʿadūna",
+     "gloss": "promised",
+     "audio": "wbw/041_030_019.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, those who have said, \"Our Lord is Allāh\" and then remained on a right course - the angels will descend upon them, [saying], \"Do not fear and do not grieve but receive good tidings of Paradise, which you were promised.",
+    "pickthall": "Lo! those who say: Our Lord is Allah, and afterward are upright, the angels descend upon them, saying: Fear not nor grieve, but hear good tidings of the paradise which ye are promised."
+   }
+  },
+  {
+   "n": 31,
+   "global": 4249,
+   "text": "نَحْنُ أَوْلِيَآؤُكُمْ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْـَٔاخِرَةِ ۖ وَلَكُمْ فِيهَا مَا تَشْتَهِىٓ أَنفُسُكُمْ وَلَكُمْ فِيهَا مَا تَدَّعُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "نَحْنُ",
+     "translit": "naḥnu",
+     "gloss": "We",
+     "audio": "wbw/041_031_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَوْلِيَآؤُكُمْ",
+     "translit": "awliyāukum",
+     "gloss": "(are) your protectors",
+     "audio": "wbw/041_031_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/041_031_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْحَيَوٰةِ",
+     "translit": "l-ḥayati",
+     "gloss": "the life",
+     "audio": "wbw/041_031_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلدُّنْيَا",
+     "translit": "l-dun'yā",
+     "gloss": "(of) the world",
+     "audio": "wbw/041_031_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَفِى",
+     "translit": "wafī",
+     "gloss": "and in",
+     "audio": "wbw/041_031_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "ٱلْـَٔاخِرَةِ ۖ",
+     "translit": "l-ākhirati",
+     "gloss": "the Hereafter",
+     "audio": "wbw/041_031_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَلَكُمْ",
+     "translit": "walakum",
+     "gloss": "And for you",
+     "audio": "wbw/041_031_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "فِيهَا",
+     "translit": "fīhā",
+     "gloss": "therein",
+     "audio": "wbw/041_031_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "whatever",
+     "audio": "wbw/041_031_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "تَشْتَهِىٓ",
+     "translit": "tashtahī",
+     "gloss": "desire",
+     "audio": "wbw/041_031_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "أَنفُسُكُمْ",
+     "translit": "anfusukum",
+     "gloss": "your souls",
+     "audio": "wbw/041_031_013.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "وَلَكُمْ",
+     "translit": "walakum",
+     "gloss": "and for you",
+     "audio": "wbw/041_031_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "فِيهَا",
+     "translit": "fīhā",
+     "gloss": "therein",
+     "audio": "wbw/041_031_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/041_031_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "تَدَّعُونَ",
+     "translit": "taddaʿūna",
+     "gloss": "you ask",
+     "audio": "wbw/041_031_017.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "We [angels] were your allies in worldly life and [are so] in the Hereafter. And you will have therein whatever your souls desire, and you will have therein whatever you request [or wish]",
+    "pickthall": "We are your protecting friends in the life of the world and in the Hereafter. There ye will have (all) that your souls desire, and there ye will have (all) for which ye pray."
+   }
+  },
+  {
+   "n": 32,
+   "global": 4250,
+   "text": "نُزُلًا مِّنْ غَفُورٍ رَّحِيمٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "نُزُلًۭا",
+     "translit": "nuzulan",
+     "gloss": "A hospitable gift",
+     "audio": "wbw/041_032_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مِّنْ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/041_032_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "غَفُورٍۢ",
+     "translit": "ghafūrin",
+     "gloss": "(the) Oft-Forgiving",
+     "audio": "wbw/041_032_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "رَّحِيمٍۢ",
+     "translit": "raḥīmin",
+     "gloss": "(the) Most Merciful",
+     "audio": "wbw/041_032_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "As accommodation from a [Lord who is] Forgiving and Merciful.\"",
+    "pickthall": "A gift of welcome from One Forgiving, Merciful."
+   }
+  },
+  {
+   "n": 33,
+   "global": 4251,
+   "text": "وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَآ إِلَى ٱللَّهِ وَعَمِلَ صَـٰلِحًا وَقَالَ إِنَّنِى مِنَ ٱلْمُسْلِمِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمَنْ",
+     "translit": "waman",
+     "gloss": "And who",
+     "audio": "wbw/041_033_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَحْسَنُ",
+     "translit": "aḥsanu",
+     "gloss": "(is) better",
+     "audio": "wbw/041_033_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "قَوْلًۭا",
+     "translit": "qawlan",
+     "gloss": "(in) speech",
+     "audio": "wbw/041_033_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِّمَّن",
+     "translit": "mimman",
+     "gloss": "than (one) who",
+     "audio": "wbw/041_033_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "دَعَآ",
+     "translit": "daʿā",
+     "gloss": "invites",
+     "audio": "wbw/041_033_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "إِلَى",
+     "translit": "ilā",
+     "gloss": "to",
+     "audio": "wbw/041_033_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "ٱللَّهِ",
+     "translit": "l-lahi",
+     "gloss": "Allah",
+     "audio": "wbw/041_033_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَعَمِلَ",
+     "translit": "waʿamila",
+     "gloss": "and does",
+     "audio": "wbw/041_033_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "صَـٰلِحًۭا",
+     "translit": "ṣāliḥan",
+     "gloss": "righteous (deeds)",
+     "audio": "wbw/041_033_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "وَقَالَ",
+     "translit": "waqāla",
+     "gloss": "and says",
+     "audio": "wbw/041_033_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "إِنَّنِى",
+     "translit": "innanī",
+     "gloss": "Indeed, I am",
+     "audio": "wbw/041_033_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "مِنَ",
+     "translit": "mina",
+     "gloss": "of",
+     "audio": "wbw/041_033_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "ٱلْمُسْلِمِينَ",
+     "translit": "l-mus'limīna",
+     "gloss": "those who submit",
+     "audio": "wbw/041_033_013.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And who is better in speech than one who invites to Allāh and does righteousness and says, \"Indeed, I am of the Muslims.\"",
+    "pickthall": "And who is better in speech than him who prayeth unto his Lord and doeth right, and saith: Lo! I am of those who are muslims (surrender unto Him)."
+   }
+  },
+  {
+   "n": 34,
+   "global": 4252,
+   "text": "وَلَا تَسْتَوِى ٱلْحَسَنَةُ وَلَا ٱلسَّيِّئَةُ ۚ ٱدْفَعْ بِٱلَّتِى هِىَ أَحْسَنُ فَإِذَا ٱلَّذِى بَيْنَكَ وَبَيْنَهُۥ عَدَٰوَةٌ كَأَنَّهُۥ وَلِىٌّ حَمِيمٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "And not",
+     "audio": "wbw/041_034_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "تَسْتَوِى",
+     "translit": "tastawī",
+     "gloss": "(are) equal",
+     "audio": "wbw/041_034_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْحَسَنَةُ",
+     "translit": "l-ḥasanatu",
+     "gloss": "the good (deed)",
+     "audio": "wbw/041_034_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "and",
+     "audio": "wbw/041_034_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلسَّيِّئَةُ ۚ",
+     "translit": "l-sayi-atu",
+     "gloss": "the evil (deed)",
+     "audio": "wbw/041_034_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ٱدْفَعْ",
+     "translit": "id'faʿ",
+     "gloss": "Repel",
+     "audio": "wbw/041_034_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "بِٱلَّتِى",
+     "translit": "bi-allatī",
+     "gloss": "by (that) which",
+     "audio": "wbw/041_034_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "هِىَ",
+     "translit": "hiya",
+     "gloss": "[it]",
+     "audio": "wbw/041_034_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "أَحْسَنُ",
+     "translit": "aḥsanu",
+     "gloss": "(is) better",
+     "audio": "wbw/041_034_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "فَإِذَا",
+     "translit": "fa-idhā",
+     "gloss": "then behold",
+     "audio": "wbw/041_034_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "ٱلَّذِى",
+     "translit": "alladhī",
+     "gloss": "One who",
+     "audio": "wbw/041_034_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "بَيْنَكَ",
+     "translit": "baynaka",
+     "gloss": "between you",
+     "audio": "wbw/041_034_013.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "وَبَيْنَهُۥ",
+     "translit": "wabaynahu",
+     "gloss": "and between him",
+     "audio": "wbw/041_034_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "عَدَٰوَةٌۭ",
+     "translit": "ʿadāwatun",
+     "gloss": "(was) enmity",
+     "audio": "wbw/041_034_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "كَأَنَّهُۥ",
+     "translit": "ka-annahu",
+     "gloss": "(will become) as if he",
+     "audio": "wbw/041_034_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "وَلِىٌّ",
+     "translit": "waliyyun",
+     "gloss": "(was) a friend",
+     "audio": "wbw/041_034_017.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "حَمِيمٌۭ",
+     "translit": "ḥamīmun",
+     "gloss": "intimate",
+     "audio": "wbw/041_034_018.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And not equal are the good deed and the bad. Repel [evil] by that [deed] which is better; and thereupon, the one whom between you and him is enmity [will become] as though he was a devoted friend.",
+    "pickthall": "The good deed and the evil deed are not alike. Repel the evil deed with one which is better, then lo! he, between whom and thee there was enmity (will become) as though he was a bosom friend."
+   }
+  },
+  {
+   "n": 35,
+   "global": 4253,
+   "text": "وَمَا يُلَقَّىٰهَآ إِلَّا ٱلَّذِينَ صَبَرُوا۟ وَمَا يُلَقَّىٰهَآ إِلَّا ذُو حَظٍّ عَظِيمٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "And not",
+     "audio": "wbw/041_035_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يُلَقَّىٰهَآ",
+     "translit": "yulaqqāhā",
+     "gloss": "it is granted",
+     "audio": "wbw/041_035_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "إِلَّا",
+     "translit": "illā",
+     "gloss": "except",
+     "audio": "wbw/041_035_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "(to) those who",
+     "audio": "wbw/041_035_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "صَبَرُوا۟",
+     "translit": "ṣabarū",
+     "gloss": "(are) patient",
+     "audio": "wbw/041_035_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "and not",
+     "audio": "wbw/041_035_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "يُلَقَّىٰهَآ",
+     "translit": "yulaqqāhā",
+     "gloss": "it is granted",
+     "audio": "wbw/041_035_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "إِلَّا",
+     "translit": "illā",
+     "gloss": "except",
+     "audio": "wbw/041_035_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ذُو",
+     "translit": "dhū",
+     "gloss": "(to the) owner",
+     "audio": "wbw/041_035_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "حَظٍّ",
+     "translit": "ḥaẓẓin",
+     "gloss": "(of) fortune",
+     "audio": "wbw/041_035_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "عَظِيمٍۢ",
+     "translit": "ʿaẓīmin",
+     "gloss": "great",
+     "audio": "wbw/041_035_011.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "But none is granted it except those who are patient, and none is granted it except one having a great portion [of good].",
+    "pickthall": "But none is granted it save those who are steadfast, and none is granted it save the owner of great happiness."
+   }
+  },
+  {
+   "n": 36,
+   "global": 4254,
+   "text": "وَإِمَّا يَنزَغَنَّكَ مِنَ ٱلشَّيْطَـٰنِ نَزْغٌ فَٱسْتَعِذْ بِٱللَّهِ ۖ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَإِمَّا",
+     "translit": "wa-immā",
+     "gloss": "And if",
+     "audio": "wbw/041_036_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَنزَغَنَّكَ",
+     "translit": "yanzaghannaka",
+     "gloss": "whisper comes to you",
+     "audio": "wbw/041_036_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مِنَ",
+     "translit": "mina",
+     "gloss": "from",
+     "audio": "wbw/041_036_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلشَّيْطَـٰنِ",
+     "translit": "l-shayṭāni",
+     "gloss": "the Shaitaan",
+     "audio": "wbw/041_036_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "نَزْغٌۭ",
+     "translit": "nazghun",
+     "gloss": "an evil suggestion",
+     "audio": "wbw/041_036_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "فَٱسْتَعِذْ",
+     "translit": "fa-is'taʿidh",
+     "gloss": "then seek refuge",
+     "audio": "wbw/041_036_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "بِٱللَّهِ ۖ",
+     "translit": "bil-lahi",
+     "gloss": "in Allah",
+     "audio": "wbw/041_036_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "إِنَّهُۥ",
+     "translit": "innahu",
+     "gloss": "Indeed, He",
+     "audio": "wbw/041_036_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "هُوَ",
+     "translit": "huwa",
+     "gloss": "[He]",
+     "audio": "wbw/041_036_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "ٱلسَّمِيعُ",
+     "translit": "l-samīʿu",
+     "gloss": "(is) the All-Hearer",
+     "audio": "wbw/041_036_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "ٱلْعَلِيمُ",
+     "translit": "l-ʿalīmu",
+     "gloss": "the All-Knower",
+     "audio": "wbw/041_036_012.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And if there comes to you from Satan an evil suggestion, then seek refuge in Allāh. Indeed, He is the Hearing, the Knowing.",
+    "pickthall": "And if a whisper from the devil reach thee (O Muhammad) then seek refuge in Allah. Lo! He is the Hearer, the Knower."
+   }
+  },
+  {
+   "n": 37,
+   "global": 4255,
+   "text": "وَمِنْ ءَايَـٰتِهِ ٱلَّيْلُ وَٱلنَّهَارُ وَٱلشَّمْسُ وَٱلْقَمَرُ ۚ لَا تَسْجُدُوا۟ لِلشَّمْسِ وَلَا لِلْقَمَرِ وَٱسْجُدُوا۟ لِلَّهِ ٱلَّذِى خَلَقَهُنَّ إِن كُنتُمْ إِيَّاهُ تَعْبُدُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمِنْ",
+     "translit": "wamin",
+     "gloss": "And of",
+     "audio": "wbw/041_037_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَايَـٰتِهِ",
+     "translit": "āyātihi",
+     "gloss": "His Signs",
+     "audio": "wbw/041_037_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلَّيْلُ",
+     "translit": "al-laylu",
+     "gloss": "(are) the night",
+     "audio": "wbw/041_037_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَٱلنَّهَارُ",
+     "translit": "wal-nahāru",
+     "gloss": "and the day",
+     "audio": "wbw/041_037_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَٱلشَّمْسُ",
+     "translit": "wal-shamsu",
+     "gloss": "and the sun",
+     "audio": "wbw/041_037_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَٱلْقَمَرُ ۚ",
+     "translit": "wal-qamaru",
+     "gloss": "and the moon",
+     "audio": "wbw/041_037_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "لَا",
+     "translit": "lā",
+     "gloss": "(Do) not",
+     "audio": "wbw/041_037_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "تَسْجُدُوا۟",
+     "translit": "tasjudū",
+     "gloss": "prostrate",
+     "audio": "wbw/041_037_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "لِلشَّمْسِ",
+     "translit": "lilshamsi",
+     "gloss": "to the sun",
+     "audio": "wbw/041_037_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "and not",
+     "audio": "wbw/041_037_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "لِلْقَمَرِ",
+     "translit": "lil'qamari",
+     "gloss": "to the moon",
+     "audio": "wbw/041_037_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "وَٱسْجُدُوا۟",
+     "translit": "wa-us'judū",
+     "gloss": "but prostrate",
+     "audio": "wbw/041_037_013.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "لِلَّهِ",
+     "translit": "lillahi",
+     "gloss": "to Allah",
+     "audio": "wbw/041_037_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "ٱلَّذِى",
+     "translit": "alladhī",
+     "gloss": "the One Who",
+     "audio": "wbw/041_037_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "خَلَقَهُنَّ",
+     "translit": "khalaqahunna",
+     "gloss": "created them",
+     "audio": "wbw/041_037_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "إِن",
+     "translit": "in",
+     "gloss": "if",
+     "audio": "wbw/041_037_017.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "كُنتُمْ",
+     "translit": "kuntum",
+     "gloss": "you",
+     "audio": "wbw/041_037_018.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "إِيَّاهُ",
+     "translit": "iyyāhu",
+     "gloss": "Him alone",
+     "audio": "wbw/041_037_019.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "تَعْبُدُونَ",
+     "translit": "taʿbudūna",
+     "gloss": "worship",
+     "audio": "wbw/041_037_020.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And of His signs are the night and day and the sun and moon. Do not prostrate to the sun or to the moon, but prostrate to Allāh, who created them, if it should be Him that you worship.",
+    "pickthall": "And of His portents are the night and the day and the sun and the moon. Do not prostrate to the sun or the moon; but prostrate to Allah Who created them, if it is in truth Him Whom ye worship."
+   }
+  },
+  {
+   "n": 38,
+   "global": 4256,
+   "text": "فَإِنِ ٱسْتَكْبَرُوا۟ فَٱلَّذِينَ عِندَ رَبِّكَ يُسَبِّحُونَ لَهُۥ بِٱلَّيْلِ وَٱلنَّهَارِ وَهُمْ لَا يَسْـَٔمُونَ ۩",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَإِنِ",
+     "translit": "fa-ini",
+     "gloss": "But if",
+     "audio": "wbw/041_038_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱسْتَكْبَرُوا۟",
+     "translit": "is'takbarū",
+     "gloss": "they are arrogant",
+     "audio": "wbw/041_038_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَٱلَّذِينَ",
+     "translit": "fa-alladhīna",
+     "gloss": "then those who",
+     "audio": "wbw/041_038_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "عِندَ",
+     "translit": "ʿinda",
+     "gloss": "(are) near",
+     "audio": "wbw/041_038_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "رَبِّكَ",
+     "translit": "rabbika",
+     "gloss": "your Lord",
+     "audio": "wbw/041_038_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "يُسَبِّحُونَ",
+     "translit": "yusabbiḥūna",
+     "gloss": "glorify",
+     "audio": "wbw/041_038_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "لَهُۥ",
+     "translit": "lahu",
+     "gloss": "Him",
+     "audio": "wbw/041_038_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "بِٱلَّيْلِ",
+     "translit": "bi-al-layli",
+     "gloss": "by night",
+     "audio": "wbw/041_038_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "وَٱلنَّهَارِ",
+     "translit": "wal-nahāri",
+     "gloss": "and day",
+     "audio": "wbw/041_038_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "وَهُمْ",
+     "translit": "wahum",
+     "gloss": "And they",
+     "audio": "wbw/041_038_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "لَا",
+     "translit": "lā",
+     "gloss": "(do) not",
+     "audio": "wbw/041_038_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "يَسْـَٔمُونَ ۩",
+     "translit": "yasamūna",
+     "gloss": "tire",
+     "audio": "wbw/041_038_012.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "But if they are arrogant - then those who are near your Lord [i.e., the angels] exalt Him by night and by day, and they do not become weary.",
+    "pickthall": "But if they are too proud - still those who are with thy Lord glorify Him night and day, and tire not."
+   }
+  },
+  {
+   "n": 39,
+   "global": 4257,
+   "text": "وَمِنْ ءَايَـٰتِهِۦٓ أَنَّكَ تَرَى ٱلْأَرْضَ خَـٰشِعَةً فَإِذَآ أَنزَلْنَا عَلَيْهَا ٱلْمَآءَ ٱهْتَزَّتْ وَرَبَتْ ۚ إِنَّ ٱلَّذِىٓ أَحْيَاهَا لَمُحْىِ ٱلْمَوْتَىٰٓ ۚ إِنَّهُۥ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمِنْ",
+     "translit": "wamin",
+     "gloss": "And among",
+     "audio": "wbw/041_039_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَايَـٰتِهِۦٓ",
+     "translit": "āyātihi",
+     "gloss": "His Signs",
+     "audio": "wbw/041_039_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَنَّكَ",
+     "translit": "annaka",
+     "gloss": "(is) that you",
+     "audio": "wbw/041_039_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تَرَى",
+     "translit": "tarā",
+     "gloss": "see",
+     "audio": "wbw/041_039_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْأَرْضَ",
+     "translit": "l-arḍa",
+     "gloss": "the earth",
+     "audio": "wbw/041_039_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "خَـٰشِعَةًۭ",
+     "translit": "khāshiʿatan",
+     "gloss": "barren",
+     "audio": "wbw/041_039_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فَإِذَآ",
+     "translit": "fa-idhā",
+     "gloss": "but when",
+     "audio": "wbw/041_039_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "أَنزَلْنَا",
+     "translit": "anzalnā",
+     "gloss": "We send down",
+     "audio": "wbw/041_039_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "عَلَيْهَا",
+     "translit": "ʿalayhā",
+     "gloss": "upon it",
+     "audio": "wbw/041_039_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "ٱلْمَآءَ",
+     "translit": "l-māa",
+     "gloss": "water",
+     "audio": "wbw/041_039_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "ٱهْتَزَّتْ",
+     "translit": "ih'tazzat",
+     "gloss": "it is stirred (to life)",
+     "audio": "wbw/041_039_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "وَرَبَتْ ۚ",
+     "translit": "warabat",
+     "gloss": "and grows",
+     "audio": "wbw/041_039_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/041_039_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "ٱلَّذِىٓ",
+     "translit": "alladhī",
+     "gloss": "the One Who",
+     "audio": "wbw/041_039_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "أَحْيَاهَا",
+     "translit": "aḥyāhā",
+     "gloss": "gives it life",
+     "audio": "wbw/041_039_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "لَمُحْىِ",
+     "translit": "lamuḥ'yī",
+     "gloss": "(is) surely the Giver of life",
+     "audio": "wbw/041_039_017.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "ٱلْمَوْتَىٰٓ ۚ",
+     "translit": "l-mawtā",
+     "gloss": "(to) the dead",
+     "audio": "wbw/041_039_018.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "إِنَّهُۥ",
+     "translit": "innahu",
+     "gloss": "Indeed, He",
+     "audio": "wbw/041_039_020.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "عَلَىٰ",
+     "translit": "ʿalā",
+     "gloss": "(is) on",
+     "audio": "wbw/041_039_021.mp3"
+    },
+    {
+     "n": 20,
+     "ar": "كُلِّ",
+     "translit": "kulli",
+     "gloss": "every",
+     "audio": "wbw/041_039_022.mp3"
+    },
+    {
+     "n": 21,
+     "ar": "شَىْءٍۢ",
+     "translit": "shayin",
+     "gloss": "thing",
+     "audio": "wbw/041_039_023.mp3"
+    },
+    {
+     "n": 22,
+     "ar": "قَدِيرٌ",
+     "translit": "qadīrun",
+     "gloss": "All-Powerful",
+     "audio": "wbw/041_039_024.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And of His signs is that you see the earth stilled, but when We send down upon it rain, it quivers and grows. Indeed, He who has given it life is the Giver of Life to the dead. Indeed, He is over all things competent.",
+    "pickthall": "And of His portents (is this): that thou seest the earth lowly, but when We send down water thereon it thrilleth and groweth. Lo! He Who quickeneth it is verily the Quickener of the Dead. Lo! He is Able to do all things."
+   }
+  },
+  {
+   "n": 40,
+   "global": 4258,
+   "text": "إِنَّ ٱلَّذِينَ يُلْحِدُونَ فِىٓ ءَايَـٰتِنَا لَا يَخْفَوْنَ عَلَيْنَآ ۗ أَفَمَن يُلْقَىٰ فِى ٱلنَّارِ خَيْرٌ أَم مَّن يَأْتِىٓ ءَامِنًا يَوْمَ ٱلْقِيَـٰمَةِ ۚ ٱعْمَلُوا۟ مَا شِئْتُمْ ۖ إِنَّهُۥ بِمَا تَعْمَلُونَ بَصِيرٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/041_040_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/041_040_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يُلْحِدُونَ",
+     "translit": "yul'ḥidūna",
+     "gloss": "distort",
+     "audio": "wbw/041_040_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فِىٓ",
+     "translit": "fī",
+     "gloss": "[in]",
+     "audio": "wbw/041_040_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ءَايَـٰتِنَا",
+     "translit": "āyātinā",
+     "gloss": "Our Verses",
+     "audio": "wbw/041_040_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "لَا",
+     "translit": "lā",
+     "gloss": "(are) not",
+     "audio": "wbw/041_040_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "يَخْفَوْنَ",
+     "translit": "yakhfawna",
+     "gloss": "hidden",
+     "audio": "wbw/041_040_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "عَلَيْنَآ ۗ",
+     "translit": "ʿalaynā",
+     "gloss": "from Us",
+     "audio": "wbw/041_040_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "أَفَمَن",
+     "translit": "afaman",
+     "gloss": "So, is (he) who",
+     "audio": "wbw/041_040_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "يُلْقَىٰ",
+     "translit": "yul'qā",
+     "gloss": "is cast",
+     "audio": "wbw/041_040_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/041_040_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "ٱلنَّارِ",
+     "translit": "l-nāri",
+     "gloss": "the Fire",
+     "audio": "wbw/041_040_013.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "خَيْرٌ",
+     "translit": "khayrun",
+     "gloss": "better",
+     "audio": "wbw/041_040_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "أَم",
+     "translit": "am",
+     "gloss": "or",
+     "audio": "wbw/041_040_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "مَّن",
+     "translit": "man",
+     "gloss": "(he) who",
+     "audio": "wbw/041_040_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "يَأْتِىٓ",
+     "translit": "yatī",
+     "gloss": "comes",
+     "audio": "wbw/041_040_017.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "ءَامِنًۭا",
+     "translit": "āminan",
+     "gloss": "secure",
+     "audio": "wbw/041_040_018.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "يَوْمَ",
+     "translit": "yawma",
+     "gloss": "(on the) Day",
+     "audio": "wbw/041_040_019.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "ٱلْقِيَـٰمَةِ ۚ",
+     "translit": "l-qiyāmati",
+     "gloss": "(of) Resurrection",
+     "audio": "wbw/041_040_020.mp3"
+    },
+    {
+     "n": 20,
+     "ar": "ٱعْمَلُوا۟",
+     "translit": "iʿ'malū",
+     "gloss": "Do",
+     "audio": "wbw/041_040_022.mp3"
+    },
+    {
+     "n": 21,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/041_040_023.mp3"
+    },
+    {
+     "n": 22,
+     "ar": "شِئْتُمْ ۖ",
+     "translit": "shi'tum",
+     "gloss": "you will",
+     "audio": "wbw/041_040_024.mp3"
+    },
+    {
+     "n": 23,
+     "ar": "إِنَّهُۥ",
+     "translit": "innahu",
+     "gloss": "Indeed, He",
+     "audio": "wbw/041_040_026.mp3"
+    },
+    {
+     "n": 24,
+     "ar": "بِمَا",
+     "translit": "bimā",
+     "gloss": "of what",
+     "audio": "wbw/041_040_027.mp3"
+    },
+    {
+     "n": 25,
+     "ar": "تَعْمَلُونَ",
+     "translit": "taʿmalūna",
+     "gloss": "you do",
+     "audio": "wbw/041_040_028.mp3"
+    },
+    {
+     "n": 26,
+     "ar": "بَصِيرٌ",
+     "translit": "baṣīrun",
+     "gloss": "(is) All-Seer",
+     "audio": "wbw/041_040_029.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, those who inject deviation into Our verses are not concealed from Us. So, is he who is cast into the Fire better or he who comes secure on the Day of Resurrection? Do whatever you will; indeed, He is Seeing of what you do.",
+    "pickthall": "Lo! those who distort Our revelations are not hid from Us. Is he who is hurled into the Fire better, or he who cometh secure on the Day of Resurrection? Do what ye will. Lo! He is Seer of what ye do."
+   }
+  },
+  {
+   "n": 41,
+   "global": 4259,
+   "text": "إِنَّ ٱلَّذِينَ كَفَرُوا۟ بِٱلذِّكْرِ لَمَّا جَآءَهُمْ ۖ وَإِنَّهُۥ لَكِتَـٰبٌ عَزِيزٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/041_041_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/041_041_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كَفَرُوا۟",
+     "translit": "kafarū",
+     "gloss": "disbelieve",
+     "audio": "wbw/041_041_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "بِٱلذِّكْرِ",
+     "translit": "bil-dhik'ri",
+     "gloss": "in the Reminder",
+     "audio": "wbw/041_041_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "لَمَّا",
+     "translit": "lammā",
+     "gloss": "when",
+     "audio": "wbw/041_041_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "جَآءَهُمْ ۖ",
+     "translit": "jāahum",
+     "gloss": "it comes to them",
+     "audio": "wbw/041_041_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "وَإِنَّهُۥ",
+     "translit": "wa-innahu",
+     "gloss": "And indeed, it",
+     "audio": "wbw/041_041_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "لَكِتَـٰبٌ",
+     "translit": "lakitābun",
+     "gloss": "(is) surely a Book",
+     "audio": "wbw/041_041_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "عَزِيزٌۭ",
+     "translit": "ʿazīzun",
+     "gloss": "mighty",
+     "audio": "wbw/041_041_010.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, those who disbelieve in the message [i.e., the Qur’ān] after it has come to them... And indeed, it is a mighty Book.",
+    "pickthall": "Lo! those who disbelieve in the Reminder when it cometh unto them (are guilty), for lo! it is an unassailable Scripture."
+   }
+  },
+  {
+   "n": 42,
+   "global": 4260,
+   "text": "لَّا يَأْتِيهِ ٱلْبَـٰطِلُ مِنۢ بَيْنِ يَدَيْهِ وَلَا مِنْ خَلْفِهِۦ ۖ تَنزِيلٌ مِّنْ حَكِيمٍ حَمِيدٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "لَّا",
+     "translit": "lā",
+     "gloss": "Not",
+     "audio": "wbw/041_042_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَأْتِيهِ",
+     "translit": "yatīhi",
+     "gloss": "comes to it",
+     "audio": "wbw/041_042_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْبَـٰطِلُ",
+     "translit": "l-bāṭilu",
+     "gloss": "the falsehood",
+     "audio": "wbw/041_042_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِنۢ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/041_042_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "بَيْنِ",
+     "translit": "bayni",
+     "gloss": "before it",
+     "audio": "wbw/041_042_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "يَدَيْهِ",
+     "translit": "yadayhi",
+     "gloss": "before it",
+     "audio": "wbw/041_042_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "and not",
+     "audio": "wbw/041_042_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "مِنْ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/041_042_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "خَلْفِهِۦ ۖ",
+     "translit": "khalfihi",
+     "gloss": "behind it",
+     "audio": "wbw/041_042_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "تَنزِيلٌۭ",
+     "translit": "tanzīlun",
+     "gloss": "A Revelation",
+     "audio": "wbw/041_042_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "مِّنْ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/041_042_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "حَكِيمٍ",
+     "translit": "ḥakīmin",
+     "gloss": "(the) All-Wise",
+     "audio": "wbw/041_042_013.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "حَمِيدٍۢ",
+     "translit": "ḥamīdin",
+     "gloss": "(the) Praiseworthy",
+     "audio": "wbw/041_042_014.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Falsehood cannot approach it from before it or from behind it; [it is] a revelation from a [Lord who is] Wise and Praiseworthy.",
+    "pickthall": "Falsehood cannot come at it from before it or from behind it. (It is) a revelation from the Wise, the Owner of Praise."
+   }
+  },
+  {
+   "n": 43,
+   "global": 4261,
+   "text": "مَّا يُقَالُ لَكَ إِلَّا مَا قَدْ قِيلَ لِلرُّسُلِ مِن قَبْلِكَ ۚ إِنَّ رَبَّكَ لَذُو مَغْفِرَةٍ وَذُو عِقَابٍ أَلِيمٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مَّا",
+     "translit": "mā",
+     "gloss": "Not",
+     "audio": "wbw/041_043_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يُقَالُ",
+     "translit": "yuqālu",
+     "gloss": "is said",
+     "audio": "wbw/041_043_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "لَكَ",
+     "translit": "laka",
+     "gloss": "to you",
+     "audio": "wbw/041_043_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "إِلَّا",
+     "translit": "illā",
+     "gloss": "except",
+     "audio": "wbw/041_043_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/041_043_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "قَدْ",
+     "translit": "qad",
+     "gloss": "was said",
+     "audio": "wbw/041_043_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "قِيلَ",
+     "translit": "qīla",
+     "gloss": "was said",
+     "audio": "wbw/041_043_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "لِلرُّسُلِ",
+     "translit": "lilrrusuli",
+     "gloss": "to the Messengers",
+     "audio": "wbw/041_043_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "before you",
+     "audio": "wbw/041_043_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "قَبْلِكَ ۚ",
+     "translit": "qablika",
+     "gloss": "before you",
+     "audio": "wbw/041_043_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/041_043_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "رَبَّكَ",
+     "translit": "rabbaka",
+     "gloss": "your Lord",
+     "audio": "wbw/041_043_013.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "لَذُو",
+     "translit": "ladhū",
+     "gloss": "(is) Possessor",
+     "audio": "wbw/041_043_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "مَغْفِرَةٍۢ",
+     "translit": "maghfiratin",
+     "gloss": "(of) forgiveness",
+     "audio": "wbw/041_043_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "وَذُو",
+     "translit": "wadhū",
+     "gloss": "and Possessor",
+     "audio": "wbw/041_043_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "عِقَابٍ",
+     "translit": "ʿiqābin",
+     "gloss": "(of) penalty",
+     "audio": "wbw/041_043_017.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "أَلِيمٍۢ",
+     "translit": "alīmin",
+     "gloss": "painful",
+     "audio": "wbw/041_043_018.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Nothing is said to you, [O Muḥammad], except what was already said to the messengers before you. Indeed, your Lord is a possessor of forgiveness and a possessor of painful penalty.",
+    "pickthall": "Naught is said unto thee (Muhammad) save what was said unto the messengers before thee. Lo! thy Lord is owner of forgiveness, and owner (also) of dire punishment."
+   }
+  },
+  {
+   "n": 44,
+   "global": 4262,
+   "text": "وَلَوْ جَعَلْنَـٰهُ قُرْءَانًا أَعْجَمِيًّا لَّقَالُوا۟ لَوْلَا فُصِّلَتْ ءَايَـٰتُهُۥٓ ۖ ءَا۬عْجَمِىٌّ وَعَرَبِىٌّ ۗ قُلْ هُوَ لِلَّذِينَ ءَامَنُوا۟ هُدًى وَشِفَآءٌ ۖ وَٱلَّذِينَ لَا يُؤْمِنُونَ فِىٓ ءَاذَانِهِمْ وَقْرٌ وَهُوَ عَلَيْهِمْ عَمًى ۚ أُو۟لَـٰٓئِكَ يُنَادَوْنَ مِن مَّكَانٍۭ بَعِيدٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَوْ",
+     "translit": "walaw",
+     "gloss": "And if",
+     "audio": "wbw/041_044_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "جَعَلْنَـٰهُ",
+     "translit": "jaʿalnāhu",
+     "gloss": "We (had) made it",
+     "audio": "wbw/041_044_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "قُرْءَانًا",
+     "translit": "qur'ānan",
+     "gloss": "a Quran",
+     "audio": "wbw/041_044_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أَعْجَمِيًّۭا",
+     "translit": "aʿjamiyyan",
+     "gloss": "(in) a foreign (language)",
+     "audio": "wbw/041_044_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "لَّقَالُوا۟",
+     "translit": "laqālū",
+     "gloss": "they (would have) said",
+     "audio": "wbw/041_044_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "لَوْلَا",
+     "translit": "lawlā",
+     "gloss": "Why not",
+     "audio": "wbw/041_044_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فُصِّلَتْ",
+     "translit": "fuṣṣilat",
+     "gloss": "are explained in detail",
+     "audio": "wbw/041_044_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "ءَايَـٰتُهُۥٓ ۖ",
+     "translit": "āyātuhu",
+     "gloss": "its verses",
+     "audio": "wbw/041_044_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ءَا۬عْجَمِىٌّۭ",
+     "translit": "āʿ'jamiyyun",
+     "gloss": "(Is it) a foreign (language)",
+     "audio": "wbw/041_044_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "وَعَرَبِىٌّۭ ۗ",
+     "translit": "waʿarabiyyun",
+     "gloss": "and an Arab",
+     "audio": "wbw/041_044_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "قُلْ",
+     "translit": "qul",
+     "gloss": "Say",
+     "audio": "wbw/041_044_013.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "هُوَ",
+     "translit": "huwa",
+     "gloss": "It (is)",
+     "audio": "wbw/041_044_014.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "لِلَّذِينَ",
+     "translit": "lilladhīna",
+     "gloss": "for those who",
+     "audio": "wbw/041_044_015.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "ءَامَنُوا۟",
+     "translit": "āmanū",
+     "gloss": "believe",
+     "audio": "wbw/041_044_016.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "هُدًۭى",
+     "translit": "hudan",
+     "gloss": "a guidance",
+     "audio": "wbw/041_044_017.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "وَشِفَآءٌۭ ۖ",
+     "translit": "washifāon",
+     "gloss": "and a healing",
+     "audio": "wbw/041_044_018.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "وَٱلَّذِينَ",
+     "translit": "wa-alladhīna",
+     "gloss": "And those who",
+     "audio": "wbw/041_044_020.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "لَا",
+     "translit": "lā",
+     "gloss": "(do) not",
+     "audio": "wbw/041_044_021.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "يُؤْمِنُونَ",
+     "translit": "yu'minūna",
+     "gloss": "believe",
+     "audio": "wbw/041_044_022.mp3"
+    },
+    {
+     "n": 20,
+     "ar": "فِىٓ",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/041_044_023.mp3"
+    },
+    {
+     "n": 21,
+     "ar": "ءَاذَانِهِمْ",
+     "translit": "ādhānihim",
+     "gloss": "their ears",
+     "audio": "wbw/041_044_024.mp3"
+    },
+    {
+     "n": 22,
+     "ar": "وَقْرٌۭ",
+     "translit": "waqrun",
+     "gloss": "(is) deafness",
+     "audio": "wbw/041_044_025.mp3"
+    },
+    {
+     "n": 23,
+     "ar": "وَهُوَ",
+     "translit": "wahuwa",
+     "gloss": "and it",
+     "audio": "wbw/041_044_026.mp3"
+    },
+    {
+     "n": 24,
+     "ar": "عَلَيْهِمْ",
+     "translit": "ʿalayhim",
+     "gloss": "(is) for them",
+     "audio": "wbw/041_044_027.mp3"
+    },
+    {
+     "n": 25,
+     "ar": "عَمًى ۚ",
+     "translit": "ʿaman",
+     "gloss": "blindness",
+     "audio": "wbw/041_044_028.mp3"
+    },
+    {
+     "n": 26,
+     "ar": "أُو۟لَـٰٓئِكَ",
+     "translit": "ulāika",
+     "gloss": "Those",
+     "audio": "wbw/041_044_030.mp3"
+    },
+    {
+     "n": 27,
+     "ar": "يُنَادَوْنَ",
+     "translit": "yunādawna",
+     "gloss": "are being called",
+     "audio": "wbw/041_044_031.mp3"
+    },
+    {
+     "n": 28,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/041_044_032.mp3"
+    },
+    {
+     "n": 29,
+     "ar": "مَّكَانٍۭ",
+     "translit": "makānin",
+     "gloss": "a place",
+     "audio": "wbw/041_044_033.mp3"
+    },
+    {
+     "n": 30,
+     "ar": "بَعِيدٍۢ",
+     "translit": "baʿīdin",
+     "gloss": "far",
+     "audio": "wbw/041_044_034.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And if We had made it a foreign [i.e., non-Arabic] Qur’ān, they would have said, \"Why are its verses not explained in detail [in our language]? Is it a foreign [recitation] and an Arab [messenger]?\" Say, \"It is, for those who believe, a guidance and cure.\" And those who do not believe - in their ears is deafness, and it is upon them blindness. Those are being called from a distant place.",
+    "pickthall": "And if We had appointed it a Lecture in a foreign tongue they would assuredly have said: If only its verses were expounded (so that we might understand)? What! A foreign tongue and an Arab? - Say unto them (O Muhammad): For those who believe it is a guidance and a healing; and as for those who disbelieve, there is a deafness in their ears, and it is blindness for them. Such are called to from afar."
+   }
+  },
+  {
+   "n": 45,
+   "global": 4263,
+   "text": "وَلَقَدْ ءَاتَيْنَا مُوسَى ٱلْكِتَـٰبَ فَٱخْتُلِفَ فِيهِ ۗ وَلَوْلَا كَلِمَةٌ سَبَقَتْ مِن رَّبِّكَ لَقُضِىَ بَيْنَهُمْ ۚ وَإِنَّهُمْ لَفِى شَكٍّ مِّنْهُ مُرِيبٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَقَدْ",
+     "translit": "walaqad",
+     "gloss": "And certainly",
+     "audio": "wbw/041_045_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَاتَيْنَا",
+     "translit": "ātaynā",
+     "gloss": "We gave",
+     "audio": "wbw/041_045_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مُوسَى",
+     "translit": "mūsā",
+     "gloss": "Musa",
+     "audio": "wbw/041_045_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْكِتَـٰبَ",
+     "translit": "l-kitāba",
+     "gloss": "the Book",
+     "audio": "wbw/041_045_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "فَٱخْتُلِفَ",
+     "translit": "fa-ukh'tulifa",
+     "gloss": "but disputes arose",
+     "audio": "wbw/041_045_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "فِيهِ ۗ",
+     "translit": "fīhi",
+     "gloss": "therein",
+     "audio": "wbw/041_045_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "وَلَوْلَا",
+     "translit": "walawlā",
+     "gloss": "And had it not been",
+     "audio": "wbw/041_045_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "كَلِمَةٌۭ",
+     "translit": "kalimatun",
+     "gloss": "(for) a word",
+     "audio": "wbw/041_045_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "سَبَقَتْ",
+     "translit": "sabaqat",
+     "gloss": "(that) preceded",
+     "audio": "wbw/041_045_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/041_045_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "رَّبِّكَ",
+     "translit": "rabbika",
+     "gloss": "your Lord",
+     "audio": "wbw/041_045_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "لَقُضِىَ",
+     "translit": "laquḍiya",
+     "gloss": "surely, would have been settled",
+     "audio": "wbw/041_045_013.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "بَيْنَهُمْ ۚ",
+     "translit": "baynahum",
+     "gloss": "between them",
+     "audio": "wbw/041_045_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "وَإِنَّهُمْ",
+     "translit": "wa-innahum",
+     "gloss": "But indeed, they",
+     "audio": "wbw/041_045_016.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "لَفِى",
+     "translit": "lafī",
+     "gloss": "surely (are) in",
+     "audio": "wbw/041_045_017.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "شَكٍّۢ",
+     "translit": "shakkin",
+     "gloss": "doubt",
+     "audio": "wbw/041_045_018.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "مِّنْهُ",
+     "translit": "min'hu",
+     "gloss": "about it",
+     "audio": "wbw/041_045_019.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "مُرِيبٍۢ",
+     "translit": "murībin",
+     "gloss": "disquieting",
+     "audio": "wbw/041_045_020.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And We had already given Moses the Scripture, but it came under disagreement. And if not for a word [i.e., decree] that preceded from your Lord, it would have been concluded between them. And indeed they are, concerning it [i.e., the Qur’ān], in disquieting doubt.",
+    "pickthall": "And We verily gave Moses the Scripture, but there hath been dispute concerning it; and but for a Word that had already gone forth from thy Lord, it would ere now have been judged between them; but lo! they are in hopeless doubt concerning it."
+   }
+  },
+  {
+   "n": 46,
+   "global": 4264,
+   "text": "مَّنْ عَمِلَ صَـٰلِحًا فَلِنَفْسِهِۦ ۖ وَمَنْ أَسَآءَ فَعَلَيْهَا ۗ وَمَا رَبُّكَ بِظَلَّـٰمٍ لِّلْعَبِيدِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مَّنْ",
+     "translit": "man",
+     "gloss": "Whoever",
+     "audio": "wbw/041_046_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَمِلَ",
+     "translit": "ʿamila",
+     "gloss": "does",
+     "audio": "wbw/041_046_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "صَـٰلِحًۭا",
+     "translit": "ṣāliḥan",
+     "gloss": "righteous deeds",
+     "audio": "wbw/041_046_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَلِنَفْسِهِۦ ۖ",
+     "translit": "falinafsihi",
+     "gloss": "then it is for his soul",
+     "audio": "wbw/041_046_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَمَنْ",
+     "translit": "waman",
+     "gloss": "and whoever",
+     "audio": "wbw/041_046_006.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "أَسَآءَ",
+     "translit": "asāa",
+     "gloss": "does evil",
+     "audio": "wbw/041_046_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فَعَلَيْهَا ۗ",
+     "translit": "faʿalayhā",
+     "gloss": "then it is against it",
+     "audio": "wbw/041_046_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "And not",
+     "audio": "wbw/041_046_010.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "رَبُّكَ",
+     "translit": "rabbuka",
+     "gloss": "(is) your Lord",
+     "audio": "wbw/041_046_011.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "بِظَلَّـٰمٍۢ",
+     "translit": "biẓallāmin",
+     "gloss": "unjust",
+     "audio": "wbw/041_046_012.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "لِّلْعَبِيدِ",
+     "translit": "lil'ʿabīdi",
+     "gloss": "to His slaves",
+     "audio": "wbw/041_046_013.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Whoever does righteousness - it is for his [own] soul; and whoever does evil [does so] against it. And your Lord is not ever unjust to [His] servants.",
+    "pickthall": "Whoso doeth right it is for his soul, and whoso doeth wrong it is against it. And thy Lord is not at all a tyrant to His slaves."
+   }
+  },
+  {
+   "n": 47,
+   "global": 4265,
+   "text": "۞ إِلَيْهِ يُرَدُّ عِلْمُ ٱلسَّاعَةِ ۚ وَمَا تَخْرُجُ مِن ثَمَرَٰتٍ مِّنْ أَكْمَامِهَا وَمَا تَحْمِلُ مِنْ أُنثَىٰ وَلَا تَضَعُ إِلَّا بِعِلْمِهِۦ ۚ وَيَوْمَ يُنَادِيهِمْ أَيْنَ شُرَكَآءِى قَالُوٓا۟ ءَاذَنَّـٰكَ مَا مِنَّا مِن شَهِيدٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "۞ إِلَيْهِ",
+     "translit": "ilayhi",
+     "gloss": "To Him",
+     "audio": "wbw/041_047_002.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يُرَدُّ",
+     "translit": "yuraddu",
+     "gloss": "is referred",
+     "audio": "wbw/041_047_003.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عِلْمُ",
+     "translit": "ʿil'mu",
+     "gloss": "(the) knowledge",
+     "audio": "wbw/041_047_004.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلسَّاعَةِ ۚ",
+     "translit": "l-sāʿati",
+     "gloss": "(of) the Hour",
+     "audio": "wbw/041_047_005.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "And not",
+     "audio": "wbw/041_047_007.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "تَخْرُجُ",
+     "translit": "takhruju",
+     "gloss": "comes out",
+     "audio": "wbw/041_047_008.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "any",
+     "audio": "wbw/041_047_009.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "ثَمَرَٰتٍۢ",
+     "translit": "thamarātin",
+     "gloss": "fruits",
+     "audio": "wbw/041_047_010.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "مِّنْ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/041_047_011.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "أَكْمَامِهَا",
+     "translit": "akmāmihā",
+     "gloss": "their coverings",
+     "audio": "wbw/041_047_012.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "and not",
+     "audio": "wbw/041_047_013.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "تَحْمِلُ",
+     "translit": "taḥmilu",
+     "gloss": "bears",
+     "audio": "wbw/041_047_014.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "مِنْ",
+     "translit": "min",
+     "gloss": "any",
+     "audio": "wbw/041_047_015.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "أُنثَىٰ",
+     "translit": "unthā",
+     "gloss": "female",
+     "audio": "wbw/041_047_016.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "and not",
+     "audio": "wbw/041_047_017.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "تَضَعُ",
+     "translit": "taḍaʿu",
+     "gloss": "gives birth",
+     "audio": "wbw/041_047_018.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "إِلَّا",
+     "translit": "illā",
+     "gloss": "except",
+     "audio": "wbw/041_047_019.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "بِعِلْمِهِۦ ۚ",
+     "translit": "biʿil'mihi",
+     "gloss": "with His knowledge",
+     "audio": "wbw/041_047_020.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "وَيَوْمَ",
+     "translit": "wayawma",
+     "gloss": "And (the) Day",
+     "audio": "wbw/041_047_022.mp3"
+    },
+    {
+     "n": 20,
+     "ar": "يُنَادِيهِمْ",
+     "translit": "yunādīhim",
+     "gloss": "He will call them",
+     "audio": "wbw/041_047_023.mp3"
+    },
+    {
+     "n": 21,
+     "ar": "أَيْنَ",
+     "translit": "ayna",
+     "gloss": "Where (are)",
+     "audio": "wbw/041_047_024.mp3"
+    },
+    {
+     "n": 22,
+     "ar": "شُرَكَآءِى",
+     "translit": "shurakāī",
+     "gloss": "My partners",
+     "audio": "wbw/041_047_025.mp3"
+    },
+    {
+     "n": 23,
+     "ar": "قَالُوٓا۟",
+     "translit": "qālū",
+     "gloss": "They will say",
+     "audio": "wbw/041_047_026.mp3"
+    },
+    {
+     "n": 24,
+     "ar": "ءَاذَنَّـٰكَ",
+     "translit": "ādhannāka",
+     "gloss": "We announce (to) You",
+     "audio": "wbw/041_047_027.mp3"
+    },
+    {
+     "n": 25,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "not",
+     "audio": "wbw/041_047_028.mp3"
+    },
+    {
+     "n": 26,
+     "ar": "مِنَّا",
+     "translit": "minnā",
+     "gloss": "among us",
+     "audio": "wbw/041_047_029.mp3"
+    },
+    {
+     "n": 27,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "any",
+     "audio": "wbw/041_047_030.mp3"
+    },
+    {
+     "n": 28,
+     "ar": "شَهِيدٍۢ",
+     "translit": "shahīdin",
+     "gloss": "witness",
+     "audio": "wbw/041_047_031.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "To Him [alone] is attributed knowledge of the Hour. And fruits emerge not from their coverings nor does a female conceive or give birth except with His knowledge. And the Day He will call to them, \"Where are My 'partners'?\" they will say, \"We announce to You that there is [no longer] among us any witness [to that].\"",
+    "pickthall": "Unto Him is referred (all) knowledge of the Hour. And no fruits burst forth from their sheaths, and no female carrieth or bringeth forth but with His knowledge. And on the day when He calleth unto them: Where are now My partners? they will say: We confess unto Thee, not one of us is a witness (for them)."
+   }
+  },
+  {
+   "n": 48,
+   "global": 4266,
+   "text": "وَضَلَّ عَنْهُم مَّا كَانُوا۟ يَدْعُونَ مِن قَبْلُ ۖ وَظَنُّوا۟ مَا لَهُم مِّن مَّحِيصٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَضَلَّ",
+     "translit": "waḍalla",
+     "gloss": "And lost",
+     "audio": "wbw/041_048_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَنْهُم",
+     "translit": "ʿanhum",
+     "gloss": "from them",
+     "audio": "wbw/041_048_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَّا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/041_048_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "كَانُوا۟",
+     "translit": "kānū",
+     "gloss": "they were",
+     "audio": "wbw/041_048_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "يَدْعُونَ",
+     "translit": "yadʿūna",
+     "gloss": "invoking",
+     "audio": "wbw/041_048_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "before",
+     "audio": "wbw/041_048_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "قَبْلُ ۖ",
+     "translit": "qablu",
+     "gloss": "before",
+     "audio": "wbw/041_048_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَظَنُّوا۟",
+     "translit": "waẓannū",
+     "gloss": "and they (will) be certain",
+     "audio": "wbw/041_048_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "(that) not",
+     "audio": "wbw/041_048_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "لَهُم",
+     "translit": "lahum",
+     "gloss": "for them",
+     "audio": "wbw/041_048_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "مِّن",
+     "translit": "min",
+     "gloss": "any",
+     "audio": "wbw/041_048_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "مَّحِيصٍۢ",
+     "translit": "maḥīṣin",
+     "gloss": "place of escape",
+     "audio": "wbw/041_048_013.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And lost from them will be those they were invoking before, and they will be certain that they have no place of escape.",
+    "pickthall": "And those to whom they used to cry of old have failed them, and they perceive they have no place of refuge."
+   }
+  },
+  {
+   "n": 49,
+   "global": 4267,
+   "text": "لَّا يَسْـَٔمُ ٱلْإِنسَـٰنُ مِن دُعَآءِ ٱلْخَيْرِ وَإِن مَّسَّهُ ٱلشَّرُّ فَيَـُٔوسٌ قَنُوطٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "لَّا",
+     "translit": "lā",
+     "gloss": "(Does) not",
+     "audio": "wbw/041_049_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَسْـَٔمُ",
+     "translit": "yasamu",
+     "gloss": "get tired",
+     "audio": "wbw/041_049_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْإِنسَـٰنُ",
+     "translit": "l-insānu",
+     "gloss": "man",
+     "audio": "wbw/041_049_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "of",
+     "audio": "wbw/041_049_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "دُعَآءِ",
+     "translit": "duʿāi",
+     "gloss": "praying",
+     "audio": "wbw/041_049_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ٱلْخَيْرِ",
+     "translit": "l-khayri",
+     "gloss": "(for) the good",
+     "audio": "wbw/041_049_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "وَإِن",
+     "translit": "wa-in",
+     "gloss": "but if",
+     "audio": "wbw/041_049_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "مَّسَّهُ",
+     "translit": "massahu",
+     "gloss": "touches him",
+     "audio": "wbw/041_049_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ٱلشَّرُّ",
+     "translit": "l-sharu",
+     "gloss": "the evil",
+     "audio": "wbw/041_049_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "فَيَـُٔوسٌۭ",
+     "translit": "fayaūsun",
+     "gloss": "then he gives up hope",
+     "audio": "wbw/041_049_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "قَنُوطٌۭ",
+     "translit": "qanūṭun",
+     "gloss": "(and) despairs",
+     "audio": "wbw/041_049_011.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Man is not weary of supplication for good [things], but if evil touches him, he is hopeless and despairing.",
+    "pickthall": "Man tireth not of praying for good, and if ill toucheth him, then he is disheartened, desperate."
+   }
+  },
+  {
+   "n": 50,
+   "global": 4268,
+   "text": "وَلَئِنْ أَذَقْنَـٰهُ رَحْمَةً مِّنَّا مِنۢ بَعْدِ ضَرَّآءَ مَسَّتْهُ لَيَقُولَنَّ هَـٰذَا لِى وَمَآ أَظُنُّ ٱلسَّاعَةَ قَآئِمَةً وَلَئِن رُّجِعْتُ إِلَىٰ رَبِّىٓ إِنَّ لِى عِندَهُۥ لَلْحُسْنَىٰ ۚ فَلَنُنَبِّئَنَّ ٱلَّذِينَ كَفَرُوا۟ بِمَا عَمِلُوا۟ وَلَنُذِيقَنَّهُم مِّنْ عَذَابٍ غَلِيظٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَئِنْ",
+     "translit": "wala-in",
+     "gloss": "And verily, if",
+     "audio": "wbw/041_050_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَذَقْنَـٰهُ",
+     "translit": "adhaqnāhu",
+     "gloss": "We let him taste",
+     "audio": "wbw/041_050_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَحْمَةًۭ",
+     "translit": "raḥmatan",
+     "gloss": "mercy",
+     "audio": "wbw/041_050_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِّنَّا",
+     "translit": "minnā",
+     "gloss": "from Us",
+     "audio": "wbw/041_050_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مِنۢ",
+     "translit": "min",
+     "gloss": "after",
+     "audio": "wbw/041_050_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "بَعْدِ",
+     "translit": "baʿdi",
+     "gloss": "after",
+     "audio": "wbw/041_050_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "ضَرَّآءَ",
+     "translit": "ḍarrāa",
+     "gloss": "an adversity",
+     "audio": "wbw/041_050_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "مَسَّتْهُ",
+     "translit": "massathu",
+     "gloss": "(has) touched him",
+     "audio": "wbw/041_050_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "لَيَقُولَنَّ",
+     "translit": "layaqūlanna",
+     "gloss": "he will surely say",
+     "audio": "wbw/041_050_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "هَـٰذَا",
+     "translit": "hādhā",
+     "gloss": "This (is)",
+     "audio": "wbw/041_050_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "لِى",
+     "translit": "lī",
+     "gloss": "(due) to me",
+     "audio": "wbw/041_050_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "وَمَآ",
+     "translit": "wamā",
+     "gloss": "and not",
+     "audio": "wbw/041_050_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "أَظُنُّ",
+     "translit": "aẓunnu",
+     "gloss": "I think",
+     "audio": "wbw/041_050_013.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "ٱلسَّاعَةَ",
+     "translit": "l-sāʿata",
+     "gloss": "the Hour",
+     "audio": "wbw/041_050_014.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "قَآئِمَةًۭ",
+     "translit": "qāimatan",
+     "gloss": "(will be) established",
+     "audio": "wbw/041_050_015.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "وَلَئِن",
+     "translit": "wala-in",
+     "gloss": "and if",
+     "audio": "wbw/041_050_016.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "رُّجِعْتُ",
+     "translit": "rujiʿ'tu",
+     "gloss": "I am returned",
+     "audio": "wbw/041_050_017.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "إِلَىٰ",
+     "translit": "ilā",
+     "gloss": "to",
+     "audio": "wbw/041_050_018.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "رَبِّىٓ",
+     "translit": "rabbī",
+     "gloss": "my Lord",
+     "audio": "wbw/041_050_019.mp3"
+    },
+    {
+     "n": 20,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "indeed",
+     "audio": "wbw/041_050_020.mp3"
+    },
+    {
+     "n": 21,
+     "ar": "لِى",
+     "translit": "lī",
+     "gloss": "for me",
+     "audio": "wbw/041_050_021.mp3"
+    },
+    {
+     "n": 22,
+     "ar": "عِندَهُۥ",
+     "translit": "ʿindahu",
+     "gloss": "with Him",
+     "audio": "wbw/041_050_022.mp3"
+    },
+    {
+     "n": 23,
+     "ar": "لَلْحُسْنَىٰ ۚ",
+     "translit": "lalḥus'nā",
+     "gloss": "(will be) the best",
+     "audio": "wbw/041_050_023.mp3"
+    },
+    {
+     "n": 24,
+     "ar": "فَلَنُنَبِّئَنَّ",
+     "translit": "falanunabbi-anna",
+     "gloss": "But We will surely inform",
+     "audio": "wbw/041_050_025.mp3"
+    },
+    {
+     "n": 25,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/041_050_026.mp3"
+    },
+    {
+     "n": 26,
+     "ar": "كَفَرُوا۟",
+     "translit": "kafarū",
+     "gloss": "disbelieved",
+     "audio": "wbw/041_050_027.mp3"
+    },
+    {
+     "n": 27,
+     "ar": "بِمَا",
+     "translit": "bimā",
+     "gloss": "about what",
+     "audio": "wbw/041_050_028.mp3"
+    },
+    {
+     "n": 28,
+     "ar": "عَمِلُوا۟",
+     "translit": "ʿamilū",
+     "gloss": "they did",
+     "audio": "wbw/041_050_029.mp3"
+    },
+    {
+     "n": 29,
+     "ar": "وَلَنُذِيقَنَّهُم",
+     "translit": "walanudhīqannahum",
+     "gloss": "and We will surely make them taste",
+     "audio": "wbw/041_050_030.mp3"
+    },
+    {
+     "n": 30,
+     "ar": "مِّنْ",
+     "translit": "min",
+     "gloss": "of",
+     "audio": "wbw/041_050_031.mp3"
+    },
+    {
+     "n": 31,
+     "ar": "عَذَابٍ",
+     "translit": "ʿadhābin",
+     "gloss": "a punishment",
+     "audio": "wbw/041_050_032.mp3"
+    },
+    {
+     "n": 32,
+     "ar": "غَلِيظٍۢ",
+     "translit": "ghalīẓin",
+     "gloss": "severe",
+     "audio": "wbw/041_050_033.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And if We let him taste mercy from Us after an adversity which has touched him, he will surely say, \"This is [due] to me, and I do not think the Hour will occur; and [even] if I should be returned to my Lord, indeed, for me there will be with Him the best.\" But We will surely inform those who disbelieved about what they did, and We will surely make them taste a massive punishment.",
+    "pickthall": "And verily, if We cause him to taste mercy after some hurt that hath touched him, he will say: This is my own; and I deem not that the Hour will ever rise, and if I am brought back to my Lord, I surely shall be better off with Him - But We verily shall tell those who disbelieve (all) that they did, and We verily shall make them taste hard punishment."
+   }
+  },
+  {
+   "n": 51,
+   "global": 4269,
+   "text": "وَإِذَآ أَنْعَمْنَا عَلَى ٱلْإِنسَـٰنِ أَعْرَضَ وَنَـَٔا بِجَانِبِهِۦ وَإِذَا مَسَّهُ ٱلشَّرُّ فَذُو دُعَآءٍ عَرِيضٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَإِذَآ",
+     "translit": "wa-idhā",
+     "gloss": "And when",
+     "audio": "wbw/041_051_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَنْعَمْنَا",
+     "translit": "anʿamnā",
+     "gloss": "We bestow favor",
+     "audio": "wbw/041_051_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَلَى",
+     "translit": "ʿalā",
+     "gloss": "upon",
+     "audio": "wbw/041_051_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْإِنسَـٰنِ",
+     "translit": "l-insāni",
+     "gloss": "man",
+     "audio": "wbw/041_051_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "أَعْرَضَ",
+     "translit": "aʿraḍa",
+     "gloss": "he turns away",
+     "audio": "wbw/041_051_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَنَـَٔا",
+     "translit": "wanaā",
+     "gloss": "and distances himself",
+     "audio": "wbw/041_051_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "بِجَانِبِهِۦ",
+     "translit": "bijānibihi",
+     "gloss": "and distances himself",
+     "audio": "wbw/041_051_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَإِذَا",
+     "translit": "wa-idhā",
+     "gloss": "but when",
+     "audio": "wbw/041_051_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "مَسَّهُ",
+     "translit": "massahu",
+     "gloss": "touches him",
+     "audio": "wbw/041_051_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "ٱلشَّرُّ",
+     "translit": "l-sharu",
+     "gloss": "the evil",
+     "audio": "wbw/041_051_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "فَذُو",
+     "translit": "fadhū",
+     "gloss": "then (he is) full",
+     "audio": "wbw/041_051_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "دُعَآءٍ",
+     "translit": "duʿāin",
+     "gloss": "(of) supplication",
+     "audio": "wbw/041_051_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "عَرِيضٍۢ",
+     "translit": "ʿarīḍin",
+     "gloss": "lengthy",
+     "audio": "wbw/041_051_013.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And when We bestow favor upon man, he turns away and distances himself; but when evil touches him, then he is full of extensive supplication.",
+    "pickthall": "When We show favour unto man, he withdraweth and turneth aside, but when ill toucheth him then he aboundeth in prayer."
+   }
+  },
+  {
+   "n": 52,
+   "global": 4270,
+   "text": "قُلْ أَرَءَيْتُمْ إِن كَانَ مِنْ عِندِ ٱللَّهِ ثُمَّ كَفَرْتُم بِهِۦ مَنْ أَضَلُّ مِمَّنْ هُوَ فِى شِقَاقٍۭ بَعِيدٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "قُلْ",
+     "translit": "qul",
+     "gloss": "Say",
+     "audio": "wbw/041_052_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَرَءَيْتُمْ",
+     "translit": "ara-aytum",
+     "gloss": "You see",
+     "audio": "wbw/041_052_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "إِن",
+     "translit": "in",
+     "gloss": "if",
+     "audio": "wbw/041_052_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "كَانَ",
+     "translit": "kāna",
+     "gloss": "it is",
+     "audio": "wbw/041_052_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مِنْ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/041_052_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "عِندِ",
+     "translit": "ʿindi",
+     "gloss": "from",
+     "audio": "wbw/041_052_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "ٱللَّهِ",
+     "translit": "l-lahi",
+     "gloss": "Allah",
+     "audio": "wbw/041_052_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "ثُمَّ",
+     "translit": "thumma",
+     "gloss": "then",
+     "audio": "wbw/041_052_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "كَفَرْتُم",
+     "translit": "kafartum",
+     "gloss": "you disbelieve",
+     "audio": "wbw/041_052_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "بِهِۦ",
+     "translit": "bihi",
+     "gloss": "in it",
+     "audio": "wbw/041_052_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "مَنْ",
+     "translit": "man",
+     "gloss": "who",
+     "audio": "wbw/041_052_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "أَضَلُّ",
+     "translit": "aḍallu",
+     "gloss": "(is) more astray",
+     "audio": "wbw/041_052_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "مِمَّنْ",
+     "translit": "mimman",
+     "gloss": "than (one) who",
+     "audio": "wbw/041_052_013.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "هُوَ",
+     "translit": "huwa",
+     "gloss": "he",
+     "audio": "wbw/041_052_014.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "(is) in",
+     "audio": "wbw/041_052_015.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "شِقَاقٍۭ",
+     "translit": "shiqāqin",
+     "gloss": "opposition",
+     "audio": "wbw/041_052_016.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "بَعِيدٍۢ",
+     "translit": "baʿīdin",
+     "gloss": "far",
+     "audio": "wbw/041_052_017.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Say, \"Have you considered: if it [i.e., the Qur’ān] is from Allāh and you disbelieved in it, who would be more astray than one who is in extreme dissension?\"",
+    "pickthall": "Bethink you: If it is from Allah and ye reject it - Who is further astray than one who is at open feud (with Allah)?"
+   }
+  },
+  {
+   "n": 53,
+   "global": 4271,
+   "text": "سَنُرِيهِمْ ءَايَـٰتِنَا فِى ٱلْـَٔافَاقِ وَفِىٓ أَنفُسِهِمْ حَتَّىٰ يَتَبَيَّنَ لَهُمْ أَنَّهُ ٱلْحَقُّ ۗ أَوَلَمْ يَكْفِ بِرَبِّكَ أَنَّهُۥ عَلَىٰ كُلِّ شَىْءٍ شَهِيدٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "سَنُرِيهِمْ",
+     "translit": "sanurīhim",
+     "gloss": "Soon We will show them",
+     "audio": "wbw/041_053_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَايَـٰتِنَا",
+     "translit": "āyātinā",
+     "gloss": "Our Signs",
+     "audio": "wbw/041_053_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/041_053_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْـَٔافَاقِ",
+     "translit": "l-āfāqi",
+     "gloss": "the horizons",
+     "audio": "wbw/041_053_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَفِىٓ",
+     "translit": "wafī",
+     "gloss": "and in",
+     "audio": "wbw/041_053_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "أَنفُسِهِمْ",
+     "translit": "anfusihim",
+     "gloss": "themselves",
+     "audio": "wbw/041_053_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "حَتَّىٰ",
+     "translit": "ḥattā",
+     "gloss": "until",
+     "audio": "wbw/041_053_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "يَتَبَيَّنَ",
+     "translit": "yatabayyana",
+     "gloss": "becomes clear",
+     "audio": "wbw/041_053_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "لَهُمْ",
+     "translit": "lahum",
+     "gloss": "to them",
+     "audio": "wbw/041_053_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "أَنَّهُ",
+     "translit": "annahu",
+     "gloss": "that it",
+     "audio": "wbw/041_053_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "ٱلْحَقُّ ۗ",
+     "translit": "l-ḥaqu",
+     "gloss": "(is) the truth",
+     "audio": "wbw/041_053_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "أَوَلَمْ",
+     "translit": "awalam",
+     "gloss": "Is (it) not",
+     "audio": "wbw/041_053_013.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "يَكْفِ",
+     "translit": "yakfi",
+     "gloss": "sufficient",
+     "audio": "wbw/041_053_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "بِرَبِّكَ",
+     "translit": "birabbika",
+     "gloss": "concerning your Lord",
+     "audio": "wbw/041_053_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "أَنَّهُۥ",
+     "translit": "annahu",
+     "gloss": "that He",
+     "audio": "wbw/041_053_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "عَلَىٰ",
+     "translit": "ʿalā",
+     "gloss": "(is) over",
+     "audio": "wbw/041_053_017.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "كُلِّ",
+     "translit": "kulli",
+     "gloss": "all",
+     "audio": "wbw/041_053_018.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "شَىْءٍۢ",
+     "translit": "shayin",
+     "gloss": "things",
+     "audio": "wbw/041_053_019.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "شَهِيدٌ",
+     "translit": "shahīdun",
+     "gloss": "a Witness",
+     "audio": "wbw/041_053_020.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "We will show them Our signs in the horizons and within themselves until it becomes clear to them that it is the truth. But is it not sufficient concerning your Lord that He is, over all things, a Witness?",
+    "pickthall": "We shall show them Our portents on the horizons and within themselves until it will be manifest unto them that it is the Truth. Doth not thy Lord suffice, since He is Witness over all things?"
+   }
+  },
+  {
+   "n": 54,
+   "global": 4272,
+   "text": "أَلَآ إِنَّهُمْ فِى مِرْيَةٍ مِّن لِّقَآءِ رَبِّهِمْ ۗ أَلَآ إِنَّهُۥ بِكُلِّ شَىْءٍ مُّحِيطٌۢ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَلَآ",
+     "translit": "alā",
+     "gloss": "Unquestionably",
+     "audio": "wbw/041_054_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِنَّهُمْ",
+     "translit": "innahum",
+     "gloss": "they",
+     "audio": "wbw/041_054_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "(are) in",
+     "audio": "wbw/041_054_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِرْيَةٍۢ",
+     "translit": "mir'yatin",
+     "gloss": "doubt",
+     "audio": "wbw/041_054_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مِّن",
+     "translit": "min",
+     "gloss": "about",
+     "audio": "wbw/041_054_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "لِّقَآءِ",
+     "translit": "liqāi",
+     "gloss": "(the) meeting",
+     "audio": "wbw/041_054_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "رَبِّهِمْ ۗ",
+     "translit": "rabbihim",
+     "gloss": "(with) their Lord",
+     "audio": "wbw/041_054_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "أَلَآ",
+     "translit": "alā",
+     "gloss": "Unquestionably",
+     "audio": "wbw/041_054_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "إِنَّهُۥ",
+     "translit": "innahu",
+     "gloss": "indeed, He",
+     "audio": "wbw/041_054_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "بِكُلِّ",
+     "translit": "bikulli",
+     "gloss": "(is) of all",
+     "audio": "wbw/041_054_011.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "شَىْءٍۢ",
+     "translit": "shayin",
+     "gloss": "things",
+     "audio": "wbw/041_054_012.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "مُّحِيطٌۢ",
+     "translit": "muḥīṭun",
+     "gloss": "encompassing",
+     "audio": "wbw/041_054_013.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Unquestionably, they are in doubt about the meeting with their Lord. Unquestionably He is, of all things, encompassing.",
+    "pickthall": "How! Are they still in doubt about the meeting with their Lord? Lo! Is not He surrounding all things?"
+   }
+  }
+ ]
+}

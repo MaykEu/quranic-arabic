@@ -1,0 +1,410 @@
+{
+ "id": 100,
+ "name_simple": "Al-'Adiyat",
+ "name_arabic": "العاديات",
+ "verses_count": 11,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6147,
+   "text": "وَٱلْعَـٰدِيَـٰتِ ضَبْحًا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلْعَـٰدِيَـٰتِ",
+     "translit": "wal-ʿādiyāti",
+     "gloss": "By the racers",
+     "audio": "wbw/100_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ضَبْحًۭا",
+     "translit": "ḍabḥan",
+     "gloss": "panting",
+     "audio": "wbw/100_001_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "By the racers, panting,",
+    "pickthall": "By the snorting courses,"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6148,
+   "text": "فَٱلْمُورِيَـٰتِ قَدْحًا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَٱلْمُورِيَـٰتِ",
+     "translit": "fal-mūriyāti",
+     "gloss": "And the producers of sparks",
+     "audio": "wbw/100_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "قَدْحًۭا",
+     "translit": "qadḥan",
+     "gloss": "striking",
+     "audio": "wbw/100_002_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And the producers of sparks [when] striking",
+    "pickthall": "Striking sparks of fire"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6149,
+   "text": "فَٱلْمُغِيرَٰتِ صُبْحًا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَٱلْمُغِيرَٰتِ",
+     "translit": "fal-mughīrāti",
+     "gloss": "And the chargers",
+     "audio": "wbw/100_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "صُبْحًۭا",
+     "translit": "ṣub'ḥan",
+     "gloss": "(at) dawn",
+     "audio": "wbw/100_003_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And the chargers at dawn,",
+    "pickthall": "And scouring to the raid at dawn,"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6150,
+   "text": "فَأَثَرْنَ بِهِۦ نَقْعًا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَأَثَرْنَ",
+     "translit": "fa-atharna",
+     "gloss": "Then raise",
+     "audio": "wbw/100_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "بِهِۦ",
+     "translit": "bihi",
+     "gloss": "thereby",
+     "audio": "wbw/100_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "نَقْعًۭا",
+     "translit": "naqʿan",
+     "gloss": "dust",
+     "audio": "wbw/100_004_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Stirring up thereby [clouds of] dust,",
+    "pickthall": "Then, therewith, with their trail of dust,"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6151,
+   "text": "فَوَسَطْنَ بِهِۦ جَمْعًا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَوَسَطْنَ",
+     "translit": "fawasaṭna",
+     "gloss": "Then penetrate (in the) center",
+     "audio": "wbw/100_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "بِهِۦ",
+     "translit": "bihi",
+     "gloss": "thereby",
+     "audio": "wbw/100_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "جَمْعًا",
+     "translit": "jamʿan",
+     "gloss": "collectively",
+     "audio": "wbw/100_005_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Arriving thereby in the center collectively,",
+    "pickthall": "Cleaving, as one, the centre (of the foe),"
+   }
+  },
+  {
+   "n": 6,
+   "global": 6152,
+   "text": "إِنَّ ٱلْإِنسَـٰنَ لِرَبِّهِۦ لَكَنُودٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/100_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْإِنسَـٰنَ",
+     "translit": "l-insāna",
+     "gloss": "mankind",
+     "audio": "wbw/100_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "لِرَبِّهِۦ",
+     "translit": "lirabbihi",
+     "gloss": "to his Lord",
+     "audio": "wbw/100_006_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَكَنُودٌۭ",
+     "translit": "lakanūdun",
+     "gloss": "(is) surely ungrateful",
+     "audio": "wbw/100_006_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed mankind, to his Lord, is ungrateful.",
+    "pickthall": "Lo! man is an ingrate unto his Lord"
+   }
+  },
+  {
+   "n": 7,
+   "global": 6153,
+   "text": "وَإِنَّهُۥ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَإِنَّهُۥ",
+     "translit": "wa-innahu",
+     "gloss": "And indeed, he",
+     "audio": "wbw/100_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَلَىٰ",
+     "translit": "ʿalā",
+     "gloss": "on",
+     "audio": "wbw/100_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ذَٰلِكَ",
+     "translit": "dhālika",
+     "gloss": "that",
+     "audio": "wbw/100_007_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَشَهِيدٌۭ",
+     "translit": "lashahīdun",
+     "gloss": "surely (is) a witness",
+     "audio": "wbw/100_007_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And indeed, he is to that a witness.",
+    "pickthall": "And lo! he is a witness unto that;"
+   }
+  },
+  {
+   "n": 8,
+   "global": 6154,
+   "text": "وَإِنَّهُۥ لِحُبِّ ٱلْخَيْرِ لَشَدِيدٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَإِنَّهُۥ",
+     "translit": "wa-innahu",
+     "gloss": "And indeed he",
+     "audio": "wbw/100_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لِحُبِّ",
+     "translit": "liḥubbi",
+     "gloss": "in (the) love",
+     "audio": "wbw/100_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْخَيْرِ",
+     "translit": "l-khayri",
+     "gloss": "(of) wealth",
+     "audio": "wbw/100_008_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَشَدِيدٌ",
+     "translit": "lashadīdun",
+     "gloss": "(is) surely intense",
+     "audio": "wbw/100_008_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And indeed he is, in love of wealth, intense.",
+    "pickthall": "And lo! in the love of wealth he is violent."
+   }
+  },
+  {
+   "n": 9,
+   "global": 6155,
+   "text": "۞ أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِى ٱلْقُبُورِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "۞ أَفَلَا",
+     "translit": "afalā",
+     "gloss": "But does not",
+     "audio": "wbw/100_009_002.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَعْلَمُ",
+     "translit": "yaʿlamu",
+     "gloss": "he know",
+     "audio": "wbw/100_009_003.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "إِذَا",
+     "translit": "idhā",
+     "gloss": "when",
+     "audio": "wbw/100_009_004.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "بُعْثِرَ",
+     "translit": "buʿ'thira",
+     "gloss": "will be scattered",
+     "audio": "wbw/100_009_005.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/100_009_006.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "(is) in",
+     "audio": "wbw/100_009_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "ٱلْقُبُورِ",
+     "translit": "l-qubūri",
+     "gloss": "the graves",
+     "audio": "wbw/100_009_008.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "But does he not know that when the contents of the graves are scattered",
+    "pickthall": "Knoweth he not that, when the contents of the graves are poured forth"
+   }
+  },
+  {
+   "n": 10,
+   "global": 6156,
+   "text": "وَحُصِّلَ مَا فِى ٱلصُّدُورِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَحُصِّلَ",
+     "translit": "waḥuṣṣila",
+     "gloss": "And is made apparent",
+     "audio": "wbw/100_010_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/100_010_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "(is) in",
+     "audio": "wbw/100_010_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلصُّدُورِ",
+     "translit": "l-ṣudūri",
+     "gloss": "the breasts",
+     "audio": "wbw/100_010_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And that within the breasts is obtained,",
+    "pickthall": "And the secrets of the breasts are made known,"
+   }
+  },
+  {
+   "n": 11,
+   "global": 6157,
+   "text": "إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌۢ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/100_011_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "رَبَّهُم",
+     "translit": "rabbahum",
+     "gloss": "their Lord",
+     "audio": "wbw/100_011_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بِهِمْ",
+     "translit": "bihim",
+     "gloss": "about them",
+     "audio": "wbw/100_011_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "يَوْمَئِذٍۢ",
+     "translit": "yawma-idhin",
+     "gloss": "that Day",
+     "audio": "wbw/100_011_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "لَّخَبِيرٌۢ",
+     "translit": "lakhabīrun",
+     "gloss": "(is) surely All-Aware",
+     "audio": "wbw/100_011_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, their Lord with them, that Day, is [fully] Aware.",
+    "pickthall": "On that day will their Lord be perfectly informed concerning them."
+   }
+  }
+ ]
+}

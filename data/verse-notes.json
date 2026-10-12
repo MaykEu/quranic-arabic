@@ -1,0 +1,27 @@
+{
+ "1:1": [
+  {"n": 1, "note": "bismi: 'in the name of' - bi- (preposition) + ism (noun); the noun is majrūr (genitive) after the preposition."},
+  {"n": 2, "note": "Allāh: the divine name; majrūr (genitive) here because it follows a preposition."},
+  {"n": 4, "note": "ar-raḥīmi: 'the Most Merciful' - definite adjective; majrūr (genitive), matching ar-raḥmāni."}
+ ],
+ "1:2": [
+  {"n": 1, "note": "al-ḥamdu: 'the praise / all praise' - definite noun; subject (mubtadaʾ) of the sentence, marfūʿ (nominative) with ḍammah."},
+  {"n": 2, "note": "li-llāhi: 'belongs to Allāh' - preposition li- + the divine name; majrūr (genitive)."},
+  {"n": 3, "note": "rabbi: 'lord of' - first term of an iḍāfa (possessive construction) with al-ʿālamīn; majrūr (genitive)."},
+  {"n": 4, "note": "al-ʿālamīna: 'the worlds / all creation' - second term of the iḍāfa; majrūr (genitive), plural ending -īn(a)."}
+ ],
+ "112:1": [
+  {"n": 1, "note": "qul: 'say!' - imperative verb (fiʿl amr)."},
+  {"n": 4, "note": "aḥadun: 'one' - predicate (khabar) of the sentence; marfūʿ (nominative) with tanwīn."}
+ ],
+ "112:2": [
+  {"n": 1, "note": "Allāhu: 'Allah' - definite noun; marfūʿ (nominative), subject of the sentence."},
+  {"n": 2, "note": "aṣ-ṣamadu: 'the Eternal / the Self-Sufficient' - definite noun; predicate (khabar), marfūʿ (nominative)."}
+ ],
+ "103:1": [
+  {"n": 1, "note": "wal-ʿaṣri: 'by the time / by the afternoon' - wa- (oath particle 'by') + al-ʿaṣr (definite noun, majrūr / genitive in the oath)."}
+ ],
+ "114:1": [
+  {"n": 2, "note": "aʿūdhu: 'I seek refuge' - present-tense verb (fiʿl muḍāriʿ), first person singular."}
+ ]
+}

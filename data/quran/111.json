@@ -1,0 +1,225 @@
+{
+ "id": 111,
+ "name_simple": "Al-Masad",
+ "name_arabic": "المسد",
+ "verses_count": 5,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6217,
+   "text": "تَبَّتْ يَدَآ أَبِى لَهَبٍ وَتَبَّ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "تَبَّتْ",
+     "translit": "tabbat",
+     "gloss": "Perish",
+     "audio": "wbw/111_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَدَآ",
+     "translit": "yadā",
+     "gloss": "(the) hands",
+     "audio": "wbw/111_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَبِى",
+     "translit": "abī",
+     "gloss": "(of) Abu",
+     "audio": "wbw/111_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَهَبٍۢ",
+     "translit": "lahabin",
+     "gloss": "Lahab",
+     "audio": "wbw/111_001_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَتَبَّ",
+     "translit": "watabba",
+     "gloss": "and perish he",
+     "audio": "wbw/111_001_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "May the hands of Abū Lahab be ruined, and ruined is he.",
+    "pickthall": "The power of Abu Lahab will perish, and he will perish."
+   }
+  },
+  {
+   "n": 2,
+   "global": 6218,
+   "text": "مَآ أَغْنَىٰ عَنْهُ مَالُهُۥ وَمَا كَسَبَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مَآ",
+     "translit": "mā",
+     "gloss": "Not",
+     "audio": "wbw/111_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَغْنَىٰ",
+     "translit": "aghnā",
+     "gloss": "(will) avail",
+     "audio": "wbw/111_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَنْهُ",
+     "translit": "ʿanhu",
+     "gloss": "him",
+     "audio": "wbw/111_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مَالُهُۥ",
+     "translit": "māluhu",
+     "gloss": "his wealth",
+     "audio": "wbw/111_002_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "and what",
+     "audio": "wbw/111_002_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "كَسَبَ",
+     "translit": "kasaba",
+     "gloss": "he earned",
+     "audio": "wbw/111_002_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "His wealth will not avail him or that which he gained.",
+    "pickthall": "His wealth and gains will not exempt him."
+   }
+  },
+  {
+   "n": 3,
+   "global": 6219,
+   "text": "سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "سَيَصْلَىٰ",
+     "translit": "sayaṣlā",
+     "gloss": "He will be burnt",
+     "audio": "wbw/111_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "نَارًۭا",
+     "translit": "nāran",
+     "gloss": "(in) a Fire",
+     "audio": "wbw/111_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ذَاتَ",
+     "translit": "dhāta",
+     "gloss": "of",
+     "audio": "wbw/111_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَهَبٍۢ",
+     "translit": "lahabin",
+     "gloss": "Blazing Flames",
+     "audio": "wbw/111_003_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "He will [enter to] burn in a Fire of [blazing] flame",
+    "pickthall": "He will be plunged in flaming Fire,"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6220,
+   "text": "وَٱمْرَأَتُهُۥ حَمَّالَةَ ٱلْحَطَبِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱمْرَأَتُهُۥ",
+     "translit": "wa-im'ra-atuhu",
+     "gloss": "And his wife",
+     "audio": "wbw/111_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "حَمَّالَةَ",
+     "translit": "ḥammālata",
+     "gloss": "(the) carrier",
+     "audio": "wbw/111_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْحَطَبِ",
+     "translit": "l-ḥaṭabi",
+     "gloss": "(of) firewood",
+     "audio": "wbw/111_004_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And his wife [as well] - the carrier of firewood.",
+    "pickthall": "And his wife, the wood-carrier,"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6221,
+   "text": "فِى جِيدِهَا حَبْلٌ مِّن مَّسَدٍۭ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "In",
+     "audio": "wbw/111_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "جِيدِهَا",
+     "translit": "jīdihā",
+     "gloss": "her neck",
+     "audio": "wbw/111_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "حَبْلٌۭ",
+     "translit": "ḥablun",
+     "gloss": "(will be) a rope",
+     "audio": "wbw/111_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِّن",
+     "translit": "min",
+     "gloss": "of",
+     "audio": "wbw/111_005_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مَّسَدٍۭ",
+     "translit": "masadin",
+     "gloss": "palm-fiber",
+     "audio": "wbw/111_005_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Around her neck is a rope of [twisted] fiber.",
+    "pickthall": "Will have upon her neck a halter of palm-fibre."
+   }
+  }
+ ]
+}

@@ -1,0 +1,225 @@
+{
+ "id": 105,
+ "name_simple": "Al-Fil",
+ "name_arabic": "الفيل",
+ "verses_count": 5,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6189,
+   "text": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَـٰبِ ٱلْفِيلِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَلَمْ",
+     "translit": "alam",
+     "gloss": "Have not",
+     "audio": "wbw/105_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "تَرَ",
+     "translit": "tara",
+     "gloss": "you seen",
+     "audio": "wbw/105_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كَيْفَ",
+     "translit": "kayfa",
+     "gloss": "how",
+     "audio": "wbw/105_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَعَلَ",
+     "translit": "faʿala",
+     "gloss": "dealt",
+     "audio": "wbw/105_001_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "رَبُّكَ",
+     "translit": "rabbuka",
+     "gloss": "your Lord",
+     "audio": "wbw/105_001_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "بِأَصْحَـٰبِ",
+     "translit": "bi-aṣḥābi",
+     "gloss": "with (the) Companions",
+     "audio": "wbw/105_001_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "ٱلْفِيلِ",
+     "translit": "l-fīli",
+     "gloss": "(of the) Elephant",
+     "audio": "wbw/105_001_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Have you not considered, [O Muḥammad], how your Lord dealt with the companions of the elephant?",
+    "pickthall": "Hast thou not seen how thy Lord dealt with the owners of the Elephant?"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6190,
+   "text": "أَلَمْ يَجْعَلْ كَيْدَهُمْ فِى تَضْلِيلٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَلَمْ",
+     "translit": "alam",
+     "gloss": "Did not",
+     "audio": "wbw/105_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَجْعَلْ",
+     "translit": "yajʿal",
+     "gloss": "He make",
+     "audio": "wbw/105_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كَيْدَهُمْ",
+     "translit": "kaydahum",
+     "gloss": "their plan",
+     "audio": "wbw/105_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "go",
+     "audio": "wbw/105_002_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "تَضْلِيلٍۢ",
+     "translit": "taḍlīlin",
+     "gloss": "astray",
+     "audio": "wbw/105_002_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Did He not make their plan into misguidance?",
+    "pickthall": "Did He not bring their stratagem to naught,"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6191,
+   "text": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَأَرْسَلَ",
+     "translit": "wa-arsala",
+     "gloss": "And He sent",
+     "audio": "wbw/105_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَلَيْهِمْ",
+     "translit": "ʿalayhim",
+     "gloss": "against them",
+     "audio": "wbw/105_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "طَيْرًا",
+     "translit": "ṭayran",
+     "gloss": "birds",
+     "audio": "wbw/105_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أَبَابِيلَ",
+     "translit": "abābīla",
+     "gloss": "(in) flocks",
+     "audio": "wbw/105_003_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And He sent against them birds in flocks,",
+    "pickthall": "And send against them swarms of flying creatures,"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6192,
+   "text": "تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "تَرْمِيهِم",
+     "translit": "tarmīhim",
+     "gloss": "Striking them",
+     "audio": "wbw/105_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "بِحِجَارَةٍۢ",
+     "translit": "biḥijāratin",
+     "gloss": "with stones",
+     "audio": "wbw/105_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مِّن",
+     "translit": "min",
+     "gloss": "of",
+     "audio": "wbw/105_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "سِجِّيلٍۢ",
+     "translit": "sijjīlin",
+     "gloss": "baked clay",
+     "audio": "wbw/105_004_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Striking them with stones of hard clay,",
+    "pickthall": "Which pelted them with stones of baked clay,"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6193,
+   "text": "فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍۭ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَجَعَلَهُمْ",
+     "translit": "fajaʿalahum",
+     "gloss": "Then He made them",
+     "audio": "wbw/105_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "كَعَصْفٍۢ",
+     "translit": "kaʿaṣfin",
+     "gloss": "like straw",
+     "audio": "wbw/105_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَّأْكُولٍۭ",
+     "translit": "makūlin",
+     "gloss": "eaten up",
+     "audio": "wbw/105_005_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And He made them like eaten straw.",
+    "pickthall": "And made them like green crops devoured (by cattle)?"
+   }
+  }
+ ]
+}

@@ -1,0 +1,3324 @@
+{
+ "id": 55,
+ "name_simple": "Ar-Rahman",
+ "name_arabic": "الرحمن",
+ "verses_count": 78,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 4902,
+   "text": "ٱلرَّحْمَـٰنُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلرَّحْمَـٰنُ",
+     "translit": "al-raḥmānu",
+     "gloss": "The Most Gracious",
+     "audio": "wbw/055_001_001.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The Most Merciful",
+    "pickthall": "The Beneficent"
+   }
+  },
+  {
+   "n": 2,
+   "global": 4903,
+   "text": "عَلَّمَ ٱلْقُرْءَانَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "عَلَّمَ",
+     "translit": "ʿallama",
+     "gloss": "He taught",
+     "audio": "wbw/055_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْقُرْءَانَ",
+     "translit": "l-qur'āna",
+     "gloss": "the Quran",
+     "audio": "wbw/055_002_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Taught the Qur’ān,",
+    "pickthall": "Hath made known the Qur'an."
+   }
+  },
+  {
+   "n": 3,
+   "global": 4904,
+   "text": "خَلَقَ ٱلْإِنسَـٰنَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "خَلَقَ",
+     "translit": "khalaqa",
+     "gloss": "He created",
+     "audio": "wbw/055_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْإِنسَـٰنَ",
+     "translit": "l-insāna",
+     "gloss": "[the] man",
+     "audio": "wbw/055_003_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Created man,",
+    "pickthall": "He hath created man."
+   }
+  },
+  {
+   "n": 4,
+   "global": 4905,
+   "text": "عَلَّمَهُ ٱلْبَيَانَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "عَلَّمَهُ",
+     "translit": "ʿallamahu",
+     "gloss": "He taught him",
+     "audio": "wbw/055_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْبَيَانَ",
+     "translit": "l-bayāna",
+     "gloss": "[the] speech",
+     "audio": "wbw/055_004_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "[And] taught him eloquence.",
+    "pickthall": "He hath taught him utterance."
+   }
+  },
+  {
+   "n": 5,
+   "global": 4906,
+   "text": "ٱلشَّمْسُ وَٱلْقَمَرُ بِحُسْبَانٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلشَّمْسُ",
+     "translit": "al-shamsu",
+     "gloss": "The sun",
+     "audio": "wbw/055_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَٱلْقَمَرُ",
+     "translit": "wal-qamaru",
+     "gloss": "and the moon",
+     "audio": "wbw/055_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بِحُسْبَانٍۢ",
+     "translit": "biḥus'bānin",
+     "gloss": "by (precise) calculation",
+     "audio": "wbw/055_005_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The sun and the moon [move] by precise calculation,",
+    "pickthall": "The sun and the moon are made punctual."
+   }
+  },
+  {
+   "n": 6,
+   "global": 4907,
+   "text": "وَٱلنَّجْمُ وَٱلشَّجَرُ يَسْجُدَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلنَّجْمُ",
+     "translit": "wal-najmu",
+     "gloss": "And the stars",
+     "audio": "wbw/055_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَٱلشَّجَرُ",
+     "translit": "wal-shajaru",
+     "gloss": "and the trees",
+     "audio": "wbw/055_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يَسْجُدَانِ",
+     "translit": "yasjudāni",
+     "gloss": "both prostrate",
+     "audio": "wbw/055_006_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And the stars and trees prostrate.",
+    "pickthall": "The stars and the trees prostrate."
+   }
+  },
+  {
+   "n": 7,
+   "global": 4908,
+   "text": "وَٱلسَّمَآءَ رَفَعَهَا وَوَضَعَ ٱلْمِيزَانَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلسَّمَآءَ",
+     "translit": "wal-samāa",
+     "gloss": "And the heaven",
+     "audio": "wbw/055_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "رَفَعَهَا",
+     "translit": "rafaʿahā",
+     "gloss": "He raised it",
+     "audio": "wbw/055_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَوَضَعَ",
+     "translit": "wawaḍaʿa",
+     "gloss": "and He has set up",
+     "audio": "wbw/055_007_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْمِيزَانَ",
+     "translit": "l-mīzāna",
+     "gloss": "the balance",
+     "audio": "wbw/055_007_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And the heaven He raised and imposed the balance",
+    "pickthall": "And the sky He hath uplifted; and He hath set the measure,"
+   }
+  },
+  {
+   "n": 8,
+   "global": 4909,
+   "text": "أَلَّا تَطْغَوْا۟ فِى ٱلْمِيزَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَلَّا",
+     "translit": "allā",
+     "gloss": "That not",
+     "audio": "wbw/055_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "تَطْغَوْا۟",
+     "translit": "taṭghaw",
+     "gloss": "you may transgress",
+     "audio": "wbw/055_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/055_008_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْمِيزَانِ",
+     "translit": "l-mīzāni",
+     "gloss": "the balance",
+     "audio": "wbw/055_008_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "That you not transgress within the balance.",
+    "pickthall": "That ye exceed not the measure,"
+   }
+  },
+  {
+   "n": 9,
+   "global": 4910,
+   "text": "وَأَقِيمُوا۟ ٱلْوَزْنَ بِٱلْقِسْطِ وَلَا تُخْسِرُوا۟ ٱلْمِيزَانَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَأَقِيمُوا۟",
+     "translit": "wa-aqīmū",
+     "gloss": "And establish",
+     "audio": "wbw/055_009_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْوَزْنَ",
+     "translit": "l-wazna",
+     "gloss": "the weight",
+     "audio": "wbw/055_009_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بِٱلْقِسْطِ",
+     "translit": "bil-qis'ṭi",
+     "gloss": "in justice",
+     "audio": "wbw/055_009_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "and (do) not",
+     "audio": "wbw/055_009_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "تُخْسِرُوا۟",
+     "translit": "tukh'sirū",
+     "gloss": "make deficient",
+     "audio": "wbw/055_009_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ٱلْمِيزَانَ",
+     "translit": "l-mīzāna",
+     "gloss": "the balance",
+     "audio": "wbw/055_009_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And establish weight in justice and do not make deficient the balance.",
+    "pickthall": "But observe the measure strictly, nor fall short thereof."
+   }
+  },
+  {
+   "n": 10,
+   "global": 4911,
+   "text": "وَٱلْأَرْضَ وَضَعَهَا لِلْأَنَامِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلْأَرْضَ",
+     "translit": "wal-arḍa",
+     "gloss": "And the earth",
+     "audio": "wbw/055_010_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَضَعَهَا",
+     "translit": "waḍaʿahā",
+     "gloss": "He laid it",
+     "audio": "wbw/055_010_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "لِلْأَنَامِ",
+     "translit": "lil'anāmi",
+     "gloss": "for the creatures",
+     "audio": "wbw/055_010_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And the earth He laid [out] for the creatures.",
+    "pickthall": "And the earth hath He appointed for (His) creatures,"
+   }
+  },
+  {
+   "n": 11,
+   "global": 4912,
+   "text": "فِيهَا فَـٰكِهَةٌ وَٱلنَّخْلُ ذَاتُ ٱلْأَكْمَامِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فِيهَا",
+     "translit": "fīhā",
+     "gloss": "Therein",
+     "audio": "wbw/055_011_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "فَـٰكِهَةٌۭ",
+     "translit": "fākihatun",
+     "gloss": "(is) fruit",
+     "audio": "wbw/055_011_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَٱلنَّخْلُ",
+     "translit": "wal-nakhlu",
+     "gloss": "and date-palms",
+     "audio": "wbw/055_011_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ذَاتُ",
+     "translit": "dhātu",
+     "gloss": "having",
+     "audio": "wbw/055_011_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْأَكْمَامِ",
+     "translit": "l-akmāmi",
+     "gloss": "sheaths",
+     "audio": "wbw/055_011_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Therein is fruit and palm trees having sheaths [of dates]",
+    "pickthall": "Wherein are fruit and sheathed palm-trees,"
+   }
+  },
+  {
+   "n": 12,
+   "global": 4913,
+   "text": "وَٱلْحَبُّ ذُو ٱلْعَصْفِ وَٱلرَّيْحَانُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلْحَبُّ",
+     "translit": "wal-ḥabu",
+     "gloss": "And the grain",
+     "audio": "wbw/055_012_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ذُو",
+     "translit": "dhū",
+     "gloss": "having",
+     "audio": "wbw/055_012_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْعَصْفِ",
+     "translit": "l-ʿaṣfi",
+     "gloss": "husk",
+     "audio": "wbw/055_012_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَٱلرَّيْحَانُ",
+     "translit": "wal-rayḥānu",
+     "gloss": "and scented plants",
+     "audio": "wbw/055_012_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And grain having husks and scented plants.",
+    "pickthall": "Husked grain and scented herb."
+   }
+  },
+  {
+   "n": 13,
+   "global": 4914,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_013_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_013_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_013_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_013_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 14,
+   "global": 4915,
+   "text": "خَلَقَ ٱلْإِنسَـٰنَ مِن صَلْصَـٰلٍ كَٱلْفَخَّارِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "خَلَقَ",
+     "translit": "khalaqa",
+     "gloss": "He created",
+     "audio": "wbw/055_014_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْإِنسَـٰنَ",
+     "translit": "l-insāna",
+     "gloss": "the man",
+     "audio": "wbw/055_014_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/055_014_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "صَلْصَـٰلٍۢ",
+     "translit": "ṣalṣālin",
+     "gloss": "clay",
+     "audio": "wbw/055_014_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "كَٱلْفَخَّارِ",
+     "translit": "kal-fakhāri",
+     "gloss": "like the pottery",
+     "audio": "wbw/055_014_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "He created man from clay like [that of] pottery.",
+    "pickthall": "He created man of clay like the potter's,"
+   }
+  },
+  {
+   "n": 15,
+   "global": 4916,
+   "text": "وَخَلَقَ ٱلْجَآنَّ مِن مَّارِجٍ مِّن نَّارٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَخَلَقَ",
+     "translit": "wakhalaqa",
+     "gloss": "And He created",
+     "audio": "wbw/055_015_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْجَآنَّ",
+     "translit": "l-jāna",
+     "gloss": "the jinn",
+     "audio": "wbw/055_015_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/055_015_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مَّارِجٍۢ",
+     "translit": "mārijin",
+     "gloss": "a smokeless flame",
+     "audio": "wbw/055_015_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مِّن",
+     "translit": "min",
+     "gloss": "of",
+     "audio": "wbw/055_015_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "نَّارٍۢ",
+     "translit": "nārin",
+     "gloss": "fire",
+     "audio": "wbw/055_015_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And He created the jinn from a smokeless flame of fire.",
+    "pickthall": "And the jinn did He create of smokeless fire."
+   }
+  },
+  {
+   "n": 16,
+   "global": 4917,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_016_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_016_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_016_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_016_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 17,
+   "global": 4918,
+   "text": "رَبُّ ٱلْمَشْرِقَيْنِ وَرَبُّ ٱلْمَغْرِبَيْنِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "رَبُّ",
+     "translit": "rabbu",
+     "gloss": "Lord",
+     "audio": "wbw/055_017_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْمَشْرِقَيْنِ",
+     "translit": "l-mashriqayni",
+     "gloss": "(of) the two Easts",
+     "audio": "wbw/055_017_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَرَبُّ",
+     "translit": "warabbu",
+     "gloss": "and Lord",
+     "audio": "wbw/055_017_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْمَغْرِبَيْنِ",
+     "translit": "l-maghribayni",
+     "gloss": "(of) the two Wests",
+     "audio": "wbw/055_017_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "[He is] Lord of the two sunrises and Lord of the two sunsets.",
+    "pickthall": "Lord of the two Easts, and Lord of the two Wests!"
+   }
+  },
+  {
+   "n": 18,
+   "global": 4919,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_018_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_018_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_018_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_018_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 19,
+   "global": 4920,
+   "text": "مَرَجَ ٱلْبَحْرَيْنِ يَلْتَقِيَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مَرَجَ",
+     "translit": "maraja",
+     "gloss": "He released",
+     "audio": "wbw/055_019_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْبَحْرَيْنِ",
+     "translit": "l-baḥrayni",
+     "gloss": "the two seas",
+     "audio": "wbw/055_019_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يَلْتَقِيَانِ",
+     "translit": "yaltaqiyāni",
+     "gloss": "meeting",
+     "audio": "wbw/055_019_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "He released the two seas, meeting [one another];",
+    "pickthall": "He hath loosed the two seas. They meet."
+   }
+  },
+  {
+   "n": 20,
+   "global": 4921,
+   "text": "بَيْنَهُمَا بَرْزَخٌ لَّا يَبْغِيَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "بَيْنَهُمَا",
+     "translit": "baynahumā",
+     "gloss": "Between both of them",
+     "audio": "wbw/055_020_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "بَرْزَخٌۭ",
+     "translit": "barzakhun",
+     "gloss": "(is) a barrier",
+     "audio": "wbw/055_020_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "لَّا",
+     "translit": "lā",
+     "gloss": "not",
+     "audio": "wbw/055_020_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "يَبْغِيَانِ",
+     "translit": "yabghiyāni",
+     "gloss": "they transgress",
+     "audio": "wbw/055_020_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Between them is a barrier so neither of them transgresses.",
+    "pickthall": "There is a barrier between them. They encroach not (one upon the other)."
+   }
+  },
+  {
+   "n": 21,
+   "global": 4922,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_021_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_021_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_021_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_021_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 22,
+   "global": 4923,
+   "text": "يَخْرُجُ مِنْهُمَا ٱللُّؤْلُؤُ وَٱلْمَرْجَانُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "يَخْرُجُ",
+     "translit": "yakhruju",
+     "gloss": "Come forth",
+     "audio": "wbw/055_022_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مِنْهُمَا",
+     "translit": "min'humā",
+     "gloss": "from both of them",
+     "audio": "wbw/055_022_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱللُّؤْلُؤُ",
+     "translit": "l-lu'lu-u",
+     "gloss": "the pearl",
+     "audio": "wbw/055_022_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَٱلْمَرْجَانُ",
+     "translit": "wal-marjānu",
+     "gloss": "and the coral",
+     "audio": "wbw/055_022_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "From both of them emerge pearl and coral.",
+    "pickthall": "There cometh forth from both of them the pearl and coral-stone."
+   }
+  },
+  {
+   "n": 23,
+   "global": 4924,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_023_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_023_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_023_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_023_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 24,
+   "global": 4925,
+   "text": "وَلَهُ ٱلْجَوَارِ ٱلْمُنشَـَٔاتُ فِى ٱلْبَحْرِ كَٱلْأَعْلَـٰمِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَهُ",
+     "translit": "walahu",
+     "gloss": "And for Him",
+     "audio": "wbw/055_024_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْجَوَارِ",
+     "translit": "l-jawāri",
+     "gloss": "(are) the ships",
+     "audio": "wbw/055_024_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْمُنشَـَٔاتُ",
+     "translit": "l-munshaātu",
+     "gloss": "elevated",
+     "audio": "wbw/055_024_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/055_024_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْبَحْرِ",
+     "translit": "l-baḥri",
+     "gloss": "the sea",
+     "audio": "wbw/055_024_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "كَٱلْأَعْلَـٰمِ",
+     "translit": "kal-aʿlāmi",
+     "gloss": "like mountains",
+     "audio": "wbw/055_024_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And to Him belong the ships [with sails] elevated in the sea like mountains.",
+    "pickthall": "His are the ships displayed upon the sea, like banners."
+   }
+  },
+  {
+   "n": 25,
+   "global": 4926,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_025_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_025_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_025_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_025_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 26,
+   "global": 4927,
+   "text": "كُلُّ مَنْ عَلَيْهَا فَانٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كُلُّ",
+     "translit": "kullu",
+     "gloss": "Everyone",
+     "audio": "wbw/055_026_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مَنْ",
+     "translit": "man",
+     "gloss": "who",
+     "audio": "wbw/055_026_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "عَلَيْهَا",
+     "translit": "ʿalayhā",
+     "gloss": "(is) on it",
+     "audio": "wbw/055_026_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَانٍۢ",
+     "translit": "fānin",
+     "gloss": "(will) perish",
+     "audio": "wbw/055_026_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Everyone upon it [i.e., the earth] will perish,",
+    "pickthall": "Everyone that is thereon will pass away;"
+   }
+  },
+  {
+   "n": 27,
+   "global": 4928,
+   "text": "وَيَبْقَىٰ وَجْهُ رَبِّكَ ذُو ٱلْجَلَـٰلِ وَٱلْإِكْرَامِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَيَبْقَىٰ",
+     "translit": "wayabqā",
+     "gloss": "But will remain",
+     "audio": "wbw/055_027_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَجْهُ",
+     "translit": "wajhu",
+     "gloss": "(the) Face",
+     "audio": "wbw/055_027_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكَ",
+     "translit": "rabbika",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_027_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ذُو",
+     "translit": "dhū",
+     "gloss": "(the) Owner",
+     "audio": "wbw/055_027_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْجَلَـٰلِ",
+     "translit": "l-jalāli",
+     "gloss": "(of) Majesty",
+     "audio": "wbw/055_027_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَٱلْإِكْرَامِ",
+     "translit": "wal-ik'rāmi",
+     "gloss": "and Honor",
+     "audio": "wbw/055_027_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And there will remain the Face of your Lord, Owner of Majesty and Honor.",
+    "pickthall": "There remaineth but the Countenance of thy Lord of Might and Glory."
+   }
+  },
+  {
+   "n": 28,
+   "global": 4929,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_028_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_028_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_028_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_028_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 29,
+   "global": 4930,
+   "text": "يَسْـَٔلُهُۥ مَن فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ كُلَّ يَوْمٍ هُوَ فِى شَأْنٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "يَسْـَٔلُهُۥ",
+     "translit": "yasaluhu",
+     "gloss": "Asks Him",
+     "audio": "wbw/055_029_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مَن",
+     "translit": "man",
+     "gloss": "whoever",
+     "audio": "wbw/055_029_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "(is) in",
+     "audio": "wbw/055_029_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلسَّمَـٰوَٰتِ",
+     "translit": "l-samāwāti",
+     "gloss": "the heavens",
+     "audio": "wbw/055_029_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَٱلْأَرْضِ ۚ",
+     "translit": "wal-arḍi",
+     "gloss": "and the earth",
+     "audio": "wbw/055_029_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "كُلَّ",
+     "translit": "kulla",
+     "gloss": "Every",
+     "audio": "wbw/055_029_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "يَوْمٍ",
+     "translit": "yawmin",
+     "gloss": "day",
+     "audio": "wbw/055_029_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "هُوَ",
+     "translit": "huwa",
+     "gloss": "He",
+     "audio": "wbw/055_029_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "(is) in",
+     "audio": "wbw/055_029_010.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "شَأْنٍۢ",
+     "translit": "shanin",
+     "gloss": "a matter",
+     "audio": "wbw/055_029_011.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Whoever is within the heavens and earth asks Him; every day He is in [i.e., bringing about] a matter.",
+    "pickthall": "All that are in the heavens and the earth entreat Him. Every day He exerciseth (universal) power."
+   }
+  },
+  {
+   "n": 30,
+   "global": 4931,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_030_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_030_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_030_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_030_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 31,
+   "global": 4932,
+   "text": "سَنَفْرُغُ لَكُمْ أَيُّهَ ٱلثَّقَلَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "سَنَفْرُغُ",
+     "translit": "sanafrughu",
+     "gloss": "Soon We will attend",
+     "audio": "wbw/055_031_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لَكُمْ",
+     "translit": "lakum",
+     "gloss": "to you",
+     "audio": "wbw/055_031_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَيُّهَ",
+     "translit": "ayyuha",
+     "gloss": "O you",
+     "audio": "wbw/055_031_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلثَّقَلَانِ",
+     "translit": "l-thaqalāni",
+     "gloss": "two classes",
+     "audio": "wbw/055_031_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "We will attend to you, O prominent beings.",
+    "pickthall": "We shall dispose of you, O ye two dependents (man and jinn)."
+   }
+  },
+  {
+   "n": 32,
+   "global": 4933,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_032_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_032_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_032_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_032_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 33,
+   "global": 4934,
+   "text": "يَـٰمَعْشَرَ ٱلْجِنِّ وَٱلْإِنسِ إِنِ ٱسْتَطَعْتُمْ أَن تَنفُذُوا۟ مِنْ أَقْطَارِ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ فَٱنفُذُوا۟ ۚ لَا تَنفُذُونَ إِلَّا بِسُلْطَـٰنٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "يَـٰمَعْشَرَ",
+     "translit": "yāmaʿshara",
+     "gloss": "O assembly",
+     "audio": "wbw/055_033_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْجِنِّ",
+     "translit": "l-jini",
+     "gloss": "(of) the jinn",
+     "audio": "wbw/055_033_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَٱلْإِنسِ",
+     "translit": "wal-insi",
+     "gloss": "and the men",
+     "audio": "wbw/055_033_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "إِنِ",
+     "translit": "ini",
+     "gloss": "If",
+     "audio": "wbw/055_033_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱسْتَطَعْتُمْ",
+     "translit": "is'taṭaʿtum",
+     "gloss": "you are able",
+     "audio": "wbw/055_033_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "أَن",
+     "translit": "an",
+     "gloss": "to",
+     "audio": "wbw/055_033_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "تَنفُذُوا۟",
+     "translit": "tanfudhū",
+     "gloss": "pass beyond",
+     "audio": "wbw/055_033_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "مِنْ",
+     "translit": "min",
+     "gloss": "[of]",
+     "audio": "wbw/055_033_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "أَقْطَارِ",
+     "translit": "aqṭāri",
+     "gloss": "(the) regions",
+     "audio": "wbw/055_033_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "ٱلسَّمَـٰوَٰتِ",
+     "translit": "l-samāwāti",
+     "gloss": "(of) the heavens",
+     "audio": "wbw/055_033_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "وَٱلْأَرْضِ",
+     "translit": "wal-arḍi",
+     "gloss": "and the earth",
+     "audio": "wbw/055_033_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "فَٱنفُذُوا۟ ۚ",
+     "translit": "fa-unfudhū",
+     "gloss": "then pass",
+     "audio": "wbw/055_033_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "لَا",
+     "translit": "lā",
+     "gloss": "Not",
+     "audio": "wbw/055_033_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "تَنفُذُونَ",
+     "translit": "tanfudhūna",
+     "gloss": "you (can) pass",
+     "audio": "wbw/055_033_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "إِلَّا",
+     "translit": "illā",
+     "gloss": "except",
+     "audio": "wbw/055_033_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "بِسُلْطَـٰنٍۢ",
+     "translit": "bisul'ṭānin",
+     "gloss": "by authority",
+     "audio": "wbw/055_033_017.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "O company of jinn and mankind, if you are able to pass beyond the regions of the heavens and the earth, then pass. You will not pass except by authority [from Allāh].",
+    "pickthall": "O company of jinn and men, if ye have power to penetrate (all) regions of the heavens and the earth, then penetrate (them)! Ye will never penetrate them save with (Our) sanction."
+   }
+  },
+  {
+   "n": 34,
+   "global": 4935,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_034_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_034_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_034_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_034_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 35,
+   "global": 4936,
+   "text": "يُرْسَلُ عَلَيْكُمَا شُوَاظٌ مِّن نَّارٍ وَنُحَاسٌ فَلَا تَنتَصِرَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "يُرْسَلُ",
+     "translit": "yur'salu",
+     "gloss": "Will be sent",
+     "audio": "wbw/055_035_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَلَيْكُمَا",
+     "translit": "ʿalaykumā",
+     "gloss": "against both of you",
+     "audio": "wbw/055_035_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "شُوَاظٌۭ",
+     "translit": "shuwāẓun",
+     "gloss": "a flame",
+     "audio": "wbw/055_035_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِّن",
+     "translit": "min",
+     "gloss": "of",
+     "audio": "wbw/055_035_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "نَّارٍۢ",
+     "translit": "nārin",
+     "gloss": "fire",
+     "audio": "wbw/055_035_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَنُحَاسٌۭ",
+     "translit": "wanuḥāsun",
+     "gloss": "and smoke",
+     "audio": "wbw/055_035_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "فَلَا",
+     "translit": "falā",
+     "gloss": "and not",
+     "audio": "wbw/055_035_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "تَنتَصِرَانِ",
+     "translit": "tantaṣirāni",
+     "gloss": "you will (be able to) defend yourselves",
+     "audio": "wbw/055_035_008.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "There will be sent upon you a flame of fire and smoke, and you will not defend yourselves.",
+    "pickthall": "There will be sent, against you both, heat of fire and flash of brass, and ye will not escape."
+   }
+  },
+  {
+   "n": 36,
+   "global": 4937,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_036_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_036_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_036_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_036_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 37,
+   "global": 4938,
+   "text": "فَإِذَا ٱنشَقَّتِ ٱلسَّمَآءُ فَكَانَتْ وَرْدَةً كَٱلدِّهَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَإِذَا",
+     "translit": "fa-idhā",
+     "gloss": "Then when",
+     "audio": "wbw/055_037_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱنشَقَّتِ",
+     "translit": "inshaqqati",
+     "gloss": "is split",
+     "audio": "wbw/055_037_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلسَّمَآءُ",
+     "translit": "l-samāu",
+     "gloss": "the heaven",
+     "audio": "wbw/055_037_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَكَانَتْ",
+     "translit": "fakānat",
+     "gloss": "and it becomes",
+     "audio": "wbw/055_037_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَرْدَةًۭ",
+     "translit": "wardatan",
+     "gloss": "rose-colored",
+     "audio": "wbw/055_037_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "كَٱلدِّهَانِ",
+     "translit": "kal-dihāni",
+     "gloss": "like murky oil",
+     "audio": "wbw/055_037_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And when the heaven is split open and becomes rose-colored like oil -",
+    "pickthall": "And when the heaven splitteth asunder and becometh rosy like red hide -"
+   }
+  },
+  {
+   "n": 38,
+   "global": 4939,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_038_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_038_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_038_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_038_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny? -",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny? -"
+   }
+  },
+  {
+   "n": 39,
+   "global": 4940,
+   "text": "فَيَوْمَئِذٍ لَّا يُسْـَٔلُ عَن ذَنۢبِهِۦٓ إِنسٌ وَلَا جَآنٌّ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَيَوْمَئِذٍۢ",
+     "translit": "fayawma-idhin",
+     "gloss": "Then (on) that Day",
+     "audio": "wbw/055_039_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لَّا",
+     "translit": "lā",
+     "gloss": "not",
+     "audio": "wbw/055_039_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يُسْـَٔلُ",
+     "translit": "yus'alu",
+     "gloss": "will be asked",
+     "audio": "wbw/055_039_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "عَن",
+     "translit": "ʿan",
+     "gloss": "about",
+     "audio": "wbw/055_039_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ذَنۢبِهِۦٓ",
+     "translit": "dhanbihi",
+     "gloss": "his sin",
+     "audio": "wbw/055_039_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "إِنسٌۭ",
+     "translit": "insun",
+     "gloss": "any man",
+     "audio": "wbw/055_039_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "and not",
+     "audio": "wbw/055_039_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "جَآنٌّۭ",
+     "translit": "jānnun",
+     "gloss": "any jinn",
+     "audio": "wbw/055_039_008.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Then on that Day none will be asked about his sin among men or jinn.",
+    "pickthall": "On that day neither man nor jinni will be questioned of his sin."
+   }
+  },
+  {
+   "n": 40,
+   "global": 4941,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_040_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_040_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_040_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_040_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 41,
+   "global": 4942,
+   "text": "يُعْرَفُ ٱلْمُجْرِمُونَ بِسِيمَـٰهُمْ فَيُؤْخَذُ بِٱلنَّوَٰصِى وَٱلْأَقْدَامِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "يُعْرَفُ",
+     "translit": "yuʿ'rafu",
+     "gloss": "Will be known",
+     "audio": "wbw/055_041_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْمُجْرِمُونَ",
+     "translit": "l-muj'rimūna",
+     "gloss": "the criminals",
+     "audio": "wbw/055_041_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "بِسِيمَـٰهُمْ",
+     "translit": "bisīmāhum",
+     "gloss": "by their marks",
+     "audio": "wbw/055_041_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَيُؤْخَذُ",
+     "translit": "fayu'khadhu",
+     "gloss": "and will be seized",
+     "audio": "wbw/055_041_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "بِٱلنَّوَٰصِى",
+     "translit": "bil-nawāṣī",
+     "gloss": "by the forelocks",
+     "audio": "wbw/055_041_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَٱلْأَقْدَامِ",
+     "translit": "wal-aqdāmi",
+     "gloss": "and the feet",
+     "audio": "wbw/055_041_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The criminals will be known by their marks, and they will be seized by the forelocks and the feet.",
+    "pickthall": "The guilty will be known by their marks, and will be taken by the forelocks and the feet."
+   }
+  },
+  {
+   "n": 42,
+   "global": 4943,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_042_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_042_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_042_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_042_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 43,
+   "global": 4944,
+   "text": "هَـٰذِهِۦ جَهَنَّمُ ٱلَّتِى يُكَذِّبُ بِهَا ٱلْمُجْرِمُونَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "هَـٰذِهِۦ",
+     "translit": "hādhihi",
+     "gloss": "This",
+     "audio": "wbw/055_043_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "جَهَنَّمُ",
+     "translit": "jahannamu",
+     "gloss": "(is) Hell",
+     "audio": "wbw/055_043_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلَّتِى",
+     "translit": "allatī",
+     "gloss": "which",
+     "audio": "wbw/055_043_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "يُكَذِّبُ",
+     "translit": "yukadhibu",
+     "gloss": "deny",
+     "audio": "wbw/055_043_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "بِهَا",
+     "translit": "bihā",
+     "gloss": "[of it]",
+     "audio": "wbw/055_043_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ٱلْمُجْرِمُونَ",
+     "translit": "l-muj'rimūna",
+     "gloss": "the criminals",
+     "audio": "wbw/055_043_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "This is Hell, which the criminals deny.",
+    "pickthall": "This is hell which the guilty deny."
+   }
+  },
+  {
+   "n": 44,
+   "global": 4945,
+   "text": "يَطُوفُونَ بَيْنَهَا وَبَيْنَ حَمِيمٍ ءَانٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "يَطُوفُونَ",
+     "translit": "yaṭūfūna",
+     "gloss": "They will go around",
+     "audio": "wbw/055_044_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "بَيْنَهَا",
+     "translit": "baynahā",
+     "gloss": "between it",
+     "audio": "wbw/055_044_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَبَيْنَ",
+     "translit": "wabayna",
+     "gloss": "and between",
+     "audio": "wbw/055_044_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "حَمِيمٍ",
+     "translit": "ḥamīmin",
+     "gloss": "scalding water",
+     "audio": "wbw/055_044_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ءَانٍۢ",
+     "translit": "ānin",
+     "gloss": "heated",
+     "audio": "wbw/055_044_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "They will circulate between it and scalding water, heated [to the utmost degree].",
+    "pickthall": "They go circling round between it and fierce, boiling water."
+   }
+  },
+  {
+   "n": 45,
+   "global": 4946,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_045_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_045_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_045_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_045_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 46,
+   "global": 4947,
+   "text": "وَلِمَنْ خَافَ مَقَامَ رَبِّهِۦ جَنَّتَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلِمَنْ",
+     "translit": "waliman",
+     "gloss": "But for (him) who",
+     "audio": "wbw/055_046_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "خَافَ",
+     "translit": "khāfa",
+     "gloss": "fears",
+     "audio": "wbw/055_046_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَقَامَ",
+     "translit": "maqāma",
+     "gloss": "(the) standing",
+     "audio": "wbw/055_046_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "رَبِّهِۦ",
+     "translit": "rabbihi",
+     "gloss": "(before) his Lord",
+     "audio": "wbw/055_046_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "جَنَّتَانِ",
+     "translit": "jannatāni",
+     "gloss": "(are) two gardens",
+     "audio": "wbw/055_046_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "But for he who has feared the position of his Lord are two gardens -",
+    "pickthall": "But for him who feareth the standing before his Lord there are two gardens."
+   }
+  },
+  {
+   "n": 47,
+   "global": 4948,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_047_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_047_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_047_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_047_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny? -",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 48,
+   "global": 4949,
+   "text": "ذَوَاتَآ أَفْنَانٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ذَوَاتَآ",
+     "translit": "dhawātā",
+     "gloss": "Having",
+     "audio": "wbw/055_048_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَفْنَانٍۢ",
+     "translit": "afnānin",
+     "gloss": "branches",
+     "audio": "wbw/055_048_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Having [spreading] branches.",
+    "pickthall": "Of spreading branches."
+   }
+  },
+  {
+   "n": 49,
+   "global": 4950,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_049_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_049_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_049_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_049_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 50,
+   "global": 4951,
+   "text": "فِيهِمَا عَيْنَانِ تَجْرِيَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فِيهِمَا",
+     "translit": "fīhimā",
+     "gloss": "In both of them",
+     "audio": "wbw/055_050_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَيْنَانِ",
+     "translit": "ʿaynāni",
+     "gloss": "(are) two springs",
+     "audio": "wbw/055_050_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "تَجْرِيَانِ",
+     "translit": "tajriyāni",
+     "gloss": "flowing",
+     "audio": "wbw/055_050_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "In both of them are two springs, flowing.",
+    "pickthall": "Wherein are two fountains flowing."
+   }
+  },
+  {
+   "n": 51,
+   "global": 4952,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_051_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_051_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_051_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_051_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 52,
+   "global": 4953,
+   "text": "فِيهِمَا مِن كُلِّ فَـٰكِهَةٍ زَوْجَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فِيهِمَا",
+     "translit": "fīhimā",
+     "gloss": "In both of them",
+     "audio": "wbw/055_052_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "[of]",
+     "audio": "wbw/055_052_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كُلِّ",
+     "translit": "kulli",
+     "gloss": "(are) every",
+     "audio": "wbw/055_052_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَـٰكِهَةٍۢ",
+     "translit": "fākihatin",
+     "gloss": "fruits",
+     "audio": "wbw/055_052_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "زَوْجَانِ",
+     "translit": "zawjāni",
+     "gloss": "(in) pairs",
+     "audio": "wbw/055_052_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "In both of them are of every fruit, two kinds.",
+    "pickthall": "Wherein is every kind of fruit in pairs."
+   }
+  },
+  {
+   "n": 53,
+   "global": 4954,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_053_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_053_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_053_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_053_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 54,
+   "global": 4955,
+   "text": "مُتَّكِـِٔينَ عَلَىٰ فُرُشٍۭ بَطَآئِنُهَا مِنْ إِسْتَبْرَقٍ ۚ وَجَنَى ٱلْجَنَّتَيْنِ دَانٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مُتَّكِـِٔينَ",
+     "translit": "muttakiīna",
+     "gloss": "Reclining",
+     "audio": "wbw/055_054_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَلَىٰ",
+     "translit": "ʿalā",
+     "gloss": "on",
+     "audio": "wbw/055_054_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فُرُشٍۭ",
+     "translit": "furushin",
+     "gloss": "couches",
+     "audio": "wbw/055_054_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "بَطَآئِنُهَا",
+     "translit": "baṭāinuhā",
+     "gloss": "(whose) inner linings",
+     "audio": "wbw/055_054_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مِنْ",
+     "translit": "min",
+     "gloss": "(are) of",
+     "audio": "wbw/055_054_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "إِسْتَبْرَقٍۢ ۚ",
+     "translit": "is'tabraqin",
+     "gloss": "brocade",
+     "audio": "wbw/055_054_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "وَجَنَى",
+     "translit": "wajanā",
+     "gloss": "and (the) fruit",
+     "audio": "wbw/055_054_008.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "ٱلْجَنَّتَيْنِ",
+     "translit": "l-janatayni",
+     "gloss": "(of) both the gardens",
+     "audio": "wbw/055_054_009.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "دَانٍۢ",
+     "translit": "dānin",
+     "gloss": "(is) near",
+     "audio": "wbw/055_054_010.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "[They are] reclining on beds whose linings are of silk brocade, and the fruit of the two gardens is hanging low.",
+    "pickthall": "Reclining upon couches lined with silk brocade, the fruit of both the gardens near to hand."
+   }
+  },
+  {
+   "n": 55,
+   "global": 4956,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_055_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_055_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_055_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_055_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 56,
+   "global": 4957,
+   "text": "فِيهِنَّ قَـٰصِرَٰتُ ٱلطَّرْفِ لَمْ يَطْمِثْهُنَّ إِنسٌ قَبْلَهُمْ وَلَا جَآنٌّ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فِيهِنَّ",
+     "translit": "fīhinna",
+     "gloss": "In them",
+     "audio": "wbw/055_056_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "قَـٰصِرَٰتُ",
+     "translit": "qāṣirātu",
+     "gloss": "(will be) companions of modest gaze",
+     "audio": "wbw/055_056_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلطَّرْفِ",
+     "translit": "l-ṭarfi",
+     "gloss": "(will be) companions of modest gaze",
+     "audio": "wbw/055_056_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَمْ",
+     "translit": "lam",
+     "gloss": "not",
+     "audio": "wbw/055_056_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "يَطْمِثْهُنَّ",
+     "translit": "yaṭmith'hunna",
+     "gloss": "has touched them",
+     "audio": "wbw/055_056_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "إِنسٌۭ",
+     "translit": "insun",
+     "gloss": "any man",
+     "audio": "wbw/055_056_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "قَبْلَهُمْ",
+     "translit": "qablahum",
+     "gloss": "before them",
+     "audio": "wbw/055_056_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "and not",
+     "audio": "wbw/055_056_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "جَآنٌّۭ",
+     "translit": "jānnun",
+     "gloss": "any jinn",
+     "audio": "wbw/055_056_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "In them are women limiting [their] glances, untouched before them by man or jinnī -",
+    "pickthall": "Therein are those of modest gaze, whom neither man nor jinni will have touched before them."
+   }
+  },
+  {
+   "n": 57,
+   "global": 4958,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_057_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_057_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_057_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_057_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny? -",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 58,
+   "global": 4959,
+   "text": "كَأَنَّهُنَّ ٱلْيَاقُوتُ وَٱلْمَرْجَانُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "كَأَنَّهُنَّ",
+     "translit": "ka-annahunna",
+     "gloss": "As if they were",
+     "audio": "wbw/055_058_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْيَاقُوتُ",
+     "translit": "l-yāqūtu",
+     "gloss": "rubies",
+     "audio": "wbw/055_058_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَٱلْمَرْجَانُ",
+     "translit": "wal-marjānu",
+     "gloss": "and coral",
+     "audio": "wbw/055_058_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "As if they were rubies and coral.",
+    "pickthall": "(In beauty) like the jacynth and the coral-stone."
+   }
+  },
+  {
+   "n": 59,
+   "global": 4960,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_059_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_059_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_059_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_059_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 60,
+   "global": 4961,
+   "text": "هَلْ جَزَآءُ ٱلْإِحْسَـٰنِ إِلَّا ٱلْإِحْسَـٰنُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "هَلْ",
+     "translit": "hal",
+     "gloss": "Is",
+     "audio": "wbw/055_060_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "جَزَآءُ",
+     "translit": "jazāu",
+     "gloss": "(the) reward",
+     "audio": "wbw/055_060_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْإِحْسَـٰنِ",
+     "translit": "l-iḥ'sāni",
+     "gloss": "for the good",
+     "audio": "wbw/055_060_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "إِلَّا",
+     "translit": "illā",
+     "gloss": "but",
+     "audio": "wbw/055_060_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْإِحْسَـٰنُ",
+     "translit": "l-iḥ'sānu",
+     "gloss": "good",
+     "audio": "wbw/055_060_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Is the reward for good [anything] but good?",
+    "pickthall": "Is the reward of goodness aught save goodness?"
+   }
+  },
+  {
+   "n": 61,
+   "global": 4962,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_061_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_061_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_061_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_061_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 62,
+   "global": 4963,
+   "text": "وَمِن دُونِهِمَا جَنَّتَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمِن",
+     "translit": "wamin",
+     "gloss": "Besides these two",
+     "audio": "wbw/055_062_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "دُونِهِمَا",
+     "translit": "dūnihimā",
+     "gloss": "Besides these two",
+     "audio": "wbw/055_062_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "جَنَّتَانِ",
+     "translit": "jannatāni",
+     "gloss": "(are) two gardens",
+     "audio": "wbw/055_062_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And below them both [in excellence] are two [other] gardens -",
+    "pickthall": "And beside them are two other gardens,"
+   }
+  },
+  {
+   "n": 63,
+   "global": 4964,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_063_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_063_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_063_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_063_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny? -",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 64,
+   "global": 4965,
+   "text": "مُدْهَآمَّتَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مُدْهَآمَّتَانِ",
+     "translit": "mud'hāmmatāni",
+     "gloss": "Dark green",
+     "audio": "wbw/055_064_001.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Dark green [in color].",
+    "pickthall": "Dark green with foliage."
+   }
+  },
+  {
+   "n": 65,
+   "global": 4966,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_065_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_065_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_065_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_065_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 66,
+   "global": 4967,
+   "text": "فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فِيهِمَا",
+     "translit": "fīhimā",
+     "gloss": "In both of them",
+     "audio": "wbw/055_066_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَيْنَانِ",
+     "translit": "ʿaynāni",
+     "gloss": "(are) two springs",
+     "audio": "wbw/055_066_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "نَضَّاخَتَانِ",
+     "translit": "naḍḍākhatāni",
+     "gloss": "gushing forth",
+     "audio": "wbw/055_066_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "In both of them are two springs, spouting.",
+    "pickthall": "Wherein are two abundant springs."
+   }
+  },
+  {
+   "n": 67,
+   "global": 4968,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_067_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_067_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_067_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_067_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 68,
+   "global": 4969,
+   "text": "فِيهِمَا فَـٰكِهَةٌ وَنَخْلٌ وَرُمَّانٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فِيهِمَا",
+     "translit": "fīhimā",
+     "gloss": "In both of them",
+     "audio": "wbw/055_068_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "فَـٰكِهَةٌۭ",
+     "translit": "fākihatun",
+     "gloss": "(are) fruits",
+     "audio": "wbw/055_068_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَنَخْلٌۭ",
+     "translit": "wanakhlun",
+     "gloss": "and date-palms",
+     "audio": "wbw/055_068_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَرُمَّانٌۭ",
+     "translit": "warummānun",
+     "gloss": "and pomegranates",
+     "audio": "wbw/055_068_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "In both of them are fruit and palm trees and pomegranates.",
+    "pickthall": "Wherein is fruit, the date-palm and pomegranate."
+   }
+  },
+  {
+   "n": 69,
+   "global": 4970,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_069_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_069_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_069_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_069_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 70,
+   "global": 4971,
+   "text": "فِيهِنَّ خَيْرَٰتٌ حِسَانٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فِيهِنَّ",
+     "translit": "fīhinna",
+     "gloss": "In them",
+     "audio": "wbw/055_070_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "خَيْرَٰتٌ",
+     "translit": "khayrātun",
+     "gloss": "(are) good",
+     "audio": "wbw/055_070_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "حِسَانٌۭ",
+     "translit": "ḥisānun",
+     "gloss": "and beautiful ones",
+     "audio": "wbw/055_070_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "In them are good and beautiful women -",
+    "pickthall": "Wherein (are found) the good and beautiful -"
+   }
+  },
+  {
+   "n": 71,
+   "global": 4972,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_071_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_071_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_071_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_071_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny? -",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny? -"
+   }
+  },
+  {
+   "n": 72,
+   "global": 4973,
+   "text": "حُورٌ مَّقْصُورَٰتٌ فِى ٱلْخِيَامِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "حُورٌۭ",
+     "translit": "ḥūrun",
+     "gloss": "Fair ones",
+     "audio": "wbw/055_072_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مَّقْصُورَٰتٌۭ",
+     "translit": "maqṣūrātun",
+     "gloss": "restrained",
+     "audio": "wbw/055_072_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/055_072_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْخِيَامِ",
+     "translit": "l-khiyāmi",
+     "gloss": "the pavilions",
+     "audio": "wbw/055_072_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Fair ones reserved in pavilions -",
+    "pickthall": "Fair ones, close-guarded in pavilions -"
+   }
+  },
+  {
+   "n": 73,
+   "global": 4974,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_073_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_073_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_073_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_073_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny? -",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny? -"
+   }
+  },
+  {
+   "n": 74,
+   "global": 4975,
+   "text": "لَمْ يَطْمِثْهُنَّ إِنسٌ قَبْلَهُمْ وَلَا جَآنٌّ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "لَمْ",
+     "translit": "lam",
+     "gloss": "Not",
+     "audio": "wbw/055_074_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَطْمِثْهُنَّ",
+     "translit": "yaṭmith'hunna",
+     "gloss": "has touched them",
+     "audio": "wbw/055_074_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "إِنسٌۭ",
+     "translit": "insun",
+     "gloss": "any man",
+     "audio": "wbw/055_074_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "قَبْلَهُمْ",
+     "translit": "qablahum",
+     "gloss": "before them",
+     "audio": "wbw/055_074_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "and not",
+     "audio": "wbw/055_074_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "جَآنٌّۭ",
+     "translit": "jānnun",
+     "gloss": "any jinn",
+     "audio": "wbw/055_074_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Untouched before them by man or jinnī -",
+    "pickthall": "Whom neither man nor jinni will have touched before them -"
+   }
+  },
+  {
+   "n": 75,
+   "global": 4976,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_075_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_075_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_075_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_075_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny? -",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 76,
+   "global": 4977,
+   "text": "مُتَّكِـِٔينَ عَلَىٰ رَفْرَفٍ خُضْرٍ وَعَبْقَرِىٍّ حِسَانٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مُتَّكِـِٔينَ",
+     "translit": "muttakiīna",
+     "gloss": "Reclining",
+     "audio": "wbw/055_076_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَلَىٰ",
+     "translit": "ʿalā",
+     "gloss": "on",
+     "audio": "wbw/055_076_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَفْرَفٍ",
+     "translit": "rafrafin",
+     "gloss": "cushions",
+     "audio": "wbw/055_076_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "خُضْرٍۢ",
+     "translit": "khuḍ'rin",
+     "gloss": "green",
+     "audio": "wbw/055_076_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَعَبْقَرِىٍّ",
+     "translit": "waʿabqariyyin",
+     "gloss": "and carpets",
+     "audio": "wbw/055_076_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "حِسَانٍۢ",
+     "translit": "ḥisānin",
+     "gloss": "beautiful",
+     "audio": "wbw/055_076_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Reclining on green cushions and beautiful fine carpets.",
+    "pickthall": "Reclining on green cushions and fair carpets."
+   }
+  },
+  {
+   "n": 77,
+   "global": 4978,
+   "text": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَبِأَىِّ",
+     "translit": "fabi-ayyi",
+     "gloss": "So which",
+     "audio": "wbw/055_077_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ءَالَآءِ",
+     "translit": "ālāi",
+     "gloss": "(of the) favors",
+     "audio": "wbw/055_077_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكُمَا",
+     "translit": "rabbikumā",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_077_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تُكَذِّبَانِ",
+     "translit": "tukadhibāni",
+     "gloss": "will you both deny",
+     "audio": "wbw/055_077_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So which of the favors of your Lord would you deny?",
+    "pickthall": "Which is it, of the favours of your Lord, that ye deny?"
+   }
+  },
+  {
+   "n": 78,
+   "global": 4979,
+   "text": "تَبَـٰرَكَ ٱسْمُ رَبِّكَ ذِى ٱلْجَلَـٰلِ وَٱلْإِكْرَامِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "تَبَـٰرَكَ",
+     "translit": "tabāraka",
+     "gloss": "Blessed is",
+     "audio": "wbw/055_078_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱسْمُ",
+     "translit": "us'mu",
+     "gloss": "(the) name",
+     "audio": "wbw/055_078_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكَ",
+     "translit": "rabbika",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/055_078_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ذِى",
+     "translit": "dhī",
+     "gloss": "Owner",
+     "audio": "wbw/055_078_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْجَلَـٰلِ",
+     "translit": "l-jalāli",
+     "gloss": "(of) Majesty",
+     "audio": "wbw/055_078_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "وَٱلْإِكْرَامِ",
+     "translit": "wal-ik'rāmi",
+     "gloss": "and Honor",
+     "audio": "wbw/055_078_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Blessed is the name of your Lord, Owner of Majesty and Honor.",
+    "pickthall": "Blessed be the name of thy Lord, Mighty and glorious!"
+   }
+  }
+ ]
+}

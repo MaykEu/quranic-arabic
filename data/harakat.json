@@ -1,0 +1,10 @@
+[
+ {"id":"fathah","name":"fatḥah","name_ar":"فَتْحَة","display":"بَ","sound":"a"},
+ {"id":"kasrah","name":"kasrah","name_ar":"كَسْرَة","display":"بِ","sound":"i"},
+ {"id":"dammah","name":"ḍammah","name_ar":"ضَمَّة","display":"بُ","sound":"u"},
+ {"id":"sukun","name":"sukūn","name_ar":"سُكُون","display":"بْ","sound":"no vowel"},
+ {"id":"shaddah","name":"shaddah","name_ar":"شَدَّة","display":"بّ","sound":"doubles the letter"},
+ {"id":"tanwin-fath","name":"tanwīn (fatḥ)","name_ar":"تَنْوِين الفَتْح","display":"بًا","sound":"an"},
+ {"id":"tanwin-kasr","name":"tanwīn (kasr)","name_ar":"تَنْوِين الكَسْر","display":"بٍ","sound":"in"},
+ {"id":"tanwin-damm","name":"tanwīn (ḍamm)","name_ar":"تَنْوِين الضَّمّ","display":"بٌ","sound":"un"}
+]

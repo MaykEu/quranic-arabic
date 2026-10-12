@@ -1,0 +1,410 @@
+{
+ "id": 93,
+ "name_simple": "Ad-Duhaa",
+ "name_arabic": "الضحى",
+ "verses_count": 11,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6080,
+   "text": "وَٱلضُّحَىٰ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلضُّحَىٰ",
+     "translit": "wal-ḍuḥā",
+     "gloss": "By the morning brightness",
+     "audio": "wbw/093_001_001.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "By the morning brightness",
+    "pickthall": "By the morning hours"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6081,
+   "text": "وَٱلَّيْلِ إِذَا سَجَىٰ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَٱلَّيْلِ",
+     "translit": "wa-al-layli",
+     "gloss": "And the night",
+     "audio": "wbw/093_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "إِذَا",
+     "translit": "idhā",
+     "gloss": "when",
+     "audio": "wbw/093_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "سَجَىٰ",
+     "translit": "sajā",
+     "gloss": "it covers with darkness",
+     "audio": "wbw/093_002_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And [by] the night when it covers with darkness,",
+    "pickthall": "And by the night when it is stillest,"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6082,
+   "text": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "Not",
+     "audio": "wbw/093_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "وَدَّعَكَ",
+     "translit": "waddaʿaka",
+     "gloss": "has forsaken you",
+     "audio": "wbw/093_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبُّكَ",
+     "translit": "rabbuka",
+     "gloss": "your Lord",
+     "audio": "wbw/093_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "and not",
+     "audio": "wbw/093_003_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "قَلَىٰ",
+     "translit": "qalā",
+     "gloss": "He is displeased",
+     "audio": "wbw/093_003_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Your Lord has not taken leave of you, [O Muḥammad], nor has He detested [you].",
+    "pickthall": "Thy Lord hath not forsaken thee nor doth He hate thee,"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6083,
+   "text": "وَلَلْـَٔاخِرَةُ خَيْرٌ لَّكَ مِنَ ٱلْأُولَىٰ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَلْـَٔاخِرَةُ",
+     "translit": "walalākhiratu",
+     "gloss": "And surely the Hereafter",
+     "audio": "wbw/093_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "خَيْرٌۭ",
+     "translit": "khayrun",
+     "gloss": "(is) better",
+     "audio": "wbw/093_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "لَّكَ",
+     "translit": "laka",
+     "gloss": "for you",
+     "audio": "wbw/093_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِنَ",
+     "translit": "mina",
+     "gloss": "than",
+     "audio": "wbw/093_004_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْأُولَىٰ",
+     "translit": "l-ūlā",
+     "gloss": "the first",
+     "audio": "wbw/093_004_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And the Hereafter is better for you than the first [life].",
+    "pickthall": "And verily the latter portion will be better for thee than the former,"
+   }
+  },
+  {
+   "n": 5,
+   "global": 6084,
+   "text": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰٓ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَسَوْفَ",
+     "translit": "walasawfa",
+     "gloss": "And soon",
+     "audio": "wbw/093_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يُعْطِيكَ",
+     "translit": "yuʿ'ṭīka",
+     "gloss": "will give you",
+     "audio": "wbw/093_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبُّكَ",
+     "translit": "rabbuka",
+     "gloss": "your Lord",
+     "audio": "wbw/093_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَتَرْضَىٰٓ",
+     "translit": "fatarḍā",
+     "gloss": "then you will be satisfied",
+     "audio": "wbw/093_005_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And your Lord is going to give you, and you will be satisfied.",
+    "pickthall": "And verily thy Lord will give unto thee so that thou wilt be content."
+   }
+  },
+  {
+   "n": 6,
+   "global": 6085,
+   "text": "أَلَمْ يَجِدْكَ يَتِيمًا فَـَٔاوَىٰ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "أَلَمْ",
+     "translit": "alam",
+     "gloss": "Did not",
+     "audio": "wbw/093_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَجِدْكَ",
+     "translit": "yajid'ka",
+     "gloss": "He find you",
+     "audio": "wbw/093_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يَتِيمًۭا",
+     "translit": "yatīman",
+     "gloss": "an orphan",
+     "audio": "wbw/093_006_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَـَٔاوَىٰ",
+     "translit": "faāwā",
+     "gloss": "and give shelter",
+     "audio": "wbw/093_006_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Did He not find you an orphan and give [you] refuge?",
+    "pickthall": "Did He not find thee an orphan and protect (thee)?"
+   }
+  },
+  {
+   "n": 7,
+   "global": 6086,
+   "text": "وَوَجَدَكَ ضَآلًّا فَهَدَىٰ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَوَجَدَكَ",
+     "translit": "wawajadaka",
+     "gloss": "And He found you",
+     "audio": "wbw/093_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ضَآلًّۭا",
+     "translit": "ḍāllan",
+     "gloss": "lost",
+     "audio": "wbw/093_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَهَدَىٰ",
+     "translit": "fahadā",
+     "gloss": "so He guided",
+     "audio": "wbw/093_007_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And He found you lost and guided [you],",
+    "pickthall": "Did He not find thee wandering and direct (thee)?"
+   }
+  },
+  {
+   "n": 8,
+   "global": 6087,
+   "text": "وَوَجَدَكَ عَآئِلًا فَأَغْنَىٰ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَوَجَدَكَ",
+     "translit": "wawajadaka",
+     "gloss": "And He found you",
+     "audio": "wbw/093_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عَآئِلًۭا",
+     "translit": "ʿāilan",
+     "gloss": "in need",
+     "audio": "wbw/093_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَأَغْنَىٰ",
+     "translit": "fa-aghnā",
+     "gloss": "so He made self-sufficient",
+     "audio": "wbw/093_008_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And He found you poor and made [you] self-sufficient.",
+    "pickthall": "Did He not find thee destitute and enrich (thee)?"
+   }
+  },
+  {
+   "n": 9,
+   "global": 6088,
+   "text": "فَأَمَّا ٱلْيَتِيمَ فَلَا تَقْهَرْ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَأَمَّا",
+     "translit": "fa-ammā",
+     "gloss": "So as for",
+     "audio": "wbw/093_009_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْيَتِيمَ",
+     "translit": "l-yatīma",
+     "gloss": "the orphan",
+     "audio": "wbw/093_009_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَلَا",
+     "translit": "falā",
+     "gloss": "then (do) not",
+     "audio": "wbw/093_009_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تَقْهَرْ",
+     "translit": "taqhar",
+     "gloss": "oppress",
+     "audio": "wbw/093_009_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So as for the orphan, do not oppress [him].",
+    "pickthall": "Therefor the orphan oppress not,"
+   }
+  },
+  {
+   "n": 10,
+   "global": 6089,
+   "text": "وَأَمَّا ٱلسَّآئِلَ فَلَا تَنْهَرْ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَأَمَّا",
+     "translit": "wa-ammā",
+     "gloss": "And as for",
+     "audio": "wbw/093_010_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلسَّآئِلَ",
+     "translit": "l-sāila",
+     "gloss": "one who asks",
+     "audio": "wbw/093_010_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فَلَا",
+     "translit": "falā",
+     "gloss": "then (do) not",
+     "audio": "wbw/093_010_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "تَنْهَرْ",
+     "translit": "tanhar",
+     "gloss": "repel",
+     "audio": "wbw/093_010_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And as for the petitioner, do not repel [him].",
+    "pickthall": "Therefor the beggar drive not away,"
+   }
+  },
+  {
+   "n": 11,
+   "global": 6090,
+   "text": "وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَأَمَّا",
+     "translit": "wa-ammā",
+     "gloss": "But as for",
+     "audio": "wbw/093_011_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "بِنِعْمَةِ",
+     "translit": "biniʿ'mati",
+     "gloss": "(the) Favor",
+     "audio": "wbw/093_011_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكَ",
+     "translit": "rabbika",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/093_011_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فَحَدِّثْ",
+     "translit": "faḥaddith",
+     "gloss": "narrate",
+     "audio": "wbw/093_011_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "But as for the favor of your Lord, report [it].",
+    "pickthall": "Therefor of the bounty of thy Lord be thy discourse."
+   }
+  }
+ ]
+}

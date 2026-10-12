@@ -1,0 +1,158 @@
+{
+ "id": 112,
+ "name_simple": "Al-Ikhlas",
+ "name_arabic": "الإخلاص",
+ "verses_count": 4,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6222,
+   "text": "قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "قُلْ",
+     "translit": "qul",
+     "gloss": "Say",
+     "audio": "wbw/112_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "هُوَ",
+     "translit": "huwa",
+     "gloss": "He",
+     "audio": "wbw/112_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱللَّهُ",
+     "translit": "l-lahu",
+     "gloss": "(is) Allah",
+     "audio": "wbw/112_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أَحَدٌ",
+     "translit": "aḥadun",
+     "gloss": "the One",
+     "audio": "wbw/112_001_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Say, \"He is Allāh, [who is] One,",
+    "pickthall": "Say: He is Allah, the One!"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6223,
+   "text": "ٱللَّهُ ٱلصَّمَدُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱللَّهُ",
+     "translit": "al-lahu",
+     "gloss": "Allah",
+     "audio": "wbw/112_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلصَّمَدُ",
+     "translit": "l-ṣamadu",
+     "gloss": "the Eternal, the Absolute",
+     "audio": "wbw/112_002_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Allāh, the Eternal Refuge.",
+    "pickthall": "Allah, the eternally Besought of all!"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6224,
+   "text": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "لَمْ",
+     "translit": "lam",
+     "gloss": "Not",
+     "audio": "wbw/112_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَلِدْ",
+     "translit": "yalid",
+     "gloss": "He begets",
+     "audio": "wbw/112_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَلَمْ",
+     "translit": "walam",
+     "gloss": "and not",
+     "audio": "wbw/112_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "يُولَدْ",
+     "translit": "yūlad",
+     "gloss": "He is begotten",
+     "audio": "wbw/112_003_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "He neither begets nor is born,",
+    "pickthall": "He begetteth not nor was begotten."
+   }
+  },
+  {
+   "n": 4,
+   "global": 6225,
+   "text": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَلَمْ",
+     "translit": "walam",
+     "gloss": "And not",
+     "audio": "wbw/112_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَكُن",
+     "translit": "yakun",
+     "gloss": "is",
+     "audio": "wbw/112_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "لَّهُۥ",
+     "translit": "lahu",
+     "gloss": "for Him",
+     "audio": "wbw/112_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "كُفُوًا",
+     "translit": "kufuwan",
+     "gloss": "equivalent",
+     "audio": "wbw/112_004_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "أَحَدٌۢ",
+     "translit": "aḥadun",
+     "gloss": "any [one]",
+     "audio": "wbw/112_004_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Nor is there to Him any equivalent.\"",
+    "pickthall": "And there is none comparable unto Him."
+   }
+  }
+ ]
+}

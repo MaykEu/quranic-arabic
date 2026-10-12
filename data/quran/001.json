@@ -1,0 +1,289 @@
+{
+ "id": 1,
+ "name_simple": "Al-Fatihah",
+ "name_arabic": "الفاتحة",
+ "verses_count": 7,
+ "bismillah_pre": false,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 1,
+   "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "بِسْمِ",
+     "translit": "bis'mi",
+     "gloss": "In (the) name",
+     "audio": "wbw/001_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱللَّهِ",
+     "translit": "l-lahi",
+     "gloss": "(of) Allah",
+     "audio": "wbw/001_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلرَّحْمَـٰنِ",
+     "translit": "l-raḥmāni",
+     "gloss": "the Most Gracious",
+     "audio": "wbw/001_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلرَّحِيمِ",
+     "translit": "l-raḥīmi",
+     "gloss": "the Most Merciful",
+     "audio": "wbw/001_001_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "In the name of Allāh, the Entirely Merciful, the Especially Merciful.",
+    "pickthall": "In the name of Allah, the Beneficent, the Merciful."
+   }
+  },
+  {
+   "n": 2,
+   "global": 2,
+   "text": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلْحَمْدُ",
+     "translit": "al-ḥamdu",
+     "gloss": "All praises and thanks",
+     "audio": "wbw/001_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لِلَّهِ",
+     "translit": "lillahi",
+     "gloss": "(be) to Allah",
+     "audio": "wbw/001_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّ",
+     "translit": "rabbi",
+     "gloss": "the Lord",
+     "audio": "wbw/001_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْعَـٰلَمِينَ",
+     "translit": "l-ʿālamīna",
+     "gloss": "of the universe",
+     "audio": "wbw/001_002_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "[All] praise is [due] to Allāh, Lord of the worlds -",
+    "pickthall": "Praise be to Allah, Lord of the Worlds,"
+   }
+  },
+  {
+   "n": 3,
+   "global": 3,
+   "text": "ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلرَّحْمَـٰنِ",
+     "translit": "al-raḥmāni",
+     "gloss": "The Most Gracious",
+     "audio": "wbw/001_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلرَّحِيمِ",
+     "translit": "l-raḥīmi",
+     "gloss": "the Most Merciful",
+     "audio": "wbw/001_003_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The Entirely Merciful, the Especially Merciful,",
+    "pickthall": "The Beneficent, the Merciful."
+   }
+  },
+  {
+   "n": 4,
+   "global": 4,
+   "text": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "مَـٰلِكِ",
+     "translit": "māliki",
+     "gloss": "(The) Master",
+     "audio": "wbw/001_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَوْمِ",
+     "translit": "yawmi",
+     "gloss": "(of the) Day",
+     "audio": "wbw/001_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلدِّينِ",
+     "translit": "l-dīni",
+     "gloss": "(of the) Judgment",
+     "audio": "wbw/001_004_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Sovereign of the Day of Recompense.",
+    "pickthall": "Master of the Day of Judgment,"
+   }
+  },
+  {
+   "n": 5,
+   "global": 5,
+   "text": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِيَّاكَ",
+     "translit": "iyyāka",
+     "gloss": "You Alone",
+     "audio": "wbw/001_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "نَعْبُدُ",
+     "translit": "naʿbudu",
+     "gloss": "we worship",
+     "audio": "wbw/001_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَإِيَّاكَ",
+     "translit": "wa-iyyāka",
+     "gloss": "and You Alone",
+     "audio": "wbw/001_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "نَسْتَعِينُ",
+     "translit": "nastaʿīnu",
+     "gloss": "we ask for help",
+     "audio": "wbw/001_005_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "It is You we worship and You we ask for help.",
+    "pickthall": "Thee (alone) we worship; Thee (alone) we ask for help."
+   }
+  },
+  {
+   "n": 6,
+   "global": 6,
+   "text": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱهْدِنَا",
+     "translit": "ih'dinā",
+     "gloss": "Guide us",
+     "audio": "wbw/001_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلصِّرَٰطَ",
+     "translit": "l-ṣirāṭa",
+     "gloss": "(to) the path",
+     "audio": "wbw/001_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْمُسْتَقِيمَ",
+     "translit": "l-mus'taqīma",
+     "gloss": "the straight",
+     "audio": "wbw/001_006_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Guide us to the straight path -",
+    "pickthall": "Show us the straight path,"
+   }
+  },
+  {
+   "n": 7,
+   "global": 7,
+   "text": "صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "صِرَٰطَ",
+     "translit": "ṣirāṭa",
+     "gloss": "(The) path",
+     "audio": "wbw/001_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "(of) those",
+     "audio": "wbw/001_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "أَنْعَمْتَ",
+     "translit": "anʿamta",
+     "gloss": "You have bestowed (Your) Favors",
+     "audio": "wbw/001_007_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "عَلَيْهِمْ",
+     "translit": "ʿalayhim",
+     "gloss": "on them",
+     "audio": "wbw/001_007_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "غَيْرِ",
+     "translit": "ghayri",
+     "gloss": "not (of)",
+     "audio": "wbw/001_007_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ٱلْمَغْضُوبِ",
+     "translit": "l-maghḍūbi",
+     "gloss": "those who earned (Your) wrath",
+     "audio": "wbw/001_007_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "عَلَيْهِمْ",
+     "translit": "ʿalayhim",
+     "gloss": "on themselves",
+     "audio": "wbw/001_007_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَلَا",
+     "translit": "walā",
+     "gloss": "and not",
+     "audio": "wbw/001_007_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ٱلضَّآلِّينَ",
+     "translit": "l-ḍālīna",
+     "gloss": "(of) those who go astray",
+     "audio": "wbw/001_007_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The path of those upon whom You have bestowed favor, not of those who have earned [Your] anger or of those who are astray.",
+    "pickthall": "The path of those whom Thou hast favoured; Not the (path) of those who earn Thine anger nor of those who go astray."
+   }
+  }
+ ]
+}

@@ -1,0 +1,172 @@
+{
+ "id": 106,
+ "name_simple": "Quraysh",
+ "name_arabic": "قريش",
+ "verses_count": 4,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6194,
+   "text": "لِإِيلَـٰفِ قُرَيْشٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "لِإِيلَـٰفِ",
+     "translit": "liīlāfi",
+     "gloss": "For (the) familiarity",
+     "audio": "wbw/106_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "قُرَيْشٍ",
+     "translit": "qurayshin",
+     "gloss": "(of the) Quraish",
+     "audio": "wbw/106_001_002.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "For the accustomed security of the Quraysh -",
+    "pickthall": "For the taming of Qureysh."
+   }
+  },
+  {
+   "n": 2,
+   "global": 6195,
+   "text": "إِۦلَـٰفِهِمْ رِحْلَةَ ٱلشِّتَآءِ وَٱلصَّيْفِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِۦلَـٰفِهِمْ",
+     "translit": "īlāfihim",
+     "gloss": "Their familiarity",
+     "audio": "wbw/106_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "رِحْلَةَ",
+     "translit": "riḥ'lata",
+     "gloss": "(with the) journey",
+     "audio": "wbw/106_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلشِّتَآءِ",
+     "translit": "l-shitāi",
+     "gloss": "(of) winter",
+     "audio": "wbw/106_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَٱلصَّيْفِ",
+     "translit": "wal-ṣayfi",
+     "gloss": "and summer",
+     "audio": "wbw/106_002_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Their accustomed security [in] the caravan of winter and summer -",
+    "pickthall": "For their taming (We cause) the caravans to set forth in winter and summer."
+   }
+  },
+  {
+   "n": 3,
+   "global": 6196,
+   "text": "فَلْيَعْبُدُوا۟ رَبَّ هَـٰذَا ٱلْبَيْتِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَلْيَعْبُدُوا۟",
+     "translit": "falyaʿbudū",
+     "gloss": "So let them worship",
+     "audio": "wbw/106_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "رَبَّ",
+     "translit": "rabba",
+     "gloss": "(the) Lord",
+     "audio": "wbw/106_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "هَـٰذَا",
+     "translit": "hādhā",
+     "gloss": "(of) this",
+     "audio": "wbw/106_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْبَيْتِ",
+     "translit": "l-bayti",
+     "gloss": "House",
+     "audio": "wbw/106_003_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Let them worship the Lord of this House,",
+    "pickthall": "So let them worship the Lord of this House,"
+   }
+  },
+  {
+   "n": 4,
+   "global": 6197,
+   "text": "ٱلَّذِىٓ أَطْعَمَهُم مِّن جُوعٍ وَءَامَنَهُم مِّنْ خَوْفٍۭ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "ٱلَّذِىٓ",
+     "translit": "alladhī",
+     "gloss": "The One Who",
+     "audio": "wbw/106_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَطْعَمَهُم",
+     "translit": "aṭʿamahum",
+     "gloss": "feeds them",
+     "audio": "wbw/106_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مِّن",
+     "translit": "min",
+     "gloss": "[from]",
+     "audio": "wbw/106_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "جُوعٍۢ",
+     "translit": "jūʿin",
+     "gloss": "(against) hunger",
+     "audio": "wbw/106_004_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَءَامَنَهُم",
+     "translit": "waāmanahum",
+     "gloss": "and gives them security",
+     "audio": "wbw/106_004_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مِّنْ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/106_004_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "خَوْفٍۭ",
+     "translit": "khawfin",
+     "gloss": "fear",
+     "audio": "wbw/106_004_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Who has fed them, [saving them] from hunger and made them safe, [saving them] from fear.",
+    "pickthall": "Who hath fed them against hunger and hath made them safe from fear."
+   }
+  }
+ ]
+}

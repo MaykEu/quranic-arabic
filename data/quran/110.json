@@ -1,0 +1,175 @@
+{
+ "id": 110,
+ "name_simple": "An-Nasr",
+ "name_arabic": "النصر",
+ "verses_count": 3,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6214,
+   "text": "إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِذَا",
+     "translit": "idhā",
+     "gloss": "When",
+     "audio": "wbw/110_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "جَآءَ",
+     "translit": "jāa",
+     "gloss": "comes",
+     "audio": "wbw/110_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "نَصْرُ",
+     "translit": "naṣru",
+     "gloss": "(the) Help",
+     "audio": "wbw/110_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱللَّهِ",
+     "translit": "l-lahi",
+     "gloss": "(of) Allah",
+     "audio": "wbw/110_001_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "وَٱلْفَتْحُ",
+     "translit": "wal-fatḥu",
+     "gloss": "and the Victory",
+     "audio": "wbw/110_001_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "When the victory of Allāh has come and the conquest,",
+    "pickthall": "When Allah's succour and the triumph cometh"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6215,
+   "text": "وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ أَفْوَاجًا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَرَأَيْتَ",
+     "translit": "wara-ayta",
+     "gloss": "And you see",
+     "audio": "wbw/110_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلنَّاسَ",
+     "translit": "l-nāsa",
+     "gloss": "the people",
+     "audio": "wbw/110_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "يَدْخُلُونَ",
+     "translit": "yadkhulūna",
+     "gloss": "entering",
+     "audio": "wbw/110_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "into",
+     "audio": "wbw/110_002_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "دِينِ",
+     "translit": "dīni",
+     "gloss": "(the) religion",
+     "audio": "wbw/110_002_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ٱللَّهِ",
+     "translit": "l-lahi",
+     "gloss": "(of) Allah",
+     "audio": "wbw/110_002_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "أَفْوَاجًۭا",
+     "translit": "afwājan",
+     "gloss": "(in) multitudes",
+     "audio": "wbw/110_002_007.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And you see the people entering into the religion of Allāh in multitudes,",
+    "pickthall": "And thou seest mankind entering the religion of Allah in troops,"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6216,
+   "text": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُ ۚ إِنَّهُۥ كَانَ تَوَّابًۢا",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَسَبِّحْ",
+     "translit": "fasabbiḥ",
+     "gloss": "Then glorify",
+     "audio": "wbw/110_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "بِحَمْدِ",
+     "translit": "biḥamdi",
+     "gloss": "with (the) praises",
+     "audio": "wbw/110_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّكَ",
+     "translit": "rabbika",
+     "gloss": "(of) your Lord",
+     "audio": "wbw/110_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَٱسْتَغْفِرْهُ ۚ",
+     "translit": "wa-is'taghfir'hu",
+     "gloss": "and ask His forgiveness",
+     "audio": "wbw/110_003_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "إِنَّهُۥ",
+     "translit": "innahu",
+     "gloss": "Indeed, He",
+     "audio": "wbw/110_003_006.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "كَانَ",
+     "translit": "kāna",
+     "gloss": "is",
+     "audio": "wbw/110_003_007.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "تَوَّابًۢا",
+     "translit": "tawwāban",
+     "gloss": "Oft-Returning",
+     "audio": "wbw/110_003_008.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Then exalt [Him] with praise of your Lord and ask forgiveness of Him. Indeed, He is ever Accepting of Repentance.",
+    "pickthall": "Then hymn the praises of thy Lord, and seek forgiveness of Him. Lo! He is ever ready to show mercy."
+   }
+  }
+ ]
+}

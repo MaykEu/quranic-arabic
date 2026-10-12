@@ -1,0 +1,755 @@
+{
+ "id": 98,
+ "name_simple": "Al-Bayyinah",
+ "name_arabic": "البينة",
+ "verses_count": 8,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6131,
+   "text": "لَمْ يَكُنِ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَـٰبِ وَٱلْمُشْرِكِينَ مُنفَكِّينَ حَتَّىٰ تَأْتِيَهُمُ ٱلْبَيِّنَةُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "لَمْ",
+     "translit": "lam",
+     "gloss": "Not",
+     "audio": "wbw/098_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "يَكُنِ",
+     "translit": "yakuni",
+     "gloss": "were",
+     "audio": "wbw/098_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/098_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "كَفَرُوا۟",
+     "translit": "kafarū",
+     "gloss": "disbelieved",
+     "audio": "wbw/098_001_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "مِنْ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/098_001_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "أَهْلِ",
+     "translit": "ahli",
+     "gloss": "(the) People",
+     "audio": "wbw/098_001_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "ٱلْكِتَـٰبِ",
+     "translit": "l-kitābi",
+     "gloss": "of the Book",
+     "audio": "wbw/098_001_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "وَٱلْمُشْرِكِينَ",
+     "translit": "wal-mush'rikīna",
+     "gloss": "and the polytheists",
+     "audio": "wbw/098_001_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "مُنفَكِّينَ",
+     "translit": "munfakkīna",
+     "gloss": "to be abandoned",
+     "audio": "wbw/098_001_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "حَتَّىٰ",
+     "translit": "ḥattā",
+     "gloss": "until",
+     "audio": "wbw/098_001_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "تَأْتِيَهُمُ",
+     "translit": "tatiyahumu",
+     "gloss": "(there) comes to them",
+     "audio": "wbw/098_001_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "ٱلْبَيِّنَةُ",
+     "translit": "l-bayinatu",
+     "gloss": "the clear evidence",
+     "audio": "wbw/098_001_012.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Those who disbelieved among the People of the Scripture and the polytheists were not to be parted [from misbelief] until there came to them clear evidence",
+    "pickthall": "Those who disbelieve among the People of the Scripture and the idolaters could not have left off (erring) till the clear proof came unto them,"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6132,
+   "text": "رَسُولٌ مِّنَ ٱللَّهِ يَتْلُوا۟ صُحُفًا مُّطَهَّرَةً",
+   "words": [
+    {
+     "n": 1,
+     "ar": "رَسُولٌۭ",
+     "translit": "rasūlun",
+     "gloss": "A Messenger",
+     "audio": "wbw/098_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "مِّنَ",
+     "translit": "mina",
+     "gloss": "from",
+     "audio": "wbw/098_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱللَّهِ",
+     "translit": "l-lahi",
+     "gloss": "Allah",
+     "audio": "wbw/098_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "يَتْلُوا۟",
+     "translit": "yatlū",
+     "gloss": "reciting",
+     "audio": "wbw/098_002_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "صُحُفًۭا",
+     "translit": "ṣuḥufan",
+     "gloss": "pages",
+     "audio": "wbw/098_002_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مُّطَهَّرَةًۭ",
+     "translit": "muṭahharatan",
+     "gloss": "purified",
+     "audio": "wbw/098_002_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "A Messenger from Allāh, reciting purified scriptures",
+    "pickthall": "A messenger from Allah, reading purified pages"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6133,
+   "text": "فِيهَا كُتُبٌ قَيِّمَةٌ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فِيهَا",
+     "translit": "fīhā",
+     "gloss": "Wherein",
+     "audio": "wbw/098_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "كُتُبٌۭ",
+     "translit": "kutubun",
+     "gloss": "(are) writings",
+     "audio": "wbw/098_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "قَيِّمَةٌۭ",
+     "translit": "qayyimatun",
+     "gloss": "correct",
+     "audio": "wbw/098_003_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Within which are correct writings [i.e., rulings and laws].",
+    "pickthall": "Containing correct scriptures."
+   }
+  },
+  {
+   "n": 4,
+   "global": 6134,
+   "text": "وَمَا تَفَرَّقَ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ إِلَّا مِنۢ بَعْدِ مَا جَآءَتْهُمُ ٱلْبَيِّنَةُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمَا",
+     "translit": "wamā",
+     "gloss": "And not",
+     "audio": "wbw/098_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "تَفَرَّقَ",
+     "translit": "tafarraqa",
+     "gloss": "became divided",
+     "audio": "wbw/098_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/098_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "أُوتُوا۟",
+     "translit": "ūtū",
+     "gloss": "were given",
+     "audio": "wbw/098_004_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْكِتَـٰبَ",
+     "translit": "l-kitāba",
+     "gloss": "the Book",
+     "audio": "wbw/098_004_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "إِلَّا",
+     "translit": "illā",
+     "gloss": "until",
+     "audio": "wbw/098_004_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "مِنۢ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/098_004_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "بَعْدِ",
+     "translit": "baʿdi",
+     "gloss": "after",
+     "audio": "wbw/098_004_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/098_004_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "جَآءَتْهُمُ",
+     "translit": "jāathumu",
+     "gloss": "came (to) them",
+     "audio": "wbw/098_004_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "ٱلْبَيِّنَةُ",
+     "translit": "l-bayinatu",
+     "gloss": "(of) the clear evidence",
+     "audio": "wbw/098_004_011.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Nor did those who were given the Scripture become divided until after there had come to them clear evidence.",
+    "pickthall": "Nor were the People of the Scripture divided until after the clear proof came unto them."
+   }
+  },
+  {
+   "n": 5,
+   "global": 6135,
+   "text": "وَمَآ أُمِرُوٓا۟ إِلَّا لِيَعْبُدُوا۟ ٱللَّهَ مُخْلِصِينَ لَهُ ٱلدِّينَ حُنَفَآءَ وَيُقِيمُوا۟ ٱلصَّلَوٰةَ وَيُؤْتُوا۟ ٱلزَّكَوٰةَ ۚ وَذَٰلِكَ دِينُ ٱلْقَيِّمَةِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمَآ",
+     "translit": "wamā",
+     "gloss": "And not",
+     "audio": "wbw/098_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أُمِرُوٓا۟",
+     "translit": "umirū",
+     "gloss": "they were commanded",
+     "audio": "wbw/098_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "إِلَّا",
+     "translit": "illā",
+     "gloss": "except",
+     "audio": "wbw/098_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لِيَعْبُدُوا۟",
+     "translit": "liyaʿbudū",
+     "gloss": "to worship",
+     "audio": "wbw/098_005_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱللَّهَ",
+     "translit": "l-laha",
+     "gloss": "Allah",
+     "audio": "wbw/098_005_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "مُخْلِصِينَ",
+     "translit": "mukh'liṣīna",
+     "gloss": "(being) sincere",
+     "audio": "wbw/098_005_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "لَهُ",
+     "translit": "lahu",
+     "gloss": "to Him",
+     "audio": "wbw/098_005_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "ٱلدِّينَ",
+     "translit": "l-dīna",
+     "gloss": "(in) the religion",
+     "audio": "wbw/098_005_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "حُنَفَآءَ",
+     "translit": "ḥunafāa",
+     "gloss": "upright",
+     "audio": "wbw/098_005_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "وَيُقِيمُوا۟",
+     "translit": "wayuqīmū",
+     "gloss": "and to establish",
+     "audio": "wbw/098_005_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "ٱلصَّلَوٰةَ",
+     "translit": "l-ṣalata",
+     "gloss": "the prayer",
+     "audio": "wbw/098_005_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "وَيُؤْتُوا۟",
+     "translit": "wayu'tū",
+     "gloss": "and to give",
+     "audio": "wbw/098_005_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "ٱلزَّكَوٰةَ ۚ",
+     "translit": "l-zakata",
+     "gloss": "the zakah",
+     "audio": "wbw/098_005_013.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "وَذَٰلِكَ",
+     "translit": "wadhālika",
+     "gloss": "And that",
+     "audio": "wbw/098_005_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "دِينُ",
+     "translit": "dīnu",
+     "gloss": "(is the) religion",
+     "audio": "wbw/098_005_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "ٱلْقَيِّمَةِ",
+     "translit": "l-qayimati",
+     "gloss": "the correct",
+     "audio": "wbw/098_005_017.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And they were not commanded except to worship Allāh, [being] sincere to Him in religion, inclining to truth, and to establish prayer and to give zakāh. And that is the correct religion.",
+    "pickthall": "And they are ordered naught else than to serve Allah, keeping religion pure for Him, as men by nature upright, and to establish worship and to pay the poor-due. That is true religion."
+   }
+  },
+  {
+   "n": 6,
+   "global": 6136,
+   "text": "إِنَّ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَـٰبِ وَٱلْمُشْرِكِينَ فِى نَارِ جَهَنَّمَ خَـٰلِدِينَ فِيهَآ ۚ أُو۟لَـٰٓئِكَ هُمْ شَرُّ ٱلْبَرِيَّةِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/098_006_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/098_006_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "كَفَرُوا۟",
+     "translit": "kafarū",
+     "gloss": "disbelieve",
+     "audio": "wbw/098_006_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِنْ",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/098_006_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "أَهْلِ",
+     "translit": "ahli",
+     "gloss": "(the) People",
+     "audio": "wbw/098_006_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "ٱلْكِتَـٰبِ",
+     "translit": "l-kitābi",
+     "gloss": "(of) the Book",
+     "audio": "wbw/098_006_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "وَٱلْمُشْرِكِينَ",
+     "translit": "wal-mush'rikīna",
+     "gloss": "and the polytheists",
+     "audio": "wbw/098_006_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "(will be) in",
+     "audio": "wbw/098_006_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "نَارِ",
+     "translit": "nāri",
+     "gloss": "(the) Fire",
+     "audio": "wbw/098_006_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "جَهَنَّمَ",
+     "translit": "jahannama",
+     "gloss": "(of) Hell",
+     "audio": "wbw/098_006_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "خَـٰلِدِينَ",
+     "translit": "khālidīna",
+     "gloss": "abiding eternally",
+     "audio": "wbw/098_006_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "فِيهَآ ۚ",
+     "translit": "fīhā",
+     "gloss": "therein",
+     "audio": "wbw/098_006_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "أُو۟لَـٰٓئِكَ",
+     "translit": "ulāika",
+     "gloss": "Those",
+     "audio": "wbw/098_006_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "هُمْ",
+     "translit": "hum",
+     "gloss": "they",
+     "audio": "wbw/098_006_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "شَرُّ",
+     "translit": "sharru",
+     "gloss": "(are the) worst",
+     "audio": "wbw/098_006_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "ٱلْبَرِيَّةِ",
+     "translit": "l-bariyati",
+     "gloss": "(of) the creatures",
+     "audio": "wbw/098_006_017.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, they who disbelieved among the People of the Scripture and the polytheists will be in the fire of Hell, abiding eternally therein. Those are the worst of creatures.",
+    "pickthall": "Lo! those who disbelieve, among the People of the Scripture and the idolaters, will abide in fire of hell. They are the worst of created beings."
+   }
+  },
+  {
+   "n": 7,
+   "global": 6137,
+   "text": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ أُو۟لَـٰٓئِكَ هُمْ خَيْرُ ٱلْبَرِيَّةِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/098_007_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلَّذِينَ",
+     "translit": "alladhīna",
+     "gloss": "those who",
+     "audio": "wbw/098_007_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ءَامَنُوا۟",
+     "translit": "āmanū",
+     "gloss": "believe",
+     "audio": "wbw/098_007_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "وَعَمِلُوا۟",
+     "translit": "waʿamilū",
+     "gloss": "and do",
+     "audio": "wbw/098_007_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلصَّـٰلِحَـٰتِ",
+     "translit": "l-ṣāliḥāti",
+     "gloss": "righteous deeds",
+     "audio": "wbw/098_007_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "أُو۟لَـٰٓئِكَ",
+     "translit": "ulāika",
+     "gloss": "those",
+     "audio": "wbw/098_007_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "هُمْ",
+     "translit": "hum",
+     "gloss": "they",
+     "audio": "wbw/098_007_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "خَيْرُ",
+     "translit": "khayru",
+     "gloss": "(are the) best",
+     "audio": "wbw/098_007_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ٱلْبَرِيَّةِ",
+     "translit": "l-bariyati",
+     "gloss": "(of) the creatures",
+     "audio": "wbw/098_007_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, they who have believed and done righteous deeds - those are the best of creatures.",
+    "pickthall": "(And) lo! those who believe and do good works are the best of created beings."
+   }
+  },
+  {
+   "n": 8,
+   "global": 6138,
+   "text": "جَزَآؤُهُمْ عِندَ رَبِّهِمْ جَنَّـٰتُ عَدْنٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَآ أَبَدًا ۖ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ۚ ذَٰلِكَ لِمَنْ خَشِىَ رَبَّهُۥ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "جَزَآؤُهُمْ",
+     "translit": "jazāuhum",
+     "gloss": "Their reward",
+     "audio": "wbw/098_008_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "عِندَ",
+     "translit": "ʿinda",
+     "gloss": "(is) with",
+     "audio": "wbw/098_008_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "رَبِّهِمْ",
+     "translit": "rabbihim",
+     "gloss": "their Lord",
+     "audio": "wbw/098_008_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "جَنَّـٰتُ",
+     "translit": "jannātu",
+     "gloss": "Gardens",
+     "audio": "wbw/098_008_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "عَدْنٍۢ",
+     "translit": "ʿadnin",
+     "gloss": "(of) Eternity",
+     "audio": "wbw/098_008_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "تَجْرِى",
+     "translit": "tajrī",
+     "gloss": "flow",
+     "audio": "wbw/098_008_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "مِن",
+     "translit": "min",
+     "gloss": "from",
+     "audio": "wbw/098_008_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "تَحْتِهَا",
+     "translit": "taḥtihā",
+     "gloss": "underneath them",
+     "audio": "wbw/098_008_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "ٱلْأَنْهَـٰرُ",
+     "translit": "l-anhāru",
+     "gloss": "the rivers",
+     "audio": "wbw/098_008_009.mp3"
+    },
+    {
+     "n": 10,
+     "ar": "خَـٰلِدِينَ",
+     "translit": "khālidīna",
+     "gloss": "will abide",
+     "audio": "wbw/098_008_010.mp3"
+    },
+    {
+     "n": 11,
+     "ar": "فِيهَآ",
+     "translit": "fīhā",
+     "gloss": "therein",
+     "audio": "wbw/098_008_011.mp3"
+    },
+    {
+     "n": 12,
+     "ar": "أَبَدًۭا ۖ",
+     "translit": "abadan",
+     "gloss": "forever",
+     "audio": "wbw/098_008_012.mp3"
+    },
+    {
+     "n": 13,
+     "ar": "رَّضِىَ",
+     "translit": "raḍiya",
+     "gloss": "(will be) pleased",
+     "audio": "wbw/098_008_014.mp3"
+    },
+    {
+     "n": 14,
+     "ar": "ٱللَّهُ",
+     "translit": "l-lahu",
+     "gloss": "Allah",
+     "audio": "wbw/098_008_015.mp3"
+    },
+    {
+     "n": 15,
+     "ar": "عَنْهُمْ",
+     "translit": "ʿanhum",
+     "gloss": "with them",
+     "audio": "wbw/098_008_016.mp3"
+    },
+    {
+     "n": 16,
+     "ar": "وَرَضُوا۟",
+     "translit": "waraḍū",
+     "gloss": "and they (will be) pleased",
+     "audio": "wbw/098_008_017.mp3"
+    },
+    {
+     "n": 17,
+     "ar": "عَنْهُ ۚ",
+     "translit": "ʿanhu",
+     "gloss": "with Him",
+     "audio": "wbw/098_008_018.mp3"
+    },
+    {
+     "n": 18,
+     "ar": "ذَٰلِكَ",
+     "translit": "dhālika",
+     "gloss": "That",
+     "audio": "wbw/098_008_020.mp3"
+    },
+    {
+     "n": 19,
+     "ar": "لِمَنْ",
+     "translit": "liman",
+     "gloss": "(is) for whoever",
+     "audio": "wbw/098_008_021.mp3"
+    },
+    {
+     "n": 20,
+     "ar": "خَشِىَ",
+     "translit": "khashiya",
+     "gloss": "feared",
+     "audio": "wbw/098_008_022.mp3"
+    },
+    {
+     "n": 21,
+     "ar": "رَبَّهُۥ",
+     "translit": "rabbahu",
+     "gloss": "his Lord",
+     "audio": "wbw/098_008_023.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Their reward with their Lord will be gardens of perpetual residence beneath which rivers flow, wherein they will abide forever, Allāh being pleased with them and they with Him. That is for whoever has feared his Lord.",
+    "pickthall": "Their reward is with their Lord: Gardens of Eden underneath which rivers flow, wherein they dwell for ever. Allah hath pleasure in them and they have pleasure in Him. This is (in store) for him who feareth his Lord."
+   }
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "id": 108,
+ "name_simple": "Al-Kawthar",
+ "name_arabic": "الكوثر",
+ "verses_count": 3,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6205,
+   "text": "إِنَّآ أَعْطَيْنَـٰكَ ٱلْكَوْثَرَ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّآ",
+     "translit": "innā",
+     "gloss": "Indeed, We",
+     "audio": "wbw/108_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَعْطَيْنَـٰكَ",
+     "translit": "aʿṭaynāka",
+     "gloss": "We have given you",
+     "audio": "wbw/108_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "ٱلْكَوْثَرَ",
+     "translit": "l-kawthara",
+     "gloss": "Al-Kauthar",
+     "audio": "wbw/108_001_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, We have granted you, [O Muḥammad], al-Kawthar.",
+    "pickthall": "Lo! We have given thee Abundance;"
+   }
+  },
+  {
+   "n": 2,
+   "global": 6206,
+   "text": "فَصَلِّ لِرَبِّكَ وَٱنْحَرْ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "فَصَلِّ",
+     "translit": "faṣalli",
+     "gloss": "So pray",
+     "audio": "wbw/108_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "لِرَبِّكَ",
+     "translit": "lirabbika",
+     "gloss": "to your Lord",
+     "audio": "wbw/108_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَٱنْحَرْ",
+     "translit": "wa-in'ḥar",
+     "gloss": "and sacrifice",
+     "audio": "wbw/108_002_003.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "So pray to your Lord and offer sacrifice [to Him alone].",
+    "pickthall": "So pray unto thy Lord, and sacrifice."
+   }
+  },
+  {
+   "n": 3,
+   "global": 6207,
+   "text": "إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّ",
+     "translit": "inna",
+     "gloss": "Indeed",
+     "audio": "wbw/108_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "شَانِئَكَ",
+     "translit": "shāni-aka",
+     "gloss": "your enemy",
+     "audio": "wbw/108_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "هُوَ",
+     "translit": "huwa",
+     "gloss": "he (is)",
+     "audio": "wbw/108_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "ٱلْأَبْتَرُ",
+     "translit": "l-abtaru",
+     "gloss": "the one cut off",
+     "audio": "wbw/108_003_004.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, your enemy is the one cut off.",
+    "pickthall": "Lo! it is thy insulter (and not thou) who is without posterity."
+   }
+  }
+ ]
+}

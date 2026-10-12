@@ -1,0 +1,274 @@
+{
+ "id": 97,
+ "name_simple": "Al-Qadr",
+ "name_arabic": "القدر",
+ "verses_count": 5,
+ "bismillah_pre": true,
+ "ayahs": [
+  {
+   "n": 1,
+   "global": 6126,
+   "text": "إِنَّآ أَنزَلْنَـٰهُ فِى لَيْلَةِ ٱلْقَدْرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "إِنَّآ",
+     "translit": "innā",
+     "gloss": "Indeed, We",
+     "audio": "wbw/097_001_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَنزَلْنَـٰهُ",
+     "translit": "anzalnāhu",
+     "gloss": "revealed it",
+     "audio": "wbw/097_001_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "فِى",
+     "translit": "fī",
+     "gloss": "in",
+     "audio": "wbw/097_001_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَيْلَةِ",
+     "translit": "laylati",
+     "gloss": "(the) Night",
+     "audio": "wbw/097_001_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْقَدْرِ",
+     "translit": "l-qadri",
+     "gloss": "(of) Power",
+     "audio": "wbw/097_001_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Indeed, We sent it [i.e., the Qur’ān] down during the Night of Decree.",
+    "pickthall": "Lo! We revealed it on the Night of Predestination."
+   }
+  },
+  {
+   "n": 2,
+   "global": 6127,
+   "text": "وَمَآ أَدْرَىٰكَ مَا لَيْلَةُ ٱلْقَدْرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "وَمَآ",
+     "translit": "wamā",
+     "gloss": "And what",
+     "audio": "wbw/097_002_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "أَدْرَىٰكَ",
+     "translit": "adrāka",
+     "gloss": "can make you know",
+     "audio": "wbw/097_002_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "مَا",
+     "translit": "mā",
+     "gloss": "what",
+     "audio": "wbw/097_002_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "لَيْلَةُ",
+     "translit": "laylatu",
+     "gloss": "(the) Night",
+     "audio": "wbw/097_002_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْقَدْرِ",
+     "translit": "l-qadri",
+     "gloss": "(of) Power (is)",
+     "audio": "wbw/097_002_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "And what can make you know what is the Night of Decree?",
+    "pickthall": "Ah, what will convey unto thee what the Night of Power is!"
+   }
+  },
+  {
+   "n": 3,
+   "global": 6128,
+   "text": "لَيْلَةُ ٱلْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "لَيْلَةُ",
+     "translit": "laylatu",
+     "gloss": "(The) Night",
+     "audio": "wbw/097_003_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْقَدْرِ",
+     "translit": "l-qadri",
+     "gloss": "(of) Power",
+     "audio": "wbw/097_003_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "خَيْرٌۭ",
+     "translit": "khayrun",
+     "gloss": "(is) better",
+     "audio": "wbw/097_003_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مِّنْ",
+     "translit": "min",
+     "gloss": "than",
+     "audio": "wbw/097_003_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "أَلْفِ",
+     "translit": "alfi",
+     "gloss": "a thousand",
+     "audio": "wbw/097_003_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "شَهْرٍۢ",
+     "translit": "shahrin",
+     "gloss": "month(s)",
+     "audio": "wbw/097_003_006.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The Night of Decree is better than a thousand months.",
+    "pickthall": "The Night of Power is better than a thousand months."
+   }
+  },
+  {
+   "n": 4,
+   "global": 6129,
+   "text": "تَنَزَّلُ ٱلْمَلَـٰٓئِكَةُ وَٱلرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "تَنَزَّلُ",
+     "translit": "tanazzalu",
+     "gloss": "Descend",
+     "audio": "wbw/097_004_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "ٱلْمَلَـٰٓئِكَةُ",
+     "translit": "l-malāikatu",
+     "gloss": "the Angels",
+     "audio": "wbw/097_004_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "وَٱلرُّوحُ",
+     "translit": "wal-rūḥu",
+     "gloss": "and the Spirit",
+     "audio": "wbw/097_004_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "فِيهَا",
+     "translit": "fīhā",
+     "gloss": "therein",
+     "audio": "wbw/097_004_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "بِإِذْنِ",
+     "translit": "bi-idh'ni",
+     "gloss": "by (the) permission",
+     "audio": "wbw/097_004_005.mp3"
+    },
+    {
+     "n": 6,
+     "ar": "رَبِّهِم",
+     "translit": "rabbihim",
+     "gloss": "(of) their Lord",
+     "audio": "wbw/097_004_006.mp3"
+    },
+    {
+     "n": 7,
+     "ar": "مِّن",
+     "translit": "min",
+     "gloss": "for",
+     "audio": "wbw/097_004_007.mp3"
+    },
+    {
+     "n": 8,
+     "ar": "كُلِّ",
+     "translit": "kulli",
+     "gloss": "every",
+     "audio": "wbw/097_004_008.mp3"
+    },
+    {
+     "n": 9,
+     "ar": "أَمْرٍۢ",
+     "translit": "amrin",
+     "gloss": "affair",
+     "audio": "wbw/097_004_009.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "The angels and the Spirit [i.e., Gabriel] descend therein by permission of their Lord for every matter.",
+    "pickthall": "The angels and the Spirit descend therein, by the permission of their Lord, with all decrees."
+   }
+  },
+  {
+   "n": 5,
+   "global": 6130,
+   "text": "سَلَـٰمٌ هِىَ حَتَّىٰ مَطْلَعِ ٱلْفَجْرِ",
+   "words": [
+    {
+     "n": 1,
+     "ar": "سَلَـٰمٌ",
+     "translit": "salāmun",
+     "gloss": "Peace",
+     "audio": "wbw/097_005_001.mp3"
+    },
+    {
+     "n": 2,
+     "ar": "هِىَ",
+     "translit": "hiya",
+     "gloss": "it (is)",
+     "audio": "wbw/097_005_002.mp3"
+    },
+    {
+     "n": 3,
+     "ar": "حَتَّىٰ",
+     "translit": "ḥattā",
+     "gloss": "until",
+     "audio": "wbw/097_005_003.mp3"
+    },
+    {
+     "n": 4,
+     "ar": "مَطْلَعِ",
+     "translit": "maṭlaʿi",
+     "gloss": "(the) emergence",
+     "audio": "wbw/097_005_004.mp3"
+    },
+    {
+     "n": 5,
+     "ar": "ٱلْفَجْرِ",
+     "translit": "l-fajri",
+     "gloss": "(of) the dawn",
+     "audio": "wbw/097_005_005.mp3"
+    }
+   ],
+   "tr": {
+    "sahih": "Peace it is until the emergence of dawn.",
+    "pickthall": "(The night is) Peace until the rising of the dawn."
+   }
+  }
+ ]
+}
