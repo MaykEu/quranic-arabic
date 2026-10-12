@@ -1,3 +1,348 @@
-// Practice module (phase P6): read-aloud with hide/show toggles, word tracing,
-// and listen-and-repeat sessions from the vocabulary deck.
-export {};
+// Practice module — four drills:
+//   Read aloud : record yourself, then hear the reciter's verse back-to-back
+//                (production effect; deliberately NO automatic scoring)
+//   Trace      : trace whole words with the same coverage scorer as letters
+//   Listen     : hear → say → next with a daily counter
+//   Recall     : verse shown, meaning hidden, self-grade → same SRS scheduler
+// Modes live in the hash (#read / #trace / #listen / #recall).
+import { loadData } from '../lib/data.js';
+import { wbwFromRef, verseAudioUrl } from '../lib/audio.js';
+import { play } from '../ui/player.js';
+import { get, set } from '../lib/store.js';
+import { load as loadSRS, review, dueIds } from '../lib/srs.js';
+import { mountTrace } from '../ui/trace.js';
+import { toast } from '../ui/toast.js';
+
+const main = document.querySelector('main');
+const esc = (s) =>
+  String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+const MODES = [
+  ['read', 'Read aloud'],
+  ['trace', 'Trace'],
+  ['listen', 'Listen'],
+  ['recall', 'Recall'],
+];
+
+const DEFAULT_VERSES = ['1:1', '1:2', '1:3', '1:4', '1:5', '1:6', '1:7', '2:255', '112:1', '112:2', '103:1', '114:1'];
+
+const state = {
+  index: null,
+  reciters: [],
+  build: [],
+  surahs: new Map(),
+  rec: { recorder: null, chunks: [], url: null, stream: null, verse: null },
+  traceIdx: 0,
+  listenIdx: 0,
+  recall: { queue: [], i: 0, revealed: false, got: 0 },
+};
+
+const prefs = () => get('prefs', {});
+const today = () => new Date().toISOString().slice(0, 10);
+
+async function getSurah(id) {
+  if (!state.surahs.has(id)) {
+    state.surahs.set(id, await loadData(`quran/${String(id).padStart(3, '0')}.json`));
+  }
+  return state.surahs.get(id);
+}
+async function getVerse(s, a) {
+  const surah = await getSurah(s);
+  const ayah = surah.ayahs.find((x) => x.n === a);
+  const meta = state.index.surahs.find((x) => x.id === s);
+  return ayah && meta ? { surah: meta, ayah } : null;
+}
+
+function recentVerses() {
+  const p = get('progress', {});
+  const entries = Object.entries(p.verses || {})
+    .sort((a, b) => (b[1].at || 0) - (a[1].at || 0))
+    .map(([id]) => id)
+    .filter((id) => /^\d+:\d+$/.test(id));
+  return entries.length ? entries.slice(0, 12) : DEFAULT_VERSES;
+}
+
+function stopRecording() {
+  const r = state.rec;
+  if (r.recorder && r.recorder.state === 'recording') {
+    try { r.recorder.stop(); } catch { /* already stopped */ }
+  }
+  if (r.stream) r.stream.getTracks().forEach((t) => t.stop());
+  r.stream = null;
+  r.recorder = null;
+}
+
+// ---------- shell ----------
+
+function shell(mode, body) {
+  main.innerHTML = `
+    <h2>Practice</h2>
+    <nav class="seg" aria-label="Practice modes">
+      ${MODES.map(([m, label]) => `<a href="#${m}" class="${m === mode ? 'active' : ''}">${label}</a>`).join('')}
+    </nav>
+    <div id="view">${body}</div>`;
+}
+
+// ---------- read aloud ----------
+
+async function renderRead() {
+  shell('read', `<section class="card pr-card"><p class="muted">Loading…</p></section>`);
+  const pool = recentVerses();
+  const key = state.rec.verse || pool[0];
+  const [s, a] = key.split(':').map(Number);
+  const v = await getVerse(s, a);
+  const reciter = state.reciters.find((r) => r.id === prefs().reciter) || state.reciters[0];
+  const tr = v.ayah.tr ? (prefs().tr === 'sahih' ? v.ayah.tr.sahih : v.ayah.tr.pickthall) : '';
+
+  document.getElementById('view').innerHTML = `
+    <section class="card pr-card">
+      <div class="muted">${esc(v.surah.name_simple)} ${s}:${a} — ${esc(v.surah.name_translit)}</div>
+      <p class="pr-verse" lang="ar" dir="rtl">${esc(v.ayah.text)}</p>
+      ${tr ? `<p class="pr-tr">${esc(tr)}</p>` : ''}
+      <div class="rec-row" id="rec-row"></div>
+      <p class="pr-note">Listen to the reciter first, then read aloud and compare.
+      No scoring — your ears decide. (Recording stays on your device.)</p>
+      <div id="mic-note" class="pr-note"></div>
+      <div class="row"><button type="button" class="btn btn-ghost" id="nextv">Another verse →</button></div>
+    </section>`;
+
+  const row = document.getElementById('rec-row');
+
+  const renderRow = () => {
+    const r = state.rec;
+    const recording = r.recorder && r.recorder.state === 'recording';
+    row.innerHTML = `
+      ${recording
+        ? `<button type="button" class="btn" id="stop"><span class="rec-dot"></span>Stop</button>`
+        : `<button type="button" class="btn" id="record">🎤 Record</button>`}
+      <button type="button" class="btn btn-ghost" id="theirs">▶ Reciter</button>
+      ${r.url ? `<button type="button" class="btn btn-ghost" id="mine">▶ You</button>` : ''}`;
+    const rec = row.querySelector('#record');
+    if (rec) rec.addEventListener('click', startRec);
+    const st = row.querySelector('#stop');
+    if (st) st.addEventListener('click', () => state.rec.recorder.stop());
+    row.querySelector('#theirs').addEventListener('click', () =>
+      play(verseAudioUrl(reciter, v.ayah.global), `${s}:${a} — ${reciter.label}`),
+    );
+    const mine = row.querySelector('#mine');
+    if (mine) mine.addEventListener('click', () => play(state.rec.url, 'You'));
+  };
+
+  async function startRec() {
+    if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
+      document.getElementById('mic-note').textContent =
+        'Recording is not supported in this browser — you can still read aloud without it.';
+      return;
+    }
+    try {
+      state.rec.stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    } catch {
+      document.getElementById('mic-note').textContent =
+        'Microphone access was blocked. Allow it in your browser settings to record.';
+      return;
+    }
+    const r = state.rec;
+    r.chunks = [];
+    if (r.url) URL.revokeObjectURL(r.url);
+    r.url = null;
+    r.recorder = new MediaRecorder(r.stream);
+    r.recorder.ondataavailable = (e) => r.chunks.push(e.data);
+    r.recorder.onstop = () => {
+      r.stream?.getTracks().forEach((t) => t.stop());
+      r.stream = null;
+      const blob = new Blob(r.chunks, { type: r.recorder.mimeType || 'audio/webm' });
+      r.url = URL.createObjectURL(blob);
+      renderRow();
+    };
+    r.recorder.start();
+    renderRow();
+  }
+
+  renderRow();
+  document.getElementById('nextv').addEventListener('click', () => {
+    stopRecording();
+    const i = pool.indexOf(key);
+    state.rec.verse = pool[(i + 1) % pool.length];
+    renderRead();
+  });
+}
+
+// ---------- trace ----------
+
+function renderTrace() {
+  const w = state.build[state.traceIdx % state.build.length];
+  shell('trace', `
+    <section class="card pr-card">
+      <p class="muted center">Trace the word's letter skeleton — the full vowelled form is shown below.</p>
+      <div id="trace-slot"></div>
+      <div class="trace-caption">
+        <div class="trace-word-ar" lang="ar" dir="rtl">${esc(w.ar)}</div>
+        <div class="muted">${esc(w.translit)} — ${esc(w.gloss)}</div>
+      </div>
+      <div class="trace-actions">
+        <button type="button" class="btn" id="check">Check</button>
+        <button type="button" class="btn btn-ghost" id="erase">Erase</button>
+        <button type="button" class="btn btn-ghost" id="nextw">Next word →</button>
+      </div>
+      <p class="center muted" id="trace-msg">Trace over the dashed ${esc(w.bare)} with your finger or mouse.</p>
+    </section>`);
+
+  const trace = mountTrace(document.getElementById('trace-slot'), w.bare);
+  document.getElementById('erase').addEventListener('click', () => trace.clear());
+  document.getElementById('check').addEventListener('click', () => {
+    const { coverage, inkNear, ok } = trace.checkCoverage();
+    const msg = document.getElementById('trace-msg');
+    const pct = Math.round(coverage * 100);
+    if (ok) {
+      msg.textContent = `Nice — ${pct}% covered.`;
+      toast(`${w.bare} traced`);
+      setTimeout(() => {
+        state.traceIdx += 1;
+        renderTrace();
+      }, 800);
+    } else if (coverage >= 0.75 && inkNear < 0.6) {
+      msg.textContent = 'You covered the word, but most of your ink is off the shape — follow the dashed line.';
+    } else {
+      msg.textContent = `Almost — ${pct}% covered. Trace a little more and check again.`;
+    }
+  });
+  document.getElementById('nextw').addEventListener('click', () => {
+    state.traceIdx += 1;
+    renderTrace();
+  });
+}
+
+// ---------- listen ----------
+
+function renderListen() {
+  const w = state.build[state.listenIdx % state.build.length];
+  const pr = get('practice', { day: today(), count: 0 });
+  const count = pr.day === today() ? pr.count : 0;
+
+  shell('listen', `
+    <section class="card pr-card">
+      <div class="row" style="justify-content:space-between;align-items:center">
+        <span class="muted">Hear it → say it → next</span>
+        <span class="counter-chip" id="count">${count} today</span>
+      </div>
+      <div class="listen-word" lang="ar" dir="rtl">${esc(w.ar)}</div>
+      <p class="center muted">${esc(w.translit)} — ${esc(w.gloss)}</p>
+      <div class="row" style="justify-content:center">
+        <button type="button" class="btn btn-ghost" id="again">🔊 Hear it again</button>
+        <button type="button" class="btn" id="next">I said it — next →</button>
+      </div>
+      <p class="pr-note center">Say each word out loud before moving on. Ten minutes a day beats an hour a week.</p>
+    </section>`);
+
+  const playCur = () => play(wbwFromRef(w.audio), w.bare);
+  playCur();
+
+  document.getElementById('again').addEventListener('click', playCur);
+  document.getElementById('next').addEventListener('click', () => {
+    const cur = get('practice', { day: today(), count: 0 });
+    const n = (cur.day === today() ? cur.count : 0) + 1;
+    set('practice', { day: today(), count: n });
+    state.listenIdx += 1;
+    renderListen();
+  });
+}
+
+// ---------- recall ----------
+
+function buildRecallQueue() {
+  const srsAll = loadSRS();
+  const due = dueIds(srsAll).filter((id) => /^v:\d+:\d+$/.test(id));
+  const pool = recentVerses();
+  const fresh = pool.filter((id) => !srsAll[`v:${id}`]);
+  return [...due.map((id) => id.slice(2)), ...fresh].slice(0, 8);
+}
+
+async function renderRecall() {
+  if (!state.recall.queue.length) {
+    state.recall = { queue: buildRecallQueue(), i: 0, revealed: false, got: 0 };
+  }
+  const r = state.recall;
+  if (r.i >= r.queue.length) {
+    shell('recall', `
+      <section class="card center">
+        <h2>Recall done</h2>
+        <p>${r.got} of ${r.queue.length} recalled. Misses come back first next time.</p>
+        <div class="row" style="justify-content:center"><button type="button" class="btn" id="again">Again</button></div>
+      </section>`);
+    document.getElementById('again').addEventListener('click', () => {
+      state.recall = { queue: buildRecallQueue(), i: 0, revealed: false, got: 0 };
+      renderRecall();
+    });
+    return;
+  }
+
+  const [s, a] = r.queue[r.i].split(':').map(Number);
+  const v = await getVerse(s, a);
+  if (!v) {
+    r.i += 1;
+    return renderRecall();
+  }
+  const tr = v.ayah.tr ? (prefs().tr === 'sahih' ? v.ayah.tr.sahih : v.ayah.tr.pickthall) : '';
+
+  shell('recall', `
+    <section class="card pr-card">
+      <p class="muted center">${r.i + 1} / ${r.queue.length} · ${esc(v.surah.name_simple)} ${s}:${a}</p>
+      <p class="recall-verse" lang="ar" dir="rtl">${esc(v.ayah.text)}</p>
+      <div id="reveal-box" hidden>
+        ${tr ? `<p class="pr-tr">${esc(tr)}</p>` : ''}
+      </div>
+      <div class="row" style="justify-content:center">
+        <button type="button" class="btn" id="show">Show meaning</button>
+      </div>
+      <div class="row" style="justify-content:center" id="grade-row" hidden>
+        <button type="button" class="btn btn-ghost" id="again">Again</button>
+        <button type="button" class="btn" id="got">Got it</button>
+      </div>
+      <p class="pr-note center">Read the verse aloud before revealing the meaning.</p>
+    </section>`);
+
+  document.getElementById('show').addEventListener('click', () => {
+    document.getElementById('reveal-box').hidden = false;
+    document.getElementById('grade-row').hidden = false;
+    document.getElementById('show').hidden = true;
+  });
+  const grade = (good) => {
+    review(`v:${s}:${a}`, good);
+    if (good) r.got += 1;
+    r.i += 1;
+    renderRecall();
+  };
+  document.getElementById('again').addEventListener('click', () => grade(false));
+  document.getElementById('got').addEventListener('click', () => grade(true));
+}
+
+// ---------- router ----------
+
+function render() {
+  stopRecording();
+  const mode = (location.hash.replace(/^#/, '') || 'read').split('/')[0];
+  if (mode === 'trace') return renderTrace();
+  if (mode === 'listen') return renderListen();
+  if (mode === 'recall') return renderRecall();
+  return renderRead();
+}
+
+async function init() {
+  try {
+    const [idx, recs, build] = await Promise.all([
+      loadData('quran/index.json'),
+      loadData('reciters.json'),
+      loadData('build-words.json'),
+    ]);
+    state.index = idx;
+    state.reciters = recs;
+    state.build = build.words;
+  } catch (e) {
+    main.innerHTML = `<section class="card"><p>Could not load practice data: ${esc(e.message)}</p></section>`;
+    return;
+  }
+  window.addEventListener('hashchange', render);
+  render();
+}
+
+init();
