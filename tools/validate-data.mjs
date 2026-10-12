@@ -34,7 +34,18 @@ for (const c of index.surahs) {
     for (const w of a.words) {
       ok(typeof w.ar === 'string' && w.ar.length > 0, `${file} ${c.id}:${a.n} w${w.n}: empty word`);
       ok(/^wbw\/\d{3}_\d{3}_\d{3}\.mp3$/.test(w.audio), `${file} ${c.id}:${a.n} w${w.n}: bad audio ref "${w.audio}"`);
+      ok(!/[\u200E\u200F]/.test(w.ar), `${file} ${c.id}:${a.n} w${w.n}: zero-width char in word`);
     }
+    // Word text must rejoin to the ayah text (normalised, conventions ignored).
+    const stripChk = (s) => s.normalize('NFC')
+      .replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u08D3-\u08FF\u200E\u200F\uFEFF]/g, '')
+      .replace(/\u0640/g, '')
+      .replace(/[\u0622\u0623\u0625\u0671]/g, '\u0627')
+      .replace(/\u0649/g, '\u064A')
+      .replace(/\u0621\u0627/g, '\u0627');
+    const joinedWords = a.words.map((w) => stripChk(w.ar).trim()).filter(Boolean).join(' ');
+    const joinedText = a.text.split(/\s+/).map(stripChk).filter(Boolean).join(' ');
+    ok(joinedWords === joinedText, `${file} ${c.id}:${a.n}: words[] do not rejoin to the ayah text`);
     // Audio refs: strictly increasing and never below the word's position.
     // (Numbers may skip where recitation pause-marks occupy their own CDN segments.)
     let audioPrev = 0;

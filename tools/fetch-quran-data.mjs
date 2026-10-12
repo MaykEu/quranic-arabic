@@ -36,6 +36,15 @@ async function getJson(url, tries = 3) {
 // segment (_007), so the word is file _008. Mirrors the fix in data/quran/036.json.
 const AUDIO_FIXES = { "36:52:7": "wbw/036_052_008.mp3" };
 
+// Raw word-text corrections where the upstream API's word differs from its own verse
+// text (verified against independent Tanzil Uthmani copies, Oct 2026):
+const TEXT_FIXES = {
+  "5:52:12": "دَآئِرَةٌۭ ۚ",  // upstream split دَائِرَةٌ into two pieces
+  "11:13:3": "ٱفْتَرَىٰهُ ۖ",  // upstream used a plain alef instead of ىٰ
+};
+const fixWordText = (key, s) =>
+  (TEXT_FIXES[key] ?? s).replace(/[\u200E\u200F]/g, "");
+
 const clean = (s) =>
   (s ?? '')
     .replace(/^\uFEFF/, '')                 // BOM guard (seen in fallback sources)
@@ -85,7 +94,7 @@ for (const ch of chapters.slice(0, limit)) {
         .filter((w) => w.char_type_name === 'word') // drop the ayah-number "end" marker word
         .map((w) => ({
           n: w.position,
-          ar: clean(w.text_uthmani),
+          ar: fixWordText(`${ch.id}:${v.verse_number}:${w.position}`, clean(w.text_uthmani)),
           translit: clean(w.transliteration?.text ?? ''),
           gloss: clean(w.translation?.text ?? ''),
           audio:
