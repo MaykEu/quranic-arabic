@@ -8,12 +8,19 @@ works offline once loaded.
 
 ## Run locally
 
+Double-click **`start-server.cmd`** — it starts a small local server and opens your
+browser at http://localhost:8080/. Close its window to stop the server.
+
+Manual alternative (any static server works):
+
 ```bash
-python -m http.server 8080
-# open http://localhost:8080/
+python tools/serve.py     # or: python -m http.server 8080
+# then open http://localhost:8080/
 ```
 
-Serve over HTTP — ES modules and fetch don't work from `file://`.
+Serve over HTTP — ES modules and fetch don't work from `file://` (the pages detect
+this and explain). On localhost the service worker is disabled and files are served
+with `no-store`, so every reload always shows the latest files from disk.
 
 ## Deploy
 

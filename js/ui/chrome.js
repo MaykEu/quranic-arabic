@@ -65,6 +65,12 @@ function initTheme() {
 
 function registerSW() {
   if (!('serviceWorker' in navigator) || !location.protocol.startsWith('http')) return;
+  // Local development: keep reloads fresh — remove any old worker and skip
+  // registration entirely on localhost (the deployed site still caches offline).
+  if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+    navigator.serviceWorker.getRegistrations().then((rs) => rs.forEach((r) => r.unregister())).catch(() => {});
+    return;
+  }
   const hadController = !!navigator.serviceWorker.controller;
   navigator.serviceWorker.register('sw.js').catch(() => {});
   if (hadController) {
