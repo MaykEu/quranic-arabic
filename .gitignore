@@ -1,0 +1,6 @@
+# Hermes plan-mode artifacts (plan file lives here during the build)
+.hermes/
+cache/
+# OS cruft
+Thumbs.db
+.DS_Store
