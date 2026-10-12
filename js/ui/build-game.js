@@ -46,11 +46,12 @@ export async function mountBuild(container, { firstLetter = null } = {}) {
   function menu() {
     const built = builtCount();
     const srsAll = loadSRS();
-    const due = all.filter((w) => {
+    const dueList = scope.filter((w) => {
       const e = srsAll[sid(w)];
       return e && e.due <= Date.now();
-    }).length;
-    const fresh = all.length - Object.keys(srsAll).filter((k) => k.startsWith('b:')).length;
+    });
+    const freshList = scope.filter((w) => !srsAll[sid(w)]);
+    const todo = Math.min(SESSION, dueList.length + freshList.length);
     const empty = scope.length === 0;
 
     container.innerHTML = `
@@ -58,13 +59,15 @@ export async function mountBuild(container, { firstLetter = null } = {}) {
         <h2>Build <span class="muted">· make words from letters</span></h2>
         <p class="muted">Tap the letters in the right order. Watch each letter change shape as the next one joins.</p>
         <div class="progbar" aria-hidden="true"><i style="width:${Math.round((built / all.length) * 100)}%"></i></div>
-        <p class="muted center">${built} of ${all.length} words built${due ? ` · ${due} ready for review` : ''}</p>
+        <p class="muted center">${built} of ${all.length} words built${dueList.length ? ` · ${dueList.length} ready for review` : ''}</p>
         ${
           empty
             ? `<p class="center">No build words start with this letter yet — try free play, or build all words.</p>
                <div class="row" style="justify-content:center"><button type="button" class="btn" id="sandbox">Free play</button></div>`
             : `<div class="row" style="justify-content:center">
-                 <button type="button" class="btn" id="go">${due ? `Review ${Math.min(due, SESSION)}` : `Build ${Math.min(SESSION, fresh || scope.length)} words`}</button>
+                 <button type="button" class="btn" id="go" ${todo ? '' : 'disabled'}>${
+                   dueList.length ? `Review ${todo}` : todo ? `Build ${todo} words` : 'All built — free play!'
+                 }</button>
                  <button type="button" class="btn btn-ghost" id="sandbox">Free play</button>
                </div>`
         }
@@ -189,6 +192,7 @@ export async function mountBuild(container, { firstLetter = null } = {}) {
 
     function judge() {
       if (done) return;
+      if (placed.length < w.letters.length) return; // an undo landed inside the check window
       const ok = placed.every((ri, k) => rack[ri].id === w.letters[k]);
       if (ok) {
         done = true;

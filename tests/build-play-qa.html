@@ -45,26 +45,45 @@ try {
   const tiles = [...el.querySelectorAll('.tile')];
   if (!tiles.length) throw new Error('no-tiles');
 
-  let placed = 0;
   const used = new Set();
-  for (const id of w.letters) {
-    if (mode === 'mid' && placed >= 2) break;
+  const clickLetter = (id) => {
     const ch = letters.find((l) => l.id === id).ar;
     const tile = tiles.find((t) => t.textContent.trim() === ch && !used.has(t));
     if (!tile) throw new Error('tile-not-found:' + id + ' for ' + w.bare);
     used.add(tile);
     tile.click();
-    placed += 1;
-    await sleep(120);
-  }
-  await sleep(mode === 'done' ? 700 : 250);
+    return tile;
+  };
 
-  if (mode === 'done') {
-    const ok = !!el.querySelector('.success-word');
-    report(`done:${w.bare}:placed=${placed}:success=${ok}`);
+  if (mode === 'race') {
+    // Regression test: undo INSIDE the 260ms judge window must not fire success.
+    let last = null;
+    for (const id of w.letters) {
+      last = clickLetter(id);
+      await sleep(40);
+    }
+    el.querySelector('#undo').click();
+    await sleep(700);
+    const early = !!el.querySelector('.success-word');
+    last.click(); // now finish properly
+    await sleep(700);
+    const final = !!el.querySelector('.success-word');
+    report(`race:early=${early ? 'FAILED-fired' : 'ok'}:final=${final ? 'ok' : 'FAILED'}`);
   } else {
-    const ribbon = el.querySelector('.ribbon-word')?.textContent || '';
-    report(`mid:${w.bare}:placed=${placed}:ribbon=${ribbon}`);
+    let placed = 0;
+    for (const id of w.letters) {
+      if (mode === 'mid' && placed >= 2) break;
+      clickLetter(id);
+      placed += 1;
+      await sleep(120);
+    }
+    await sleep(mode === 'done' ? 700 : 250);
+    if (mode === 'done') {
+      report(`done:${w.bare}:placed=${placed}:success=${!!el.querySelector('.success-word')}`);
+    } else {
+      const ribbon = el.querySelector('.ribbon-word')?.textContent || '';
+      report(`mid:${w.bare}:placed=${placed}:ribbon=${ribbon}`);
+    }
   }
 } catch (e) {
   report('error:' + e.message);
