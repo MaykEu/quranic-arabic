@@ -258,8 +258,8 @@ const stored = new Map();
 for (const s of ours) for (const a of s.ayahs) for (const w of a.words) {
   const n = bstrip(w.ar); if (!n) continue;
   const rec = stored.get(n);
-  if (rec) rec.count++;
-  else stored.set(n, { count: 1, ref: `${s.id}:${a.n}`, audio: w.audio });
+  if (rec) { rec.count++; rec.audios.add(w.audio); }
+  else stored.set(n, { count: 1, ref: `${s.id}:${a.n}`, audio: w.audio, audios: new Set([w.audio]) });
 }
 let fIssues = 0;
 for (const w of vocab) {
@@ -267,12 +267,12 @@ for (const w of vocab) {
   if (!rec) { fIssues++; out(`   ${w.rank} ${w.ar}: normalised form not found`); continue; }
   if (rec.count !== w.count) { fIssues++; out(`   ${w.rank} ${w.ar}: stored ${w.count}, recounted ${rec.count}`); }
   if (rec.ref !== w.ref) { fIssues++; out(`   ${w.rank} ${w.ar}: ref ${w.ref} vs ${rec.ref}`); }
-  if (rec.audio !== w.audio) { fIssues++; out(`   ${w.rank} ${w.ar}: audio ${w.audio} vs ${rec.audio}`); }
-  const [ss, aa] = w.ref.split(':').map(Number);
-  const ayah = ours.find((x) => x.id === ss).ayahs.find((x) => x.n === aa);
-  const target = ayah.words.find((x) => x.audio === w.audio);
-  if (!target) { fIssues++; out(`   ${w.rank} ${w.ar}: audio ref not in ${w.ref}`); }
-  else if (bstrip(target.ar) !== w.ar_norm) { fIssues++; out(`   ${w.rank} ${w.ar}: audio ref points at "${target.ar}"`); }
+  // The clip may come from any occurrence of the same word (a working clip is
+  // preferred over a broken first-occurrence one); rec.ref stays the first occurrence.
+  if (!rec.audios.has(w.audio)) {
+    fIssues++;
+    out(`   ${w.rank} ${w.ar}: audio ${w.audio} is not an occurrence of this word`);
+  }
 }
 out(`   issues: ${fIssues} / ${vocab.length}`);
 out();

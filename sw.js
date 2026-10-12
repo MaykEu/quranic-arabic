@@ -1,7 +1,7 @@
 // Service worker: offline app shell + runtime caches.
 // Bump VERSION whenever shipped files change (forces a clean re-cache).
-const VERSION = 'qa-v5';
-const AUDIO_CACHE = 'qa-audio-v1';
+const VERSION = 'qa-v6';
+const AUDIO_CACHE = 'qa-audio-v2';
 const AUDIO_HOSTS = ['audio.qurancdn.com', 'cdn.islamic.network', 'everyayah.com'];
 const AUDIO_MAX_ENTRIES = 300;
 
@@ -52,10 +52,12 @@ async function staleWhileRevalidate(request, cacheName) {
 async function cacheFirstAudio(request) {
   const cache = await caches.open(AUDIO_CACHE);
   const hit = await cache.match(request);
-  if (hit) return hit;
+  // Only trust full (200) responses. A cached 206 partial would break playback
+  // (truncated audio / wrong range served for a full-file request).
+  if (hit && hit.status === 200) return hit;
   try {
     const res = await fetch(request);
-    if (res && res.ok) {
+    if (res && res.status === 200) {
       cache.put(request, res.clone());
       trimCache(cache, AUDIO_MAX_ENTRIES);
     }

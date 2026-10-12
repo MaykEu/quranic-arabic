@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Listen-tab trace QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/reading.css">
+</head>
+<body>
+<main></main>
+<script type="module">
+// Trace exactly which audio files the Listen tab requests for each word.
+const orig = Audio.prototype.play;
+window.__played = [];
+Audio.prototype.play = function () {
+  try { window.__played.push(String(this.src)); } catch { /* ignore */ }
+  return orig.apply(this, arguments);
+};
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const bw = await (await fetch('../data/build-words.json')).json();
+
+await import('../js/pages/practice.js');
+await sleep(500);
+
+const out = [];
+const snap = () => {
+  const step = window.__played.length;
+  const word = document.querySelector('.listen-word')?.textContent.trim() || null;
+  const played = window.__played.slice(-1)[0] || null;
+  const expected = bw.words[step - 1] ? 'https://audio.qurancdn.com/' + bw.words[step - 1].audio : null;
+  const expectedWord = bw.words[step - 1]?.ar || null;
+  out.push({ step, word, played, expected, expectedWord, ok: played === expected, wordOk: word === expectedWord });
+};
+
+snap();
+for (let i = 0; i < 9; i++) {
+  document.getElementById('next')?.click();
+  await sleep(300);
+  snap();
+}
+
+const pre = document.createElement('pre');
+pre.id = 'trace';
+pre.style.whiteSpace = 'pre-wrap';
+pre.style.fontSize = '12px';
+pre.textContent = JSON.stringify({ pairs: out, mismatches: out.filter((x) => !x.ok).length }, null, 1);
+document.body.appendChild(pre);
+document.body.dataset.qa = 'done';
+</script>
+</body>
+</html>
