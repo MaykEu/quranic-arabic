@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smoke tests — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  body { max-width: 640px; margin: 0 auto; padding: 16px; }
+  .res { margin: 6px 0; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 13px; }
+  .ok { color: #2F6B4F; }
+  .bad { color: #B0413E; }
+</style>
+</head>
+<body>
+<main>
+  <h2>Smoke tests</h2>
+  <p class="muted">Serve this site locally (<code>python -m http.server 8080</code>) and open this page via
+  <code>http://localhost:8080/tests/smoke.html</code>. Click the button — the click also unlocks audio.</p>
+  <button class="btn" id="run" type="button">Run checks</button>
+  <div id="out"></div>
+</main>
+<script type="module">
+  const out = document.getElementById('out');
+  const line = (ok, msg) => {
+    const d = document.createElement('div');
+    d.className = 'res ' + (ok ? 'ok' : 'bad');
+    d.textContent = (ok ? 'PASS  ' : 'FAIL  ') + msg;
+    out.appendChild(d);
+    return ok;
+  };
+
+  document.getElementById('run').addEventListener('click', async () => {
+    out.innerHTML = '';
+    let all = true;
+
+    try {
+      const r = await fetch('../data/quran/index.json');
+      const j = await r.json();
+      all = line(r.ok && j.surahs.length === 114, 'index.json loads (114 surahs)') && all;
+    } catch (e) { all = false; line(false, 'index.json: ' + e.message); }
+
+    try {
+      const l = await (await fetch('../data/letters.json')).json();
+      all = line(l.length === 28, 'letters.json has 28 letters') && all;
+    } catch (e) { all = false; line(false, 'letters.json: ' + e.message); }
+
+    try {
+      await document.fonts.load('32px Amiri');
+      all = line(document.fonts.check('32px Amiri'), 'Amiri font loaded') && all;
+    } catch (e) { all = false; line(false, 'font: ' + e.message); }
+
+    try {
+      const a = new Audio('https://audio.qurancdn.com/wbw/001_001_001.mp3');
+      a.muted = true;
+      await a.play();
+      a.pause();
+      a.currentTime = 0;
+      all = line(true, 'word audio plays (001_001_001.mp3)') && all;
+    } catch (e) { all = false; line(false, 'audio: ' + (e.message || e)); }
+
+    all = line('serviceWorker' in navigator, 'service workers supported') && all;
+    try {
+      const sw = await navigator.serviceWorker.getRegistration();
+      line(!!sw, sw ? 'service worker registered' : 'service worker not registered yet (reload once)');
+    } catch {}
+
+    localStorage.setItem('qa.v1.probe', '1');
+    all = line(localStorage.getItem('qa.v1.probe') === '1', 'localStorage works') && all;
+    localStorage.removeItem('qa.v1.probe');
+
+    const banner = document.createElement('div');
+    banner.className = 'res ' + (all ? 'ok' : 'bad');
+    banner.innerHTML = all ? '<b>ALL CHECKS PASSED</b>' : '<b>SOME CHECKS FAILED</b>';
+    out.appendChild(banner);
+  });
+</script>
+</body>
+</html>
