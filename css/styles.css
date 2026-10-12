@@ -1,6 +1,15 @@
 /* Quranic Arabic — design tokens & base styles.
-   Tokens first; components grouped below. Dark mode toggles via [data-theme="dark"] on <html>.
-   NOTE: self-hosted Amiri @font-face blocks are added in task P1-4. */
+   Tokens first; components grouped below. Dark mode toggles via [data-theme="dark"] on <html>. */
+
+/* Self-hosted Amiri (arabic subset woff2; SIL OFL — attribution in README/CREDITS). */
+@font-face {
+  font-family: 'Amiri'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('../assets/fonts/amiri-arabic-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Amiri'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('../assets/fonts/amiri-arabic-700.woff2') format('woff2');
+}
 
 :root {
   color-scheme: light;
