@@ -142,15 +142,18 @@ function renderTrace(id) {
 
   main.querySelector('#erase').addEventListener('click', () => trace.clear());
   main.querySelector('#check').addEventListener('click', () => {
-    const score = trace.checkCoverage();
+    const { coverage, inkNear, ok } = trace.checkCoverage();
     const msg = main.querySelector('#trace-msg');
-    if (score >= 0.6) {
+    const pct = Math.round(coverage * 100);
+    if (ok) {
       mark('letters', l.id);
-      msg.textContent = `Nice — ${Math.round(score * 100)}% of the letter covered. Marked as learned.`;
+      msg.textContent = `Nice — ${pct}% of the letter covered. Marked as learned.`;
       toast(`${l.name} marked as learned`);
       setTimeout(() => renderDetail(l.id), 900);
+    } else if (coverage >= 0.75 && inkNear < 0.6) {
+      msg.textContent = 'You covered the letter, but most of your ink is off the shape — follow the dashed line and try again.';
     } else {
-      msg.textContent = `Almost — ${Math.round(score * 100)}% covered. Trace a little more and check again.`;
+      msg.textContent = `Almost — ${pct}% covered. Trace a little more and check again.`;
     }
   });
   main.querySelector('#back').addEventListener('click', () => renderDetail(id));

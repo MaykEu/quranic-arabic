@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trace component QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<main>
+  <h2>Trace component QA</h2>
+  <p class="muted">Automated checks of the tracing scorer. Each case draws programmatically on the
+  component canvas and reads its verdict. Serve over HTTP and open this page, or run
+  <code>msedge --headless=new --dump-dom …/tests/trace-check.html</code> to read the results.</p>
+  <div id="slot"></div>
+  <pre id="log" style="white-space:pre-wrap;font-size:13px">running…</pre>
+</main>
+<script type="module">
+import { mountTrace } from '../js/ui/trace.js';
+
+const slot = document.getElementById('slot');
+const logEl = document.getElementById('log');
+const lines = [];
+const say = (s) => { lines.push(s); logEl.textContent = lines.join('\n'); };
+
+const GLYPH = 'ب';
+const size = 300;
+const trace = mountTrace(slot, GLYPH);
+const canvas = slot.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+const dpr = canvas.width / size;
+
+// the glyph's own pixels — the ground truth the scorer compares against
+function glyphPixels() {
+  const off = document.createElement('canvas');
+  off.width = off.height = size;
+  const o = off.getContext('2d');
+  o.font = `${size * 0.6}px Amiri, serif`;
+  o.textAlign = 'center';
+  o.textBaseline = 'alphabetic';
+  o.fillText(GLYPH, size / 2, size * 0.73);
+  const d = o.getImageData(0, 0, size, size).data;
+  const px = [];
+  for (let y = 0; y < size; y += 3) {
+    for (let x = 0; x < size; x += 3) if (d[(y * size + x) * 4 + 3] >= 128) px.push([x, y]);
+  }
+  return px;
+}
+
+function drawAlong(pts) {
+  ctx.save();
+  ctx.strokeStyle = '#14555A';
+  ctx.lineWidth = 6;
+  ctx.lineCap = 'round';
+  for (const [x, y] of pts) {
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x + 0.01, y);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+await document.fonts.ready;
+const px = glyphPixels();
+say('glyph: ' + GLYPH + ' · target sample pixels: ' + px.length + ' · devicePixelRatio: ' + dpr);
+
+// 1. perfect trace
+drawAlong(px);
+say('RESULT perfect-trace  ' + JSON.stringify(trace.checkCoverage()));
+trace.clear();
+
+// 2. left-half trace (everything left of the middle)
+drawAlong(px.filter(([x]) => x < size / 2));
+say('RESULT left-half-trace ' + JSON.stringify(trace.checkCoverage()));
+trace.clear();
+
+// 2b. nearly complete (90% of pixels, small gaps) — must still pass
+drawAlong(px.filter((_, i) => i % 10 !== 0));
+say('RESULT trace-90pct    ' + JSON.stringify(trace.checkCoverage()));
+trace.clear();
+
+// 3. scribble: fill the whole canvas with ink
+ctx.fillStyle = 'rgba(20,85,90,0.95)';
+ctx.fillRect(0, 0, size, size);
+say('RESULT scribble       ' + JSON.stringify(trace.checkCoverage()));
+trace.clear();
+
+// 4. empty canvas
+say('RESULT empty          ' + JSON.stringify(trace.checkCoverage()));
+
+// leave a thin-brush trace visible for a visual check
+drawAlong(px);
+document.body.dataset.qa = 'done';
+</script>
+</body>
+</html>
