@@ -9,13 +9,16 @@ SOURCE (also documented in assets/audio/letters/CREDITS.md):
 WHAT IT DOES:
   1. Resolves download URLs for the 35 selected clips (28 letters + 7 alternates)
      via one Commons API call.
-  2. Downloads originals (.wav) into cache/letters_raw/ (polite: 2 s between
-     downloads, retries on 429/503).
+  2. Downloads originals (.wav) into cache/letters_raw/.
+     NOTE: upload.wikimedia.org rate-limits bursts (HTTP 429), so downloads are
+     paced (SLEEP_BETWEEN seconds apart) and retries honour Retry-After.
+     Expect ~6-8 minutes for a full run; the script is idempotent and resumes
+     wherever it stopped if re-run.
   3. Converts to mono MP3 96 kbps with ffmpeg into assets/audio/letters/<id>.mp3.
   4. Writes assets/audio/letters/CREDITS.md (attribution table).
   5. Regenerates tests/letters-audition.html for manual review by Mayk.
 
-Idempotent — existing files are reused. Usage (from anywhere):
+Usage (from anywhere):
     python tools/fetch-letter-audio.py
 """
 import json
@@ -33,6 +36,7 @@ UA = {'User-Agent': 'QuranicArabic-site/1.0 (contact: maykeu.github.io; educatio
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'assets', 'audio', 'letters')
 RAW = os.path.join(ROOT, 'cache', 'letters_raw')
+SLEEP_BETWEEN = 10.0  # seconds between downloads (~6/min, rate-limit friendly)
 
 # local id -> Commons file title
 PLAN = [
@@ -73,18 +77,19 @@ def api(params):
         return json.load(r)
 
 
-def fetch(url, tries=4):
+def fetch(url, tries=5):
     for i in range(tries):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=90) as r:
                 return r.read()
         except urllib.error.HTTPError as e:
             if e.code in (429, 503) and i < tries - 1:
-                wait = 6 * (i + 1)
-                print(f'    http {e.code}; retry in {wait}s')
+                wait = int(e.headers.get('Retry-After') or 0) or (20 * (i + 1))
+                print(f'    http {e.code}; retry in {wait}s', flush=True)
                 time.sleep(wait)
                 continue
             raise
+    raise RuntimeError('unreachable')
 
 
 def find_ffmpeg():
@@ -175,9 +180,10 @@ def main():
             if not url:
                 raise RuntimeError('no URL resolved')
             if not os.path.exists(rawpath) or os.path.getsize(rawpath) == 0:
+                data = fetch(url)  # fetch FIRST - a failed download must not leave a 0-byte file
                 with open(rawpath, 'wb') as f:
-                    f.write(fetch(url))
-                time.sleep(2.0)  # be polite to upload.wikimedia.org
+                    f.write(data)
+                time.sleep(SLEEP_BETWEEN)
             if not os.path.exists(mp3path) or os.path.getsize(mp3path) == 0:
                 r = subprocess.run(
                     [ffmpeg, '-y', '-hide_banner', '-loglevel', 'error', '-i', rawpath,
@@ -186,17 +192,17 @@ def main():
                 if r.returncode != 0:
                     raise RuntimeError('ffmpeg: ' + (r.stderr or '')[:200])
             ok.append(tid)
-            print(f'{tid:9s} ok  {os.path.getsize(mp3path):7d} bytes  ({title})')
+            print(f'{tid:9s} ok  {os.path.getsize(mp3path):7d} bytes  ({title})', flush=True)
         except Exception as e:
             fails.append((tid, title, repr(e)))
-            print(f'{tid:9s} FAIL  {title}  {e}')
+            print(f'{tid:9s} FAIL  {title}  {e}', flush=True)
 
     write_credits()
     write_audition_page()
     total = sum(os.path.getsize(os.path.join(OUT, t + '.mp3')) for t in ok)
-    print(f'\nDONE ok={len(ok)} fail={len(fails)} total_mp3={total // 1024} KB')
+    print(f'\nDONE ok={len(ok)} fail={len(fails)} total_mp3={total // 1024} KB', flush=True)
     for f in fails:
-        print('  FAILED:', f)
+        print('  FAILED:', f, flush=True)
     return 1 if fails else 0
 
 

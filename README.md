@@ -1,0 +1,43 @@
+# Quranic Arabic
+
+A personal, mobile-first web app for learning **reading, writing and understanding Qur'anic Arabic** —
+the Arabic script, letter tracing, the 150 most frequent words, and verse study word by word with audio.
+
+Plain HTML/CSS/JS (ES modules) — no build step, no runtime dependencies. Installable as a PWA and
+works offline once loaded.
+
+## Run locally
+
+```bash
+python -m http.server 8080
+# open http://localhost:8080/
+```
+
+Serve over HTTP — ES modules and fetch don't work from `file://`.
+
+## Deploy
+
+GitHub Pages, from the `main` branch (root). Push to `main` to deploy.
+
+## Structure
+
+- Pages: `index.html`, `letters.html`, `words.html`, `verses.html`, `practice.html`, `progress.html`, `about.html`
+- `css/styles.css` — design tokens + all styles (light/dark)
+- `js/lib/` — store, audio URLs, data loader, progress, SRS · `js/ui/` — chrome, player, toast, tracing · `js/pages/` — one module per page
+- `data/` — generated dataset: full Qur'an (114 surahs, word-by-word transliteration/gloss/audio), top-150 vocabulary, letters, harakat, reciters, grammar notes
+- `assets/` — self-hosted Amiri font, icons, letter audio
+- `tools/` — regeneration scripts (Node + Python) · `tests/` — unit tests + browser smoke tests
+
+## Verification
+
+```bash
+node --test tests/*.test.js     # unit tests
+node tools/validate-data.mjs    # dataset audit (114 surahs / 6236 ayahs)
+```
+
+## Sources & licensing
+
+- Qur'an text, word-by-word audio: [quran.com](https://quran.com) / QuranCDN · verse recitations: cdn.islamic.network (Alafasy, Husary, Minshawi, Abdul Basit)
+- Letter audio clips: Wikimedia Commons, **CC BY-SA 4.0** — attribution included with the audio files
+- Font: [Amiri](https://github.com/aliftype/amiri), **SIL OFL**
+- Translations: **Pickthall** (public domain) and **Saheeh International** (© its publisher; distributed via quran.com) — included here for personal study. For public redistribution, prefer an openly-licensed translation.
