@@ -25,14 +25,15 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const QURAN = path.join(ROOT, 'data', 'quran');
 
 // The curated selection — concrete, beginner-friendly words. { bare, ref } pins
-// a specific verified occurrence (so gloss/audio/transliteration all agree).
+// a specific verified occurrence (so gloss/audio/transliteration all agree;
+// refs chosen so the word-by-word clip verifiably exists on the CDN).
 const CURATED = [
-  'يوم', 'عذاب', 'عند', 'خير', 'قبل', 'سبيل', 'خلق', 'بين', 'قوم', 'كيف',
+  'يوم', { bare: 'عذاب', ref: '2:10' }, 'عند', 'خير', 'قبل', 'سبيل', 'خلق', 'بين', 'قوم', 'كيف',
   'فرعون', 'علم', { bare: 'نفس', ref: '2:123' }, { bare: 'ملك', ref: '12:31' },
-  'نار', 'رسل', 'وجه', 'عين', 'دين', { bare: 'طين', ref: '7:12' },
+  'نار', 'رسل', 'وجه', 'عين', 'دين', { bare: 'طين', ref: '6:2' },
   { bare: 'ظلم', ref: '40:17' }, 'نور', { bare: 'عبد', ref: '43:59' },
   'بيت', 'ريح', 'لسان', 'جبل', { bare: 'كتاب', ref: '18:27' },
-  { bare: 'حكم', ref: '60:10' }, 'فلك', 'بحر', { bare: 'سمع', ref: '3:181' },
+  { bare: 'حكم', ref: '5:43' }, 'فلك', 'بحر', { bare: 'سمع', ref: '3:181' },
   'صبر', 'شكر', { bare: 'قلب', ref: '50:37' }, { bare: 'عرش', ref: '27:23' },
   { bare: 'لحم', ref: '6:145' }, { bare: 'ذنب', ref: '81:9' }, 'رزق', 'طور',
 ];

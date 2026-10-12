@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T20:04:36.850Z",
+ "generated": "2026-10-12T20:25:01.996Z",
  "count": 40,
  "words": [
   {
@@ -23,8 +23,8 @@
    "translit": "ʿadhābun",
    "gloss": "a punishment",
    "count": 150,
-   "ref": "2:7",
-   "audio": "wbw/002_007_013.mp3",
+   "ref": "2:10",
+   "audio": "wbw/002_010_009.mp3",
    "letters": [
     "ayn",
     "dhal",
@@ -297,8 +297,8 @@
    "translit": "ṭīnin",
    "gloss": "clay",
    "count": 8,
-   "ref": "7:12",
-   "audio": "wbw/007_012_018.mp3",
+   "ref": "6:2",
+   "audio": "wbw/006_002_005.mp3",
    "letters": [
     "tta",
     "ya",
@@ -432,10 +432,10 @@
    "bare": "حكم",
    "ar": "حُكْمُ",
    "translit": "ḥuk'mu",
-   "gloss": "the Judgment",
+   "gloss": "the Command",
    "count": 3,
-   "ref": "60:10",
-   "audio": "wbw/060_010_056.mp3",
+   "ref": "5:43",
+   "audio": "wbw/005_043_006.mp3",
    "letters": [
     "ha",
     "kaf",
