@@ -281,16 +281,18 @@ function renderListen() {
       <div class="listen-word" lang="ar" dir="rtl">${esc(w.ar)}</div>
       <p class="center muted">${esc(w.translit)} — ${esc(w.gloss)}</p>
       <div class="row" style="justify-content:center">
-        <button type="button" class="btn btn-ghost" id="again">🔊 Hear it again</button>
-        <button type="button" class="btn" id="next">I said it — next →</button>
+        <button type="button" class="btn" id="hear">🔊 Hear it</button>
+        <button type="button" class="btn btn-ghost" id="next">I said it — next →</button>
       </div>
-      <p class="pr-note center">Say each word out loud before moving on. Ten minutes a day beats an hour a week.</p>
+      <p class="pr-note center">Nothing plays on its own — press “Hear it”, say the word out loud, then move on.</p>
     </section>`);
 
   const playCur = () => play(wbwFromRef(w.audio), w.bare);
-  playCur();
 
-  document.getElementById('again').addEventListener('click', playCur);
+  document.getElementById('hear').addEventListener('click', (e) => {
+    playCur();
+    e.currentTarget.textContent = '🔊 Hear it again';
+  });
   document.getElementById('next').addEventListener('click', () => {
     const cur = get('practice', { day: today(), count: 0 });
     const n = (cur.day === today() ? cur.count : 0) + 1;
@@ -317,7 +319,13 @@ function renderQuiz() {
 
   const w = s.round[s.i];
   s.answered = false;
-  const options = pickOptions(w, state.vocab, 4);
+  // Options are built once per question (a re-render must never reshuffle them) and
+  // stay hidden until the learner presses play — nothing plays on its own.
+  if (s.optionsFor !== s.i) {
+    s.options = pickOptions(w, state.vocab, 4);
+    s.optionsFor = s.i;
+    s.heard = false;
+  }
 
   shell('quiz', `
     <section class="card pr-card">
@@ -326,19 +334,24 @@ function renderQuiz() {
         <span class="counter-chip">${s.i + 1} / ${s.round.length}</span>
       </div>
       <div class="row" style="justify-content:center">
-        <button type="button" class="btn btn-ghost" id="replay">🔊 Play the word</button>
+        <button type="button" class="btn${s.heard ? ' btn-ghost' : ''}" id="replay">🔊 ${s.heard ? 'Play it again' : 'Hear the word'}</button>
       </div>
-      <div class="sound-grid" id="options">
-        ${options
+      <div class="sound-grid" id="options"${s.heard ? '' : ' hidden'}>
+        ${s.options
           .map((o) => `<button type="button" class="sound-opt" data-rank="${o.rank}" lang="ar" dir="rtl">${esc(o.ar)}</button>`)
           .join('')}
       </div>
-      <p class="muted center" id="sound-feedback">&nbsp;</p>
+      <p class="muted center" id="sound-feedback">${s.heard ? '&nbsp;' : 'Press “Hear the word” to start.'}</p>
     </section>`);
 
   const playCur = () => play(wbwFromRef(w.audio), 'Hear the word');
-  playCur();
-  document.getElementById('replay').addEventListener('click', playCur);
+  document.getElementById('replay').addEventListener('click', () => {
+    playCur();
+    if (!s.heard) {
+      s.heard = true;
+      renderQuiz(); // reveal the options (the sound keeps playing in the player bar)
+    }
+  });
 
   const fb = document.getElementById('sound-feedback');
   for (const btn of main.querySelectorAll('.sound-opt')) {
@@ -356,6 +369,8 @@ function renderQuiz() {
       fb.innerHTML = `${correct ? '✓' : '✗ It was'} <span lang="ar" dir="rtl">${esc(w.ar)}</span> — ${esc(w.translit)} · ${esc(w.gloss)}`;
       setTimeout(() => {
         s.i += 1;
+        s.heard = false;
+        s.optionsFor = -1;
         renderQuiz();
       }, correct ? 900 : 1700);
     });
@@ -392,16 +407,32 @@ function buildRecallQueue() {
 }
 
 async function renderRecall() {
+  const segBar = `
+    <nav class="seg" aria-label="Recall source" style="margin:0 0 12px">
+      <a href="#" data-src="auto" class="${state.recall.single ? '' : 'active'}">My verses</a>
+      <a href="#" data-src="one" class="${state.recall.single ? 'active' : ''}">One verse</a>
+    </nav>`;
+
+  // One-verse mode with nothing chosen yet: ask — never auto-open the picker.
+  if (state.recall.single && !state.recall.focus) {
+    shell('recall', `
+      ${segBar}
+      <section class="card center">
+        <h2>One verse</h2>
+        <p class="muted">Drill a single verse on its own. Nothing is chosen yet.</p>
+        <div class="row" style="justify-content:center">
+          <button type="button" class="btn" id="choose">Choose a verse</button>
+        </div>
+      </section>`);
+    document.getElementById('choose').addEventListener('click', openRecallPicker);
+    wireRecallSeg();
+    return;
+  }
+
   if (!state.recall.queue.length) {
     state.recall = { ...state.recall, queue: buildRecallQueue(), i: 0, revealed: false, got: 0 };
   }
   const r = state.recall;
-
-  const segBar = `
-    <nav class="seg" aria-label="Recall source" style="margin:0 0 12px">
-      <a href="#" data-src="auto" class="${r.single ? '' : 'active'}">My verses</a>
-      <a href="#" data-src="one" class="${r.single ? 'active' : ''}">One verse</a>
-    </nav>`;
 
   if (r.i >= r.queue.length) {
     shell('recall', `
@@ -463,19 +494,20 @@ async function renderRecall() {
   document.getElementById('got').addEventListener('click', () => grade(true));
 
   const choose = document.getElementById('choose');
-  if (choose) {
-    choose.addEventListener('click', () =>
-      openVersePicker({
-        onPick: (cs, ca) => {
-          state.recall.focus = { s: cs, a: ca };
-          state.recall = { ...state.recall, queue: [], i: 0, revealed: false, got: 0 };
-          savePractice({ recallVerse: state.recall.focus, recallSingle: true });
-          renderRecall();
-        },
-      }),
-    );
-  }
+  if (choose) choose.addEventListener('click', openRecallPicker);
   wireRecallSeg();
+}
+
+// Choosing a verse is always an explicit step (never triggered by switching tabs).
+function openRecallPicker() {
+  openVersePicker({
+    onPick: (cs, ca) => {
+      state.recall.focus = { s: cs, a: ca };
+      state.recall = { ...state.recall, queue: [], i: 0, revealed: false, got: 0 };
+      savePractice({ recallVerse: state.recall.focus, recallSingle: true });
+      renderRecall();
+    },
+  });
 }
 
 function wireRecallSeg() {
@@ -483,25 +515,11 @@ function wireRecallSeg() {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const one = link.dataset.src === 'one';
+      if (!!state.recall.single === one) return;
+      // Switching tabs only switches tabs — the picker opens from "Choose a verse".
       state.recall = { ...state.recall, single: one, queue: [], i: 0, revealed: false, got: 0 };
       savePractice({ recallSingle: one });
-      if (one && !state.recall.focus) {
-        openVersePicker({
-          onPick: (cs, ca) => {
-            state.recall.focus = { s: cs, a: ca };
-            savePractice({ recallVerse: state.recall.focus });
-            renderRecall();
-          },
-          onClose: () => {
-            if (!state.recall.focus) {
-              state.recall.single = false;
-              renderRecall();
-            }
-          },
-        });
-      } else {
-        renderRecall();
-      }
+      renderRecall();
     });
   }
 }

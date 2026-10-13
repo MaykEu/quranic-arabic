@@ -302,5 +302,22 @@ button.surah-row {
 .memo-on { background: var(--brand2); border-color: var(--brand2); color: #fff; }
 [data-theme="dark"] .memo-on { color: var(--brand-ink); }
 .ay-memo:disabled { opacity: 0.4; cursor: default; }
-.sr-done { color: var(--brand2); font-weight: 700; font-size: 13px; }
+/* memorised = the same 3px brand edge everywhere (verses, surahs, list rows) */
+.surah-row.memo,
+.surah-head.memo { box-shadow: inset 3px 0 0 var(--brand2); }
+.sr-done {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--brand2);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+[data-theme="dark"] .sr-done { color: var(--brand-ink); }
 .whole-tag { color: var(--brand2); font-weight: 600; font-size: 12px; }

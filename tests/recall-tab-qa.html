@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recall tab QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/reading.css">
+</head>
+<body>
+<main></main>
+<script type="module">
+// The Recall drill's two tabs. New rules under test: switching tabs only switches
+// tabs (the verse picker is a separate, explicit step and must never auto-open).
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const out = {};
+const q = (s) => document.querySelector(s);
+const seg = (src) => [...document.querySelectorAll('.seg [data-src]')].find((a) => a.dataset.src === src);
+const practice = () => JSON.parse(localStorage.getItem('qa.v1.practice') || '{}');
+
+localStorage.clear();
+history.replaceState(null, '', '#recall');
+await import('../js/pages/practice.js');
+await sleep(1400);
+
+out.startsOnMyVerses = seg('auto')?.classList.contains('active') === true;
+out.noOverlayAtStart = !q('.picker-overlay');
+
+// switch to One verse: the tab must switch, and NO picker may appear
+seg('one').click();
+await sleep(500);
+out.switchedToOne = seg('one')?.classList.contains('active') === true;
+out.noPickerOnSwitch = !q('.picker-overlay');
+out.emptyStateShown = /Nothing is chosen yet/.test(document.body.textContent);
+out.chooseButton = !!q('#choose');
+out.savedSingle = practice().recallSingle === true;
+
+// only the button opens the picker
+q('#choose').click();
+await sleep(600);
+out.pickerOpensFromButton = !!q('.picker-overlay');
+
+// pick Al-Ikhlas 1 → focus set, overlay closed, verse shown
+[...document.querySelectorAll('.picker-overlay .surah-row')].find((b) => b.dataset.s === '112')?.click();
+await sleep(300);
+[...document.querySelectorAll('.pk-ayah')].find((b) => b.dataset.a === '1')?.click();
+await sleep(600);
+out.pickerClosedAfterPick = !q('.picker-overlay');
+out.focusSaved = practice().recallVerse?.s === 112 && practice().recallVerse?.a === 1;
+out.verseShown = /112:1/.test(document.body.textContent);
+out.changeVerseButton = !!q('#choose');
+
+// switching back and forth keeps the chosen verse (no picker, no reset)
+seg('auto').click();
+await sleep(400);
+out.backToMyVerses = seg('auto')?.classList.contains('active') === true && !q('.picker-overlay');
+seg('one').click();
+await sleep(600);
+out.verseKeptOnReturn = /112:1/.test(document.body.textContent) && !q('.picker-overlay');
+
+out.pass = [
+  out.startsOnMyVerses, out.noOverlayAtStart, out.switchedToOne, out.noPickerOnSwitch,
+  out.emptyStateShown, out.chooseButton, out.savedSingle, out.pickerOpensFromButton,
+  out.pickerClosedAfterPick, out.focusSaved, out.verseShown, out.changeVerseButton,
+  out.backToMyVerses, out.verseKeptOnReturn,
+].every((v) => v === true);
+
+const pre = document.createElement('pre');
+pre.id = 'result';
+pre.textContent = JSON.stringify(out, null, 1);
+document.body.appendChild(pre);
+document.body.dataset.qa = out.pass ? 'done-pass' : 'done-fail';
+</script>
+</body>
+</html>

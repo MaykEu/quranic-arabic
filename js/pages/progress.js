@@ -80,6 +80,12 @@ function memorisedCard() {
     bySurah.get(s).push(r);
   }
   const visibleCount = [...bySurah.values()].reduce((n, list) => n + list.length, 0);
+  // A whole-surah mark counts as ALL of its verses (that's what memorising it means).
+  const wholeVerseCount = wholeSurahs.reduce(
+    (n, sid) => n + ((surahNames.get(sid) || {}).verses_count || 0),
+    0,
+  );
+  const totalVerses = visibleCount + wholeVerseCount;
 
   const nameOf = (sid) => {
     const nm = surahNames.get(sid);
@@ -88,13 +94,13 @@ function memorisedCard() {
 
   return `<section class="card">
     <div class="row" style="justify-content:space-between;align-items:baseline">
-      <h3 style="margin:0">Verses memorised <span class="muted">· ${visibleCount}${wholeSurahs.length ? ` · ${wholeSurahs.length} surah${wholeSurahs.length === 1 ? '' : 's'}` : ''}</span></h3>
+      <h3 style="margin:0">Verses memorised <span class="muted">· ${totalVerses}${wholeSurahs.length ? ` · ${wholeSurahs.length} surah${wholeSurahs.length === 1 ? '' : 's'}` : ''}</span></h3>
       <a class="muted" href="verses.html">Open reader →</a>
     </div>
     ${wholeSurahs
       .map((sid) => {
         const nm = surahNames.get(sid);
-        return `<div class="memo-row">
+        return `<div class="memo-row whole">
           <div class="memo-row-head">
             <strong>${nameOf(sid)} <span class="muted">${sid}</span> <span class="whole-tag">whole surah ✓</span></strong>
             <button type="button" class="chip-x" data-surah="${sid}" aria-label="Remove ${nameOf(sid)}">✕</button>

@@ -10,19 +10,31 @@
 <body>
 <main></main>
 <script type="module">
-// Drive the real Practice page in Quiz mode: first question renders 4 unique
-// options, answering gives feedback + grades SRS, then it advances.
+// Drive the real Practice page in Quiz mode. New rules under test: nothing plays
+// on its own and the options stay hidden until the learner presses play.
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const out = {};
+const q = (s) => document.querySelector(s);
 
 localStorage.clear();
 history.replaceState(null, '', '#quiz');
 await import('../js/pages/practice.js');
 await sleep(1200);
 
-const q = (s) => document.querySelector(s);
 out.modeActive = !!q('.sound-grid');
 out.counter = q('.counter-chip')?.textContent?.trim();
+
+// before pressing play: options hidden, button asks to hear it, no player audio
+out.hiddenBeforePlay = getComputedStyle(q('#options')).display === 'none';
+out.hearButton = /Hear the word/.test(q('#replay').textContent);
+out.feedbackPrompt = /Press/.test(q('#sound-feedback').textContent);
+out.playerIdle = !q('.player-bar .bar-title') || !/playing/i.test(document.body.textContent);
+
+q('#replay').click();
+await sleep(250);
+out.optionsVisibleAfterPlay = getComputedStyle(q('#options')).display !== 'none';
+out.buttonAfterPlay = /Play it again/.test(q('#replay').textContent);
+
 const opts = [...document.querySelectorAll('.sound-opt')];
 out.optionCount = opts.length;
 const ranks = opts.map((b) => b.dataset.rank);
@@ -42,13 +54,18 @@ document.querySelectorAll('.sound-opt')[1].click();
 await sleep(120);
 out.noDoubleGrade = Object.keys(JSON.parse(localStorage.getItem('qa.v1.srs') || '{}')).length === srsBefore;
 
-// advances to the next question
-await sleep(1600);
+// advances to the next question — and that one also waits for a press
+await sleep(1800);
 out.advanced = q('.counter-chip')?.textContent?.trim() !== out.counter && !!q('.sound-grid');
+out.nextQuestionHiddenAgain =
+  getComputedStyle(q('#options')).display === 'none' && /Hear the word/.test(q('#replay').textContent);
 
-out.pass =
-  out.modeActive && out.optionCount === 4 && out.uniqueOptions && out.feedbackShown &&
-  out.marked && out.optionsDisabled && out.srsCount >= 1 && out.noDoubleGrade && out.advanced;
+out.pass = [
+  out.modeActive, out.hiddenBeforePlay, out.hearButton, out.feedbackPrompt,
+  out.optionsVisibleAfterPlay, out.buttonAfterPlay, out.optionCount === 4, out.uniqueOptions,
+  out.feedbackShown, out.marked, out.optionsDisabled, out.srsCount >= 1, out.noDoubleGrade,
+  out.advanced, out.nextQuestionHiddenAgain,
+].every((v) => v === true);
 
 const pre = document.createElement('pre');
 pre.id = 'result';

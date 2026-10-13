@@ -161,7 +161,7 @@ function renderBrowser() {
       ${surahIndex.surahs
         .map(
           (s) => `
-        <a class="surah-row" href="#${s.id}">
+        <a class="surah-row${isLearned('surahs', String(s.id)) ? ' memo' : ''}" href="#${s.id}">
           <span class="sr-num">${s.id}</span>
           <span>
             <span class="sr-name">${esc(s.name_simple)}${isLearned('surahs', String(s.id)) ? ' <span class="sr-done" title="Memorised">✓</span>' : ''}</span>
@@ -231,7 +231,7 @@ function renderSurah(focusAyah) {
   const surahDone = isLearned('surahs', String(surah.id));
 
   main.innerHTML = `
-    <div class="surah-head">
+    <div class="surah-head${surahDone ? ' memo' : ''}">
       <button type="button" class="btn btn-ghost" id="back">←</button>
       <div class="sh-titles">
         <div class="sh-name">${esc(surah.name_simple)} <span class="muted">${surah.id}</span></div>

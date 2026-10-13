@@ -717,6 +717,7 @@ svg[fill="currentColor"] { fill: currentColor; stroke: none; }
 /* ---------- memorised verses card (progress page) ---------- */
 .memo-row { display: grid; gap: 6px; padding: 8px 0; border-bottom: 1px dashed var(--line); }
 .memo-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.memo-row.whole { box-shadow: inset 3px 0 0 var(--brand2); padding-left: 10px; }
 .memo-row-head { display: flex; justify-content: space-between; align-items: baseline; }
 .memo-chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .memo-chip {
