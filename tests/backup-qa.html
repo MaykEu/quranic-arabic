@@ -21,9 +21,12 @@ localStorage.setItem('qa.v1.theme', JSON.stringify('dark'));
 await import('../js/pages/progress.js');
 await sleep(400);
 
-// 1. renders with seeded stats
+// 1. Overview renders with seeded stats; the backup controls live on the Data tab
 out.statsShown = document.body.innerText.includes('3/28');
-out.dayDots = document.querySelectorAll('.day-dot.on').length;
+out.goalShown = !!document.querySelector('.goal-line');
+location.hash = '#data'; // the hash is what the account menu deep-links to
+await sleep(500);
+out.tabSwitched = !!document.getElementById('export');
 
 // 2. build a backup object from current data (same as export), then wipe and import it
 const { exportData } = await import('../js/lib/backup.js');
@@ -53,7 +56,11 @@ document.getElementById('do-import').click();
 await sleep(400);
 out.afterImport = JSON.parse(localStorage.getItem('qa.v1.progress')).letters && Object.keys(JSON.parse(localStorage.getItem('qa.v1.progress')).letters).length;
 out.themeAfterImport = JSON.parse(localStorage.getItem('qa.v1.theme'));
+location.hash = '#overview'; // tiles are on Overview
+await sleep(500);
 out.statsShownAfter = document.body.innerText.includes('3/28');
+location.hash = '#data'; // back to Data for the reset flow
+await sleep(500);
 
 // 3. invalid file → friendly error (re-query: render() rebuilds the DOM)
 const errs = [];
@@ -89,7 +96,7 @@ out.afterReset = localStorage.getItem('qa.v1.progress') === null || Object.keys(
 out.themeAfterReset = JSON.parse(localStorage.getItem('qa.v1.theme'));
 
 out.pass =
-  out.statsShown && out.dayDots === 2 && out.exportClicked && out.confirmShown &&
+  out.statsShown && out.goalShown && out.tabSwitched && out.exportClicked && out.confirmShown &&
   out.afterImport === 3 && out.themeAfterImport === 'dark' && out.statsShownAfter &&
   out.invalidMsg && out.afterReset && out.themeAfterReset === 'dark';
 

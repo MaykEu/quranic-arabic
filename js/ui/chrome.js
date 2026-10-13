@@ -4,7 +4,8 @@
 import { get, set } from '../lib/store.js';
 import { mountPlayer } from './player.js';
 import { captureSession, signedIn, session, signIn, signOut, syncNow } from '../lib/sync.js';
-import { migrate as migrateActivity, touch as touchDay } from '../lib/activity.js';
+import { migrate as migrateActivity, touch as touchDay, day as activityDay, repsOf as activityReps } from '../lib/activity.js';
+import { count as progressCount } from '../lib/progress.js';
 
 const NAV = [
   ['index.html', 'Home', 'home'],
@@ -144,6 +145,41 @@ function buildAccount() {
     btn.classList.add('has-avatar');
   };
 
+  // Relative day for the backup hint ("today" / "yesterday" / "N days ago").
+  const relDay = (t) => {
+    const midnight = (x) => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime();
+    const diff = Math.round((midnight(new Date()) - midnight(new Date(t))) / 86400000);
+    return diff <= 0 ? 'today' : diff === 1 ? 'yesterday' : `${diff} days ago`;
+  };
+
+  // The menu rows every account menu carries — real destinations with a live
+  // hint line each (the app works fully signed out, so they show in both states).
+  const menuRows = () => {
+    const reps = activityReps(activityDay());
+    const goal = Number(get('prefs', {}).dailyGoalReps) || 30;
+    const memo = progressCount('memorised');
+    const surahs = progressCount('surahs');
+    const memoBits = [
+      memo ? `${memo} verse${memo === 1 ? '' : 's'}` : '',
+      surahs ? `${surahs} surah${surahs === 1 ? '' : 's'}` : '',
+    ].filter(Boolean);
+    const bak = get('lastBackupAt', null);
+    return `<nav class="acc-menu" aria-label="Account pages">
+      <a class="acc-row" href="progress.html">
+        <span class="acc-row-title">Progress</span>
+        <span class="acc-row-hint">${reps}/${goal} reps today</span>
+      </a>
+      <a class="acc-row" href="progress.html#memorised">
+        <span class="acc-row-title">Memorised</span>
+        <span class="acc-row-hint">${memoBits.length ? memoBits.join(' · ') : 'nothing marked yet'}</span>
+      </a>
+      <a class="acc-row" href="progress.html#data">
+        <span class="acc-row-title">Backup &amp; data</span>
+        <span class="acc-row-hint">${bak ? `last backup ${relDay(bak)}` : 'no backup yet'}</span>
+      </a>
+    </nav>`;
+  };
+
   const renderPanel = () => {
     const s = session();
     if (!s) {
@@ -152,7 +188,8 @@ function buildAccount() {
         <p class="muted">Optional — keep one progress across your phone and computer. Everything
         stays on this device until you sign in; signing in only merges your progress with your own account.</p>
         <div class="row"><button type="button" class="btn" id="acc-signin">Continue with Google</button></div>
-        <a class="btn-link" href="progress.html">Progress &amp; backup →</a>`;
+        <div class="acc-sep"></div>
+        ${menuRows()}`;
       panel.querySelector('#acc-signin').addEventListener('click', () => signIn());
       return;
     }
@@ -163,8 +200,10 @@ function buildAccount() {
         <span class="account-dot dot-${dot}"></span>
       </div>
       <p class="muted" id="acc-when">${whenText()}</p>
-      <div class="row"><button type="button" class="btn btn-ghost" id="acc-out">Sign out</button></div>
-      <a class="btn-link" href="progress.html">Progress &amp; backup →</a>`;
+      <div class="acc-sep"></div>
+      ${menuRows()}
+      <div class="acc-sep"></div>
+      <button type="button" class="btn btn-ghost acc-signout" id="acc-out">Sign out</button>`;
     panel.querySelector('#acc-out').addEventListener('click', () => {
       signOut();
       renderButton();

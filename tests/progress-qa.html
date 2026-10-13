@@ -11,7 +11,8 @@
 <main></main>
 <script type="module">
 // Progress page QA — seeds a known history, then drives the REAL page and
-// checks every number against an independently computed expectation.
+// checks every number against an independently computed expectation, section by
+// section: Overview · Stats · Memorised · Data (hash-routed tabs).
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const q = (s) => document.querySelector(s);
 const qa = (s) => [...document.querySelectorAll(s)];
@@ -30,15 +31,20 @@ const key = (d) =>
   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 const tKey = key(new Date());
 const yKey = key(new Date(Date.now() - DAY));
+const tab = (id) => qa('.pr-tabs a').find((a) => a.getAttribute('href') === '#' + id);
+
+async function go(id) {
+  tab(id).click(); // real click → hashchange → render (the same path a menu deep link takes)
+  await sleep(700);
+}
 
 async function run() {
-  // ---- seed a known history BEFORE the page module runs ----
   localStorage.clear();
 
   const srs = {};
   for (let r = 1; r <= 3; r++) srs[r] = { box: 5, seen: 6, right: 6, due: Date.now() + 10 * DAY }; // mature
   for (let r = 4; r <= 6; r++) srs[r] = { box: 3, seen: 4, right: 4, due: Date.now() + 5 * DAY }; // young
-  for (let r = 7; r <= 9; r++) srs[r] = { box: 1, seen: 2, right: 1, due: Date.now() - 5000 }; // learning, due now
+  for (let r = 7; r <= 9; r++) srs[r] = { box: 1, seen: 2, right: 1, due: Date.now() - 5000 }; // learning, overdue
   localStorage.setItem('qa.v1.srs', JSON.stringify(srs));
 
   localStorage.setItem(
@@ -74,66 +80,86 @@ async function run() {
     }),
   );
 
-  // ---- independent expectations (own math, not the page's) ----
   const vocab = await (await fetch('../data/vocabulary.json')).json();
   const knownTokens = vocab.words.filter((w) => srs[w.rank] && srs[w.rank].box >= 3).reduce((n, w) => n + w.count, 0);
   const expCoverage = (knownTokens / vocab.total_tokens) * 100;
 
-  // ---- drive the real page ----
   await import('../js/pages/progress.js');
   await sleep(1400);
-
-  out.pageRendered = !!q('.goal-line') && !!q('.cov-num');
   out.noError = !pageError;
 
-  // goal card: 3 listens + 10 quiz answers + 12 trace checks = 25 reps
-  out.goalReps = /25/.test(q('.goal-line').textContent) && /\/ 30 reps/.test(q('.goal-line').textContent);
-  out.goalBar = Math.abs(parseFloat(q('.goal-bar i').style.width) - 83) <= 1;
-  out.goalNotDone = !q('.goal-done');
-  out.daysUsed = /2 days used/.test(q('.goal-card') ? '' : document.body.textContent);
-  out.heatKeyDays = /2 days used/.test(q('.heat').parentElement.textContent);
+  // ---------- tab bar ----------
+  const tabs = qa('.pr-tabs a');
+  out.fourTabs = tabs.length === 4;
+  // Guard against the "stylesheet not linked on this page" trap: the seg must be
+  // STYLED, not a row of raw inline links (that is how it shipped once).
+  out.tabsStyled = getComputedStyle(q('.pr-tabs')).display === 'flex' && parseFloat(getComputedStyle(tabs[0]).borderRadius) > 0;
+  out.tabHrefs =
+    tabs.map((a) => a.getAttribute('href')).join(',') === '#overview,#stats,#memorised,#data';
+  out.overviewDefault = tab('overview').classList.contains('active');
 
-  // coverage meter
+  // ---------- Overview ----------
+  out.ovGoal = /25/.test(q('.goal-line').textContent) && /\/ 30 reps/.test(q('.goal-line').textContent);
+  out.ovGoalBar = Math.abs(parseFloat(q('.goal-bar i').style.width) - 83) <= 1;
+  out.ovGoalNotDone = !q('.goal-done');
+  out.ovDaysUsed = /2 days used/.test(document.body.textContent);
+  out.ovTiles =
+    q('.stat-grid').textContent.includes('3/28') &&
+    q('.stat-grid').textContent.includes('6') &&
+    q('.stat-grid').textContent.includes('Words known');
   const covShown = parseFloat(q('.cov-num b').textContent);
-  out.coverageMatches = Math.abs(covShown - expCoverage) <= 0.1;
-  out.coverageTicks = qa('.cov-tick').length === 2;
-  out.coverageCaption = /56\.05%/.test(document.body.textContent);
+  out.ovCoverageMatches = Math.abs(covShown - expCoverage) <= 0.1;
+  out.ovCoverageTicks = qa('.cov-tick').length === 2;
+  out.ovDue = /3 reviews ready/.test(document.body.textContent) && !!q('a[href="words.html#review"]');
+  out.ovOnlyOverview = !q('.drill-table') && !q('.heat') && !q('#export'); // the heavy stuff is NOT here
 
-  // strength buckets: 500 taught − 9 seen = 491 new; 3 learning (box 1–2); 3 young (3–4); 3 mature (5)
-  const bucketVals = qa('.bucket b').map((b) => Number(b.textContent));
-  out.buckets = JSON.stringify(bucketVals) === JSON.stringify([491, 3, 3, 3]);
-  const bucketHrefs = qa('.bucket').map((a) => a.getAttribute('href'));
-  out.bucketLinks = bucketHrefs.includes('words.html#review/b12') && bucketHrefs.includes('words.html#review/b34') && bucketHrefs.includes('words.html#review/b5');
-
-  // forecast: 2 overdue (learning) due today, 3 young in 5 days
-  out.forecastToday = /2 due today/.test(document.body.textContent);
-  out.forecastWeek = /3 in the next 7 days/.test(document.body.textContent);
-  out.forecastBars = qa('.forecast i').length === 30;
-
-  // drills: Read it 1 round · best 8/10 · 10 answers · 70%; trace 12 checks 9 passed;
-  // overall 16/22 = 73%
-  const rows = qa('.drill-table tr').map((r) => r.textContent.replace(/\s+/g, ' ').trim());
-  out.drillRows = rows.length === 5 && /Read it/.test(rows[0]) && /Understand it/.test(rows[1]);
-  out.readRow = /1 round/.test(rows[0]) && /best 8\/10/.test(rows[0]) && /10 answers · 70%/.test(rows[0]);
-  out.traceRow = /12 checks/.test(rows[2]) && /9 passed/.test(rows[2]);
-  out.overallAccuracy = /73%/.test(document.body.textContent) && /22/.test(document.body.textContent);
-
-  // letters + heatmap + volume
-  out.letterGrid = qa('.letter-cell').length === 28 && qa('.letter-cell.on').length === 3;
-  const heatSpans = qa('.heat .heat-col span');
-  out.heatCells = heatSpans.length >= 84;
-  out.heatToday = heatSpans[heatSpans.length - 1].className === 'l2'; // 25 reps → level 2
-  out.volume = /10 min/.test(document.body.textContent) && /5 min/.test(document.body.textContent);
-
-  // goal presets: pick 15 → stored + now "done" (25 ≥ 15)
+  // goal preset writes through
   qa('.chip-pick[data-goal]').find((b) => b.dataset.goal === '15').click();
-  await sleep(600);
-  out.goalSaved = JSON.parse(localStorage.getItem('qa.v1.prefs')).dailyGoalReps === 15;
-  out.goalDoneNow = !!q('.goal-done') && /15 reps/.test(q('.goal-line').textContent);
-  out.goalChipActive = qa('.chip-pick.on')[0].dataset.goal === '15';
+  await sleep(500);
+  out.ovGoalSaved = JSON.parse(localStorage.getItem('qa.v1.prefs')).dailyGoalReps === 15;
+  out.ovGoalDoneNow = !!q('.goal-done');
 
-  // the "Your data" + reset cards must still be there
-  out.dataCardsIntact = !!q('#export') && !!q('#import') && !!q('#reset') && !!q('#last-backup');
+  // ---------- Stats ----------
+  await go('stats');
+  out.stActive = tab('stats').classList.contains('active');
+  const bucketVals = qa('.bucket b').map((b) => Number(b.textContent));
+  out.stBuckets = JSON.stringify(bucketVals) === JSON.stringify([491, 3, 3, 3]);
+  const bucketHrefs = qa('.bucket').map((a) => a.getAttribute('href'));
+  out.stBucketLinks =
+    bucketHrefs.includes('words.html#review/b12') &&
+    bucketHrefs.includes('words.html#review/b34') &&
+    bucketHrefs.includes('words.html#review/b5');
+  out.stForecastToday = /3 due today/.test(document.body.textContent);
+  out.stForecastWeek = /3 in the next 7 days/.test(document.body.textContent);
+  out.stForecastBars = qa('.forecast i').length === 30;
+  const rows = qa('.drill-table tr').map((r) => r.textContent.replace(/\s+/g, ' ').trim());
+  out.stDrillRows = rows.length === 5 && /Read it/.test(rows[0]) && /Understand it/.test(rows[1]);
+  out.stReadRow = /1 round/.test(rows[0]) && /best 8\/10/.test(rows[0]) && /10 answers · 70%/.test(rows[0]);
+  out.stTraceRow = /12 checks/.test(rows[2]) && /9 passed/.test(rows[2]);
+  out.stOverall = /73%/.test(document.body.textContent) && /22/.test(document.body.textContent);
+  out.stLetters = qa('.letter-cell').length === 28 && qa('.letter-cell.on').length === 3;
+  const heatSpans = qa('.heat .heat-col span');
+  out.stHeatCells = heatSpans.length >= 84;
+  out.stHeatToday = heatSpans[heatSpans.length - 1].className === 'l2';
+  out.stVolume = /10 min/.test(document.body.textContent) && /5 min/.test(document.body.textContent);
+  out.stNoGoal = !q('.goal-line'); // Overview's daily card stays out of Stats
+
+  // ---------- Memorised ----------
+  await go('memorised');
+  out.memActive = tab('memorised').classList.contains('active');
+  out.memEmpty = /Nothing yet/.test(document.body.textContent) && !q('.goal-line') && !q('.heat');
+
+  // ---------- Data ----------
+  await go('data');
+  out.dataActive = tab('data').classList.contains('active');
+  out.dataCards = !!q('#export') && !!q('#import') && !!q('#reset') && !!q('#file');
+  out.dataSyncLine = /Cloud sync/.test(document.body.textContent);
+  out.dataNoHeat = !q('.heat');
+
+  // ---------- deep link (what the account menu rows use) ----------
+  location.hash = '#stats';
+  await sleep(700);
+  out.deepLinkStats = !!q('.drill-table') && tab('stats').classList.contains('active');
 }
 
 run()

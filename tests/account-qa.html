@@ -31,6 +31,10 @@ async function run() {
   out.panelHasSignin = !!q('#acc-signin');
   out.panelMentionsStaysLocal =
     /stays on this device/i.test(q('#account-panel').textContent);
+  // the menu rows exist even signed out, with a hint line each
+  out.signedOutMenuRows =
+    document.querySelectorAll('#account-panel .acc-row').length === 3 &&
+    /\d+\/30 reps today/.test(q('#account-panel').textContent);
 
   document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
   await sleep(120);
@@ -59,6 +63,21 @@ async function run() {
   out.panelWhen = /Synced (1 min|just now)/.test(q('#acc-when').textContent);
   out.panelAutoNote = !/Syncs automatically/i.test(q('#account-panel').textContent); // redundant copy stays out
   out.panelNoManualSync = !!q('#acc-out') && !q('#acc-sync'); // automatic sync only — no Sync now button
+
+  // the account menu: three real destinations with deep links + live hints,
+  // and Sign out as the LAST row (the Android account-list pattern)
+  const rows = [...document.querySelectorAll('#account-panel .acc-row')];
+  out.menuRows = rows.length === 3;
+  out.menuHrefs =
+    rows[0].getAttribute('href') === 'progress.html' &&
+    rows[1].getAttribute('href') === 'progress.html#memorised' &&
+    rows[2].getAttribute('href') === 'progress.html#data';
+  out.menuTitles = rows.map((r) => r.querySelector('.acc-row-title').textContent.trim()).join('|') === 'Progress|Memorised|Backup & data';
+  out.menuHints = rows.every((r) => (r.querySelector('.acc-row-hint').textContent || '').trim().length > 0);
+  out.menuProgressHint = /\d+\/\d+ reps today/.test(rows[0].textContent);
+  out.menuBackupHint = /backup/.test(rows[2].textContent);
+  const panelKids = [...q('#account-panel').children];
+  out.signOutLast = panelKids[panelKids.length - 1].id === 'acc-out';
 
   q('#acc-out').click();
   await sleep(150);

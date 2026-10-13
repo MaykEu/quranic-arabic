@@ -380,30 +380,45 @@ function syncLine() {
     <span id="sync-status"></span></p>`;
 }
 
-function render() {
-  const s = snapshot();
+// ---------- tabs ----------
 
-  main.innerHTML = `
-    <h2>Progress</h2>
-    ${goalCard()}
-    <section class="card">
-      <div class="stat-grid">
-        ${stat(`${s.letters}/28`, 'Letters learned')}
-        ${stat(s.known, 'Words known')}
-        ${stat(s.surahs, 'Surahs memorised')}
-        ${stat(s.verses, 'Verses read')}
+const TABS = [
+  ['overview', 'Overview'],
+  ['stats', 'Stats'],
+  ['memorised', 'Memorised'],
+  ['data', 'Data'],
+];
+
+const tabFromHash = () => {
+  const h = location.hash.replace(/^#/, '');
+  return TABS.some(([id]) => id === h) ? h : 'overview';
+};
+
+const tabBar = (tab) => `<nav class="seg pr-tabs" aria-label="Progress sections">
+  ${TABS.map(([id, label]) => `<a href="#${id}" class="${id === tab ? 'active' : ''}">${label}</a>`).join('')}
+</nav>`;
+
+const tileCard = (s) => `<section class="card">
+  <div class="stat-grid">
+    ${stat(`${s.letters}/28`, 'Letters learned')}
+    ${stat(s.known, 'Words known')}
+    ${stat(s.surahs, 'Surahs memorised')}
+    ${stat(s.verses, 'Verses read')}
+  </div>
+</section>`;
+
+const dueCard = (s) =>
+  s.due
+    ? `<section class="card">
+      <div class="row" style="justify-content:space-between;align-items:center">
+        <span>${s.due} review${s.due === 1 ? '' : 's'} ready</span>
+        <a class="btn" href="words.html#review">Review now</a>
       </div>
-    </section>
-    ${coverageCard(s)}
-    ${bucketsCard(s)}
-    ${forecastCard()}
-    ${drillsCard()}
-    ${lettersCard(s)}
-    ${heatCard()}
-    ${volumeCard()}
-    ${memorisedCard()}
+    </section>`
+    : `<section class="card"><p class="muted center">Nothing due right now — every card is scheduled ahead. ✓</p></section>`;
 
-    <section class="card">
+function dataCards() {
+  return `<section class="card">
       <h3>Your data</h3>
       <p class="muted">Your progress lives on this device. The two ways it ever leaves: the backup file
       below, and cloud sync — sign in from the account button (top-right). Nothing else is uploaded, and there is no tracking.</p>
@@ -423,6 +438,24 @@ function render() {
       <div class="row"><button type="button" class="btn btn-ghost" id="reset">Reset all progress</button></div>
       <div id="reset-box" hidden></div>
     </section>`;
+}
+
+function render() {
+  const s = snapshot();
+  const tab = tabFromHash();
+  const body =
+    tab === 'stats'
+      ? `${bucketsCard(s)}${forecastCard()}${drillsCard()}${lettersCard(s)}${heatCard()}${volumeCard()}`
+      : tab === 'memorised'
+        ? memorisedCard()
+        : tab === 'data'
+          ? dataCards()
+          : `${goalCard()}${tileCard(s)}${coverageCard(s)}${dueCard(s)}`;
+
+  main.innerHTML = `
+    <h2>Progress</h2>
+    ${tabBar(tab)}
+    ${body}`;
 
   wire();
 
@@ -462,20 +495,24 @@ function wire() {
     });
   }
 
-  // export
-  document.getElementById('export').addEventListener('click', () => {
-    downloadBackup();
-    set('lastBackupAt', Date.now());
-    document.getElementById('last-backup').textContent = lastBackupText();
-    toast('Backup downloaded');
-  });
+  // export (Data tab only)
+  const exportBtn = document.getElementById('export');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', () => {
+      downloadBackup();
+      set('lastBackupAt', Date.now());
+      document.getElementById('last-backup').textContent = lastBackupText();
+      toast('Backup downloaded');
+    });
+  }
 
-  // import
+  // import (Data tab only)
   const file = document.getElementById('file');
   const box = document.getElementById('import-box');
-  document.getElementById('import').addEventListener('click', () => file.click());
+  const importBtn = document.getElementById('import');
+  if (importBtn) importBtn.addEventListener('click', () => file.click());
 
-  file.addEventListener('change', async () => {
+  file?.addEventListener('change', async () => {
     const f = file.files && file.files[0];
     if (!f) return;
     let obj = null;
@@ -519,9 +556,10 @@ function wire() {
     });
   });
 
-  // reset (two-step)
+  // reset (two-step, Data tab only)
   const rbox = document.getElementById('reset-box');
-  document.getElementById('reset').addEventListener('click', () => {
+  const resetBtn = document.getElementById('reset');
+  if (resetBtn) resetBtn.addEventListener('click', () => {
     rbox.hidden = false;
     rbox.innerHTML = `
       <div class="confirm-box">
@@ -563,6 +601,13 @@ async function init() {
   }
   srsAll = loadSRS();
   render();
+
+  // Tabs: the hash selects the section (#stats / #memorised / #data), so the
+  // account menu can deep-link into them. Switching scrolls back to the top.
+  window.addEventListener('hashchange', () => {
+    render();
+    window.scrollTo({ top: 0 });
+  });
 
   // Reconcile in the background; keep the "synced" line fresh afterwards.
   if (configured() && signedIn()) {
