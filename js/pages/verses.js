@@ -231,7 +231,7 @@ function renderSurah(focusAyah) {
   const surahDone = isLearned('surahs', String(surah.id));
 
   main.innerHTML = `
-    <div class="surah-head${surahDone ? ' memo' : ''}">
+    <div class="surah-head">
       <button type="button" class="btn btn-ghost" id="back">←</button>
       <div class="sh-titles">
         <div class="sh-name">${esc(surah.name_simple)} <span class="muted">${surah.id}</span></div>

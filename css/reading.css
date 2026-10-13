@@ -302,9 +302,10 @@ button.surah-row {
 .memo-on { background: var(--brand2); border-color: var(--brand2); color: #fff; }
 [data-theme="dark"] .memo-on { color: var(--brand-ink); }
 .ay-memo:disabled { opacity: 0.4; cursor: default; }
-/* memorised = the same 3px brand edge everywhere (verses, surahs, list rows) */
-.surah-row.memo,
-.surah-head.memo { box-shadow: inset 3px 0 0 var(--brand2); }
+/* memorised = the same 3px brand edge on list rows and whole-surah rows
+   (NOT on the reader's surah header — there it read as a stray line beside the
+   back button; the header already states 'surah memorised') */
+.surah-row.memo { box-shadow: inset 3px 0 0 var(--brand2); }
 .sr-done {
   display: inline-flex;
   align-items: center;
