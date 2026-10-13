@@ -46,15 +46,15 @@ for (const c of index.surahs) {
     const joinedWords = a.words.map((w) => stripChk(w.ar).trim()).filter(Boolean).join(' ');
     const joinedText = a.text.split(/\s+/).map(stripChk).filter(Boolean).join(' ');
     ok(joinedWords === joinedText, `${file} ${c.id}:${a.n}: words[] do not rejoin to the ayah text`);
-    // Audio refs: strictly increasing and never below the word's position.
-    // (Numbers may skip where recitation pause-marks occupy their own CDN segments.)
-    let audioPrev = 0;
-    for (let wi = 0; wi < a.words.length; wi++) {
-      const m = /^wbw\/\d{3}_\d{3}_(\d{3})\.mp3$/.exec(a.words[wi].audio);
-      const num = m ? Number(m[1]) : 0;
-      ok(num > audioPrev && num >= wi + 1, `${file} ${c.id}:${a.n} w${wi + 1}: audio ordering (${num})`);
-      audioPrev = num;
-    }
+    // Audio refs must be the word's own clip: wbw/sss_aaa_<pos>.mp3 where pos
+    // is the word's compacted index (1-based). The CDN numbers files
+    // contiguously; quran.com's audio_url counts pause-mark slots and is off
+    // by one after every pause mark — never trust it (Oct 2026 finding).
+    a.words.forEach((w, wi) => {
+      const want = `wbw/${String(c.id).padStart(3, '0')}_${String(a.n).padStart(3, '0')}_${String(wi + 1).padStart(3, '0')}.mp3`;
+      ok(w.n === wi + 1, `${file} ${c.id}:${a.n} w${w.n}: position not compacted (index ${wi + 1})`);
+      ok(w.audio === want, `${file} ${c.id}:${a.n} w${wi + 1}: audio ref "${w.audio}" != "${want}"`);
+    });
   }
 }
 ok(expectedGlobal === 6236, `total ayahs walked: ${expectedGlobal}, expected 6236`);

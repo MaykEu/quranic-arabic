@@ -31,10 +31,10 @@ async function getJson(url, tries = 3) {
   }
 }
 
-// Known upstream quirks in quran.com word-by-word audio (verified 2026-10-12):
-// 36:52 word 7 arrives with an empty audio_url; the verse has one extra pause-mark
-// segment (_007), so the word is file _008. Mirrors the fix in data/quran/036.json.
-const AUDIO_FIXES = { "36:52:7": "wbw/036_052_008.mp3" };
+// (Oct 2026: an AUDIO_FIXES entry for 36:52:7 previously corrected an empty
+// audio_url assuming pause marks own CDN file slots — STT verification of the
+// actual files disproved that. Files are contiguous by word position, so audio
+// refs are now derived from the position directly; no special cases exist.)
 
 // Raw word-text corrections where the upstream API's word differs from its own verse
 // text (verified against independent Tanzil Uthmani copies, Oct 2026):
@@ -97,10 +97,10 @@ for (const ch of chapters.slice(0, limit)) {
           ar: fixWordText(`${ch.id}:${v.verse_number}:${w.position}`, clean(w.text_uthmani)),
           translit: clean(w.transliteration?.text ?? ''),
           gloss: clean(w.translation?.text ?? ''),
-          audio:
-            AUDIO_FIXES[`${ch.id}:${v.verse_number}:${w.position}`] ||
-            w.audio_url ||
-            `wbw/${String(ch.id).padStart(3, '0')}_${String(v.verse_number).padStart(3, '0')}_${String(w.position).padStart(3, '0')}.mp3`,
+          // The CDN numbers word files contiguously (file _00N = word #N of the
+          // verse). quran.com's `audio_url` counts pause-mark slots and drifts
+          // +1 after every pause mark — never use it; derive from the position.
+          audio: `wbw/${String(ch.id).padStart(3, '0')}_${String(v.verse_number).padStart(3, '0')}_${String(w.position).padStart(3, '0')}.mp3`,
         }));
       const tr = {};
       for (const t of v.translations ?? []) {
