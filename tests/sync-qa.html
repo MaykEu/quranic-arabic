@@ -124,10 +124,18 @@ async function run() {
   const cap = S.captureSession(`https://x/#access_token=aa.${payload}.cc&refresh_token=rr&expires_in=3600`);
   out.captureOk = !!(cap && cap.user && cap.user.email === 'z@y.x');
 
-  // restore a signed-in session, then drive the real Progress page
+  // restore a signed-in session, then drive the real Progress page. Since
+  // qa-v33 the sync line + Sign out live on the Data tab, so open it via hash.
   localStorage.setItem('qa.v1.sync.session', JSON.stringify(session('qa@example.com')));
+  location.hash = '#data';
   await import('../js/pages/progress.js');
-  await sleep(700);
+  await sleep(900);
+  if (!q('#sync-out') && !q('#sync-in')) {
+    location.hash = '#overview';
+    await sleep(300);
+    location.hash = '#data';
+    await sleep(700);
+  }
 
   out.cardSignedIn = document.body.innerText.includes('qa@example.com');
   out.cardHasButtons = !!q('#sync-out') && !q('#sync-in') && !q('#sync-now'); // auto-sync only

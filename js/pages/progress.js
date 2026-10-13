@@ -208,7 +208,7 @@ function lettersCard(s) {
   const cells = letters
     .map((l) => {
       const on = isLearned('letters', l.id);
-      return `<a class="letter-cell ${on ? 'on' : ''}" href="letters.html" title="${esc(l.name)}" lang="ar" dir="rtl">${esc(l.ar)}</a>`;
+      return `<a class="ltr-chip ${on ? 'on' : ''}" href="letters.html" title="${esc(l.name)}" lang="ar" dir="rtl">${esc(l.ar)}</a>`;
     })
     .join('');
   return `<section class="card">
@@ -216,7 +216,7 @@ function lettersCard(s) {
       <h3 style="margin:0">Letters <span class="muted">· ${s.letters}/28</span></h3>
       <a class="muted" href="letters.html">Practise →</a>
     </div>
-    <div class="letter-grid">${cells}</div>
+    <div class="ltr-grid">${cells}</div>
     <p class="muted">Filled tiles are letters you have marked as learned. Tracing and audio live on the Letters page.</p>
   </section>`;
 }

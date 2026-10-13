@@ -35,7 +35,10 @@ One document per account in Supabase (`progress` table, `doc` jsonb):
   both sides keeps the **earliest** `at` (when learning started).
 - **Un-marking** writes a tombstone (`tomb` → `doc.tombstones`). A tombstone removes an
   entry unless the entry was re-marked **after** it — so "un-mark on the phone" is not
-  resurrected by "still marked on the laptop", and vice versa.
+  resurrected by "still marked on the laptop", and vice versa. The test runs **per entry**:
+  an entry newer than its tombstone survives even when the other device still carries the
+  stale older mark (testing only the kept "earliest" value let a stale mark delete a valid
+  re-mark on one merge and resurrect it on the next — fixed in the qa-v34 audit).
 - **SRS cards**: the most recent review (`at`) wins; on an exact tie, the higher box wins
   (never lose progress). Cards are never deleted by merge.
 - **Practice counters**: per day, `max` of the two counts (all practice counts).

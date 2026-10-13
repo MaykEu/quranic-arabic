@@ -49,12 +49,14 @@ out.surahButtonOn =
 out.verseButtonsDisabled = [...document.querySelectorAll('.ay-memo')].every((b) => b.disabled);
 out.chipSaysSurah = q('#memo-count').textContent.trim() === '· surah memorised';
 
-// now the Progress page
+// Progress page: the stat tile is on Overview, the memorised card on its own tab
 await import('../js/pages/progress.js');
-await sleep(700);
+await sleep(900);
 out.gridHasStat = document.body.innerText.includes('Surahs memorised');
 const surahTile = [...document.querySelectorAll('.stat')].find((el) => el.textContent.includes('Surahs memorised'));
 out.surahTileValue = !!surahTile && surahTile.querySelector('b').textContent === '1';
+location.hash = '#memorised';
+await sleep(800);
 out.wholeRow = document.body.innerText.includes('whole surah ✓') && !!q('.chip-x[data-surah="112"]');
 out.verseChipHidden = !q('.memo-chip a[href$="#112:1"]'); // superseded by the whole-surah mark
 

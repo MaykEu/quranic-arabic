@@ -137,7 +137,7 @@ async function run() {
   out.stReadRow = /1 round/.test(rows[0]) && /best 8\/10/.test(rows[0]) && /10 answers · 70%/.test(rows[0]);
   out.stTraceRow = /12 checks/.test(rows[2]) && /9 passed/.test(rows[2]);
   out.stOverall = /73%/.test(document.body.textContent) && /22/.test(document.body.textContent);
-  out.stLetters = qa('.letter-cell').length === 28 && qa('.letter-cell.on').length === 3;
+  out.stLetters = qa('.ltr-chip').length === 28 && qa('.ltr-chip.on').length === 3;
   const heatSpans = qa('.heat .heat-col span');
   out.stHeatCells = heatSpans.length >= 84;
   out.stHeatToday = heatSpans[heatSpans.length - 1].className === 'l2';

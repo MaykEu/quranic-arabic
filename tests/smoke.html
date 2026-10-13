@@ -60,10 +60,20 @@
     } catch (e) { all = false; line(false, 'audio: ' + (e.message || e)); }
 
     all = line('serviceWorker' in navigator, 'service workers supported') && all;
+    // The SW is deliberately DISABLED on localhost (tools/serve.py serves
+    // no-store there) — that is a local-dev setting, not a defect. Only the
+    // real (https) deployment is expected to have a registered worker.
+    const localHost = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
     try {
       const sw = await navigator.serviceWorker.getRegistration();
-      line(!!sw, sw ? 'service worker registered' : 'service worker not registered yet (reload once)');
-    } catch {}
+      if (localHost) {
+        line(true, 'service worker: disabled on localhost by design (live site registers it)');
+      } else {
+        all = line(!!sw, sw ? 'service worker registered' : 'service worker not registered — reload once and re-run') && all;
+      }
+    } catch (e) {
+      all = line(false, 'service worker check: ' + (e.message || e)) && all;
+    }
 
     localStorage.setItem('qa.v1.probe', '1');
     all = line(localStorage.getItem('qa.v1.probe') === '1', 'localStorage works') && all;

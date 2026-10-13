@@ -166,13 +166,16 @@
 }
 
 /* ---- letters grid ---- */
-.letter-grid {
+/* Letters grid — names are deliberately distinct from the Letters PAGE's
+   .letter-grid/.letter-cell (styles.css) so the two never mix when both
+   stylesheets are loaded on one page. */
+.ltr-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
   gap: 0.4rem;
   margin-top: 0.5rem;
 }
-.letter-cell {
+.ltr-chip {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,7 +187,7 @@
   color: inherit;
   opacity: 0.45;
 }
-.letter-cell.on {
+.ltr-chip.on {
   opacity: 1;
   border-color: var(--brand2);
   box-shadow: inset 0 0 0 1px var(--brand2);

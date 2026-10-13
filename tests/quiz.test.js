@@ -124,7 +124,7 @@ test('glossOptions: particle glosses get fair options (function-word fallback)',
 });
 
 test('meaning mode covers the whole vocabulary with fair distractors', () => {
-  const vocab = JSON.parse(readFileSync('data/vocabulary.json', 'utf8')).words;
+  const vocab = JSON.parse(readFileSync(new URL('../data/vocabulary.json', import.meta.url), 'utf8')).words;
   let ok = 0;
   const skipped = [];
   for (const w of vocab) {

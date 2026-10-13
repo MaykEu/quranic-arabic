@@ -75,7 +75,7 @@ export function applyDoc(doc) {
 
 // ---------- merge ----------
 
-export function mergeProgress(p, q, resetAt = 0) {
+export function mergeProgress(p, q, resetAt = 0, tombstones = {}) {
   p = p && typeof p === 'object' ? p : {};
   q = q && typeof q === 'object' ? q : {};
   const out = {};
@@ -86,7 +86,13 @@ export function mergeProgress(p, q, resetAt = 0) {
       for (const [id, e] of Object.entries(src)) {
         if (!e || typeof e !== 'object' || typeof e.at !== 'number') continue;
         if (e.at < resetAt) continue;
-        if (!m[id] || e.at < m[id].at) m[id] = { ...e }; // earliest learning date
+        // A tombstone kills a mark only if the mark is older. Entries newer than
+        // the tombstone are legitimate RE-marks and must survive — testing each
+        // entry (not just the earliest one) is what makes that true even when
+        // the other device still carries the stale older mark.
+        const t = tombstones[`${bucket}:${id}`] || 0;
+        if (t && e.at <= t) continue;
+        if (!m[id] || e.at < m[id].at) m[id] = { ...e }; // earliest surviving learning date
       }
     }
     out[bucket] = m;
@@ -227,9 +233,9 @@ export function mergeDocs(docA, docB, now = Date.now()) {
   }
   data._meta = meta;
 
-  const progress = mergeProgress(a.data.progress, b.data.progress, resetAt);
+  const progress = mergeProgress(a.data.progress, b.data.progress, resetAt, mergeTombstones(a.tombstones, b.tombstones, resetAt));
   const tombstones = mergeTombstones(a.tombstones, b.tombstones, resetAt);
-  dropTombstoned(progress, tombstones);
+  dropTombstoned(progress, tombstones); // defence in depth: entries are already filtered
   data.progress = progress;
   data.srs = mergeSrs(a.data.srs, b.data.srs, resetAt);
   // The activity log: union of days, per-day per-field max (never double-count).

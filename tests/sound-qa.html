@@ -71,7 +71,7 @@ async function run() {
   out.meaningOwnRound = counter() === '1 / 10' && dots() === 1;
   const glossOpts = [...document.querySelectorAll('.sound-opt.gloss-opt')];
   out.glossOptions = glossOpts.length === 4;
-  out.glossLatin = glossOpts.every((b) => /^[A-Za-z ,'().-]+$/.test(b.textContent.trim()));
+  out.glossLatin = glossOpts.every((b) => !/[\u0600-\u06FF]/.test(b.textContent)); // English options, never Arabic script
   out.glossUnique = new Set(glossOpts.map((b) => b.textContent.trim())).size === 4;
   out.prefSaved = JSON.parse(localStorage.getItem('qa.v1.prefs') || '{}').quizMode === 'meaning';
 
