@@ -48,3 +48,7 @@ node tools/validate-data.mjs    # dataset audit (114 surahs / 6236 ayahs)
 - Letter audio clips: Wikimedia Commons, **CC BY-SA 4.0** — attribution included with the audio files
 - Font: [Amiri](https://github.com/aliftype/amiri), **SIL OFL**
 - Translations: **Pickthall** (public domain) and **Saheeh International** (© its publisher; distributed via quran.com) — included here for personal study. For public redistribution, prefer an openly-licensed translation.
+
+## Version history
+
+- **v0.1 — checkpoint 1** (2026-10-13): letters (+ tracing), 150-word vocabulary with spaced repetition, Build mode (assemble words from letter tiles), full Qur'an reader (114 surahs, word-by-word audio, 4 reciters, translations, grammar notes), Practice drills (read-aloud, tracing, listen & repeat, recall).
