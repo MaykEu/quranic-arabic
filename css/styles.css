@@ -624,3 +624,16 @@ svg[fill="currentColor"] { fill: currentColor; stroke: none; }
   margin: 12px 0 6px;
   letter-spacing: 0.02em;
 }
+
+/* ---------- trace brush slider ---------- */
+.trace-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 8px;
+}
+.trace-controls input[type="range"] {
+  flex: 0 1 190px;
+  accent-color: var(--brand2);
+}

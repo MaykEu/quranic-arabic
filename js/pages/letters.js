@@ -138,13 +138,13 @@ function renderTrace(id) {
       <button type="button" class="btn" id="check">Check</button>
       <button type="button" class="btn btn-ghost" id="erase">Erase</button>
     </div>
-    <p class="center muted" id="trace-msg">Trace over the dashed letter with your finger or mouse.</p>`;
+    <p class="center muted" id="trace-msg">Trace the dashed letter — stay on the line, dots included.</p>`;
 
   const trace = mountTrace(main.querySelector('#trace-slot'), l.ar);
 
   main.querySelector('#erase').addEventListener('click', () => trace.clear());
   main.querySelector('#check').addEventListener('click', () => {
-    const { coverage, inkNear, ok } = trace.checkCoverage();
+    const { coverage, precision, missedParts, ok } = trace.checkCoverage();
     const msg = main.querySelector('#trace-msg');
     const pct = Math.round(coverage * 100);
     if (ok) {
@@ -152,10 +152,12 @@ function renderTrace(id) {
       msg.textContent = `Nice — ${pct}% of the letter covered. Marked as learned.`;
       toast(`${l.name} marked as learned`);
       setTimeout(() => renderDetail(l.id), 900);
-    } else if (coverage >= 0.75 && inkNear < 0.6) {
-      msg.textContent = 'You covered the letter, but most of your ink is off the shape — follow the dashed line and try again.';
+    } else if (missedParts > 0) {
+      msg.textContent = 'Some parts are missing — check the dots and trace every stroke of the letter.';
+    } else if (precision < 0.88) {
+      msg.textContent = 'Too much of your ink is off the dashed line — follow it exactly (don\u2019t fill or scribble).';
     } else {
-      msg.textContent = `Almost — ${pct}% covered. Trace a little more and check again.`;
+      msg.textContent = `Almost — ${pct}% covered. Close the gaps and check again.`;
     }
   });
   main.querySelector('#back').addEventListener('click', () => renderDetail(id));

@@ -9,11 +9,10 @@
 <body>
 <main>
   <h2>Trace component QA</h2>
-  <p class="muted">Automated checks of the tracing scorer. Each case draws programmatically on the
-  component canvas and reads its verdict. Serve over HTTP and open this page, or run
-  <code>msedge --headless=new --dump-dom …/tests/trace-check.html</code> to read the results.</p>
+  <p class="muted">Draws deliberate mistakes and careful traces on the real component and checks the
+  scorer's verdicts. Headless: <code>msedge --headless=new --dump-dom …/tests/trace-check.html</code></p>
   <div id="slot"></div>
-  <pre id="log" style="white-space:pre-wrap;font-size:13px">running…</pre>
+  <pre id="log" style="white-space:pre-wrap;font-size:12.5px">running…</pre>
 </main>
 <script type="module">
 import { mountTrace } from '../js/ui/trace.js';
@@ -21,17 +20,25 @@ import { mountTrace } from '../js/ui/trace.js';
 const slot = document.getElementById('slot');
 const logEl = document.getElementById('log');
 const lines = [];
-const say = (s) => { lines.push(s); logEl.textContent = lines.join('\n'); };
+const say = (s) => {
+  lines.push(s);
+  logEl.textContent = lines.join('\n');
+};
 
 const GLYPH = 'ب';
 const size = 300;
 const trace = mountTrace(slot, GLYPH);
 const canvas = slot.querySelector('canvas');
 const ctx = canvas.getContext('2d');
-const dpr = canvas.width / size;
+ctx.lineWidth = 6;
+ctx.lineCap = 'round';
+ctx.lineJoin = 'round';
+ctx.strokeStyle = '#14555A';
 
-// the glyph's own pixels — the ground truth the scorer compares against
-function glyphPixels() {
+await document.fonts.ready;
+
+// ground truth: filled glyph mask + its contour (same maths as the scorer)
+function guideMask() {
   const off = document.createElement('canvas');
   off.width = off.height = size;
   const o = off.getContext('2d');
@@ -40,58 +47,124 @@ function glyphPixels() {
   o.textBaseline = 'alphabetic';
   o.fillText(GLYPH, size / 2, size * 0.73);
   const d = o.getImageData(0, 0, size, size).data;
-  const px = [];
-  for (let y = 0; y < size; y += 3) {
-    for (let x = 0; x < size; x += 3) if (d[(y * size + x) * 4 + 3] >= 128) px.push([x, y]);
-  }
-  return px;
+  const g = new Uint8Array(size * size);
+  for (let i = 0; i < g.length; i++) g[i] = d[i * 4 + 3] >= 128 ? 1 : 0;
+  return g;
 }
+const g = guideMask();
+const contour = [];
+for (let y = 0; y < size; y++) {
+  for (let x = 0; x < size; x++) {
+    const i = y * size + x;
+    if (!g[i]) continue;
+    const l = x > 0 ? g[i - 1] : 0;
+    const r = x < size - 1 ? g[i + 1] : 0;
+    const u = y > 0 ? g[i - size] : 0;
+    const d = y < size - 1 ? g[i + size] : 0;
+    if (!l || !r || !u || !d) contour.push([x, y]);
+  }
+}
+say(`glyph ${GLYPH} · contour pixels: ${contour.length}`);
 
-function drawAlong(pts) {
-  ctx.save();
-  ctx.strokeStyle = '#14555A';
-  ctx.lineWidth = 6;
-  ctx.lineCap = 'round';
+// drawing helpers
+const jitter = (pts, amp, seed) => {
+  let s = seed;
+  const rnd = () => ((s = (s * 1103515245 + 12345) % 2147483648) / 2147483648);
+  return pts.map(([x, y]) => [x + (rnd() - 0.5) * 2 * amp, y + (rnd() - 0.5) * 2 * amp]);
+};
+
+function strokeDots(pts, brush = 6) {
+  ctx.lineWidth = brush;
+  ctx.beginPath();
   for (const [x, y] of pts) {
-    ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.lineTo(x + 0.01, y);
-    ctx.stroke();
   }
-  ctx.restore();
+  ctx.stroke();
 }
 
-await document.fonts.ready;
-const px = glyphPixels();
-say('glyph: ' + GLYPH + ' · target sample pixels: ' + px.length + ' · devicePixelRatio: ' + dpr);
+function strokePath(pts, brush = 6) {
+  if (pts.length < 2) return;
+  ctx.lineWidth = brush;
+  ctx.beginPath();
+  ctx.moveTo(pts[0][0], pts[0][1]);
+  for (const [x, y] of pts.slice(1)) ctx.lineTo(x, y);
+  ctx.stroke();
+}
 
-// 1. perfect trace
-drawAlong(px);
-say('RESULT perfect-trace  ' + JSON.stringify(trace.checkCoverage()));
+function zigzag() {
+  ctx.lineWidth = 6;
+  ctx.beginPath();
+  const x0 = 60;
+  const x1 = 240;
+  let dir = 1;
+  for (let y = 60; y <= 250; y += 4) {
+    ctx.moveTo(dir ? x0 : x1, y);
+    ctx.lineTo(dir ? x1 : x0, y);
+    dir = !dir;
+  }
+  ctx.stroke();
+}
+
+const results = [];
+const run = async (name, draw, expect) => {
+  trace.clear();
+  draw();
+  await new Promise((r) => setTimeout(r, 30));
+  const v = trace.checkCoverage();
+  const ok = v.ok === expect;
+  results.push(ok);
+  say(
+    `${ok ? 'OK  ' : 'WRONG'} ${name.padEnd(18)} ok=${v.ok} (expected ${expect})  ` +
+      `cov=${v.coverage.toFixed(2)} prec=${v.precision.toFixed(2)} missed=${v.missedParts}/${v.parts} ink=${v.inkTotal}`,
+  );
+};
+
+await run('perfect-contour', () => strokeDots(contour), true);
+await run('wobbly-good', () => strokeDots(jitter(contour, 4, 7).filter((_, i) => i % 10 !== 0)), true);
+await run('trace-90pct', () => strokeDots(contour.filter((_, i) => i % 10 !== 0)), true);
+await run('left-half', () => strokeDots(contour.filter(([x]) => x < size / 2)), false);
+await run('missing-dot', () => strokeDots(contour.filter(([, y]) => y < 220)), false);
+await run('zigzag-area', zigzag, false);
+await run(
+  'fill-letter-area',
+  () => {
+    ctx.fillStyle = '#14555A';
+    ctx.fillRect(60, 60, 180, 190);
+  },
+  false,
+);
+await run(
+  'fill-whole-canvas',
+  () => {
+    ctx.fillStyle = '#14555A';
+    ctx.fillRect(0, 0, size, size);
+  },
+  false,
+);
+await run('shifted-14px', () => strokeDots(contour.map(([x, y]) => [x + 14, y])), false);
+await run(
+  'overshoot-loops',
+  () => {
+    strokeDots(contour);
+    strokePath(jitter(contour.filter((_, i) => i % 3 === 0), 42, 99), 6);
+  },
+  false,
+);
+await run('empty', () => {}, false);
+await run('wobbly-7px-ok', () => strokeDots(jitter(contour, 7, 21)), true);
+await run('wobbly-9px-ok', () => strokeDots(jitter(contour, 9, 33)), true);
+await run('wobbly-14px-bad', () => strokeDots(jitter(contour, 14, 55)), false);
+await run('three-quarters', () => strokeDots(contour.filter(([x]) => x <= 185)), false);
+await run('dot-only', () => strokeDots(contour.filter(([, y]) => y >= 220)), false);
+await run('thick-brush-18', () => strokeDots(contour, 18), true);
+
+const pass = results.every(Boolean);
+say('');
+say(`${results.filter(Boolean).length}/${results.length} expectations matched → ${pass ? 'ALL GOOD' : 'TUNE NEEDED'}`);
 trace.clear();
-
-// 2. left-half trace (everything left of the middle)
-drawAlong(px.filter(([x]) => x < size / 2));
-say('RESULT left-half-trace ' + JSON.stringify(trace.checkCoverage()));
-trace.clear();
-
-// 2b. nearly complete (90% of pixels, small gaps) — must still pass
-drawAlong(px.filter((_, i) => i % 10 !== 0));
-say('RESULT trace-90pct    ' + JSON.stringify(trace.checkCoverage()));
-trace.clear();
-
-// 3. scribble: fill the whole canvas with ink
-ctx.fillStyle = 'rgba(20,85,90,0.95)';
-ctx.fillRect(0, 0, size, size);
-say('RESULT scribble       ' + JSON.stringify(trace.checkCoverage()));
-trace.clear();
-
-// 4. empty canvas
-say('RESULT empty          ' + JSON.stringify(trace.checkCoverage()));
-
-// leave a thin-brush trace visible for a visual check
-drawAlong(px);
-document.body.dataset.qa = 'done';
+strokeDots(contour);
+document.body.dataset.qa = pass ? 'done-pass' : 'done-fail';
 </script>
 </body>
 </html>

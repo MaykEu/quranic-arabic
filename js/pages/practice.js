@@ -241,7 +241,7 @@ function renderTrace() {
   const trace = mountTrace(document.getElementById('trace-slot'), w.bare);
   document.getElementById('erase').addEventListener('click', () => trace.clear());
   document.getElementById('check').addEventListener('click', () => {
-    const { coverage, inkNear, ok } = trace.checkCoverage();
+    const { coverage, precision, missedParts, ok } = trace.checkCoverage();
     const msg = document.getElementById('trace-msg');
     const pct = Math.round(coverage * 100);
     if (ok) {
@@ -251,10 +251,12 @@ function renderTrace() {
         state.traceIdx += 1;
         renderTrace();
       }, 800);
-    } else if (coverage >= 0.75 && inkNear < 0.6) {
-      msg.textContent = 'You covered the word, but most of your ink is off the shape — follow the dashed line.';
+    } else if (missedParts > 0) {
+      msg.textContent = 'Some parts are missing — check the dots and trace every stroke of the word.';
+    } else if (precision < 0.88) {
+      msg.textContent = 'Too much of your ink is off the dashed line — follow it exactly (don\u2019t fill or scribble).';
     } else {
-      msg.textContent = `Almost — ${pct}% covered. Trace a little more and check again.`;
+      msg.textContent = `Almost — ${pct}% covered. Close the gaps and check again.`;
     }
   });
   document.getElementById('nextw').addEventListener('click', () => {
