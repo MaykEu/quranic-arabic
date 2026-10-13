@@ -25,7 +25,9 @@
 // from each are the intentionally device-local keys.
 const out = {};
 const finish = () => {
-  out.pass = Object.values(out).every((v) => v === true);
+  // booleans must be true; the "missing" arrays must simply be empty
+  const ok = (v) => v === true || (Array.isArray(v) && v.length === 0);
+  out.pass = Object.values(out).every(ok);
   const pre = document.createElement('pre');
   pre.id = 'result';
   pre.textContent = JSON.stringify(out, null, 1);
