@@ -193,3 +193,15 @@ test('captureSession reads the tokens the OAuth redirect appends', () => {
   assert.equal(get('sync.session').refresh_token, 'rr');
   assert.equal(captureSession('https://example.com/#unrelated=1'), null); // no tokens, no session
 });
+
+test('surah marks merge like any other bucket (union + tombstone)', () => {
+  const a = doc({ progress: prog({ surahs: { 112: { at: 10 } } }) });
+  const b = doc({ progress: prog({ surahs: { 1: { at: 12 } } }) }, { 'surahs:9': 20 });
+  const m = mergeDocs(a, b, 9);
+  assert.deepEqual(Object.keys(m.data.progress.surahs).sort(), ['1', '112']);
+
+  const c = doc({ progress: prog({ surahs: { 9: { at: 5 } } }) });
+  const m2 = mergeDocs(c, b, 9);
+  assert.equal(m2.data.progress.surahs['9'], undefined); // tombstoned on the other device
+  assert.ok(m2.data.progress.surahs['1']);
+});

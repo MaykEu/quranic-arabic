@@ -13,6 +13,7 @@ globalThis.localStorage = {
 };
 
 const { mark, unmark, isLearned, count, activeDays, resetAll } = await import('../js/lib/progress.js');
+const { get } = await import('../js/lib/store.js');
 
 test('mark / unmark / count round-trip for the memorised bucket', () => {
   mem.clear();
@@ -59,4 +60,14 @@ test('resetAll clears memorised too', () => {
   mark('memorised', '1:1');
   resetAll();
   assert.equal(count('memorised'), 0);
+});
+
+test('surah marks live in their own bucket and unmarking leaves a sync tombstone', () => {
+  mem.clear();
+  mark('surahs', '112');
+  assert.equal(count('surahs'), 1);
+  assert.ok(isLearned('surahs', '112'));
+  unmark('surahs', '112');
+  assert.equal(count('surahs'), 0);
+  assert.ok(get('tomb', {})['surahs:112'] > 0);
 });

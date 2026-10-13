@@ -4,8 +4,8 @@
 import { get, set } from './store.js';
 
 const KEY = 'progress';
-const KINDS = ['letters', 'words', 'verses', 'memorised'];
-const EMPTY = () => ({ letters: {}, words: {}, verses: {}, memorised: {}, days: [] });
+const KINDS = ['letters', 'words', 'verses', 'memorised', 'surahs'];
+const EMPTY = () => ({ letters: {}, words: {}, verses: {}, memorised: {}, surahs: {}, days: [] });
 
 const load = () => {
   const p = get(KEY, null);

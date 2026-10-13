@@ -25,6 +25,7 @@ function snapshot() {
     letters: progressCount('letters'),
     known: ids.filter((id) => /^\d+$/.test(id) && srsAll[id] && srsAll[id].box >= 3).length,
     memorised: progressCount('memorised'),
+    surahs: progressCount('surahs'),
     verses: progressCount('verses'),
     due: dueIds(srsAll).length,
     days: activeDays(),
@@ -48,6 +49,11 @@ const fmtDate = (iso) => {
 
 function memorisedCard() {
   const memo = (get('progress', {}) || {}).memorised || {};
+  const surahs = (get('progress', {}) || {}).surahs || {};
+  const wholeSurahs = Object.keys(surahs)
+    .filter((s) => /^\d+$/.test(s))
+    .map(Number)
+    .sort((a, b) => a - b);
   const refs = Object.keys(memo)
     .filter((r) => /^\d+:\d+$/.test(r))
     .sort((x, y) => {
@@ -56,32 +62,52 @@ function memorisedCard() {
       return sx - sy || ax - ay;
     });
 
-  if (!refs.length) {
+  if (!refs.length && !wholeSurahs.length) {
     return `<section class="card">
       <h3>Verses memorised</h3>
       <p class="muted">Nothing yet — open any verse in the <a href="verses.html">Verses reader</a>
-      and tap the ✓ button to mark it memorised. This is your own tracker: you decide when a verse is solid.</p>
+      and tap the ✓ button to mark it, or mark an entire surah with “✓ Memorise surah”. This is your own
+      tracker: you decide when a verse or surah is solid.</p>
     </section>`;
   }
 
+  const wholeSet = new Set(wholeSurahs);
   const bySurah = new Map();
   for (const r of refs) {
     const s = Number(r.split(':')[0]);
+    if (wholeSet.has(s)) continue; // superseded by the whole-surah mark (data kept)
     if (!bySurah.has(s)) bySurah.set(s, []);
     bySurah.get(s).push(r);
   }
+  const visibleCount = [...bySurah.values()].reduce((n, list) => n + list.length, 0);
+
+  const nameOf = (sid) => {
+    const nm = surahNames.get(sid);
+    return esc(nm ? nm.name_simple : 'Surah ' + sid);
+  };
 
   return `<section class="card">
     <div class="row" style="justify-content:space-between;align-items:baseline">
-      <h3 style="margin:0">Verses memorised <span class="muted">· ${refs.length}</span></h3>
+      <h3 style="margin:0">Verses memorised <span class="muted">· ${visibleCount}${wholeSurahs.length ? ` · ${wholeSurahs.length} surah${wholeSurahs.length === 1 ? '' : 's'}` : ''}</span></h3>
       <a class="muted" href="verses.html">Open reader →</a>
     </div>
-    ${[...bySurah.entries()]
-      .map(([sid, list]) => {
+    ${wholeSurahs
+      .map((sid) => {
         const nm = surahNames.get(sid);
         return `<div class="memo-row">
           <div class="memo-row-head">
-            <strong>${esc(nm ? nm.name_simple : 'Surah ' + sid)}</strong>
+            <strong>${nameOf(sid)} <span class="muted">${sid}</span> <span class="whole-tag">whole surah ✓</span></strong>
+            <button type="button" class="chip-x" data-surah="${sid}" aria-label="Remove ${nameOf(sid)}">✕</button>
+          </div>
+          <div class="memo-chips"><span class="muted">${nm ? `${nm.verses_count} verses` : ''}</span></div>
+        </div>`;
+      })
+      .join('')}
+    ${[...bySurah.entries()]
+      .map(
+        ([sid, list]) => `<div class="memo-row">
+          <div class="memo-row-head">
+            <strong>${nameOf(sid)}</strong>
             <span class="muted">${list.length} verse${list.length === 1 ? '' : 's'}</span>
           </div>
           <div class="memo-chips">
@@ -92,8 +118,8 @@ function memorisedCard() {
               )
               .join('')}
           </div>
-        </div>`;
-      })
+        </div>`,
+      )
       .join('')}
   </section>`;
 }
@@ -153,7 +179,7 @@ function render() {
       <div class="stat-grid">
         ${stat(`${s.letters}/28`, 'Letters learned')}
         ${stat(s.known, 'Words known')}
-        ${stat(s.memorised, 'Verses memorised')}
+        ${stat(s.surahs, 'Surahs memorised')}
         ${stat(s.verses, 'Verses read')}
       </div>
       <div class="week-strip" aria-label="Activity in the last 7 days">
@@ -201,7 +227,8 @@ function render() {
 
   for (const b of main.querySelectorAll('.chip-x')) {
     b.addEventListener('click', () => {
-      unmark('memorised', b.dataset.ref);
+      if (b.dataset.surah) unmark('surahs', b.dataset.surah);
+      else unmark('memorised', b.dataset.ref);
       toast('Removed from memorised');
       render();
     });
@@ -282,7 +309,7 @@ function wire() {
     box.innerHTML = `
       <div class="confirm-box">
         <p><strong>${esc(f.name)}</strong>${obj.exported ? ` — exported ${esc(fmtDate(obj.exported))}` : ''}</p>
-        <p class="muted">Contains: ${v.stats.letters} letters · ${v.stats.words} words met · ${v.stats.verses} verses · ${v.stats.reviews} review cards · ${v.stats.days} active days.</p>
+        <p class="muted">Contains: ${v.stats.letters} letters · ${v.stats.words} words met · ${v.stats.memorised || 0} memorised verses · ${v.stats.surahs || 0} surahs · ${v.stats.verses} verses · ${v.stats.reviews} review cards · ${v.stats.days} active days.</p>
         <p class="muted">Your current data: ${cur.letters} letters · ${cur.words} words · ${cur.verses} verses · ${cur.reviews} cards.</p>
         <p class="muted">Importing replaces your current progress.</p>
         <div class="row">

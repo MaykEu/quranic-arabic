@@ -14,7 +14,7 @@ import { SYNC, configured } from './sync-config.js';
 // Re-exported so pages can ask "is sync set up?" from the single sync module.
 export { configured };
 
-const BUCKETS = ['letters', 'words', 'verses', 'memorised'];
+const BUCKETS = ['letters', 'words', 'verses', 'memorised', 'surahs'];
 // Device-local keys that never sync:
 //   theme        — presentation, each device chooses its own
 //   lastBackupAt — local bookkeeping

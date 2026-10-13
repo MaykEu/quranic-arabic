@@ -40,13 +40,31 @@ q('.ay-memo[data-a="2"]').click();
 await sleep(150);
 out.afterUnmark = !store().memorised['112:2'] && !!store().memorised['112:1'];
 
+// whole-surah flow (still on the Verses page)
+q('#surah-memo').click();
+await sleep(400);
+out.surahStored = !!(store().surahs && store().surahs['112']);
+out.surahButtonOn =
+  q('#surah-memo').classList.contains('memo-on') && q('#surah-memo').textContent.includes('Surah memorised');
+out.verseButtonsDisabled = [...document.querySelectorAll('.ay-memo')].every((b) => b.disabled);
+out.chipSaysSurah = q('#memo-count').textContent.trim() === '· surah memorised';
+
 // now the Progress page
 await import('../js/pages/progress.js');
-await sleep(600);
-out.gridHasStat = document.body.innerText.includes('Verses memorised');
-out.cardListed = document.body.innerText.includes('Al-Ikhlas') && !!q('.memo-chip a[href$="#112:1"]');
+await sleep(700);
+out.gridHasStat = document.body.innerText.includes('Surahs memorised');
+const surahTile = [...document.querySelectorAll('.stat')].find((el) => el.textContent.includes('Surahs memorised'));
+out.surahTileValue = !!surahTile && surahTile.querySelector('b').textContent === '1';
+out.wholeRow = document.body.innerText.includes('whole surah ✓') && !!q('.chip-x[data-surah="112"]');
+out.verseChipHidden = !q('.memo-chip a[href$="#112:1"]'); // superseded by the whole-surah mark
 
-// remove via ✕
+// unmark the whole surah from the Progress card → the kept verse mark returns
+q('.chip-x[data-surah="112"]').click();
+await sleep(400);
+out.surahRemoved = !(store().surahs && store().surahs['112']);
+out.verseChipBack = !!q('.memo-chip a[href$="#112:1"]');
+
+// remove the last verse chip → empty state
 q('.chip-x[data-ref="112:1"]').click();
 await sleep(300);
 out.removed = !store().memorised || !store().memorised['112:1'];
@@ -54,8 +72,9 @@ out.emptyState = document.body.innerText.includes('Nothing yet');
 
 out.pass =
   out.storedAfterMark && out.buttonOn && out.cardAccent && out.chipText === '· 1 memorised' &&
-  out.chipText2 === '· 2 memorised' && out.afterUnmark && out.gridHasStat && out.cardListed &&
-  out.removed && out.emptyState;
+  out.chipText2 === '· 2 memorised' && out.afterUnmark && out.surahStored && out.surahButtonOn &&
+  out.verseButtonsDisabled && out.chipSaysSurah && out.gridHasStat && out.surahTileValue && out.wholeRow &&
+  out.verseChipHidden && out.surahRemoved && out.verseChipBack && out.removed && out.emptyState;
 
 const pre = document.createElement('pre');
 pre.id = 'result';

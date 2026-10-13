@@ -112,6 +112,16 @@ function toggleMemo(a) {
   toast(was ? 'Removed from memorised' : 'Memorised ✓');
 }
 
+// Whole-surah memorisation: supersedes the per-verse buttons (they get disabled).
+function toggleSurahMemo(id) {
+  const key = String(id);
+  const was = isLearned('surahs', key);
+  if (was) unmark('surahs', key);
+  else mark('surahs', key);
+  toast(was ? 'Surah unmarked' : 'Surah memorised ✓');
+  renderSurah(); // rebuild so buttons, chip and header all reflect the new state
+}
+
 // ---------- routing ----------
 
 async function route() {
@@ -157,6 +167,7 @@ function renderBrowser() {
             <span class="sr-name">${esc(s.name_simple)}</span>
             <span class="sr-meta">${esc(s.name_translit)} · ${s.verses_count} verses · ${esc(s.revelation_place)}</span>
           </span>
+          ${isLearned('surahs', String(s.id)) ? '<span class="sr-done" title="Memorised">✓</span>' : ''}
           <span class="sr-ar" lang="ar" dir="rtl">${esc(s.name_arabic)}</span>
         </a>`)
         .join('')}
@@ -184,7 +195,7 @@ async function openSurah(s, focusAyah) {
   renderSurah(focusAyah);
 }
 
-function ayahHTML(surah, ayah) {
+function ayahHTML(surah, ayah, surahDone = false) {
   const words = ayah.words
     .map(
       (w) =>
@@ -199,7 +210,7 @@ function ayahHTML(surah, ayah) {
       <div class="ay-head">
         <span class="ay-num">${surah.id}:${ayah.n}</span>
         <span class="ay-actions">
-          <button type="button" class="btn-icon ay-memo${memo ? ' on' : ''}" data-a="${ayah.n}" aria-label="Mark as memorised" aria-pressed="${memo}">${IC_CHECK}</button>
+          <button type="button" class="btn-icon ay-memo${memo ? ' on' : ''}" data-a="${ayah.n}" aria-label="${surahDone ? 'Surah marked memorised' : 'Mark as memorised'}" aria-pressed="${memo}"${surahDone ? ' disabled title="Surah marked memorised"' : ''}>${IC_CHECK}</button>
           <a class="btn-icon ay-prac" href="practice.html#read/${surah.id}:${ayah.n}" title="Practice this verse" aria-label="Practice this verse">🎤</a>
           <button type="button" class="btn-icon ay-play" data-a="${ayah.n}" aria-label="Play this verse">${IC_PLAY}</button>
         </span>
@@ -218,6 +229,7 @@ function renderSurah(focusAyah) {
   const r = reciterObj();
   const keepScroll = window.scrollY;
   const memoCount = surah.ayahs.filter((a) => isLearned('memorised', `${surah.id}:${a.n}`)).length;
+  const surahDone = isLearned('surahs', String(surah.id));
 
   main.innerHTML = `
     <div class="surah-head">
@@ -225,7 +237,7 @@ function renderSurah(focusAyah) {
       <div class="sh-titles">
         <div class="sh-name">${esc(surah.name_simple)} <span class="muted">${surah.id}</span></div>
         <div class="muted">${esc(meta ? meta.name_translit : '')} · ${surah.verses_count} verses
-        <span class="memo-count" id="memo-count">${memoCount ? ` · ${memoCount} memorised` : ''}</span></div>
+        <span class="memo-count" id="memo-count">${surahDone ? ' · surah memorised' : memoCount ? ` · ${memoCount} memorised` : ''}</span></div>
       </div>
       <span class="sh-ar" lang="ar" dir="rtl">${esc(surah.name_arabic)}</span>
     </div>
@@ -233,6 +245,7 @@ function renderSurah(focusAyah) {
     <div class="verse-toolbar">
       <div class="row">
         <button type="button" class="btn" id="play-all">▶ Play surah</button>
+        <button type="button" class="btn ${surahDone ? 'memo-on' : 'btn-ghost'}" id="surah-memo" aria-pressed="${surahDone}">${surahDone ? '✓ Surah memorised' : '✓ Memorise surah'}</button>
         <button type="button" class="btn btn-ghost" id="restart-verse" hidden>⟲ Restart verse</button>
         <select id="reciter" aria-label="Reciter">
           ${reciters.map((x) => `<option value="${x.id}" ${x.id === r.id ? 'selected' : ''}>${esc(x.label)}</option>`).join('')}
@@ -252,7 +265,7 @@ function renderSurah(focusAyah) {
     </div>
 
     <div id="ayahs">
-      ${surah.ayahs.map((a) => ayahHTML(surah, a)).join('')}
+      ${surah.ayahs.map((a) => ayahHTML(surah, a, surahDone)).join('')}
     </div>
 
     <details class="card">
@@ -297,6 +310,8 @@ function renderSurah(focusAyah) {
     if (seq && seq.paused) return resumeSeq();
     startTeacher(1);
   });
+
+  main.querySelector('#surah-memo').addEventListener('click', () => toggleSurahMemo(surah.id));
 
   main.querySelector('#restart-verse').addEventListener('click', () => {
     if (!seq) return;

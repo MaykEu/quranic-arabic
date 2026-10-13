@@ -299,3 +299,8 @@ button.surah-row {
 [data-theme="dark"] .ay-play.on { color: var(--brand-ink); }
 .ayah.memo { box-shadow: inset 3px 0 0 var(--brand2); }
 .memo-count { color: var(--brand2); font-weight: 600; }
+.memo-on { background: var(--brand2); border-color: var(--brand2); color: #fff; }
+[data-theme="dark"] .memo-on { color: var(--brand-ink); }
+.ay-memo:disabled { opacity: 0.4; cursor: default; }
+.sr-done { color: var(--brand2); font-weight: 700; }
+.whole-tag { color: var(--brand2); font-weight: 600; font-size: 12px; }

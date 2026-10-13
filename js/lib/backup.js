@@ -53,6 +53,8 @@ export function summarize(data) {
     words,
     known,
     verses: Object.keys(progress.verses || {}).length,
+    memorised: Object.keys(progress.memorised || {}).length,
+    surahs: Object.keys(progress.surahs || {}).length,
     reviews: ids.length,
     days: Array.isArray(progress.days) ? progress.days.length : 0,
   };
