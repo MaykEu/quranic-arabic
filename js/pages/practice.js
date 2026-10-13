@@ -284,7 +284,7 @@ function renderListen() {
         <button type="button" class="btn" id="hear">🔊 Hear it</button>
         <button type="button" class="btn btn-ghost" id="next">I said it — next →</button>
       </div>
-      <p class="pr-note center">Nothing plays on its own — press “Hear it”, say the word out loud, then move on.</p>
+      <p class="pr-note center">Press “Hear it”, say the word out loud, then move on.</p>
     </section>`);
 
   const playCur = () => play(wbwFromRef(w.audio), w.bare);
