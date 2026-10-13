@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sync QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/reading.css">
+</head>
+<body>
+<main></main>
+<script>
+  // Surface any error so a broken run still produces a marker instead of silence.
+  window.__err = null;
+  window.addEventListener('error', (e) => {
+    window.__err = (e.error && e.error.stack) || e.message;
+  });
+  window.addEventListener('unhandledrejection', (e) => {
+    window.__err = String((e.reason && e.reason.stack) || e.reason);
+  });
+</script>
+<script type="module">
+// Drives the REAL sync engine against a fake Supabase (fetch is stubbed), so the
+// pull → merge → apply → push path and the Progress-page card are exercised
+// without needing a Google login. Data files still load from the real server.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const out = {};
+const q = (s) => document.querySelector(s);
+const finish = () => {
+  out.pass = Object.values(out).every((v) => v === true);
+  const pre = document.createElement('pre');
+  pre.id = 'result';
+  pre.textContent = JSON.stringify(out, null, 1);
+  document.body.appendChild(pre);
+  document.body.dataset.qa = out.pass ? 'done-pass' : 'done-fail';
+};
+
+async function run() {
+  localStorage.clear();
+  try {
+    Object.defineProperty(navigator, 'onLine', { value: true, configurable: true });
+  } catch {
+    /* not redefinable here — syncNow only treats an explicit false as offline */
+  }
+
+  const UID = '00000000-0000-0000-0000-000000000001';
+  const session = (email) => ({
+    access_token: 'faketoken',
+    refresh_token: 'fakerefresh',
+    expires_at: Date.now() + 3600000,
+    user: { id: UID, email },
+  });
+
+  // a signed-in device with local progress already on it
+  localStorage.setItem('qa.v1.sync.session', JSON.stringify(session('qa@example.com')));
+  localStorage.setItem(
+    'qa.v1.progress',
+    JSON.stringify({
+      letters: { alif: { at: 1 } },
+      words: {},
+      verses: {},
+      memorised: { '112:1': { at: 2 } },
+      days: ['2026-10-01'],
+    }),
+  );
+  localStorage.setItem('qa.v1.srs', JSON.stringify({ 5: { box: 1, at: 10, due: 0 } }));
+  localStorage.setItem('qa.v1.tomb', JSON.stringify({ 'memorised:9:9': 30 }));
+
+  // the account's copy: one extra memorised verse, a later SRS review, extra prefs
+  const remoteDoc = {
+    v: 1,
+    updatedAt: 500,
+    resetAt: 0,
+    data: {
+      progress: { letters: {}, words: {}, verses: {}, memorised: { '112:2': { at: 3 } }, days: ['2026-10-02'] },
+      srs: { 5: { box: 4, at: 20, due: 0 }, 9: { box: 2, at: 21, due: 0 } },
+      prefs: { tr: 'sahih', reciter: 'alafasy', wordMode: false },
+      _meta: {},
+    },
+    tombstones: {},
+  };
+
+  const realFetch = globalThis.fetch.bind(globalThis);
+  const calls = [];
+  let pushed = null;
+  globalThis.fetch = async (url, opts = {}) => {
+    const u = String(url);
+    calls.push((opts.method || 'GET') + ' ' + u.replace(/^https:\/\/[^/]+/, ''));
+    if (u.includes('/rest/v1/progress')) {
+      if ((opts.method || 'GET') === 'GET') return { ok: true, status: 200, json: async () => [{ doc: remoteDoc }] };
+      pushed = JSON.parse(opts.body);
+      return { ok: true, status: 201, json: async () => [] };
+    }
+    if (u.includes('/auth/v1/token')) {
+      return { ok: true, status: 200, json: async () => ({ access_token: 'faketoken', refresh_token: 'fakerefresh', expires_in: 3600 }) };
+    }
+    return realFetch(url, opts); // data files and everything else
+  };
+
+  const S = await import('../js/lib/sync.js');
+  const res = await S.syncNow();
+  const store = (k) => JSON.parse(localStorage.getItem('qa.v1.' + k));
+
+  out.syncOk = !!(res && res.ok === true);
+  out.hadRemote = !!(res && res.hadRemote === true);
+  out.pulledThenPushed =
+    calls.some((c) => c.startsWith('GET /rest/v1/progress')) && calls.some((c) => c.startsWith('POST /rest/v1/progress'));
+
+  const prog = store('progress');
+  out.unionLocalKept = !!(prog.memorised['112:1'] && prog.memorised['112:2']);
+  out.daysUnion = prog.days.length === 2;
+  const srs = store('srs');
+  out.srsLatestWins = srs['5'].box === 4;
+  out.srsUnion = !!srs['9'];
+  out.tombstoneKept = store('tomb')['memorised:9:9'] === 30;
+  out.prefsFromRemote = store('prefs').tr === 'sahih';
+  out.lastSyncStamped = !!localStorage.getItem('qa.v1.sync.lastSync');
+  out.pushUserScoped = !!(pushed && pushed[0] && pushed[0].user_id === UID);
+  out.pushHasMergedDoc = !!(pushed && pushed[0].doc.data.progress.memorised['112:2'] && pushed[0].doc.data.srs['9']);
+  out.sessionNotInDoc = !(pushed && 'sync.session' in pushed[0].doc.data);
+
+  out.authUrlOk = S.authorizeUrl('https://maykeu.github.io/quranic-arabic/').includes('provider=google');
+  const payload = btoa(JSON.stringify({ sub: 'u9', email: 'z@y.x' })).replace(/=+$/, '');
+  const cap = S.captureSession(`https://x/#access_token=aa.${payload}.cc&refresh_token=rr&expires_in=3600`);
+  out.captureOk = !!(cap && cap.user && cap.user.email === 'z@y.x');
+
+  // restore a signed-in session, then drive the real Progress page
+  localStorage.setItem('qa.v1.sync.session', JSON.stringify(session('qa@example.com')));
+  await import('../js/pages/progress.js');
+  await sleep(700);
+
+  out.cardSignedIn = document.body.innerText.includes('qa@example.com');
+  out.cardHasButtons = !!q('#sync-now') && !!q('#sync-out') && !q('#sync-in');
+
+  q('#sync-out').click();
+  await sleep(300);
+  out.signOutClearsSession = !localStorage.getItem('qa.v1.sync.session');
+  out.progressSurvivesSignOut = !!JSON.parse(localStorage.getItem('qa.v1.progress')).memorised['112:1'];
+  out.cardBackToSignIn = !!q('#sync-in');
+}
+
+run()
+  .then(() => finish())
+  .catch((e) => {
+    const pre = document.createElement('pre');
+    pre.id = 'result';
+    pre.textContent = 'ERROR: ' + ((e && e.stack) || e) + '\nwindow.__err: ' + (window.__err || 'none');
+    document.body.appendChild(pre);
+    document.body.dataset.qa = 'done-error';
+  });
+</script>
+</body>
+</html>

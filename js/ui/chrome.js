@@ -3,6 +3,7 @@
 // Included by every page as a module side-effect (no exports needed).
 import { get, set } from '../lib/store.js';
 import { mountPlayer } from './player.js';
+import { captureSession, signedIn, syncNow } from '../lib/sync.js';
 
 const NAV = [
   ['index.html', 'Home', 'home'],
@@ -88,3 +89,16 @@ buildNav();
 mountPlayer();
 initTheme();
 registerSW();
+
+// Cloud sync (optional layer — the app works fully without it):
+// pick up a fresh Google sign-in from the URL, then reconcile in the background
+// on load, when the tab becomes visible again, and when the network comes back.
+captureSession();
+if (signedIn()) {
+  const kick = () => syncNow().catch(() => {});
+  kick();
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') kick();
+  });
+  window.addEventListener('online', kick);
+}

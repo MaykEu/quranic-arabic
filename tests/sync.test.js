@@ -12,7 +12,7 @@ globalThis.localStorage = {
   clear: () => mem.clear(),
 };
 
-const { mergeDocs, collectDoc, applyDoc } = await import('../js/lib/sync.js');
+const { mergeDocs, collectDoc, applyDoc, authorizeUrl, captureSession } = await import('../js/lib/sync.js');
 const { set, get } = await import('../js/lib/store.js');
 
 const doc = (data, tombstones = {}, extra = {}) => ({ v: 1, updatedAt: 1000, data, tombstones, ...extra });
@@ -172,4 +172,24 @@ test('fresh device + existing account = the account data', () => {
   assert.equal(m.data.progress.memorised['112:1'].at, 10);
   assert.equal(m.data.srs['5'].box, 3);
   assert.equal(m.data.prefs.tr, 'sahih');
+});
+
+test('authorizeUrl points at the project’s Google endpoint with the right scopes', () => {
+  const url = authorizeUrl('https://maykeu.github.io/quranic-arabic/');
+  const u = new URL(url);
+  assert.equal(u.origin + u.pathname, 'https://wcleejkpavmydokphavh.supabase.co/auth/v1/authorize');
+  assert.equal(u.searchParams.get('provider'), 'google');
+  assert.equal(u.searchParams.get('redirect_to'), 'https://maykeu.github.io/quranic-arabic/');
+});
+
+test('captureSession reads the tokens the OAuth redirect appends', () => {
+  mem.clear();
+  const payload = Buffer.from(JSON.stringify({ sub: 'user-1', email: 'a@b.c' })).toString('base64url');
+  const token = `aa.${payload}.cc`;
+  const s = captureSession(`https://example.com/#access_token=${token}&refresh_token=rr&expires_in=3600`);
+  assert.equal(s.user.id, 'user-1');
+  assert.equal(s.user.email, 'a@b.c');
+  assert.equal(get('sync.session').access_token, token);
+  assert.equal(get('sync.session').refresh_token, 'rr');
+  assert.equal(captureSession('https://example.com/#unrelated=1'), null); // no tokens, no session
 });

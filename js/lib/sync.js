@@ -11,6 +11,9 @@
 import { get, set, remove, keys } from './store.js';
 import { SYNC, configured } from './sync-config.js';
 
+// Re-exported so pages can ask "is sync set up?" from the single sync module.
+export { configured };
+
 const BUCKETS = ['letters', 'words', 'verses', 'memorised'];
 // Device-local keys that never sync:
 //   theme        — presentation, each device chooses its own
@@ -237,6 +240,9 @@ export function captureSession(url = typeof location !== 'undefined' ? location.
     user: { id: payload.sub || null, email: payload.email || null },
   };
   set('sync.session', s);
+  if (typeof history !== 'undefined' && typeof location !== 'undefined' && location.hash.includes('access_token=')) {
+    history.replaceState(null, '', location.pathname + location.search);
+  }
   return s;
 }
 
@@ -267,13 +273,18 @@ async function freshSession() {
   return s;
 }
 
-export function signIn(redirect) {
+export function authorizeUrl(redirect) {
   const to = redirect || (typeof location !== 'undefined' ? location.origin + location.pathname : '');
   const u = new URL(`${API()}/auth/v1/authorize`);
   u.searchParams.set('provider', 'google');
   u.searchParams.set('redirect_to', to);
-  if (typeof location !== 'undefined') location.href = u.toString();
   return u.toString();
+}
+
+export function signIn(redirect) {
+  const url = authorizeUrl(redirect);
+  if (typeof location !== 'undefined') location.href = url;
+  return url;
 }
 
 export function signOut() {

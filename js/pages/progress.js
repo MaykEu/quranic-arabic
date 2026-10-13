@@ -6,6 +6,7 @@ import { load as loadSRS, dueIds } from '../lib/srs.js';
 import { count as progressCount, activeDays, unmark } from '../lib/progress.js';
 import { get, set, clearAll } from '../lib/store.js';
 import { downloadBackup, validateImport, applyImport, summarize, collect } from '../lib/backup.js';
+import { configured, signedIn, session, signIn, signOut, syncNow, captureSession } from '../lib/sync.js';
 import { toast } from '../ui/toast.js';
 
 const main = document.querySelector('main');
@@ -97,6 +98,48 @@ function memorisedCard() {
   </section>`;
 }
 
+function syncWhenText() {
+  const t = get('sync.lastSync', null);
+  if (!t) return 'Not synced yet';
+  const mins = Math.round((Date.now() - t) / 60000);
+  if (mins < 1) return 'Synced just now';
+  if (mins < 60) return `Synced ${mins} min ago`;
+  const h = Math.round(mins / 60);
+  if (h < 24) return `Synced ${h} h ago`;
+  return `Synced ${fmtDate(new Date(t).toISOString())}`;
+}
+
+// Optional cloud sync — the app stays fully usable without it.
+function syncCard() {
+  if (!configured()) return '';
+  const s = session();
+
+  if (!s) {
+    return `<section class="card" id="sync-card">
+      <h3>Cloud sync <span class="muted">· optional</span></h3>
+      <p class="muted">Keep one progress across your phone and your computer. Until you sign in,
+      everything stays on this device — signing in only merges your progress with your own account.</p>
+      <div class="row"><button type="button" class="btn" id="sync-in">Continue with Google</button></div>
+      <p class="muted" id="sync-status"></p>
+    </section>`;
+  }
+
+  const email = (s.user && s.user.email) || 'your Google account';
+  return `<section class="card" id="sync-card">
+    <h3>Cloud sync</h3>
+    <div class="row" style="justify-content:space-between;align-items:baseline">
+      <strong>${esc(email)}</strong>
+      <span class="muted" id="sync-when">${esc(syncWhenText())}</span>
+    </div>
+    <p class="muted">Your progress is merged — nothing is ever overwritten by an older copy.</p>
+    <div class="row">
+      <button type="button" class="btn" id="sync-now">Sync now</button>
+      <button type="button" class="btn btn-ghost" id="sync-out">Sign out</button>
+    </div>
+    <p class="muted" id="sync-status"></p>
+  </section>`;
+}
+
 function render() {
   const s = snapshot();
   const last7 = [...Array(7)].map((_, i) => {
@@ -132,10 +175,12 @@ function render() {
 
     ${memorisedCard()}
 
+    ${syncCard()}
+
     <section class="card">
       <h3>Your data</h3>
-      <p class="muted">Everything is stored only on this device — nothing is uploaded anywhere.
-      Download a backup now and then; you can import it on any device (or after clearing your browser).</p>
+      <p class="muted">Your progress lives on this device. The two ways it ever leaves: the backup file
+      below, and cloud sync above (only if you sign in). Nothing else is uploaded, and there is no tracking.</p>
       <p class="muted" id="last-backup">${esc(lastBackupText())}</p>
       <div class="row">
         <button type="button" class="btn" id="export">Download backup</button>
@@ -164,6 +209,44 @@ function render() {
 }
 
 function wire() {
+  // cloud sync
+  const syncStatus = (msg) => {
+    const el = document.getElementById('sync-status');
+    if (el) el.textContent = msg;
+  };
+
+  const inBtn = document.getElementById('sync-in');
+  if (inBtn) inBtn.addEventListener('click', () => signIn());
+
+  const nowBtn = document.getElementById('sync-now');
+  if (nowBtn) {
+    nowBtn.addEventListener('click', async () => {
+      nowBtn.disabled = true;
+      syncStatus('Syncing…');
+      const res = await syncNow();
+      nowBtn.disabled = false;
+      if (res && res.ok) {
+        toast('Synced');
+        render();
+      } else {
+        syncStatus(
+          res && res.reason === 'offline'
+            ? 'You are offline — your progress is safe here and will sync later.'
+            : 'Could not reach the server. Your progress is safe on this device; it will retry.',
+        );
+      }
+    });
+  }
+
+  const outBtn = document.getElementById('sync-out');
+  if (outBtn) {
+    outBtn.addEventListener('click', () => {
+      signOut();
+      toast('Signed out — progress stays on this device');
+      render();
+    });
+  }
+
   // export
   document.getElementById('export').addEventListener('click', () => {
     downloadBackup();
@@ -249,6 +332,7 @@ function wire() {
 }
 
 async function init() {
+  captureSession(); // pick up a fresh Google sign-in from the URL hash
   try {
     const idx = await loadData('quran/index.json');
     surahNames = new Map(idx.surahs.map((s) => [s.id, s]));
@@ -256,6 +340,15 @@ async function init() {
     surahNames = new Map();
   }
   render();
+
+  // Reconcile in the background; refresh the "synced" line when it lands.
+  if (configured() && signedIn()) {
+    syncNow().then((res) => {
+      if (!res || !res.ok) return;
+      const when = document.getElementById('sync-when');
+      if (when) when.textContent = syncWhenText();
+    });
+  }
 }
 
 init();
