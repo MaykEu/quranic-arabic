@@ -44,11 +44,21 @@ document.querySelector('#pk-close')?.click();
 await sleep(200);
 const closed3 = !document.querySelector('.picker-overlay');
 
+// 4. double-open guard: reopening while one is open must leave exactly one overlay
+await openVersePicker({ onPick: () => {} });
+await sleep(200);
+await openVersePicker({ onPick: () => {} });
+await sleep(300);
+const overlays = document.querySelectorAll('.picker-overlay').length;
+const surahRows = document.querySelectorAll('.picker-overlay .surah-row').length;
+document.querySelectorAll('.picker-overlay').forEach((el) => el.remove());
+const single = overlays === 1 && surahRows === 114;
+
 const expected = [{ s: 112, a: 2 }, { s: 2, a: 255 }];
-const pass = JSON.stringify(picks) === JSON.stringify(expected) && closed1 && closed2 && closed3;
+const pass = JSON.stringify(picks) === JSON.stringify(expected) && closed1 && closed2 && closed3 && single;
 const pre = document.createElement('pre');
 pre.id = 'result';
-pre.textContent = JSON.stringify({ picks, closed1, closed2, closed3, pass }, null, 1);
+pre.textContent = JSON.stringify({ picks, closed1, closed2, closed3, overlays, surahRows, single, pass }, null, 1);
 document.body.appendChild(pre);
 document.body.dataset.qa = pass ? 'done-pass' : 'done-fail';
 </script>

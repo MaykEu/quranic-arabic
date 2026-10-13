@@ -9,6 +9,9 @@ export async function openVersePicker({ onPick, onClose } = {}) {
   const idx = await loadData('quran/index.json');
   const surahs = idx.surahs;
 
+  // Only one picker at a time (guards double-activation).
+  document.querySelectorAll('.picker-overlay').forEach((el) => el.remove());
+
   const root = document.createElement('div');
   root.className = 'picker-overlay';
   root.innerHTML = `
