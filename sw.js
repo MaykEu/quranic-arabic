@@ -1,6 +1,6 @@
 // Service worker: offline app shell + runtime caches.
 // Bump VERSION whenever shipped files change (forces a clean re-cache).
-const VERSION = 'qa-v14';
+const VERSION = 'qa-v15';
 const AUDIO_CACHE = 'qa-audio-v2';
 const AUDIO_HOSTS = ['audio.qurancdn.com', 'cdn.islamic.network', 'everyayah.com'];
 const AUDIO_MAX_ENTRIES = 300;
@@ -36,6 +36,20 @@ self.addEventListener('activate', (event) => {
     await self.clients.claim();
   })());
 });
+
+// Network-first for same-origin files: online you always get the latest build
+// (no stale window after a deploy); offline falls back to the last cached copy.
+async function networkFirst(request, cacheName) {
+  const cache = await caches.open(cacheName);
+  try {
+    const res = await fetch(request);
+    if (res && res.ok) cache.put(request, res.clone());
+    return res;
+  } catch {
+    const hit = await cache.match(request);
+    return hit || new Response('Offline', { status: 503, statusText: 'Offline' });
+  }
+}
 
 async function staleWhileRevalidate(request, cacheName) {
   const cache = await caches.open(cacheName);
@@ -84,12 +98,12 @@ self.addEventListener('fetch', (event) => {
   }
 
   if (url.origin === location.origin) {
-    // Per-surah data files: always try network, fall back to cache (works offline after a visit).
+    // Per-surah data files: cached copy is fine (they never change), avoid re-downloading.
     if (url.pathname.includes('/data/quran/')) {
       event.respondWith(staleWhileRevalidate(request, VERSION));
       return;
     }
-    // App shell & assets: serve cache first, populate on miss, revalidate in background.
-    event.respondWith(staleWhileRevalidate(request, VERSION));
+    // Everything else (pages, styles, scripts, data): network-first, cache as offline fallback.
+    event.respondWith(networkFirst(request, VERSION));
   }
 });
