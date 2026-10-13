@@ -16,12 +16,14 @@ const DEFAULT_BRUSH = 6;
 export function mountTrace(container, glyph, { size = 300, brush = null, slider = true } = {}) {
   container.classList.add('trace-wrap');
   container.innerHTML = `
-    <svg class="trace-guide" viewBox="0 0 ${size} ${size}" aria-hidden="true">
-      <text x="${size / 2}" y="${size * 0.73}" text-anchor="middle" font-size="${size * 0.6}"
-            font-family="Amiri, serif" fill="none" stroke="currentColor"
-            stroke-width="2.5" stroke-dasharray="5 9">${glyph}</text>
-    </svg>
-    <canvas class="trace-canvas" width="${size}" height="${size}"></canvas>
+    <div class="trace-stage">
+      <svg class="trace-guide" viewBox="0 0 ${size} ${size}" aria-hidden="true">
+        <text x="${size / 2}" y="${size * 0.73}" text-anchor="middle" font-size="${size * 0.6}"
+              font-family="Amiri, serif" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-dasharray="5 9">${glyph}</text>
+      </svg>
+      <canvas class="trace-canvas" width="${size}" height="${size}"></canvas>
+    </div>
     ${
       slider
         ? `<div class="trace-controls">

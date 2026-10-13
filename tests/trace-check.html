@@ -160,11 +160,29 @@ await run('dot-only', () => strokeDots(contour.filter(([, y]) => y >= 220)), fal
 await run('thick-brush-18', () => strokeDots(contour, 18), true);
 
 const pass = results.every(Boolean);
+
+// layout: the drawing square must not sit on top of the brush slider
+const stage = slot.querySelector('.trace-stage');
+const slider = slot.querySelector('#brush-slider');
+slider.scrollIntoView({ block: 'center' });
+await new Promise((r) => setTimeout(r, 60));
+const stageRect = stage.getBoundingClientRect();
+const sliderRect = slider.getBoundingClientRect();
+const noOverlap = stageRect.bottom <= sliderRect.top + 1;
+const hitEl = document.elementFromPoint(sliderRect.left + sliderRect.width / 2, sliderRect.top + sliderRect.height / 2);
+const sliderClickable = hitEl === slider || slider.contains(hitEl);
+const canvasHit = document.elementFromPoint(stageRect.left + stageRect.width / 2, stageRect.top + stageRect.height / 2);
+const canvasReachable = canvasHit && canvasHit.classList.contains('trace-canvas');
 say('');
-say(`${results.filter(Boolean).length}/${results.length} expectations matched → ${pass ? 'ALL GOOD' : 'TUNE NEEDED'}`);
+say(`layout: no-overlap=${noOverlap} slider-clickable=${sliderClickable} canvas-reachable=${canvasReachable}`);
+if (!noOverlap || !sliderClickable || !canvasReachable) results.push(false);
+
+const allPass = results.every(Boolean);
+say('');
+say(`${results.filter(Boolean).length}/${results.length} checks passed → ${allPass ? 'ALL GOOD' : 'TUNE NEEDED'}`);
 trace.clear();
 strokeDots(contour);
-document.body.dataset.qa = pass ? 'done-pass' : 'done-fail';
+document.body.dataset.qa = allPass ? 'done-pass' : 'done-fail';
 </script>
 </body>
 </html>

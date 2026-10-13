@@ -376,11 +376,11 @@ main {
 .haraka .muted { font-size: 12.5px; }
 
 /* ---------- tracing ---------- */
-.trace-wrap {
+.trace-wrap { display: grid; justify-items: center; margin: 14px auto 4px; }
+.trace-stage {
   position: relative;
   width: min(340px, 88vw);
   aspect-ratio: 1 / 1;
-  margin: 14px auto 4px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
