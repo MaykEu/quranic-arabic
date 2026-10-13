@@ -615,3 +615,12 @@ svg[fill="currentColor"] { fill: currentColor; stroke: none; }
 .confirm-box p { margin: 0 0 8px; }
 .danger-text { color: #B0413E; margin: 8px 0 0; }
 .danger-btn { background: #B0413E; border-color: #B0413E; color: #fff; }
+
+/* ---------- words browse ---------- */
+.word-divider {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 12px 0 6px;
+  letter-spacing: 0.02em;
+}

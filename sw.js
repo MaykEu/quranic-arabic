@@ -1,6 +1,6 @@
 // Service worker: offline app shell + runtime caches.
 // Bump VERSION whenever shipped files change (forces a clean re-cache).
-const VERSION = 'qa-v11';
+const VERSION = 'qa-v12';
 const AUDIO_CACHE = 'qa-audio-v2';
 const AUDIO_HOSTS = ['audio.qurancdn.com', 'cdn.islamic.network', 'everyayah.com'];
 const AUDIO_MAX_ENTRIES = 300;

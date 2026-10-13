@@ -1,7 +1,7 @@
 # Quranic Arabic
 
 A personal, mobile-first web app for learning **reading, writing and understanding Qur'anic Arabic** —
-the Arabic script, letter tracing, the 150 most frequent words, and verse study word by word with audio.
+the Arabic script, letter tracing, the 500 most frequent words (150 core + 350 more), and verse study word by word with audio.
 
 Plain HTML/CSS/JS (ES modules) — no build step, no runtime dependencies. Installable as a PWA and
 works offline once loaded.
@@ -31,7 +31,7 @@ GitHub Pages, from the `main` branch (root). Push to `main` to deploy.
 - Pages: `index.html`, `letters.html`, `words.html`, `verses.html`, `practice.html`, `progress.html`, `about.html`
 - `css/styles.css` — design tokens + all styles (light/dark)
 - `js/lib/` — store, audio URLs, data loader, progress, SRS · `js/ui/` — chrome, player, toast, tracing · `js/pages/` — one module per page
-- `data/` — generated dataset: full Qur'an (114 surahs, word-by-word transliteration/gloss/audio), top-150 vocabulary, letters, harakat, reciters, grammar notes
+- `data/` — generated dataset: full Qur'an (114 surahs, word-by-word transliteration/gloss/audio), top-500 vocabulary, letters, harakat, reciters, grammar notes
 - `assets/` — self-hosted Amiri font, icons, letter audio
 - `tools/` — regeneration scripts (Node + Python) · `tests/` — unit tests + browser smoke tests
 

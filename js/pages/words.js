@@ -1,5 +1,5 @@
 // Words module shell — three modes on one page:
-//   Browse  the 150 most frequent Quranic words (tap to hear)
+//   Browse  the most frequent Quranic words (top 500: core 150 + more; tap to hear)
 //   Review  flashcard recall with expanding-interval spaced repetition
 //   Build   assemble words from letter tiles (js/ui/build-game.js)
 // The mode lives in the URL hash (#browse / #review / #build), and Build
@@ -13,6 +13,7 @@ import { mountBuild } from '../ui/build-game.js';
 
 const main = document.querySelector('main');
 const NEW_PER_SESSION = 10;
+const CORE = 150; // the original verified core set
 let words = [];
 let vocabLoaded = false;
 
@@ -56,10 +57,11 @@ function buildQueue() {
 function renderBrowse(view) {
   view.innerHTML = `
     <p class="muted">The most frequent words of the Qur'an — tap any word to hear it.</p>
-    <div class="word-list" id="word-list"></div>`;
+    <div class="word-list" id="word-list"></div>
+    <div class="row" style="justify-content:center;margin-top:10px" id="more-wrap"></div>`;
 
   const list = view.querySelector('#word-list');
-  for (const w of words) {
+  const addRow = (w) => {
     const row = document.createElement('button');
     row.type = 'button';
     row.className = 'word-row';
@@ -76,6 +78,25 @@ function renderBrowse(view) {
       setTimeout(() => row.classList.remove('active'), 700);
     });
     list.appendChild(row);
+  };
+
+  const core = words.slice(0, CORE);
+  const rest = words.slice(CORE);
+  for (const w of core) addRow(w);
+
+  const wrap = view.querySelector('#more-wrap');
+  if (rest.length) {
+    wrap.innerHTML = `<button type="button" class="btn btn-ghost" id="more">Show ${rest.length} more words ▾</button>`;
+    view.querySelector('#more').addEventListener('click', () => {
+      const divider = document.createElement('div');
+      divider.className = 'word-divider';
+      divider.textContent = `more frequent words — ranks ${CORE + 1}–${words.length}`;
+      list.appendChild(divider);
+      for (const w of rest) addRow(w);
+      wrap.remove();
+    });
+  } else {
+    wrap.remove();
   }
 }
 
@@ -88,7 +109,7 @@ function renderReview(view) {
   view.innerHTML = `
     <section class="card">
       <div class="row stats-row">
-        <div class="stat center"><div class="n">${seen}</div><div class="l">seen</div></div>
+        <div class="stat center"><div class="n">${seen}</div><div class="l">seen of ${words.length}</div></div>
         <div class="stat center"><div class="n">${known}</div><div class="l">known</div></div>
         <div class="stat center"><div class="n">${queue.length}</div><div class="l">in queue</div></div>
       </div>

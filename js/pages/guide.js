@@ -25,7 +25,7 @@ const STEPS = [
     n: 3,
     title: 'Core words (frequency first)',
     where: 'Words + Build',
-    body: 'The 150 most frequent words cover 41.3% of every word in the Qur’an. Learn them with flashcards (spaced review) and Build — assembling words from letters teaches how Arabic words are actually made.',
+    body: 'The 500 most frequent words cover 56% of every word in the Qur’an — the top 150 alone give you 41%. Learn them with flashcards (spaced review) and Build — assembling words from letters teaches how Arabic words are actually made.',
     why: 'Frequency-first maximises comprehension per word learned. Spaced retrieval: Cepeda 2006; Roediger & Karpicke 2006.',
     see: '<a href="basics.html#words">How words are made (roots &amp; patterns)</a>',
   },
@@ -100,7 +100,7 @@ main.innerHTML = `
   <section class="card">
     <h3>Why this order works</h3>
     <ul class="muted evidence-list">
-      <li><strong>Frequency first</strong> — the 150 most common words give you 41.3% of the Qur’an’s words (measured on all 77,429 words).</li>
+      <li><strong>Frequency first</strong> — the top 150 words give you 41.3% of the Qur’an’s words; the full 500 give 56% (measured on all 77,429 words).</li>
       <li><strong>Spaced review</strong> — expanding intervals (1·3·7·14·30 days) make remembering easier: Cepeda et al. 2006.</li>
       <li><strong>Retrieval first</strong> — testing yourself beats re-reading: Roediger &amp; Karpicke 2006.</li>
       <li><strong>Small steps with audio</strong> — verse-by-verse, word-by-word: Mayer’s segmenting &amp; modality principles.</li>

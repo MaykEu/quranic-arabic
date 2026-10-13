@@ -117,7 +117,7 @@ async function init() {
         ).join('')}
       </div>
       <p>Same three letters, different pattern → different meaning. Once you recognise a root,
-      you meet it again and again — that is why learning the 150 most frequent words pays off fast.</p>
+      you meet it again and again — that is why learning the most frequent words pays off fast.</p>
       <p><a href="words.html#build">Try it: build words from letter tiles →</a></p>
     </section>`;
 
