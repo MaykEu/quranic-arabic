@@ -4,6 +4,7 @@
 import { get, set } from '../lib/store.js';
 import { mountPlayer } from './player.js';
 import { captureSession, signedIn, session, signIn, signOut, syncNow } from '../lib/sync.js';
+import { migrate as migrateActivity, touch as touchDay } from '../lib/activity.js';
 
 const NAV = [
   ['index.html', 'Home', 'home'],
@@ -205,6 +206,11 @@ buildNav();
 mountPlayer();
 initTheme();
 registerSW();
+
+// Activity log: absorb the legacy listen counter once, then record that the app
+// was opened today (this is what the Progress page's "days used" counts).
+migrateActivity();
+touchDay();
 
 // Cloud sync (optional layer — the app works fully without it): pick up a fresh
 // Google sign-in from the URL, then reconcile in the background on load, when the

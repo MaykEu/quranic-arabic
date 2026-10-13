@@ -43,6 +43,7 @@ async function run() {
   const { set } = await import('../js/lib/store.js');
   const { collectDoc } = await import('../js/lib/sync.js');
   const { collect } = await import('../js/lib/backup.js');
+  const A = await import('../js/lib/activity.js');
 
   // ---- drive one write per feature, exactly as the pages do ----
   mark('letters', 'alif'); // Letters: pass a trace
@@ -53,7 +54,14 @@ async function run() {
   unmark('memorised', '112:2'); // unmark → must leave a tombstone
   review('7', true); // Review/Quiz: SRS good
   review('v:112:1', false); // Recall: SRS miss
-  set('practice', { listens: { '2026-10-13': 3 }, recallSingle: true }); // the REAL shape the page writes
+  set('practice', { listens: { '2026-10-13': 3 }, recallSingle: true }); // legacy listen map (absorbed by activity.migrate) + a selection key
+  // Activity log (qa-v32) — the REAL helpers the pages call
+  A.bump('listens'); // Listen drill: "I said it — next"
+  A.graded('quizRead', true); // Quiz answer (correct)
+  A.graded('traces', false); // Trace check (failed)
+  A.bump('readSec', 300); // Reading time
+  A.setBest('bestRead', 8);
+  const dk = A.dayKey();
   set('brush', 9); // Trace brush size
   set('prefs', { tr: 'sahih', reciter: 'alafasy', wordMode: false });
   set('lastRead', { s: 112, a: 1, at: Date.now() });
@@ -95,6 +103,14 @@ async function run() {
   out.tombstoneInDoc = doc.tombstones['memorised:112:2'] > 0;
   out.srsInDoc = !!doc.data.srs['7'] && !!doc.data.srs['v:112:1'];
   out.practiceInDoc = doc.data.practice.listens['2026-10-13'] === 3;
+  out.activityInDoc =
+    doc.data.activity.days[dk].listens === 1 &&
+    doc.data.activity.days[dk].quizRead === 1 &&
+    doc.data.activity.days[dk].quizReadOk === 1 &&
+    doc.data.activity.days[dk].traces === 1 &&
+    doc.data.activity.days[dk].tracesOk === undefined &&
+    doc.data.activity.days[dk].readSec === 300;
+  out.activityBestInDoc = doc.data.activity.best.bestRead === 8;
   out.brushInDoc = doc.data.brush === 9;
   out.prefsInDoc = doc.data.prefs.tr === 'sahih';
   out.lastReadInDoc = doc.data.lastRead.s === 112;
@@ -106,6 +122,8 @@ async function run() {
     !!bak.progress.surahs['112'] &&
     !!bak.srs['7'] &&
     bak.practice.listens['2026-10-13'] === 3 &&
+    bak.activity.days[dk].listens === 1 &&
+    bak.activity.best.bestRead === 8 &&
     bak.brush === 9 &&
     !!bak.tomb['memorised:112:2'];
 
@@ -119,6 +137,7 @@ async function run() {
   out.mergeKeepsTombstone = merged.tombstones['memorised:112:2'] > 0;
   out.mergeKeepsSrs = !!merged.data.srs['7'];
   out.mergeKeepsPractice = merged.data.practice.listens['2026-10-13'] === 3;
+  out.mergeKeepsActivity = merged.data.activity.days[dk].listens === 1 && merged.data.activity.best.bestRead === 8;
 }
 
 run()

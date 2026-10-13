@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progress page QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/stats.css">
+</head>
+<body>
+<main></main>
+<script type="module">
+// Progress page QA — seeds a known history, then drives the REAL page and
+// checks every number against an independently computed expectation.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const q = (s) => document.querySelector(s);
+const qa = (s) => [...document.querySelectorAll(s)];
+const out = {};
+const DAY = 86400000;
+
+let pageError = null;
+window.addEventListener('error', (e) => {
+  pageError = String((e && e.error && e.error.message) || e.message || e);
+});
+window.addEventListener('unhandledrejection', (e) => {
+  pageError = String((e && e.reason && e.reason.message) || e.reason || e);
+});
+
+const key = (d) =>
+  `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const tKey = key(new Date());
+const yKey = key(new Date(Date.now() - DAY));
+
+async function run() {
+  // ---- seed a known history BEFORE the page module runs ----
+  localStorage.clear();
+
+  const srs = {};
+  for (let r = 1; r <= 3; r++) srs[r] = { box: 5, seen: 6, right: 6, due: Date.now() + 10 * DAY }; // mature
+  for (let r = 4; r <= 6; r++) srs[r] = { box: 3, seen: 4, right: 4, due: Date.now() + 5 * DAY }; // young
+  for (let r = 7; r <= 9; r++) srs[r] = { box: 1, seen: 2, right: 1, due: Date.now() - 5000 }; // learning, due now
+  localStorage.setItem('qa.v1.srs', JSON.stringify(srs));
+
+  localStorage.setItem(
+    'qa.v1.activity',
+    JSON.stringify({
+      days: {
+        [tKey]: {
+          visits: 1,
+          listens: 3,
+          quizRead: 10,
+          quizReadOk: 7,
+          quizReadRounds: 1,
+          traces: 12,
+          tracesOk: 9,
+          listenSec: 600,
+          readSec: 300,
+        },
+        [yKey]: { visits: 1, listens: 3 },
+      },
+      best: { bestRead: 8 },
+    }),
+  );
+
+  localStorage.setItem(
+    'qa.v1.progress',
+    JSON.stringify({
+      letters: { alif: { at: 1 }, ba: { at: 1 }, ta: { at: 1 } },
+      words: {},
+      verses: {},
+      memorised: {},
+      surahs: {},
+      days: [],
+    }),
+  );
+
+  // ---- independent expectations (own math, not the page's) ----
+  const vocab = await (await fetch('../data/vocabulary.json')).json();
+  const knownTokens = vocab.words.filter((w) => srs[w.rank] && srs[w.rank].box >= 3).reduce((n, w) => n + w.count, 0);
+  const expCoverage = (knownTokens / vocab.total_tokens) * 100;
+
+  // ---- drive the real page ----
+  await import('../js/pages/progress.js');
+  await sleep(1400);
+
+  out.pageRendered = !!q('.goal-line') && !!q('.cov-num');
+  out.noError = !pageError;
+
+  // goal card: 3 listens + 10 quiz answers + 12 trace checks = 25 reps
+  out.goalReps = /25/.test(q('.goal-line').textContent) && /\/ 30 reps/.test(q('.goal-line').textContent);
+  out.goalBar = Math.abs(parseFloat(q('.goal-bar i').style.width) - 83) <= 1;
+  out.goalNotDone = !q('.goal-done');
+  out.daysUsed = /2 days used/.test(q('.goal-card') ? '' : document.body.textContent);
+  out.heatKeyDays = /2 days used/.test(q('.heat').parentElement.textContent);
+
+  // coverage meter
+  const covShown = parseFloat(q('.cov-num b').textContent);
+  out.coverageMatches = Math.abs(covShown - expCoverage) <= 0.1;
+  out.coverageTicks = qa('.cov-tick').length === 2;
+  out.coverageCaption = /56\.05%/.test(document.body.textContent);
+
+  // strength buckets: 500 taught − 9 seen = 491 new; 3 learning (box 1–2); 3 young (3–4); 3 mature (5)
+  const bucketVals = qa('.bucket b').map((b) => Number(b.textContent));
+  out.buckets = JSON.stringify(bucketVals) === JSON.stringify([491, 3, 3, 3]);
+  const bucketHrefs = qa('.bucket').map((a) => a.getAttribute('href'));
+  out.bucketLinks = bucketHrefs.includes('words.html#review/b12') && bucketHrefs.includes('words.html#review/b34') && bucketHrefs.includes('words.html#review/b5');
+
+  // forecast: 2 overdue (learning) due today, 3 young in 5 days
+  out.forecastToday = /2 due today/.test(document.body.textContent);
+  out.forecastWeek = /3 in the next 7 days/.test(document.body.textContent);
+  out.forecastBars = qa('.forecast i').length === 30;
+
+  // drills: Read it 1 round · best 8/10 · 10 answers · 70%; trace 12 checks 9 passed;
+  // overall 16/22 = 73%
+  const rows = qa('.drill-table tr').map((r) => r.textContent.replace(/\s+/g, ' ').trim());
+  out.drillRows = rows.length === 5 && /Read it/.test(rows[0]) && /Understand it/.test(rows[1]);
+  out.readRow = /1 round/.test(rows[0]) && /best 8\/10/.test(rows[0]) && /10 answers · 70%/.test(rows[0]);
+  out.traceRow = /12 checks/.test(rows[2]) && /9 passed/.test(rows[2]);
+  out.overallAccuracy = /73%/.test(document.body.textContent) && /22/.test(document.body.textContent);
+
+  // letters + heatmap + volume
+  out.letterGrid = qa('.letter-cell').length === 28 && qa('.letter-cell.on').length === 3;
+  const heatSpans = qa('.heat .heat-col span');
+  out.heatCells = heatSpans.length >= 84;
+  out.heatToday = heatSpans[heatSpans.length - 1].className === 'l2'; // 25 reps → level 2
+  out.volume = /10 min/.test(document.body.textContent) && /5 min/.test(document.body.textContent);
+
+  // goal presets: pick 15 → stored + now "done" (25 ≥ 15)
+  qa('.chip-pick[data-goal]').find((b) => b.dataset.goal === '15').click();
+  await sleep(600);
+  out.goalSaved = JSON.parse(localStorage.getItem('qa.v1.prefs')).dailyGoalReps === 15;
+  out.goalDoneNow = !!q('.goal-done') && /15 reps/.test(q('.goal-line').textContent);
+  out.goalChipActive = qa('.chip-pick.on')[0].dataset.goal === '15';
+
+  // the "Your data" + reset cards must still be there
+  out.dataCardsIntact = !!q('#export') && !!q('#import') && !!q('#reset') && !!q('#last-backup');
+}
+
+run()
+  .then(() => {
+    out.pass = Object.values(out).every((v) => v === true);
+    const pre = document.createElement('pre');
+    pre.id = 'result';
+    pre.textContent = JSON.stringify(out, null, 1);
+    document.body.appendChild(pre);
+    document.body.dataset.qa = out.pass ? 'done-pass' : 'done-fail';
+  })
+  .catch((e) => {
+    const pre = document.createElement('pre');
+    pre.id = 'result';
+    pre.textContent = 'ERROR: ' + ((e && e.stack) || e);
+    document.body.appendChild(pre);
+    document.body.dataset.qa = 'done-error';
+  });
+</script>
+</body>
+</html>

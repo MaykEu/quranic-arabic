@@ -13,7 +13,7 @@ One document per account in Supabase (`progress` table, `doc` jsonb):
   "v": 1,
   "updatedAt": 1728820000000,
   "resetAt": 1728800000000,
-  "data": { "progress": {…}, "srs": {…}, "practice": {…}, "prefs": {…}, "brush": 8, "_meta": {…} },
+  "data": { "progress": {…}, "srs": {…}, "activity": {…}, "practice": {…}, "prefs": {…}, "brush": 8, "_meta": {…} },
   "tombstones": { "memorised:2:255": 1728810000000 }
 }
 ```
@@ -24,6 +24,7 @@ One document per account in Supabase (`progress` table, `doc` jsonb):
 |---|---|
 | `progress` (letters, words, verses, memorised, days) | `theme` — each device picks its own look |
 | `srs` — review boxes | `lastBackupAt` — local bookkeeping |
+| `activity` — the day log (reps, drills, seconds) | — |
 | `practice` — daily counters | `sync.session` — the login token (and it is excluded from backup files too) |
 | `prefs`, `brush`, `lastRead`, `_meta` stamps | `sync.lastSync` |
 | `tombstones`, `sync.resetAt` | |
@@ -38,6 +39,7 @@ One document per account in Supabase (`progress` table, `doc` jsonb):
 - **SRS cards**: the most recent review (`at`) wins; on an exact tie, the higher box wins
   (never lose progress). Cards are never deleted by merge.
 - **Practice counters**: per day, `max` of the two counts (all practice counts).
+- **Activity log**: days are unioned; inside a day, **every field takes the max** (two devices finishing the same day must never double-count), and an all-time best record takes the max too. Days older than a deliberate reset are dropped — the reset floor is the **local** day it happened (a reset is a local moment; the practice/day counters use the UTC day, so the two can differ by a few hours at a boundary).
 - **Days**: union, sorted.
 - **Reset**: `resetAt` is stamped when a user resets. Entries (and practice days /
   day-strings) older than the reset are dropped on **both** sides; anything done after
@@ -57,7 +59,8 @@ in localStorage, in the sync doc and in a backup file:
 |---|---|---|---|
 | `progress` (letters / words / verses / memorised / surahs / days) | Letters, Words, Verses reader (word tap, ✓, surah ✓) | ✔ union + earliest `at` | ✔ |
 | `srs` | Words review, Quiz, Recall | ✔ latest review wins | ✔ |
-| `practice` | Listen & repeat daily counter | ✔ per-day max | ✔ |
+| `practice` | Listen & repeat selections (`recallSingle`, `readVerse`, …); legacy listen map rides along | ✔ per-day max + LWW | ✔ |
+| `activity` | Goal card, drills, trace checks, quiz answers, listen reps, audio/reading seconds, daily visits | ✔ days unioned, per-field max | ✔ |
 | `prefs`, `brush`, `lastRead` | Verses reader, trace slider | ✔ newest write wins | ✔ |
 | `_meta` | every save (change stamps) | ✔ | ✔ |
 | `tomb` | every unmark | ✔ (as `doc.tombstones`) | ✔ |

@@ -17,6 +17,7 @@ import { wbwFromRef, verseAudioUrl } from '../lib/audio.js';
 import { play, stop } from '../ui/player.js';
 import { mark, unmark, isLearned } from '../lib/progress.js';
 import { get, set } from '../lib/store.js';
+import { trackAudio, bump as bumpActivity } from '../lib/activity.js';
 import { parseVerseRef, parseSurahRef, verseHash } from '../lib/hash.js';
 import { toast } from '../ui/toast.js';
 
@@ -138,6 +139,7 @@ async function route() {
 // ---------- surah browser ----------
 
 function renderBrowser() {
+  document.body.dataset.reading = '';
   const last = get('lastRead', null);
   const lastSurah = last && surahIndex.surahs.find((s) => s.id === last.s);
 
@@ -221,6 +223,7 @@ function ayahHTML(surah, ayah, surahDone = false) {
 }
 
 function renderSurah(focusAyah) {
+  document.body.dataset.reading = '1';
   stopSeq();
   const { surah } = view;
   const meta = surahIndex.surahs.find((x) => x.id === surah.id);
@@ -397,7 +400,7 @@ function startTeacher(fromAyah) {
   followPaused = false;
   const { surah } = view;
   const list = surah.ayahs.filter((x) => x.n >= fromAyah);
-  const audio = new Audio();
+  const audio = trackAudio(new Audio());
   let i = 0;
   let stopped = false;
 
@@ -476,7 +479,7 @@ function playAyahWords(a) {
   followPaused = false;
   const { surah } = view;
   const ayah = surah.ayahs.find((x) => x.n === a);
-  const audio = new Audio();
+  const audio = trackAudio(new Audio());
   let i = 0;
   let stopped = false;
   const els = [...document.querySelectorAll(`.vw[data-a="${a}"]`)];
@@ -571,6 +574,15 @@ async function init() {
   window.addEventListener('touchmove', noteManualScroll, { passive: true });
 
   window.addEventListener('hashchange', route);
+
+  // Reading time: ticks only while a surah view is open AND the tab is visible.
+  // Counted honestly — audio playback is measured separately (activity.trackAudio).
+  setInterval(() => {
+    if (document.visibilityState === 'visible' && document.body.dataset.reading === '1') {
+      bumpActivity('readSec', 15);
+    }
+  }, 15000);
+
   route();
 }
 

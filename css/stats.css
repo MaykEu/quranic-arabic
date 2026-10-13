@@ -1,0 +1,239 @@
+/* Stats blocks for the Progress page: daily goal, coverage meter, strength
+   buckets, review forecast, drill table, letters, activity heatmap. */
+
+/* ---- daily goal ---- */
+.goal-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  margin: 0.35rem 0 0.5rem;
+}
+.goal-line b {
+  font-size: 1.9rem;
+  line-height: 1;
+}
+.goal-done {
+  margin-left: auto;
+  font-weight: 600;
+  color: var(--brand2);
+}
+.goal-bar,
+.cov-bar {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--muted) 18%, transparent);
+  overflow: hidden;
+}
+.goal-bar i,
+.cov-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand2), var(--brand));
+  transition: width 0.4s ease;
+}
+.goal-presets {
+  margin-top: 0.7rem;
+  gap: 0.4rem;
+  align-items: center;
+}
+.chip-pick {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: inherit;
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  font: inherit;
+  cursor: pointer;
+}
+.chip-pick.on {
+  border-color: var(--brand2);
+  color: var(--brand2);
+  font-weight: 600;
+}
+
+/* ---- coverage meter ---- */
+.cov-num {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 0.3rem 0 0.6rem;
+}
+.cov-num b {
+  font-size: 2.1rem;
+  line-height: 1;
+}
+.cov-bar i {
+  background: linear-gradient(90deg, var(--brand2), var(--brand));
+}
+.cov-tick {
+  position: absolute;
+  top: -3px;
+  width: 2px;
+  height: 16px;
+  background: color-mix(in srgb, var(--fg, currentColor) 45%, transparent);
+}
+.cov-tick::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 15px;
+  transform: translateX(-50%);
+  font-size: 0.68rem;
+  white-space: nowrap;
+  opacity: 0.75;
+}
+.cov-legend {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.35rem;
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
+
+/* ---- strength buckets ---- */
+.bucket-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin: 0.5rem 0 0.2rem;
+}
+.bucket {
+  display: block;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.55rem 0.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+.bucket b {
+  display: block;
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+.bucket span {
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
+.bucket.mature b {
+  color: var(--brand2);
+}
+
+/* ---- review forecast ---- */
+.forecast {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 56px;
+  margin: 0.6rem 0 0.2rem;
+}
+.forecast i {
+  flex: 1;
+  min-height: 2px;
+  border-radius: 3px 3px 0 0;
+  background: color-mix(in srgb, var(--brand2) 55%, transparent);
+}
+.forecast i.today {
+  background: var(--brand2);
+}
+.forecast i.zero {
+  background: color-mix(in srgb, var(--muted) 18%, transparent);
+}
+
+/* ---- drill table ---- */
+.drill-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.drill-table td {
+  padding: 0.38rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 55%, transparent);
+}
+.drill-table tr:last-child td {
+  border-bottom: 0;
+}
+.drill-table td:first-child {
+  font-weight: 600;
+}
+.drill-table td:not(:first-child) {
+  text-align: right;
+  white-space: nowrap;
+}
+.drill-table td.dim {
+  opacity: 0.7;
+}
+
+/* ---- letters grid ---- */
+.letter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.letter-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.45;
+}
+.letter-cell.on {
+  opacity: 1;
+  border-color: var(--brand2);
+  box-shadow: inset 0 0 0 1px var(--brand2);
+}
+
+/* ---- activity heatmap ---- */
+.heat {
+  display: flex;
+  gap: 3px;
+  margin: 0.6rem 0 0.3rem;
+  overflow-x: auto;
+}
+.heat-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.heat-col span {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--muted) 14%, transparent);
+}
+.heat-col span.v {
+  background: color-mix(in srgb, var(--brand2) 22%, transparent);
+}
+.heat-col span.l1 {
+  background: color-mix(in srgb, var(--brand2) 38%, transparent);
+}
+.heat-col span.l2 {
+  background: color-mix(in srgb, var(--brand2) 60%, transparent);
+}
+.heat-col span.l3 {
+  background: color-mix(in srgb, var(--brand2) 80%, transparent);
+}
+.heat-col span.l4 {
+  background: var(--brand2);
+}
+.heat-key {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  opacity: 0.75;
+  flex-wrap: wrap;
+}
+.heat-key span {
+  width: 10px;
+  height: 10px;
+  border-radius: 2.5px;
+  display: inline-block;
+}

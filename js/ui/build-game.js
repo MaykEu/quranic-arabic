@@ -13,6 +13,7 @@ import { play } from '../ui/player.js';
 import { wbwFromRef } from '../lib/audio.js';
 import { mark, isLearned } from '../lib/progress.js';
 import { load as loadSRS, review } from '../lib/srs.js';
+import { graded } from '../lib/activity.js';
 import { buildIndex } from '../lib/shaping.js';
 import { toast } from '../ui/toast.js';
 
@@ -198,6 +199,7 @@ export async function mountBuild(container, { firstLetter = null } = {}) {
       if (ok) {
         done = true;
         review(sid(w), misses === 0);
+        graded('reviews', misses === 0);
         mark('words', sid(w));
         return success();
       }

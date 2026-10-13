@@ -18,6 +18,7 @@ import { mountTrace } from '../ui/trace.js';
 import { openVersePicker } from '../ui/verse-picker.js';
 import { parsePracticeHash } from '../lib/hash.js';
 import { pickOptions, buildRound, glossOptions, buildDrillPools } from '../lib/quiz.js';
+import { day, graded, bump, setBest } from '../lib/activity.js';
 import { toast } from '../ui/toast.js';
 
 const main = document.querySelector('main');
@@ -52,28 +53,14 @@ const state = {
 };
 
 const prefs = () => get('prefs', {});
-// Local day (YYYY-MM-DD) — the listen counter must reset at the learner's midnight,
-// not UTC midnight.
-const today = () => {
-  const d = new Date();
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-};
 const savePractice = (patchObj) => set('practice', { ...get('practice', {}), ...patchObj });
 
-// Listen drill counter: { listens: { 'YYYY-MM-DD': n } } — a per-day map so cloud
-// sync can merge it per day (the old {day, count} shape got mangled by the merge).
-function listensMap(p = get('practice', {})) {
-  const out = { ...(p.listens && typeof p.listens === 'object' ? p.listens : {}) };
-  if (p.day && typeof p.count === 'number') out[p.day] = Math.max(out[p.day] || 0, p.count); // absorb the legacy shape
-  return out;
-}
-const listenCount = () => listensMap()[today()] || 0;
+// Listen drill counter — now just the activity log's `listens` for today
+// (qa-v32 moved it there so one day-record drives the goal, the heatmap and the
+// per-drill stats). The old practice.listens map is absorbed by activity.migrate().
+const listenCount = () => day().listens || 0;
 function listenAdd() {
-  const p = get('practice', {});
-  const listens = listensMap(p);
-  listens[today()] = (listens[today()] || 0) + 1;
-  const { day, count, ...rest } = p; // drop the legacy fields for good
-  set('practice', { ...rest, listens });
+  bump('listens');
 }
 
 function loadSelection() {
@@ -265,6 +252,7 @@ function renderTrace() {
   document.getElementById('erase').addEventListener('click', () => trace.clear());
   document.getElementById('check').addEventListener('click', () => {
     const { coverage, precision, missedParts, ok } = trace.checkCoverage();
+    graded('traces', ok);
     const msg = document.getElementById('trace-msg');
     const pct = Math.round(coverage * 100);
     if (ok) {
@@ -330,6 +318,7 @@ const freshSound = () => ({
   i: 0,
   got: 0,
   answered: false,
+  recorded: false,
   log: [],
   missed: [],
   options: null,
@@ -423,6 +412,7 @@ function renderQuiz() {
       s.answered = true;
       const correct = Number(btn.dataset.rank) === w.rank;
       review(String(w.rank), correct);
+      graded(mode === 'meaning' ? 'quizMeaning' : 'quizRead', correct);
       s.log = [...(s.log || []), correct];
       if (correct) s.got += 1;
       else s.missed = [...(s.missed || []), w];
@@ -455,6 +445,13 @@ function renderQuiz() {
 
 function renderQuizDone(s, mode) {
   const missed = s.missed || [];
+  // Record the finished round once (a re-render of a finished round must not
+  // bump the round count again).
+  if (!s.recorded) {
+    s.recorded = true;
+    bump(mode === 'meaning' ? 'quizMeaningRounds' : 'quizReadRounds');
+    setBest(mode === 'meaning' ? 'bestMeaning' : 'bestRead', s.got);
+  }
   shell('quiz', `
     ${quizSeg(mode)}
     <section class="card center">
@@ -583,6 +580,7 @@ async function renderRecall() {
   });
   const grade = (good) => {
     review(`v:${s}:${a}`, good);
+    graded('recalls', good);
     if (good) r.got += 1;
     r.i += 1;
     renderRecall();

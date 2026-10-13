@@ -10,6 +10,7 @@
 // (safe by design: Row-Level Security limits every user to their own row).
 import { get, set, remove, keys } from './store.js';
 import { SYNC, configured } from './sync-config.js';
+import { mergeActivity } from './activity.js';
 
 // Re-exported so pages can ask "is sync set up?" from the single sync module.
 export { configured };
@@ -231,9 +232,11 @@ export function mergeDocs(docA, docB, now = Date.now()) {
   dropTombstoned(progress, tombstones);
   data.progress = progress;
   data.srs = mergeSrs(a.data.srs, b.data.srs, resetAt);
+  // The activity log: union of days, per-day per-field max (never double-count).
+  data.activity = mergeActivity(a.data.activity, b.data.activity, resetAt);
 
   // Everything else: newest write wins (change stamps; lastRead can use its own at).
-  const special = new Set(['_meta', 'progress', 'srs']);
+  const special = new Set(['_meta', 'progress', 'srs', 'activity']);
   for (const k of new Set([...Object.keys(a.data), ...Object.keys(b.data)])) {
     if (special.has(k)) continue;
     if (k === 'practice') {

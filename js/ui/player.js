@@ -1,7 +1,10 @@
 // Single reusable <audio> element + sticky player bar (sits above the bottom nav).
 // Every sound in the app plays through play() — one element keeps iOS happy.
 
+import { trackAudio } from '../lib/activity.js';
+
 const audio = new Audio();
+trackAudio(audio);
 audio.preload = 'none';
 
 const SVG_PLAY = '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" stroke="none"><path d="M8 5v14l11-7z"/></svg>';

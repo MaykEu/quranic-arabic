@@ -9,6 +9,7 @@ import { wbwFromRef } from '../lib/audio.js';
 import { play } from '../ui/player.js';
 import { mark } from '../lib/progress.js';
 import { load as loadSRS, review, dueIds } from '../lib/srs.js';
+import { graded } from '../lib/activity.js';
 import { mountBuild } from '../ui/build-game.js';
 
 const main = document.querySelector('main');
@@ -29,7 +30,7 @@ const MODES = [
 function parseHash() {
   const h = location.hash.replace(/^#/, '');
   if (h.startsWith('build')) return { mode: 'build', letter: h.split('/')[1] || null };
-  if (h === 'review') return { mode: 'review', letter: null };
+  if (/^review(\/b[0-9]+)?$/.test(h)) return { mode: 'review', letter: null, boxes: (h.match(/b([0-9]+)/) || [])[1] || null };
   return { mode: 'browse', letter: null };
 }
 
@@ -43,12 +44,19 @@ async function ensureVocab() {
 const byRank = (id) => words.find((w) => String(w.rank) === String(id));
 
 function buildQueue() {
+  // `#review/b34` reviews only the due cards sitting in those boxes (the
+  // Progress page's strength buckets link here); plain `#review` is the normal
+  // queue: due cards first, then a few new words.
+  const want = (location.hash.match(/^#review\/b([0-9]+)/) || [])[1];
+  const boxes = want ? new Set(want.split('')) : null;
   const all = loadSRS();
-  const due = dueIds(all).filter((id) => /^\d+$/.test(id));
-  const fresh = words
-    .filter((w) => !all[String(w.rank)])
-    .slice(0, NEW_PER_SESSION)
-    .map((w) => String(w.rank));
+  const due = dueIds(all).filter((id) => /^\d+$/.test(id) && (!boxes || boxes.has(String(all[id].box))));
+  const fresh = boxes
+    ? []
+    : words
+        .filter((w) => !all[String(w.rank)])
+        .slice(0, NEW_PER_SESSION)
+        .map((w) => String(w.rank));
   return [...due, ...fresh];
 }
 
@@ -173,6 +181,7 @@ function startSession(view, queue) {
   function grade(w, good) {
     const first = !loadSRS()[String(w.rank)];
     review(String(w.rank), good);
+    graded('reviews', good);
     if (first || good) mark('words', String(w.rank));
     if (good) got += 1;
     i += 1;
