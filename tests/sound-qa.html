@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz (ear training) QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/reading.css">
+</head>
+<body>
+<main></main>
+<script type="module">
+// Drive the real Practice page in Quiz mode: first question renders 4 unique
+// options, answering gives feedback + grades SRS, then it advances.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const out = {};
+
+localStorage.clear();
+history.replaceState(null, '', '#quiz');
+await import('../js/pages/practice.js');
+await sleep(1200);
+
+const q = (s) => document.querySelector(s);
+out.modeActive = !!q('.sound-grid');
+out.counter = q('.counter-chip')?.textContent?.trim();
+const opts = [...document.querySelectorAll('.sound-opt')];
+out.optionCount = opts.length;
+const ranks = opts.map((b) => b.dataset.rank);
+out.uniqueOptions = new Set(ranks).size === ranks.length && ranks.every((r) => r);
+
+// answer the first option (right or wrong — both paths must grade + reveal)
+opts[0].click();
+await sleep(400);
+out.feedbackShown = q('#sound-feedback').textContent.trim().length > 0;
+out.marked = document.querySelectorAll('.sound-opt.correct, .sound-opt.wrong').length >= 1;
+out.optionsDisabled = [...document.querySelectorAll('.sound-opt')].every((b) => b.disabled);
+out.srsCount = Object.keys(JSON.parse(localStorage.getItem('qa.v1.srs') || '{}')).length;
+
+// second click must be ignored (no double grading)
+const srsBefore = out.srsCount;
+document.querySelectorAll('.sound-opt')[1].click();
+await sleep(120);
+out.noDoubleGrade = Object.keys(JSON.parse(localStorage.getItem('qa.v1.srs') || '{}')).length === srsBefore;
+
+// advances to the next question
+await sleep(1600);
+out.advanced = q('.counter-chip')?.textContent?.trim() !== out.counter && !!q('.sound-grid');
+
+out.pass =
+  out.modeActive && out.optionCount === 4 && out.uniqueOptions && out.feedbackShown &&
+  out.marked && out.optionsDisabled && out.srsCount >= 1 && out.noDoubleGrade && out.advanced;
+
+const pre = document.createElement('pre');
+pre.id = 'result';
+pre.textContent = JSON.stringify(out, null, 1);
+document.body.appendChild(pre);
+document.body.dataset.qa = out.pass ? 'done-pass' : 'done-fail';
+</script>
+</body>
+</html>

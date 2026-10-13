@@ -1,13 +1,14 @@
-// Practice module — four drills:
+// Practice module — five drills:
 //   Read aloud : record yourself, then hear the reciter's verse back-to-back
 //                (production effect; deliberately NO automatic scoring)
 //   Trace      : trace whole words with the same coverage scorer as letters
 //   Listen     : hear → say → next with a daily counter
+//   Quiz       : hear a word, pick it from four (ear training; feeds the SRS)
 //   Recall     : verse shown, meaning hidden, self-grade → same SRS scheduler
-// Modes live in the hash (#read / #trace / #listen / #recall), and Read aloud /
-// Recall accept a verse: #read/2:255, #recall/2:255. Read aloud walks ayah by
-// ayah from the chosen verse; Recall drills either your recent verses or one
-// chosen verse. Everything is optional — any level can jump anywhere.
+// Modes live in the hash (#read / #trace / #listen / #quiz / #recall), and
+// Read aloud / Recall accept a verse: #read/2:255, #recall/2:255. Read aloud
+// walks ayah by ayah from the chosen verse. Everything is optional — any
+// level can jump anywhere.
 import { loadData } from '../lib/data.js';
 import { wbwFromRef, verseAudioUrl } from '../lib/audio.js';
 import { play } from '../ui/player.js';
@@ -16,6 +17,7 @@ import { load as loadSRS, review, dueIds } from '../lib/srs.js';
 import { mountTrace } from '../ui/trace.js';
 import { openVersePicker } from '../ui/verse-picker.js';
 import { parsePracticeHash } from '../lib/hash.js';
+import { pickOptions, buildRound } from '../lib/quiz.js';
 import { toast } from '../ui/toast.js';
 
 const main = document.querySelector('main');
@@ -26,21 +28,25 @@ const MODES = [
   ['read', 'Read aloud'],
   ['trace', 'Trace'],
   ['listen', 'Listen'],
+  ['quiz', 'Quiz'],
   ['recall', 'Recall'],
 ];
 
 const DEFAULT_VERSES = ['1:1', '1:2', '1:3', '1:4', '1:5', '1:6', '1:7', '2:255', '112:1', '112:2', '103:1', '114:1'];
+const QUIZ_ROUND = 10;
 
 const state = {
   index: null,
   reciters: [],
   build: [],
+  vocab: [],
   surahs: new Map(),
   rec: { recorder: null, chunks: [], url: null, stream: null, verse: null },
   traceIdx: 0,
   listenIdx: 0,
   read: null, // { s, a } — chosen verse for Read aloud
   recall: { queue: [], i: 0, revealed: false, got: 0, single: false, focus: null },
+  sound: { round: [], i: 0, answered: false, got: 0 },
 };
 
 const prefs = () => get('prefs', {});
@@ -292,6 +298,84 @@ function renderListen() {
   });
 }
 
+// ---------- quiz (ear training) ----------
+
+function renderQuiz() {
+  const s = state.sound;
+  if (!s.round.length) {
+    s.round = buildRound(state.vocab, QUIZ_ROUND);
+    s.i = 0;
+    s.got = 0;
+  }
+  if (!s.round.length) {
+    shell('quiz', `<section class="card"><p class="muted">No words loaded yet.</p></section>`);
+    return;
+  }
+  if (s.i >= s.round.length) return renderQuizDone();
+
+  const w = s.round[s.i];
+  s.answered = false;
+  const options = pickOptions(w, state.vocab, 4);
+
+  shell('quiz', `
+    <section class="card pr-card">
+      <div class="row" style="justify-content:space-between;align-items:center">
+        <span class="muted">Hear the word — pick it</span>
+        <span class="counter-chip">${s.i + 1} / ${s.round.length}</span>
+      </div>
+      <div class="row" style="justify-content:center">
+        <button type="button" class="btn btn-ghost" id="replay">🔊 Play the word</button>
+      </div>
+      <div class="sound-grid" id="options">
+        ${options
+          .map((o) => `<button type="button" class="sound-opt" data-rank="${o.rank}" lang="ar" dir="rtl">${esc(o.ar)}</button>`)
+          .join('')}
+      </div>
+      <p class="muted center" id="sound-feedback">&nbsp;</p>
+    </section>`);
+
+  const playCur = () => play(wbwFromRef(w.audio), 'Hear the word');
+  playCur();
+  document.getElementById('replay').addEventListener('click', playCur);
+
+  const fb = document.getElementById('sound-feedback');
+  for (const btn of main.querySelectorAll('.sound-opt')) {
+    btn.addEventListener('click', () => {
+      if (s.answered) return;
+      s.answered = true;
+      const correct = Number(btn.dataset.rank) === w.rank;
+      review(String(w.rank), correct);
+      if (correct) s.got += 1;
+      for (const b of main.querySelectorAll('.sound-opt')) {
+        if (Number(b.dataset.rank) === w.rank) b.classList.add('correct');
+        else if (b === btn) b.classList.add('wrong');
+        b.disabled = true;
+      }
+      fb.innerHTML = `${correct ? '✓' : '✗ It was'} <span lang="ar" dir="rtl">${esc(w.ar)}</span> — ${esc(w.translit)} · ${esc(w.gloss)}`;
+      setTimeout(() => {
+        s.i += 1;
+        renderQuiz();
+      }, correct ? 900 : 1700);
+    });
+  }
+}
+
+function renderQuizDone() {
+  const s = state.sound;
+  shell('quiz', `
+    <section class="card center">
+      <h2>Round done</h2>
+      <p>${s.got} of ${s.round.length} heard correctly. Missed words come back first in review.</p>
+      <div class="row" style="justify-content:center">
+        <button type="button" class="btn" id="again">Another round</button>
+      </div>
+    </section>`);
+  document.getElementById('again').addEventListener('click', () => {
+    state.sound = { round: [], i: 0, answered: false, got: 0 };
+    renderQuiz();
+  });
+}
+
 // ---------- recall ----------
 
 function buildRecallQueue() {
@@ -438,20 +522,23 @@ function render() {
   }
   if (route.mode === 'trace') return renderTrace();
   if (route.mode === 'listen') return renderListen();
+  if (route.mode === 'quiz') return renderQuiz();
   if (route.mode === 'recall') return renderRecall();
   return renderRead();
 }
 
 async function init() {
   try {
-    const [idx, recs, build] = await Promise.all([
+    const [idx, recs, build, vocab] = await Promise.all([
       loadData('quran/index.json'),
       loadData('reciters.json'),
       loadData('build-words.json'),
+      loadData('vocabulary.json'),
     ]);
     state.index = idx;
     state.reciters = recs;
     state.build = build.words;
+    state.vocab = vocab.words;
     loadSelection();
   } catch (e) {
     main.innerHTML = `<section class="card"><p>Could not load practice data: ${esc(e.message)}</p></section>`;
