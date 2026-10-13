@@ -51,4 +51,9 @@ node tools/validate-data.mjs    # dataset audit (114 surahs / 6236 ayahs)
 
 ## Version history
 
+- **v0.2 — checkpoint 2** (2026-10-13):
+  - **Word-audio mapping fixed** — all 27,963 shifted word-by-word references corrected (STT-verified; the CDN files are contiguous by word position — quran.com's `audio_url` counts pause-mark slots and drifts +1 per pause). Validator now enforces it.
+  - **Practice · verse selection** — surah + ayah picker on Read aloud and Recall, deep links (`practice.html#read/2:255`), next-verse walk, "Practice this verse" on every verse.
+  - **Learning guidance** — Home shows a *Today* card (Review → Learn → Read → Practice, composed from real progress) with a Focus override; new **How to learn** guide page (the path in order, daily template, evidence, FAQ). Nothing is locked — soft guidance at any level.
+  - Practice page audited: all 190 app clips content-verified — full STT sweep + context-based re-check for short words (10/10 confirmed correct).
 - **v0.1 — checkpoint 1** (2026-10-13): letters (+ tracing), 150-word vocabulary with spaced repetition, Build mode (assemble words from letter tiles), full Qur'an reader (114 surahs, word-by-word audio, 4 reciters, translations, grammar notes), Practice drills (read-aloud, tracing, listen & repeat, recall).
