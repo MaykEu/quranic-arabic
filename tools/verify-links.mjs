@@ -39,9 +39,9 @@ function checkRef(fromFile, ref) {
   }
 }
 
-// HTML
+// HTML (skip inline scripts so JS string literals like selectors don't count)
 for (const f of files.filter((x) => x.endsWith('.html'))) {
-  const src = readFileSync(f, 'utf8');
+  const src = readFileSync(f, 'utf8').replace(/<script[\s\S]*?<\/script>/gi, '');
   for (const m of src.matchAll(/(?:href|src)="([^"]+)"/g)) checkRef(f, m[1]);
 }
 

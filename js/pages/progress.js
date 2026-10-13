@@ -1,8 +1,9 @@
 // Progress page: your stats at a glance, a 7-day activity strip, what's due,
-// and your data — download a backup, import one, or reset everything.
+// memorised verses, and your data — download a backup, import one, or reset.
 // Everything lives on this device only (localStorage, qa.v1. namespace).
+import { loadData } from '../lib/data.js';
 import { load as loadSRS, dueIds } from '../lib/srs.js';
-import { count as progressCount, activeDays } from '../lib/progress.js';
+import { count as progressCount, activeDays, unmark } from '../lib/progress.js';
 import { get, set, clearAll } from '../lib/store.js';
 import { downloadBackup, validateImport, applyImport, summarize, collect } from '../lib/backup.js';
 import { toast } from '../ui/toast.js';
@@ -12,6 +13,7 @@ const esc = (s) =>
   String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 const DAY_INITIALS = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+let surahNames = new Map();
 
 const stat = (value, label) => `<div class="stat"><b>${esc(String(value))}</b><span class="muted">${esc(label)}</span></div>`;
 
@@ -20,8 +22,8 @@ function snapshot() {
   const ids = Object.keys(srsAll);
   return {
     letters: progressCount('letters'),
-    words: ids.filter((id) => /^\d+$/.test(id) || id.startsWith('b:')).length,
     known: ids.filter((id) => /^\d+$/.test(id) && srsAll[id] && srsAll[id].box >= 3).length,
+    memorised: progressCount('memorised'),
     verses: progressCount('verses'),
     due: dueIds(srsAll).length,
     days: activeDays(),
@@ -43,6 +45,58 @@ const fmtDate = (iso) => {
   }
 };
 
+function memorisedCard() {
+  const memo = (get('progress', {}) || {}).memorised || {};
+  const refs = Object.keys(memo)
+    .filter((r) => /^\d+:\d+$/.test(r))
+    .sort((x, y) => {
+      const [sx, ax] = x.split(':').map(Number);
+      const [sy, ay] = y.split(':').map(Number);
+      return sx - sy || ax - ay;
+    });
+
+  if (!refs.length) {
+    return `<section class="card">
+      <h3>Verses memorised</h3>
+      <p class="muted">Nothing yet — open any verse in the <a href="verses.html">Verses reader</a>
+      and tap the ✓ button to mark it memorised. This is your own tracker: you decide when a verse is solid.</p>
+    </section>`;
+  }
+
+  const bySurah = new Map();
+  for (const r of refs) {
+    const s = Number(r.split(':')[0]);
+    if (!bySurah.has(s)) bySurah.set(s, []);
+    bySurah.get(s).push(r);
+  }
+
+  return `<section class="card">
+    <div class="row" style="justify-content:space-between;align-items:baseline">
+      <h3 style="margin:0">Verses memorised <span class="muted">· ${refs.length}</span></h3>
+      <a class="muted" href="verses.html">Open reader →</a>
+    </div>
+    ${[...bySurah.entries()]
+      .map(([sid, list]) => {
+        const nm = surahNames.get(sid);
+        return `<div class="memo-row">
+          <div class="memo-row-head">
+            <strong>${esc(nm ? nm.name_simple : 'Surah ' + sid)}</strong>
+            <span class="muted">${list.length} verse${list.length === 1 ? '' : 's'}</span>
+          </div>
+          <div class="memo-chips">
+            ${list
+              .map(
+                (r) =>
+                  `<span class="memo-chip"><a href="verses.html#${r}">${r}</a><button type="button" class="chip-x" data-ref="${r}" aria-label="Remove ${r}">✕</button></span>`,
+              )
+              .join('')}
+          </div>
+        </div>`;
+      })
+      .join('')}
+  </section>`;
+}
+
 function render() {
   const s = snapshot();
   const last7 = [...Array(7)].map((_, i) => {
@@ -55,8 +109,8 @@ function render() {
     <section class="card">
       <div class="stat-grid">
         ${stat(`${s.letters}/28`, 'Letters learned')}
-        ${stat(s.words, 'Words met')}
-        ${stat(s.known, 'Words known well')}
+        ${stat(s.known, 'Words known')}
+        ${stat(s.memorised, 'Verses memorised')}
         ${stat(s.verses, 'Verses read')}
       </div>
       <div class="week-strip" aria-label="Activity in the last 7 days">
@@ -75,6 +129,8 @@ function render() {
            </section>`
         : ''
     }
+
+    ${memorisedCard()}
 
     <section class="card">
       <h3>Your data</h3>
@@ -96,7 +152,15 @@ function render() {
       <div id="reset-box" hidden></div>
     </section>`;
 
-  wire(s);
+  wire();
+
+  for (const b of main.querySelectorAll('.chip-x')) {
+    b.addEventListener('click', () => {
+      unmark('memorised', b.dataset.ref);
+      toast('Removed from memorised');
+      render();
+    });
+  }
 }
 
 function wire() {
@@ -184,4 +248,14 @@ function wire() {
   });
 }
 
-render();
+async function init() {
+  try {
+    const idx = await loadData('quran/index.json');
+    surahNames = new Map(idx.surahs.map((s) => [s.id, s]));
+  } catch {
+    surahNames = new Map();
+  }
+  render();
+}
+
+init();

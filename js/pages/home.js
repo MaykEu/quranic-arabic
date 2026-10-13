@@ -11,7 +11,7 @@ function snapshot() {
     letters: progressCount('letters'),
     known: ids.filter((id) => /^\d+$/.test(id) && srsAll[id] && srsAll[id].box >= 3).length,
     due: dueIds(srsAll).length,
-    verses: progressCount('verses'),
+    memorised: progressCount('memorised'),
   };
 }
 
@@ -39,7 +39,7 @@ function render() {
       <div class="stat"><b>${s.letters}/28</b><span class="muted">letters learned</span></div>
       <div class="stat"><b>${s.known}</b><span class="muted">words known</span></div>
       <div class="stat"><b>${s.due}</b><span class="muted">reviews due</span></div>
-      <div class="stat"><b>${s.verses}</b><span class="muted">verses read</span></div>
+      <div class="stat"><b>${s.memorised}</b><span class="muted">verses memorised</span></div>
     </div>
     <div class="row">
       ${

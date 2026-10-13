@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memorise tracker QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/reading.css">
+</head>
+<body>
+<main></main>
+<script type="module">
+// Drive the real pages: mark verses in the reader → check storage + chip,
+// then load the Progress page and check the card + removal.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const out = {};
+const q = (s) => document.querySelector(s);
+
+localStorage.clear();
+history.replaceState(null, '', '#112');
+await import('../js/pages/verses.js');
+await sleep(1200);
+
+// mark 1:1 via the ✓ button
+q('.ay-memo[data-a="1"]').click();
+await sleep(150);
+const store = () => JSON.parse(localStorage.getItem('qa.v1.progress') || '{}');
+out.storedAfterMark = !!(store().memorised && store().memorised['112:1']);
+out.buttonOn = q('.ay-memo[data-a="1"]').classList.contains('on');
+out.cardAccent = q('#ay-112-1').classList.contains('memo');
+out.chipText = q('#memo-count').textContent.trim();
+
+// mark 1:2 as well
+q('.ay-memo[data-a="2"]').click();
+await sleep(150);
+out.chipText2 = q('#memo-count').textContent.trim();
+
+// unmark 1:2 again
+q('.ay-memo[data-a="2"]').click();
+await sleep(150);
+out.afterUnmark = !store().memorised['112:2'] && !!store().memorised['112:1'];
+
+// now the Progress page
+await import('../js/pages/progress.js');
+await sleep(600);
+out.gridHasStat = document.body.innerText.includes('Verses memorised');
+out.cardListed = document.body.innerText.includes('Al-Ikhlas') && !!q('.memo-chip a[href$="#112:1"]');
+
+// remove via ✕
+q('.chip-x[data-ref="112:1"]').click();
+await sleep(300);
+out.removed = !store().memorised || !store().memorised['112:1'];
+out.emptyState = document.body.innerText.includes('Nothing yet');
+
+out.pass =
+  out.storedAfterMark && out.buttonOn && out.cardAccent && out.chipText === '· 1 memorised' &&
+  out.chipText2 === '· 2 memorised' && out.afterUnmark && out.gridHasStat && out.cardListed &&
+  out.removed && out.emptyState;
+
+const pre = document.createElement('pre');
+pre.id = 'result';
+pre.textContent = JSON.stringify(out, null, 1);
+document.body.appendChild(pre);
+document.body.dataset.qa = out.pass ? 'done-pass' : 'done-fail';
+</script>
+</body>
+</html>

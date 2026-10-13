@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verse playback QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/reading.css">
+</head>
+<body>
+<main></main>
+<script type="module">
+// Drives the real verses page: verse-aware play/pause/switch + restart + word mode.
+// Audio itself is not awaited — assertions are on state (status text, button states).
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const out = {};
+const q = (s) => document.querySelector(s);
+const status = () => q('#play-status')?.textContent || '';
+const btn = (a) => q(`.ay-play[data-a="${a}"]`);
+const isPauseIcon = (b) => b.innerHTML.includes('rect');
+const isPlayIcon = (b) => b.innerHTML.includes('path');
+
+localStorage.clear();
+history.replaceState(null, '', '#112');
+await import('../js/pages/verses.js');
+await sleep(1200);
+
+// 0. restart button must be hidden before anything plays (CSS [hidden] check)
+out.restartHiddenInitially = getComputedStyle(q('#restart-verse')).display === 'none';
+
+// 1. play from verse 2
+btn(2).click();
+await sleep(250);
+out.restartShownWhenPlaying = getComputedStyle(q('#restart-verse')).display !== 'none';
+out.playFrom2 = status().includes('112:2') && isPauseIcon(btn(2)) && btn(2).classList.contains('on');
+out.othersStillPlayIcon = isPlayIcon(btn(1)) && isPlayIcon(btn(3));
+
+// 2. while playing, tap verse 4 → must SWITCH (not pause)
+btn(4).click();
+await sleep(250);
+out.switchedTo4 = status().includes('112:4') && isPauseIcon(btn(4)) && isPlayIcon(btn(2));
+
+// 3. tap verse 4 again → pause
+btn(4).click();
+await sleep(250);
+out.pausedOn4 = status() === 'Paused' && isPlayIcon(btn(4)) && btn(4).classList.contains('on');
+
+// 4. tap verse 4 again → resume (still 4)
+btn(4).click();
+await sleep(250);
+out.resumedOn4 = status().includes('112:4') && isPauseIcon(btn(4));
+
+// 5. jump backwards while playing → verse 1 starts
+btn(1).click();
+await sleep(250);
+out.jumpedBackTo1 = status().includes('112:1') && isPauseIcon(btn(1)) && isPlayIcon(btn(4));
+
+// 6. restart button visible + works
+const restartBtn = q('#restart-verse');
+out.restartVisible = !!restartBtn && !restartBtn.hidden;
+restartBtn.click();
+await sleep(250);
+out.restartedOn1 = status().includes('112:1') && isPauseIcon(btn(1));
+
+// 7. word-by-word mode: switch + same-verse toggle
+q('#wordmode').click();
+await sleep(600);
+btn(3).click();
+await sleep(250);
+out.wordsOn3 = status().includes('112:3 — word 1/');
+btn(2).click();
+await sleep(250);
+out.wordsSwitchedTo2 = status().includes('112:2 — word 1/');
+btn(2).click();
+await sleep(250);
+out.wordsPaused = status() === 'Paused';
+
+// 8. after pausing words on 2, tapping 2 resumes; tapping 1 starts 1's words
+btn(2).click();
+await sleep(250);
+out.wordsResumed2 = status().includes('112:2 — word');
+btn(1).click();
+await sleep(250);
+out.wordsJumpedTo1 = status().includes('112:1 — word');
+
+out.pass = Object.entries(out).every(([k, v]) => typeof v === 'boolean' ? v : true) && !Object.values(out).some((v) => v === false);
+
+const pre = document.createElement('pre');
+pre.id = 'result';
+pre.textContent = JSON.stringify(out, null, 1);
+document.body.appendChild(pre);
+document.body.dataset.qa = out.pass ? 'done-pass' : 'done-fail';
+</script>
+</body>
+</html>

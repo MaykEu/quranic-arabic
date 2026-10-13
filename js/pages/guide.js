@@ -59,6 +59,7 @@ const FAQ = [
   ['How long should I practise each day?', 'About 15–20 minutes: a few minutes of review, a few learning something new, a minute or two reading with the audio, and a short drill. Ten focused minutes daily beats an hour on Sunday.'],
   ['What if I miss a day?', 'Nothing breaks. Your reviews just pile up gently — clear them first on your return and continue where you stopped.'],
   ['Where is my progress stored?', 'Only on this device — nothing is uploaded anywhere. Download a backup from the Progress page now and then; you can import it on any device or after clearing your browser.'],
+  ['What does “memorised” mean?', 'A verse you mark yourself with the ✓ button in the Verses reader; the Progress page keeps the list. The app does not check your memorisation — you are the judge.'],
   ['Do I have to follow the order?', 'No. Nothing is locked. The order is a recommendation — jump anywhere, any time, and come back to this guide whenever you need it.'],
   ['Why words before grammar?', 'Grammar notes appear in context on the verses that need them — right when they help, instead of years before.'],
   ['What does “learned” mean?', 'A word counts as known once its review box reaches 3 (roughly two weeks of successful recalls). Letters get marked when you trace them well.'],

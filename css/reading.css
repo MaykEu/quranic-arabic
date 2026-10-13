@@ -291,3 +291,11 @@ button.surah-row {
 .sound-opt.correct { border-color: #2F6B4F; background: rgba(47, 107, 79, 0.12); }
 .sound-opt.wrong { border-color: #B0413E; background: rgba(176, 65, 62, 0.12); }
 .sound-opt:disabled { cursor: default; opacity: 0.85; }
+
+/* ---------- verse buttons: memorised & playing states ---------- */
+.ay-memo.on,
+.ay-play.on { background: var(--brand2); border-color: var(--brand2); color: #fff; }
+[data-theme="dark"] .ay-memo.on,
+[data-theme="dark"] .ay-play.on { color: var(--brand-ink); }
+.ayah.memo { box-shadow: inset 3px 0 0 var(--brand2); }
+.memo-count { color: var(--brand2); font-weight: 600; }
