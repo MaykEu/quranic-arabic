@@ -46,6 +46,26 @@ One document per account in Supabase (`progress` table, `doc` jsonb):
   per-key change stamp in `_meta` (written by `store.js` on every save) and falling back
   to the doc's `updatedAt` for data from before sessions existed.
 
+## Persistence matrix (what's saved where)
+
+Verified end-to-end by `tests/persistence-qa.html`, which drives **every** write path
+(letters trace, build-word success, verse word-tap, verse ✓, surah ✓, SRS review/quiz/recall,
+practice counter, brush, prefs, lastRead, unmark/tombstone, reset) and then checks the value
+in localStorage, in the sync doc and in a backup file:
+
+| Key | Written by | In sync doc | In backup |
+|---|---|---|---|
+| `progress` (letters / words / verses / memorised / surahs / days) | Letters, Words, Verses reader (word tap, ✓, surah ✓) | ✔ union + earliest `at` | ✔ |
+| `srs` | Words review, Quiz, Recall | ✔ latest review wins | ✔ |
+| `practice` | Listen & repeat daily counter | ✔ per-day max | ✔ |
+| `prefs`, `brush`, `lastRead` | Verses reader, trace slider | ✔ newest write wins | ✔ |
+| `_meta` | every save (change stamps) | ✔ | ✔ |
+| `tomb` | every unmark | ✔ (as `doc.tombstones`) | ✔ |
+| `sync.resetAt` | Progress → Reset all | ✔ (both sides drop older data) | ✔ |
+| `theme` | header toggle | ✖ device-local by design | ✔ |
+| `lastBackupAt` | backup export | ✖ device-local by design | ✔ |
+| `sync.session`, `sync.lastSync` | sign-in / sync runs | ✖ never synced | ✖ **never exported** (token) |
+
 ## Flow
 
 `syncNow()` → refresh session if needed → `fetchRemote` → `mergeDocs(local, remote)`
