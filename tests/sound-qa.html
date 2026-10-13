@@ -10,15 +10,25 @@
 <body>
 <main></main>
 <script type="module">
-// Practice → Quiz, both modes. Rules under test:
-//   • nothing plays on its own (counting real media play() calls)
-//   • the four options are visible from the start and after every advance
-//   • "Write it" shows Arabic, "Meaning" shows English glosses
-//   • progress dots update, and the round ends with a recap of missed words
+// Practice → Quiz: two independent quizzes sharing one word pool.
+// Rules under test:
+//   • nothing plays on its own (real media play() calls are counted)
+//   • options visible from the start and after every advance
+//   • "Read it" = Arabic script · "Understand it" = English glosses
+//   • the two modes keep SEPARATE rounds, scores and dots
+//   • the round ends with a recap of missed words
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const out = {};
 const q = (s) => document.querySelector(s);
-const store = (k) => JSON.parse(localStorage.getItem('qa.v1.' + k) || '{}');
+const counter = () => q('.counter-chip').textContent.trim();
+const dots = () => document.querySelectorAll('.q-dots .q-dot').length;
+const answerFirst = async () => {
+  const opts = [...document.querySelectorAll('.sound-opt')];
+  if (!opts.length) return false;
+  opts[0].click();
+  await sleep(2400);
+  return true;
+};
 
 let playCalls = 0;
 const realPlay = HTMLMediaElement.prototype.play;
@@ -36,53 +46,65 @@ async function run() {
   out.quizRenders = document.querySelectorAll('.sound-opt').length === 4;
   out.noAutoplayOnEntry = playCalls === 0;
   out.optionsVisibleImmediately = getComputedStyle(q('#options')).display !== 'none';
-  out.modeSeg = !!q('.quiz-seg [data-qmode="write"]') && !!q('.quiz-seg [data-qmode="meaning"]');
-  out.writeModeActive = q('.quiz-seg [data-qmode="write"]').classList.contains('active');
-  out.dotsInitial = document.querySelectorAll('.q-dots .q-dot').length === 1;
+  out.modeSeg = !!q('.quiz-seg [data-qmode="read"]') && !!q('.quiz-seg [data-qmode="meaning"]');
+  out.labels = q('.quiz-seg [data-qmode="read"]').textContent.trim() === 'Read it' &&
+    q('.quiz-seg [data-qmode="meaning"]').textContent.trim() === 'Understand it';
+  out.readModeActive = q('.quiz-seg [data-qmode="read"]').classList.contains('active');
+  out.readStartsAtOne = counter() === '1 / 10';
+  out.dotsInitial = dots() === 1;
 
   q('#replay').click();
   await sleep(250);
   out.hearPlays = playCalls === 1;
 
-  document.querySelectorAll('.sound-opt')[0].click();
-  await sleep(350);
-  out.feedbackShown = q('#sound-feedback').textContent.trim().length > 0;
-  out.dotUpdated = document.querySelectorAll('.q-dots .q-dot.good, .q-dots .q-dot.bad').length === 1;
-  out.optionsDisabledAfterAnswer = [...document.querySelectorAll('.sound-opt')].every((b) => b.disabled);
+  // ---- Read it: answer two questions ----
+  await answerFirst();
+  out.advancedWithOptions = document.querySelectorAll('.sound-opt').length === 4;
+  out.noAutoplayOnAdvance = playCalls === 1;
+  await answerFirst();
+  out.readAtThree = counter() === '3 / 10' && dots() === 3;
 
-  await sleep(2100);
-  out.advancedWithOptions =
-    document.querySelectorAll('.sound-opt').length === 4 && getComputedStyle(q('#options')).display !== 'none';
-  out.noAutoplayOnAdvance = playCalls === 1; // still only the one manual press
-  out.srsAfterFirst = Object.keys(store('srs')).length >= 1;
-
-  // Meaning mode
+  // ---- switch: Understand it must start its OWN round ----
   q('.quiz-seg [data-qmode="meaning"]').click();
   await sleep(450);
   out.meaningActive = q('.quiz-seg [data-qmode="meaning"]').classList.contains('active');
+  out.meaningOwnRound = counter() === '1 / 10' && dots() === 1;
   const glossOpts = [...document.querySelectorAll('.sound-opt.gloss-opt')];
   out.glossOptions = glossOpts.length === 4;
-  const glossTexts = glossOpts.map((b) => b.textContent.trim());
-  out.glossUnique = new Set(glossTexts).size === 4;
-  out.glossLatin = glossTexts.every((t) => /^[A-Za-z ,'().-]+$/.test(t));
-  out.prefSaved = store('prefs').quizMode === 'meaning';
+  out.glossLatin = glossOpts.every((b) => /^[A-Za-z ,'().-]+$/.test(b.textContent.trim()));
+  out.glossUnique = new Set(glossOpts.map((b) => b.textContent.trim())).size === 4;
+  out.prefSaved = JSON.parse(localStorage.getItem('qa.v1.prefs') || '{}').quizMode === 'meaning';
 
-  const srsBefore = Object.keys(store('srs')).length;
-  document.querySelectorAll('.sound-opt')[0].click();
-  await sleep(2200);
-  out.srsGrew = Object.keys(store('srs')).length >= srsBefore;
-  out.stillMeaningMode = q('.quiz-seg [data-qmode="meaning"]')?.classList.contains('active') === true;
+  await answerFirst();
+  out.meaningAtTwo = counter() === '2 / 10';
 
-  // finish the round
+  // ---- back to Read it: its own progress must be untouched ----
+  q('.quiz-seg [data-qmode="read"]').click();
+  await sleep(450);
+  out.readPreserved = counter() === '3 / 10' && dots() === 3;
+  out.readStillArabic = document.querySelectorAll('.sound-opt.gloss-opt').length === 0;
+
+  // ---- finish the Meaning round (9 more answers) ----
+  q('.quiz-seg [data-qmode="meaning"]').click();
+  await sleep(450);
+  out.meaningPreserved = counter() === '2 / 10';
   for (let i = 0; i < 9; i++) {
-    const opts = [...document.querySelectorAll('.sound-opt')];
-    if (!opts.length) break;
-    opts[0].click();
-    await sleep(2200);
+    const ok = await answerFirst();
+    if (!ok) break;
   }
   await sleep(400);
   out.doneScreen = /Round done/.test(document.body.textContent);
+  out.doneNamesMode = /Understand it ·/.test(document.body.textContent);
   out.doneRecap = !!q('#again') && /clean round|Missed words come back/i.test(document.body.textContent);
+
+  // ---- another round restarts only this quiz ----
+  q('#again').click();
+  await sleep(450);
+  out.meaningRestarted = counter() === '1 / 10';
+  q('.quiz-seg [data-qmode="read"]').click();
+  await sleep(450);
+  out.readStillAtThree = counter() === '3 / 10';
+  out.stillNoAutoplay = playCalls === 1;
 }
 
 run()

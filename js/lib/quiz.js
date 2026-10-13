@@ -1,5 +1,7 @@
-// Recognition-drill helpers (Practice "Quiz" mode): building option sets and
-// rounds. Pure functions with an injectable rng so tests stay deterministic.
+// Recognition-drill helpers (Practice "Quiz" mode): building option sets, rounds,
+// and the trace/listen pools. Pure functions with an injectable rng so tests stay
+// deterministic.
+import { bareForm } from './shaping.js';
 
 export function shuffle(arr, rng = Math.random) {
   const a = [...arr];
@@ -54,24 +56,70 @@ export const glossTokens = (gloss) =>
     .split(/\s+/)
     .filter((t) => t && !GLOSS_STOP.has(t));
 
+// ALL tokens, function words included — used for the particle fallback below.
+export const glossFullTokens = (gloss) =>
+  String(gloss || '')
+    .toLowerCase()
+    .replace(/[^a-z\s'-]/g, ' ')
+    .split(/\s+/)
+    .filter(Boolean);
+
+const normGloss = (g) => String(g || '').toLowerCase().replace(/[^a-z\s'-]/g, ' ').replace(/\s+/g, ' ').trim();
+
 // The four options for a meaning question: the answer's gloss + three glosses that
-// share NO significant word with it — so a distractor can never also "fit".
+// can never also fit — so the question is always fair.
+//   • content answers ("the day of judgement"): distractors must share NO significant
+//     word (function words ignored), and must themselves carry a significant word.
+//   • particle answers ("from", "in", "what"): compared on ALL tokens (function words
+//     included), so "from" is quizzed against "in / what / they" and never "from it".
 // Returns null when there aren't enough clean distractors (caller skips the word).
 export function glossOptions(answer, pool, n = 4, rng = Math.random) {
-  const aTokens = new Set(glossTokens(answer.gloss));
-  if (!aTokens.size) return null;
-  const seen = new Set([String(answer.gloss).toLowerCase()]);
+  const aSig = new Set(glossTokens(answer.gloss));
+  const aFull = new Set(glossFullTokens(answer.gloss));
+  if (!aFull.size) return null;
+  const seen = new Set([normGloss(answer.gloss)]);
   const clean = [];
   for (const w of pool) {
     if (w.rank === answer.rank) continue;
-    const key = String(w.gloss || '').toLowerCase();
+    const key = normGloss(w.gloss);
     if (!key || seen.has(key)) continue;
-    const toks = glossTokens(w.gloss);
-    if (!toks.length) continue;
-    if (toks.some((t) => aTokens.has(t))) continue; // shares a meaning word → ambiguous
+    if (aSig.size) {
+      const sig = glossTokens(w.gloss);
+      if (!sig.length) continue; // content answers get content distractors
+      if (sig.some((t) => aSig.has(t))) continue;
+    } else {
+      const full = glossFullTokens(w.gloss);
+      if (full.some((t) => aFull.has(t))) continue;
+    }
     seen.add(key);
     clean.push(w);
   }
   if (clean.length < n - 1) return null;
   return shuffle([answer, ...shuffle(clean, rng).slice(0, n - 1)], rng);
+}
+
+// ---------- drill pools (Trace / Listen) ----------
+
+// Trace: the curated build words + every word short enough to trace comfortably
+// (≤ `maxBare` letters once the marks are stripped — tracing a 10-letter word with
+// tashkeel is misery). Listen: every word — the audio makes length irrelevant.
+// Both pools are deduped by bare form and keep {bare, ar, audio, translit, gloss}.
+export function buildDrillPools(buildWords, vocab, maxBare = 6) {
+  const map = (w, i) => ({
+    id: w.rank != null ? w.rank : `b${i}`,
+    bare: w.bare || bareForm(w.ar),
+    ar: w.ar,
+    audio: w.audio,
+    translit: w.translit,
+    gloss: w.gloss,
+  });
+  const build = (buildWords || []).map(map);
+  const vocabMapped = (vocab || []).map(map);
+  const inBuild = new Set(build.map((w) => w.bare));
+  const extra = vocabMapped.filter((w) => w.bare && !inBuild.has(w.bare));
+  return {
+    build,
+    trace: [...build, ...extra.filter((w) => w.bare.length <= maxBare)],
+    listen: [...build, ...extra],
+  };
 }

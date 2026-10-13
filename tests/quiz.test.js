@@ -1,7 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
-const { pickOptions, buildRound, shuffle, glossOptions, glossTokens } = await import('../js/lib/quiz.js');
+const { pickOptions, buildRound, shuffle, glossOptions, glossTokens, glossFullTokens, buildDrillPools } = await import(
+  '../js/lib/quiz.js'
+);
 
 // Deterministic rng for tests.
 let seed = 42;
@@ -101,4 +104,64 @@ test('glossOptions: skips candidates whose gloss is only stop-words', () => {
   const opts = glossOptions(answer, pool, 4, rng);
   assert.ok(opts);
   assert.ok(!opts.some((o) => o.rank === 2));
+});
+
+test('glossOptions: particle glosses get fair options (function-word fallback)', () => {
+  const answer = { rank: 1, ar: 'مِن', gloss: 'from' };
+  const pool = [
+    answer,
+    { rank: 2, ar: 'فِى', gloss: 'In' },
+    { rank: 3, ar: 'مَا', gloss: 'what' },
+    { rank: 4, ar: 'هُمْ', gloss: 'they' },
+    { rank: 5, ar: 'مِن', gloss: 'from it' }, // shares 'from' → must be excluded
+    { rank: 6, ar: 'لَا', gloss: 'no' },
+  ];
+  const opts = glossOptions(answer, pool, 4, rng);
+  assert.ok(opts);
+  assert.ok(!opts.some((o) => o.rank === 5));
+  assert.equal(opts.filter((o) => o.rank === 1).length, 1);
+  assert.equal(opts.length, 4);
+});
+
+test('meaning mode covers the whole vocabulary with fair distractors', () => {
+  const vocab = JSON.parse(readFileSync('data/vocabulary.json', 'utf8')).words;
+  let ok = 0;
+  const skipped = [];
+  for (const w of vocab) {
+    const opts = glossOptions(w, vocab, 4, rng);
+    if (!opts) {
+      skipped.push(`${w.rank}:${w.gloss}`);
+      continue;
+    }
+    ok += 1;
+    const aSig = new Set(glossTokens(w.gloss));
+    const aFull = new Set(glossFullTokens(w.gloss));
+    for (const o of opts) {
+      if (o.rank === w.rank) continue;
+      if (aSig.size) {
+        const sig = glossTokens(o.gloss);
+        assert.ok(sig.length && !sig.some((t) => aSig.has(t)), `ambiguous distractor "${o.gloss}" for "${w.gloss}"`);
+      } else {
+        const full = glossFullTokens(o.gloss);
+        assert.ok(!full.some((t) => aFull.has(t)), `ambiguous particle distractor "${o.gloss}" for "${w.gloss}"`);
+      }
+    }
+  }
+  // recorded invariant: coverage must not silently regress (qa-v31 = 500/500)
+  assert.ok(ok >= 499, `meaning coverage dropped to ${ok}/500 — skipped: ${skipped.join(' | ')}`);
+});
+
+test('buildDrillPools: trace pool capped by bare length, listen pool takes everything', () => {
+  const build = [{ bare: 'كتب', ar: 'كتب', audio: 'a0', translit: 't0', gloss: 'wrote' }];
+  const vocab = [
+    { rank: 1, ar: 'عِلْم', audio: 'a1', translit: 't1', gloss: 'knowledge' }, // 3 letters → traceable
+    { rank: 2, ar: 'ٱلْمَلَـٰٓئِكَةِ', audio: 'a2', translit: 't2', gloss: 'the angels' }, // long → listen only
+    { rank: 3, ar: 'كتب', audio: 'a3', translit: 't3', gloss: 'duplicate of a build word' },
+  ];
+  const pools = buildDrillPools(build, vocab, 6);
+  assert.equal(pools.listen.length, 3); // build + 2 distinct vocab words (dup dropped)
+  assert.ok(pools.trace.length < pools.listen.length);
+  assert.ok(pools.trace.every((w) => w.bare.length <= 6));
+  assert.ok(pools.listen.some((w) => w.bare.length > 6));
+  assert.ok(pools.listen.every((w) => w.audio && w.bare));
 });

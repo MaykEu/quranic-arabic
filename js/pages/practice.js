@@ -17,7 +17,7 @@ import { load as loadSRS, review, dueIds } from '../lib/srs.js';
 import { mountTrace } from '../ui/trace.js';
 import { openVersePicker } from '../ui/verse-picker.js';
 import { parsePracticeHash } from '../lib/hash.js';
-import { pickOptions, buildRound, glossOptions } from '../lib/quiz.js';
+import { pickOptions, buildRound, glossOptions, buildDrillPools } from '../lib/quiz.js';
 import { toast } from '../ui/toast.js';
 
 const main = document.querySelector('main');
@@ -39,6 +39,8 @@ const state = {
   index: null,
   reciters: [],
   build: [],
+  tracePool: [],
+  listenPool: [],
   vocab: [],
   surahs: new Map(),
   rec: { recorder: null, chunks: [], url: null, stream: null, verse: null },
@@ -46,7 +48,7 @@ const state = {
   listenIdx: 0,
   read: null, // { s, a } — chosen verse for Read aloud
   recall: { queue: [], i: 0, revealed: false, got: 0, single: false, focus: null },
-  sound: { round: [], i: 0, answered: false, got: 0 },
+  sound: { byMode: {} }, // per-mode quiz rounds: { read: {...}, meaning: {...} }
 };
 
 const prefs = () => get('prefs', {});
@@ -242,7 +244,7 @@ async function renderRead() {
 // ---------- trace ----------
 
 function renderTrace() {
-  const w = state.build[state.traceIdx % state.build.length];
+  const w = state.tracePool[state.traceIdx % state.tracePool.length];
   shell('trace', `
     <section class="card pr-card">
       <p class="muted center">Trace the word's letter skeleton — the full vowelled form is shown below.</p>
@@ -289,7 +291,7 @@ function renderTrace() {
 // ---------- listen ----------
 
 function renderListen() {
-  const w = state.build[state.listenIdx % state.build.length];
+  const w = state.listenPool[state.listenIdx % state.listenPool.length];
   const count = listenCount();
 
   shell('listen', `
@@ -322,9 +324,40 @@ function renderListen() {
 
 // ---------- quiz (ear training) ----------
 
+const QUIZ_MODES = { read: 'Read it', meaning: 'Understand it' };
+const freshSound = () => ({
+  round: [],
+  i: 0,
+  got: 0,
+  answered: false,
+  log: [],
+  missed: [],
+  options: null,
+  optionsFor: -1,
+});
+
+function quizSeg(mode) {
+  return `<nav class="seg quiz-seg" aria-label="Quiz type">
+    <a href="#" data-qmode="read" class="${mode === 'read' ? 'active' : ''}">Read it</a>
+    <a href="#" data-qmode="meaning" class="${mode === 'meaning' ? 'active' : ''}">Understand it</a>
+  </nav>`;
+}
+
+function wireQuizSeg(mode) {
+  for (const link of main.querySelectorAll('.quiz-seg [data-qmode]')) {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (link.dataset.qmode === mode) return;
+      set('prefs', { ...get('prefs', {}), quizMode: link.dataset.qmode });
+      renderQuiz();
+    });
+  }
+}
+
 function renderQuiz() {
-  const s = state.sound;
-  const mode = prefs().quizMode === 'meaning' ? 'meaning' : 'write';
+  const mode = prefs().quizMode === 'meaning' ? 'meaning' : 'read';
+  if (!state.sound.byMode) state.sound.byMode = {};
+  const s = (state.sound.byMode[mode] = state.sound.byMode[mode] || freshSound());
   if (!s.round.length) {
     s.round = buildRound(state.vocab, QUIZ_ROUND);
     s.i = 0;
@@ -336,27 +369,22 @@ function renderQuiz() {
     shell('quiz', `<section class="card"><p class="muted">No words loaded yet.</p></section>`);
     return;
   }
-  if (s.i >= s.round.length) return renderQuizDone();
+  if (s.i >= s.round.length) return renderQuizDone(s, mode);
 
   const w = s.round[s.i];
   s.answered = false;
   // Options are built once per question (a re-render must never reshuffle them).
   // They are visible from the start — the sound is the only thing you must ask for.
-  if (s.optionsFor !== s.i || s.optionsMode !== mode) {
+  if (s.optionsFor !== s.i) {
     s.options = mode === 'meaning' ? glossOptions(w, state.vocab, 4) : pickOptions(w, state.vocab, 4);
     s.optionsFor = s.i;
-    s.optionsMode = mode;
     if (!s.options) {
       s.i += 1; // no clean distractors for this word — skip it
       return renderQuiz();
     }
   }
 
-  const segBar = `
-    <nav class="seg quiz-seg" aria-label="Quiz type">
-      <a href="#" data-qmode="write" class="${mode === 'write' ? 'active' : ''}">Write it</a>
-      <a href="#" data-qmode="meaning" class="${mode === 'meaning' ? 'active' : ''}">Meaning</a>
-    </nav>`;
+  const segBar = quizSeg(mode);
   const dots =
     (s.log || []).map((ok) => `<span class="q-dot ${ok ? 'good' : 'bad'}"></span>`).join('') +
     `<span class="q-dot now"></span>`;
@@ -386,15 +414,7 @@ function renderQuiz() {
   const playCur = () => play(wbwFromRef(w.audio), 'Hear the word');
   document.getElementById('replay').addEventListener('click', playCur);
 
-  for (const link of main.querySelectorAll('.quiz-seg [data-qmode]')) {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (link.dataset.qmode === mode) return;
-      set('prefs', { ...get('prefs', {}), quizMode: link.dataset.qmode });
-      s.optionsFor = -1; // rebuild options in the new mode
-      renderQuiz();
-    });
-  }
+  wireQuizSeg(mode);
 
   const fb = document.getElementById('sound-feedback');
   for (const btn of main.querySelectorAll('.sound-opt')) {
@@ -433,13 +453,13 @@ function renderQuiz() {
   }
 }
 
-function renderQuizDone() {
-  const s = state.sound;
+function renderQuizDone(s, mode) {
   const missed = s.missed || [];
   shell('quiz', `
+    ${quizSeg(mode)}
     <section class="card center">
       <h2>Round done</h2>
-      <p>${s.got} of ${s.round.length} correct.</p>
+      <p>${QUIZ_MODES[mode]} · ${s.got} of ${s.round.length} correct.</p>
       ${
         missed.length
           ? `<p class="muted">Missed words come back first in review. Tap one to hear it again:</p>
@@ -463,8 +483,9 @@ function renderQuizDone() {
       if (w) play(wbwFromRef(w.audio), 'Missed word');
     });
   }
+  wireQuizSeg(mode);
   document.getElementById('again').addEventListener('click', () => {
-    state.sound = { round: [], i: 0, answered: false, got: 0, log: [], missed: [] };
+    state.sound.byMode[mode] = freshSound(); // only this quiz restarts
     renderQuiz();
   });
 }
@@ -635,6 +656,9 @@ async function init() {
     state.reciters = recs;
     state.build = build.words;
     state.vocab = vocab.words;
+    const pools = buildDrillPools(build.words, vocab.words);
+    state.tracePool = pools.trace;
+    state.listenPool = pools.listen;
     loadSelection();
   } catch (e) {
     main.innerHTML = `<section class="card"><p>Could not load practice data: ${esc(e.message)}</p></section>`;
