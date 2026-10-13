@@ -24,7 +24,7 @@ test('exportData wraps the qa.v1. namespace with app tag + format', () => {
   assert.equal(obj.app, 'quranic-arabic');
   assert.equal(obj.format, 1);
   assert.ok(typeof obj.exported === 'string');
-  assert.deepEqual(Object.keys(obj.data).sort(), ['progress', 'srs']);
+  assert.deepEqual(Object.keys(obj.data).sort(), ['_meta', 'progress', 'srs']); // _meta = per-key change stamps
 });
 
 test('summarize counts letters, words, known, verses, reviews, days', () => {

@@ -11,12 +11,15 @@ export const BACKUP_FILENAME = (d = new Date()) =>
   `quranic-arabic-progress-${d.toISOString().slice(0, 10)}.json`;
 
 // Everything currently stored under the namespace, parsed.
+// One exception: the cloud-sync session (access/refresh token) is NEVER
+// exported — a downloaded backup file must not contain credentials.
 export function collect() {
   const data = {};
   try {
     for (let i = 0; i < localStorage.length; i++) {
       const k = localStorage.key(i);
       if (!k || !k.startsWith(NS)) continue;
+      if (k.slice(NS.length).startsWith('sync.')) continue; // session + sync bookkeeping stay on device
       try {
         data[k.slice(NS.length)] = JSON.parse(localStorage.getItem(k));
       } catch {

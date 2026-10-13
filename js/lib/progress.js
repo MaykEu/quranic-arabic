@@ -31,6 +31,11 @@ export function unmark(kind, id) {
   const p = load();
   if (p[kind]) delete p[kind][id];
   save(p);
+  // Record a tombstone so sync doesn't resurrect the entry from another device
+  // (a later re-mark with a newer `at` still wins over this tombstone).
+  const t = get('tomb', {});
+  t[`${kind}:${id}`] = Date.now();
+  set('tomb', t);
 }
 
 export function isLearned(kind, id) {
@@ -49,4 +54,8 @@ export function activeDays() {
 
 export function resetAll() {
   save(EMPTY());
+  set('tomb', {});
+  // A reset is a deliberate wipe: stamp it so cloud sync drops (on both sides)
+  // anything older than this moment instead of merging it back.
+  set('sync.resetAt', Date.now());
 }
