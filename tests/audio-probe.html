@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Audio probe — Quranic Arabic</title>
+</head>
+<body>
+<main>
+<p>Probing word-audio playback (muted)…</p>
+</main>
+<script type="module">
+// Diagnostics: can this device/browser actually play word audio from the CDN?
+// Sets body[data-qa] to pass/… with details. Run with:
+//   msedge --headless=new --autoplay-policy=no-user-gesture-required --virtual-time-budget=20000 --dump-dom URL
+const probes = [
+  ['wbw quran cdn', 'https://audio.qurancdn.com/wbw/001_001_001.mp3'],
+  ['reciter cdn', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3'],
+];
+const results = [];
+let done = 0;
+for (const [label, url] of probes) {
+  const a = new Audio(url);
+  a.muted = true;
+  const t0 = Date.now();
+  a.addEventListener('canplaythrough', () => {
+    results.push({ label, ok: true, ms: Date.now() - t0 });
+    if (++done === probes.length) finish();
+  });
+  a.addEventListener('error', () => {
+    results.push({ label, ok: false, err: a.error ? a.error.code : 'unknown' });
+    if (++done === probes.length) finish();
+  });
+  a.load();
+  // also try play() to exercise the media pipeline
+  a.play().catch((e) => results.push({ label, playErr: String(e).slice(0, 80) }));
+}
+function finish() {
+  const pre = document.createElement('pre');
+  pre.id = 'result';
+  pre.textContent = JSON.stringify(results, null, 1);
+  document.body.appendChild(pre);
+  document.body.dataset.qa = results.every((r) => r.ok) ? 'done-pass' : 'done-fail';
+}
+setTimeout(() => { if (done < probes.length) { document.body.dataset.qa = 'timeout:' + done; finish(); } }, 15000);
+</script>
+</body>
+</html>
