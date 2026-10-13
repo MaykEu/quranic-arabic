@@ -139,7 +139,10 @@ function ayahHTML(surah, ayah) {
     <article class="ayah" id="ay-${surah.id}-${ayah.n}" data-a="${ayah.n}" data-tr="${trMode}">
       <div class="ay-head">
         <span class="ay-num">${surah.id}:${ayah.n}</span>
-        <button type="button" class="btn-icon ay-play" data-a="${ayah.n}" aria-label="Play this verse">▶</button>
+        <span class="ay-actions">
+          <a class="btn-icon ay-prac" href="practice.html#read/${surah.id}:${ayah.n}" title="Practice this verse" aria-label="Practice this verse">🎤</a>
+          <button type="button" class="btn-icon ay-play" data-a="${ayah.n}" aria-label="Play this verse">▶</button>
+        </span>
       </div>
       <p class="ay-text">${words}</p>
       ${tr ? `<p class="ay-tr">${esc(tr)}</p>` : ''}

@@ -1,7 +1,7 @@
 // Tests for deep-link hash helpers (js/lib/hash.js). Run with the whole suite.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseHash, parseVerseRef, parseSurahRef, verseHash, surahHash } from '../js/lib/hash.js';
+import { parseHash, parseVerseRef, parseSurahRef, verseHash, surahHash, parsePracticeHash } from '../js/lib/hash.js';
 
 test('parseVerseRef accepts surah:ayah', () => {
   assert.deepEqual(parseVerseRef('2:255'), { s: 2, a: 255 });
@@ -32,4 +32,13 @@ test('parseHash strips the #', () => {
 test('hash builders round-trip through the parsers', () => {
   assert.deepEqual(parseVerseRef(verseHash(18, 10).slice(1)), { s: 18, a: 10 });
   assert.deepEqual(parseSurahRef(surahHash(114).slice(1)), { s: 114 });
+});
+
+test('parsePracticeHash: modes and verse refs', () => {
+  assert.deepEqual(parsePracticeHash('#read/2:255'), { mode: 'read', s: 2, a: 255 });
+  assert.deepEqual(parsePracticeHash('#recall/112:1'), { mode: 'recall', s: 112, a: 1 });
+  assert.deepEqual(parsePracticeHash('#trace'), { mode: 'trace', s: null, a: null });
+  assert.deepEqual(parsePracticeHash(''), { mode: 'read', s: null, a: null });
+  assert.deepEqual(parsePracticeHash('#bogus/2:255'), { mode: 'read', s: 2, a: 255 });
+  assert.deepEqual(parsePracticeHash('#read/999:1'), { mode: 'read', s: null, a: null });
 });

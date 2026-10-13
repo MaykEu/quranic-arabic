@@ -25,3 +25,13 @@ export function parseSurahRef(str) {
 
 export const verseHash = (s, a) => `#${s}:${a}`;
 export const surahHash = (s) => `#${s}`;
+
+// Practice routes: "#read/2:255", "#recall", "#trace", "#listen".
+// → { mode: 'read'|'trace'|'listen'|'recall', s: number|null, a: number|null }
+export function parsePracticeHash(h = location.hash) {
+  const raw = String(h).replace(/^#/, '');
+  const [rawMode, ref] = raw.split('/');
+  const mode = ['read', 'trace', 'listen', 'recall'].includes(rawMode) ? rawMode : 'read';
+  const vr = ref ? parseVerseRef(ref) : null;
+  return { mode, s: vr ? vr.s : null, a: vr ? vr.a : null };
+}

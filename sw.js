@@ -1,6 +1,6 @@
 // Service worker: offline app shell + runtime caches.
 // Bump VERSION whenever shipped files change (forces a clean re-cache).
-const VERSION = 'qa-v6';
+const VERSION = 'qa-v7';
 const AUDIO_CACHE = 'qa-audio-v2';
 const AUDIO_HOSTS = ['audio.qurancdn.com', 'cdn.islamic.network', 'everyayah.com'];
 const AUDIO_MAX_ENTRIES = 300;
@@ -10,7 +10,7 @@ const SHELL = [
   'index.html', 'letters.html', 'words.html', 'verses.html', 'practice.html', 'progress.html', 'about.html',
   'css/styles.css', 'css/build.css', 'css/reading.css',
   'js/lib/store.js', 'js/lib/audio.js', 'js/lib/srs.js', 'js/lib/progress.js', 'js/lib/hash.js', 'js/lib/data.js', 'js/lib/shaping.js',
-  'js/ui/chrome.js', 'js/ui/player.js', 'js/ui/toast.js', 'js/ui/trace.js', 'js/ui/build-game.js',
+  'js/ui/chrome.js', 'js/ui/player.js', 'js/ui/toast.js', 'js/ui/trace.js', 'js/ui/build-game.js', 'js/ui/verse-picker.js',
   'js/pages/home.js', 'js/pages/letters.js', 'js/pages/words.js', 'js/pages/verses.js', 'js/pages/practice.js', 'js/pages/progress.js', 'js/pages/about.js',
   'manifest.json',
   'assets/fonts/amiri-arabic-400.woff2', 'assets/fonts/amiri-arabic-700.woff2',

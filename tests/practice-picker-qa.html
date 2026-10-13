@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verse picker QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/reading.css">
+</head>
+<body>
+<main><p class="muted">Driving the picker…</p></main>
+<script type="module">
+import { openVersePicker } from '../js/ui/verse-picker.js';
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const picks = [];
+
+// 1. surah list -> ayah grid click
+await openVersePicker({ onPick: (s, a) => picks.push({ s, a }) });
+await sleep(400);
+const row112 = [...document.querySelectorAll('.surah-row')].find((b) => b.dataset.s === '112');
+row112?.click();
+await sleep(250);
+const closedAfterFirst = null;
+[...document.querySelectorAll('.pk-ayah')].find((b) => b.dataset.a === '2')?.click();
+await sleep(250);
+const closed1 = !document.querySelector('.picker-overlay');
+
+// 2. long surah: jump input path
+await openVersePicker({ onPick: (s, a) => picks.push({ s, a }) });
+await sleep(300);
+[...document.querySelectorAll('.surah-row')].find((b) => b.dataset.s === '2')?.click();
+await sleep(250);
+const num = document.querySelector('#pk-num');
+if (num) num.value = '255';
+document.querySelector('#pk-go')?.click();
+await sleep(250);
+const closed2 = !document.querySelector('.picker-overlay');
+
+// 3. close button path
+await openVersePicker({ onPick: (s, a) => picks.push({ s, a }) });
+await sleep(300);
+document.querySelector('#pk-close')?.click();
+await sleep(200);
+const closed3 = !document.querySelector('.picker-overlay');
+
+const expected = [{ s: 112, a: 2 }, { s: 2, a: 255 }];
+const pass = JSON.stringify(picks) === JSON.stringify(expected) && closed1 && closed2 && closed3;
+const pre = document.createElement('pre');
+pre.id = 'result';
+pre.textContent = JSON.stringify({ picks, closed1, closed2, closed3, pass }, null, 1);
+document.body.appendChild(pre);
+document.body.dataset.qa = pass ? 'done-pass' : 'done-fail';
+</script>
+</body>
+</html>

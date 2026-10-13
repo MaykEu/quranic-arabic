@@ -4,13 +4,18 @@
 //   Trace      : trace whole words with the same coverage scorer as letters
 //   Listen     : hear → say → next with a daily counter
 //   Recall     : verse shown, meaning hidden, self-grade → same SRS scheduler
-// Modes live in the hash (#read / #trace / #listen / #recall).
+// Modes live in the hash (#read / #trace / #listen / #recall), and Read aloud /
+// Recall accept a verse: #read/2:255, #recall/2:255. Read aloud walks ayah by
+// ayah from the chosen verse; Recall drills either your recent verses or one
+// chosen verse. Everything is optional — any level can jump anywhere.
 import { loadData } from '../lib/data.js';
 import { wbwFromRef, verseAudioUrl } from '../lib/audio.js';
 import { play } from '../ui/player.js';
 import { get, set } from '../lib/store.js';
 import { load as loadSRS, review, dueIds } from '../lib/srs.js';
 import { mountTrace } from '../ui/trace.js';
+import { openVersePicker } from '../ui/verse-picker.js';
+import { parsePracticeHash } from '../lib/hash.js';
 import { toast } from '../ui/toast.js';
 
 const main = document.querySelector('main');
@@ -34,11 +39,20 @@ const state = {
   rec: { recorder: null, chunks: [], url: null, stream: null, verse: null },
   traceIdx: 0,
   listenIdx: 0,
-  recall: { queue: [], i: 0, revealed: false, got: 0 },
+  read: null, // { s, a } — chosen verse for Read aloud
+  recall: { queue: [], i: 0, revealed: false, got: 0, single: false, focus: null },
 };
 
 const prefs = () => get('prefs', {});
 const today = () => new Date().toISOString().slice(0, 10);
+const savePractice = (patchObj) => set('practice', { ...get('practice', {}), ...patchObj });
+
+function loadSelection() {
+  const p = get('practice', {});
+  if (p.readVerse) state.read = p.readVerse;
+  state.recall.single = !!p.recallSingle;
+  state.recall.focus = p.recallVerse || null;
+}
 
 async function getSurah(id) {
   if (!state.surahs.has(id)) {
@@ -65,7 +79,11 @@ function recentVerses() {
 function stopRecording() {
   const r = state.rec;
   if (r.recorder && r.recorder.state === 'recording') {
-    try { r.recorder.stop(); } catch { /* already stopped */ }
+    try {
+      r.recorder.stop();
+    } catch {
+      /* already stopped */
+    }
   }
   if (r.stream) r.stream.getTracks().forEach((t) => t.stop());
   r.stream = null;
@@ -88,7 +106,8 @@ function shell(mode, body) {
 async function renderRead() {
   shell('read', `<section class="card pr-card"><p class="muted">Loading…</p></section>`);
   const pool = recentVerses();
-  const key = state.rec.verse || pool[0];
+  const sel = state.read;
+  const key = sel ? `${sel.s}:${sel.a}` : state.rec.verse || pool[0];
   const [s, a] = key.split(':').map(Number);
   const v = await getVerse(s, a);
   const reciter = state.reciters.find((r) => r.id === prefs().reciter) || state.reciters[0];
@@ -96,14 +115,19 @@ async function renderRead() {
 
   document.getElementById('view').innerHTML = `
     <section class="card pr-card">
-      <div class="muted">${esc(v.surah.name_simple)} ${s}:${a} — ${esc(v.surah.name_translit)}</div>
+      <div class="row" style="justify-content:space-between;align-items:center;gap:8px">
+        <div class="muted">${esc(v.surah.name_simple)} ${s}:${a} — ${esc(v.surah.name_translit)}</div>
+        <button type="button" class="btn btn-ghost" id="choose">Choose verse</button>
+      </div>
       <p class="pr-verse" lang="ar" dir="rtl">${esc(v.ayah.text)}</p>
       ${tr ? `<p class="pr-tr">${esc(tr)}</p>` : ''}
       <div class="rec-row" id="rec-row"></div>
       <p class="pr-note">Listen to the reciter first, then read aloud and compare.
       No scoring — your ears decide. (Recording stays on your device.)</p>
       <div id="mic-note" class="pr-note"></div>
-      <div class="row"><button type="button" class="btn btn-ghost" id="nextv">Another verse →</button></div>
+      <div class="row">
+        <button type="button" class="btn btn-ghost" id="nextv">Next verse →</button>
+      </div>
     </section>`;
 
   const row = document.getElementById('rec-row');
@@ -112,9 +136,11 @@ async function renderRead() {
     const r = state.rec;
     const recording = r.recorder && r.recorder.state === 'recording';
     row.innerHTML = `
-      ${recording
-        ? `<button type="button" class="btn" id="stop"><span class="rec-dot"></span>Stop</button>`
-        : `<button type="button" class="btn" id="record">🎤 Record</button>`}
+      ${
+        recording
+          ? `<button type="button" class="btn" id="stop"><span class="rec-dot"></span>Stop</button>`
+          : `<button type="button" class="btn" id="record">🎤 Record</button>`
+      }
       <button type="button" class="btn btn-ghost" id="theirs">▶ Reciter</button>
       ${r.url ? `<button type="button" class="btn btn-ghost" id="mine">▶ You</button>` : ''}`;
     const rec = row.querySelector('#record');
@@ -159,10 +185,29 @@ async function renderRead() {
   }
 
   renderRow();
+
+  document.getElementById('choose').addEventListener('click', () =>
+    openVersePicker({
+      onPick: (cs, ca) => {
+        state.read = { s: cs, a: ca };
+        savePractice({ readVerse: state.read });
+        stopRecording();
+        renderRead();
+      },
+    }),
+  );
+
   document.getElementById('nextv').addEventListener('click', () => {
     stopRecording();
-    const i = pool.indexOf(key);
-    state.rec.verse = pool[(i + 1) % pool.length];
+    let cs = s;
+    let ca = a + 1;
+    if (ca > v.surah.verses_count) {
+      cs = cs === 114 ? 1 : cs + 1;
+      ca = 1;
+    }
+    state.read = { s: cs, a: ca };
+    state.rec.verse = `${cs}:${ca}`;
+    savePractice({ readVerse: state.read });
     renderRead();
   });
 }
@@ -241,7 +286,7 @@ function renderListen() {
   document.getElementById('next').addEventListener('click', () => {
     const cur = get('practice', { day: today(), count: 0 });
     const n = (cur.day === today() ? cur.count : 0) + 1;
-    set('practice', { day: today(), count: n });
+    set('practice', { ...cur, day: today(), count: n });
     state.listenIdx += 1;
     renderListen();
   });
@@ -252,6 +297,9 @@ function renderListen() {
 function buildRecallQueue() {
   const srsAll = loadSRS();
   const due = dueIds(srsAll).filter((id) => /^v:\d+:\d+$/.test(id));
+  if (state.recall.single && state.recall.focus) {
+    return [`${state.recall.focus.s}:${state.recall.focus.a}`];
+  }
   const pool = recentVerses();
   const fresh = pool.filter((id) => !srsAll[`v:${id}`]);
   return [...due.map((id) => id.slice(2)), ...fresh].slice(0, 8);
@@ -259,20 +307,29 @@ function buildRecallQueue() {
 
 async function renderRecall() {
   if (!state.recall.queue.length) {
-    state.recall = { queue: buildRecallQueue(), i: 0, revealed: false, got: 0 };
+    state.recall = { ...state.recall, queue: buildRecallQueue(), i: 0, revealed: false, got: 0 };
   }
   const r = state.recall;
+
+  const segBar = `
+    <nav class="seg" aria-label="Recall source" style="margin:0 0 12px">
+      <a href="#" data-src="auto" class="${r.single ? '' : 'active'}">My verses</a>
+      <a href="#" data-src="one" class="${r.single ? 'active' : ''}">One verse</a>
+    </nav>`;
+
   if (r.i >= r.queue.length) {
     shell('recall', `
+      ${segBar}
       <section class="card center">
         <h2>Recall done</h2>
         <p>${r.got} of ${r.queue.length} recalled. Misses come back first next time.</p>
         <div class="row" style="justify-content:center"><button type="button" class="btn" id="again">Again</button></div>
       </section>`);
     document.getElementById('again').addEventListener('click', () => {
-      state.recall = { queue: buildRecallQueue(), i: 0, revealed: false, got: 0 };
+      state.recall = { ...state.recall, queue: buildRecallQueue(), i: 0, revealed: false, got: 0 };
       renderRecall();
     });
+    wireRecallSeg();
     return;
   }
 
@@ -285,8 +342,12 @@ async function renderRecall() {
   const tr = v.ayah.tr ? (prefs().tr === 'sahih' ? v.ayah.tr.sahih : v.ayah.tr.pickthall) : '';
 
   shell('recall', `
+    ${segBar}
     <section class="card pr-card">
-      <p class="muted center">${r.i + 1} / ${r.queue.length} · ${esc(v.surah.name_simple)} ${s}:${a}</p>
+      <div class="row" style="justify-content:space-between;align-items:center;gap:8px">
+        <p class="muted" style="margin:0">${r.i + 1} / ${r.queue.length} · ${esc(v.surah.name_simple)} ${s}:${a}</p>
+        ${r.single ? `<button type="button" class="btn btn-ghost" id="choose">Choose verse</button>` : ''}
+      </div>
       <p class="recall-verse" lang="ar" dir="rtl">${esc(v.ayah.text)}</p>
       <div id="reveal-box" hidden>
         ${tr ? `<p class="pr-tr">${esc(tr)}</p>` : ''}
@@ -314,16 +375,70 @@ async function renderRecall() {
   };
   document.getElementById('again').addEventListener('click', () => grade(false));
   document.getElementById('got').addEventListener('click', () => grade(true));
+
+  const choose = document.getElementById('choose');
+  if (choose) {
+    choose.addEventListener('click', () =>
+      openVersePicker({
+        onPick: (cs, ca) => {
+          state.recall.focus = { s: cs, a: ca };
+          state.recall = { ...state.recall, queue: [], i: 0, revealed: false, got: 0 };
+          savePractice({ recallVerse: state.recall.focus, recallSingle: true });
+          renderRecall();
+        },
+      }),
+    );
+  }
+  wireRecallSeg();
+}
+
+function wireRecallSeg() {
+  for (const link of main.querySelectorAll('.seg [data-src]')) {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const one = link.dataset.src === 'one';
+      state.recall = { ...state.recall, single: one, queue: [], i: 0, revealed: false, got: 0 };
+      savePractice({ recallSingle: one });
+      if (one && !state.recall.focus) {
+        openVersePicker({
+          onPick: (cs, ca) => {
+            state.recall.focus = { s: cs, a: ca };
+            savePractice({ recallVerse: state.recall.focus });
+            renderRecall();
+          },
+          onClose: () => {
+            if (!state.recall.focus) {
+              state.recall.single = false;
+              renderRecall();
+            }
+          },
+        });
+      } else {
+        renderRecall();
+      }
+    });
+  }
 }
 
 // ---------- router ----------
 
 function render() {
   stopRecording();
-  const mode = (location.hash.replace(/^#/, '') || 'read').split('/')[0];
-  if (mode === 'trace') return renderTrace();
-  if (mode === 'listen') return renderListen();
-  if (mode === 'recall') return renderRecall();
+  const route = parsePracticeHash(location.hash);
+  if (route.s && route.a) {
+    if (route.mode === 'recall') {
+      state.recall.single = true;
+      state.recall.focus = { s: route.s, a: route.a };
+      state.recall.queue = [];
+      savePractice({ recallSingle: true, recallVerse: state.recall.focus });
+    } else {
+      state.read = { s: route.s, a: route.a };
+      savePractice({ readVerse: state.read });
+    }
+  }
+  if (route.mode === 'trace') return renderTrace();
+  if (route.mode === 'listen') return renderListen();
+  if (route.mode === 'recall') return renderRecall();
   return renderRead();
 }
 
@@ -337,6 +452,7 @@ async function init() {
     state.index = idx;
     state.reciters = recs;
     state.build = build.words;
+    loadSelection();
   } catch (e) {
     main.innerHTML = `<section class="card"><p>Could not load practice data: ${esc(e.message)}</p></section>`;
     return;
