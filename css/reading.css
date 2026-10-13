@@ -276,21 +276,50 @@ button.surah-row {
 }
 
 /* ---------- quiz (ear training) ---------- */
+.quiz-seg { margin: 0 0 12px; }
+.q-dots { display: inline-flex; gap: 5px; align-items: center; }
+.q-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--line); display: inline-block; }
+.q-dot.good { background: #2f9b63; }
+.q-dot.bad { background: #b0413e; }
+.q-dot.now { background: var(--brand2); box-shadow: 0 0 0 2px var(--brand2); }
 .sound-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0; }
 .sound-opt {
   font-family: var(--font-ar);
-  font-size: 26px;
-  min-height: 64px;
+  font-size: 24px;
+  line-height: 1.8; /* room for tall tashkeel above and descenders below */
+  min-height: 84px;
+  padding: 10px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow-wrap: anywhere;
   border: 1px solid var(--line-strong);
   border-radius: 12px;
   background: var(--surface);
   color: var(--ink);
   cursor: pointer;
 }
+.sound-opt.gloss-opt { font-family: inherit; font-size: 16px; line-height: 1.5; min-height: 68px; }
 .sound-opt:active { transform: scale(0.97); }
 .sound-opt.correct { border-color: #2F6B4F; background: rgba(47, 107, 79, 0.12); }
 .sound-opt.wrong { border-color: #B0413E; background: rgba(176, 65, 62, 0.12); }
 .sound-opt:disabled { cursor: default; opacity: 0.85; }
+.q-missed { display: grid; gap: 6px; margin: 12px 0; }
+.q-miss-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: var(--surface);
+  color: inherit;
+  cursor: pointer;
+}
+.q-miss-row span:first-child { font-family: var(--font-ar); font-size: 20px; }
 
 /* ---------- verse buttons: memorised & playing states ---------- */
 .ay-memo.on,

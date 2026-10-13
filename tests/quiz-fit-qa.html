@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz fit QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/reading.css">
+</head>
+<body>
+<script type="module">
+// Measures EVERY quiz option (all 500 words, both modes) at the real column width:
+// no option may overflow its box horizontally, and the room for vertical marks
+// (line-height / padding) must be present. The marks-heaviest words are rendered
+// at the top so a screenshot can confirm nothing sticks out of the border.
+const out = {};
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const escH = (s) =>
+  String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+async function run() {
+  const { loadData } = await import('../js/lib/data.js');
+  const vocab = ((await loadData('vocabulary.json')).words || []).filter((w) => w.ar && w.gloss);
+
+  const marks = (s) => (s.match(/[\u064B-\u0652\u0670\u06D6-\u06ED]/g) || []).length;
+  const heaviest = [...vocab].sort((a, b) => marks(b.ar) - marks(a.ar)).slice(0, 8);
+
+  const title = document.createElement('h3');
+  title.textContent = 'Worst case (most marks)';
+  title.style.textAlign = 'center';
+  document.body.appendChild(title);
+  const worst = document.createElement('div');
+  worst.className = 'sound-grid';
+  worst.style.width = '366px';
+  worst.style.margin = '0 auto 18px';
+  worst.innerHTML = heaviest
+    .map((w) => `<button type="button" class="sound-opt" lang="ar" dir="rtl">${escH(w.ar)}</button>`)
+    .join('');
+  document.body.appendChild(worst);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'sound-grid';
+  wrap.style.width = '366px';
+  wrap.style.margin = '0 auto';
+  wrap.innerHTML =
+    vocab.map((w) => `<button type="button" class="sound-opt" lang="ar" dir="rtl">${escH(w.ar)}</button>`).join('') +
+    vocab.map((w) => `<button type="button" class="sound-opt gloss-opt">${escH(w.gloss)}</button>`).join('');
+  document.body.appendChild(wrap);
+
+  await document.fonts.ready;
+  await sleep(400);
+
+  const bad = [];
+  for (const b of wrap.querySelectorAll('.sound-opt')) {
+    if (b.scrollWidth > b.clientWidth + 1) bad.push({ text: b.textContent.slice(0, 30), over: b.scrollWidth - b.clientWidth });
+  }
+  const cs = getComputedStyle(wrap.querySelector('.sound-opt'));
+  out.checkedOptions = wrap.querySelectorAll('.sound-opt').length === vocab.length * 2;
+  out.noHorizontalOverflow = bad.length === 0;
+  out.overflowExamples = bad.slice(0, 5);
+  out.lineHeightRoom = parseFloat(cs.lineHeight) >= parseFloat(cs.fontSize) * 1.6;
+  out.verticalPadding = parseFloat(cs.paddingTop) >= 8;
+  out.worstCaseSample = heaviest.map((w) => w.ar); // informational — rendered at the top for the screenshot
+}
+
+run()
+  .then(() => {
+    out.pass =
+      out.checkedOptions === true &&
+      out.noHorizontalOverflow === true &&
+      out.overflowExamples.length === 0 &&
+      out.lineHeightRoom === true &&
+      out.verticalPadding === true;
+    const pre = document.createElement('pre');
+    pre.id = 'result';
+    pre.textContent = JSON.stringify(out, null, 1);
+    document.body.appendChild(pre);
+    document.body.dataset.qa = out.pass ? 'done-pass' : 'done-fail';
+  })
+  .catch((e) => {
+    const pre = document.createElement('pre');
+    pre.id = 'result';
+    pre.textContent = 'ERROR: ' + ((e && e.stack) || e);
+    document.body.appendChild(pre);
+    document.body.dataset.qa = 'done-error';
+  });
+</script>
+</body>
+</html>

@@ -128,17 +128,59 @@ export function mergeSrs(a, b, resetAt = 0) {
   return out;
 }
 
-export function mergePractice(a, b, resetAt = 0) {
-  a = a && typeof a === 'object' ? a : {};
-  b = b && typeof b === 'object' ? b : {};
+export function mergeListens(a, b, resetAt = 0) {
   const floor = resetAt ? isoDay(resetAt) : '';
   const out = {};
-  for (const k of new Set([...Object.keys(a), ...Object.keys(b)])) {
-    if (floor && k < floor) continue;
-    out[k] = Math.max(Number(a[k]) || 0, Number(b[k]) || 0);
-  }
+  const eat = (src) => {
+    if (!src || typeof src !== 'object') return;
+    for (const [d, n] of Object.entries(src)) {
+      if (typeof d !== 'string') continue;
+      if (floor && d < floor) continue;
+      out[d] = Math.max(Number(out[d]) || 0, Number(n) || 0);
+    }
+  };
+  eat(a);
+  eat(b);
   return out;
 }
+
+// The 'practice' key holds the listen counter (per-day map, merges per day) plus
+// selection keys (readVerse / recallSingle / recallVerse) that are last-write-wins.
+// Legacy {day, count} shapes are absorbed instead of ever being merged as junk.
+// Symmetric: keys present on only one side are always kept, and equal-stamp
+// conflicts fall back to a deterministic order (never an arbitrary side).
+export function mergePracticeKey(docA, docB, resetAt = 0) {
+  const pA = docA.data.practice && typeof docA.data.practice === 'object' ? docA.data.practice : {};
+  const pB = docB.data.practice && typeof docB.data.practice === 'object' ? docB.data.practice : {};
+  const sa = stampOf('practice', docA) || docA.updatedAt;
+  const sb = stampOf('practice', docB) || docB.updatedAt;
+  const bWins = sb > sa;
+  const base = bWins ? pB : pA;
+  const other = bWins ? pA : pB;
+  const out = { ...base };
+  const skip = new Set(['listens', 'day', 'count']);
+  for (const [k, v] of Object.entries(other)) {
+    if (skip.has(k)) continue;
+    if (!(k in out)) out[k] = v; // present on one side only → keep it
+    else if (sa === sb) {
+      // exact stamp tie: deterministic choice so merge(a,b) === merge(b,a)
+      const [ja, jb] = [JSON.stringify(out[k]), JSON.stringify(v)];
+      if (jb < ja) out[k] = v;
+    }
+  }
+  delete out.day;
+  delete out.count;
+  const listens = mergeListens(listensOnly(pA), listensOnly(pB), resetAt);
+  if (Object.keys(listens).length) out.listens = listens;
+  else delete out.listens;
+  return out;
+}
+
+const listensOnly = (p) => {
+  const out = { ...(p.listens && typeof p.listens === 'object' ? p.listens : {}) };
+  if (p.day && typeof p.count === 'number') out[p.day] = Math.max(out[p.day] || 0, p.count);
+  return out;
+};
 
 export function mergeTombstones(a, b, resetAt = 0) {
   const out = {};
@@ -189,12 +231,15 @@ export function mergeDocs(docA, docB, now = Date.now()) {
   dropTombstoned(progress, tombstones);
   data.progress = progress;
   data.srs = mergeSrs(a.data.srs, b.data.srs, resetAt);
-  data.practice = mergePractice(a.data.practice, b.data.practice, resetAt);
 
   // Everything else: newest write wins (change stamps; lastRead can use its own at).
-  const special = new Set(['_meta', 'progress', 'srs', 'practice']);
+  const special = new Set(['_meta', 'progress', 'srs']);
   for (const k of new Set([...Object.keys(a.data), ...Object.keys(b.data)])) {
     if (special.has(k)) continue;
+    if (k === 'practice') {
+      data.practice = mergePracticeKey(a, b, resetAt);
+      continue;
+    }
     const inA = k in a.data;
     const inB = k in b.data;
     if (inA && inB) {

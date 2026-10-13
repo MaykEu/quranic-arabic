@@ -67,11 +67,31 @@ test('srs: most recent review wins; exact tie goes to the higher box', () => {
   assert.equal(solo.data.srs['1'].box, 2);
 });
 
-test('practice counts merge per day (max), days union', () => {
-  const a = doc({ practice: { '2026-10-01': 3, '2026-10-02': 1 }, progress: prog({ days: ['2026-10-01'] }) });
-  const b = doc({ practice: { '2026-10-01': 5 }, progress: prog({ days: ['2026-10-03'] }) });
+test('practice: listen counter merges per day; selection keys are last-write-wins', () => {
+  const a = doc({ practice: { listens: { '2026-10-01': 3, '2026-10-02': 1 }, recallSingle: true } });
+  const b = doc({ practice: { listens: { '2026-10-01': 5 }, readVerse: { s: 2, a: 255 } } }, {}, { updatedAt: 2000 });
   const m = mergeDocs(a, b, 1);
-  assert.deepEqual(m.data.practice, { '2026-10-01': 5, '2026-10-02': 1 });
+  assert.deepEqual(m.data.practice.listens, { '2026-10-01': 5, '2026-10-02': 1 });
+  assert.ok(m.data.practice.readVerse); // newer doc supplies its selection keys
+  assert.equal(m.data.practice.recallSingle, true); // one-sided keys are kept, never dropped
+  const m2 = mergeDocs(b, a, 1);
+  assert.deepEqual(m2.data.practice.listens, { '2026-10-01': 5, '2026-10-02': 1 });
+  assert.ok(m2.data.practice.readVerse);
+});
+
+test('legacy {day,count} practice shapes are absorbed, never merged into junk (regression)', () => {
+  const a = doc({ practice: { day: '2026-10-13', count: 3 } });
+  const b = doc({ practice: { day: '2026-10-13', count: 3 } });
+  const m = mergeDocs(a, b, 1);
+  assert.equal(m.data.practice.day, undefined);
+  assert.equal(m.data.practice.count, undefined);
+  assert.equal(m.data.practice.listens['2026-10-13'], 3); // the counter survives the merge
+});
+
+test('practice counts merge per day (max), days union', () => {
+  const a = doc({ progress: prog({ days: ['2026-10-01'] }) });
+  const b = doc({ progress: prog({ days: ['2026-10-03'] }) });
+  const m = mergeDocs(a, b, 1);
   assert.deepEqual(m.data.progress.days, ['2026-10-01', '2026-10-03']);
 });
 
@@ -80,7 +100,7 @@ test('a reset on one device drops what is older than it, keeps what is newer', (
   const a = doc(
     {
       progress: prog({ letters: { newOne: { at: D('2026-10-11') } }, days: ['2026-10-01', '2026-10-11'] }),
-      practice: { '2026-10-01': 9, '2026-10-11': 2 },
+      practice: { listens: { '2026-10-01': 9, '2026-10-11': 2 } },
       srs: { '1': { box: 3, at: D('2026-10-01') }, '2': { box: 1, at: D('2026-10-11') } },
     },
     { 'letters:gone': D('2026-10-02') },
@@ -89,7 +109,7 @@ test('a reset on one device drops what is older than it, keeps what is newer', (
   const m = mergeDocs(a, doc({}), 1); // the other device has nothing (wiped)
   assert.equal(m.data.progress.letters.newOne.at, D('2026-10-11'));
   assert.deepEqual(m.data.progress.days, ['2026-10-11']);
-  assert.deepEqual(m.data.practice, { '2026-10-11': 2 });
+  assert.deepEqual(m.data.practice.listens, { '2026-10-11': 2 });
   assert.equal(m.data.srs['1'], undefined);
   assert.equal(m.data.srs['2'].box, 1);
   assert.deepEqual(m.tombstones, {});

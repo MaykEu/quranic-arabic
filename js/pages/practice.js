@@ -17,7 +17,7 @@ import { load as loadSRS, review, dueIds } from '../lib/srs.js';
 import { mountTrace } from '../ui/trace.js';
 import { openVersePicker } from '../ui/verse-picker.js';
 import { parsePracticeHash } from '../lib/hash.js';
-import { pickOptions, buildRound } from '../lib/quiz.js';
+import { pickOptions, buildRound, glossOptions } from '../lib/quiz.js';
 import { toast } from '../ui/toast.js';
 
 const main = document.querySelector('main');
@@ -50,8 +50,29 @@ const state = {
 };
 
 const prefs = () => get('prefs', {});
-const today = () => new Date().toISOString().slice(0, 10);
+// Local day (YYYY-MM-DD) — the listen counter must reset at the learner's midnight,
+// not UTC midnight.
+const today = () => {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+};
 const savePractice = (patchObj) => set('practice', { ...get('practice', {}), ...patchObj });
+
+// Listen drill counter: { listens: { 'YYYY-MM-DD': n } } — a per-day map so cloud
+// sync can merge it per day (the old {day, count} shape got mangled by the merge).
+function listensMap(p = get('practice', {})) {
+  const out = { ...(p.listens && typeof p.listens === 'object' ? p.listens : {}) };
+  if (p.day && typeof p.count === 'number') out[p.day] = Math.max(out[p.day] || 0, p.count); // absorb the legacy shape
+  return out;
+}
+const listenCount = () => listensMap()[today()] || 0;
+function listenAdd() {
+  const p = get('practice', {});
+  const listens = listensMap(p);
+  listens[today()] = (listens[today()] || 0) + 1;
+  const { day, count, ...rest } = p; // drop the legacy fields for good
+  set('practice', { ...rest, listens });
+}
 
 function loadSelection() {
   const p = get('practice', {});
@@ -269,8 +290,7 @@ function renderTrace() {
 
 function renderListen() {
   const w = state.build[state.listenIdx % state.build.length];
-  const pr = get('practice', { day: today(), count: 0 });
-  const count = pr.day === today() ? pr.count : 0;
+  const count = listenCount();
 
   shell('listen', `
     <section class="card pr-card">
@@ -294,9 +314,7 @@ function renderListen() {
     e.currentTarget.textContent = '🔊 Hear it again';
   });
   document.getElementById('next').addEventListener('click', () => {
-    const cur = get('practice', { day: today(), count: 0 });
-    const n = (cur.day === today() ? cur.count : 0) + 1;
-    set('practice', { ...cur, day: today(), count: n });
+    listenAdd();
     state.listenIdx += 1;
     renderListen();
   });
@@ -306,10 +324,13 @@ function renderListen() {
 
 function renderQuiz() {
   const s = state.sound;
+  const mode = prefs().quizMode === 'meaning' ? 'meaning' : 'write';
   if (!s.round.length) {
     s.round = buildRound(state.vocab, QUIZ_ROUND);
     s.i = 0;
     s.got = 0;
+    s.log = [];
+    s.missed = [];
   }
   if (!s.round.length) {
     shell('quiz', `<section class="card"><p class="muted">No words loaded yet.</p></section>`);
@@ -319,39 +340,61 @@ function renderQuiz() {
 
   const w = s.round[s.i];
   s.answered = false;
-  // Options are built once per question (a re-render must never reshuffle them) and
-  // stay hidden until the learner presses play — nothing plays on its own.
-  if (s.optionsFor !== s.i) {
-    s.options = pickOptions(w, state.vocab, 4);
+  // Options are built once per question (a re-render must never reshuffle them).
+  // They are visible from the start — the sound is the only thing you must ask for.
+  if (s.optionsFor !== s.i || s.optionsMode !== mode) {
+    s.options = mode === 'meaning' ? glossOptions(w, state.vocab, 4) : pickOptions(w, state.vocab, 4);
     s.optionsFor = s.i;
-    s.heard = false;
+    s.optionsMode = mode;
+    if (!s.options) {
+      s.i += 1; // no clean distractors for this word — skip it
+      return renderQuiz();
+    }
   }
 
+  const segBar = `
+    <nav class="seg quiz-seg" aria-label="Quiz type">
+      <a href="#" data-qmode="write" class="${mode === 'write' ? 'active' : ''}">Write it</a>
+      <a href="#" data-qmode="meaning" class="${mode === 'meaning' ? 'active' : ''}">Meaning</a>
+    </nav>`;
+  const dots =
+    (s.log || []).map((ok) => `<span class="q-dot ${ok ? 'good' : 'bad'}"></span>`).join('') +
+    `<span class="q-dot now"></span>`;
+
   shell('quiz', `
+    ${segBar}
     <section class="card pr-card">
       <div class="row" style="justify-content:space-between;align-items:center">
-        <span class="muted">Hear the word — pick it</span>
+        <span class="q-dots" aria-label="Round progress">${dots}</span>
         <span class="counter-chip">${s.i + 1} / ${s.round.length}</span>
       </div>
-      <div class="row" style="justify-content:center">
-        <button type="button" class="btn${s.heard ? ' btn-ghost' : ''}" id="replay">🔊 ${s.heard ? 'Play it again' : 'Hear the word'}</button>
+      <div class="row" style="justify-content:center;margin:10px 0">
+        <button type="button" class="btn" id="replay">🔊 Hear the word</button>
       </div>
-      <div class="sound-grid" id="options"${s.heard ? '' : ' hidden'}>
+      <div class="sound-grid" id="options">
         ${s.options
-          .map((o) => `<button type="button" class="sound-opt" data-rank="${o.rank}" lang="ar" dir="rtl">${esc(o.ar)}</button>`)
+          .map((o) =>
+            mode === 'meaning'
+              ? `<button type="button" class="sound-opt gloss-opt" data-rank="${o.rank}">${esc(o.gloss)}</button>`
+              : `<button type="button" class="sound-opt" data-rank="${o.rank}" lang="ar" dir="rtl">${esc(o.ar)}</button>`,
+          )
           .join('')}
       </div>
-      <p class="muted center" id="sound-feedback">${s.heard ? '&nbsp;' : 'Press “Hear the word” to start.'}</p>
+      <p class="muted center" id="sound-feedback">&nbsp;</p>
     </section>`);
 
   const playCur = () => play(wbwFromRef(w.audio), 'Hear the word');
-  document.getElementById('replay').addEventListener('click', () => {
-    playCur();
-    if (!s.heard) {
-      s.heard = true;
-      renderQuiz(); // reveal the options (the sound keeps playing in the player bar)
-    }
-  });
+  document.getElementById('replay').addEventListener('click', playCur);
+
+  for (const link of main.querySelectorAll('.quiz-seg [data-qmode]')) {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (link.dataset.qmode === mode) return;
+      set('prefs', { ...get('prefs', {}), quizMode: link.dataset.qmode });
+      s.optionsFor = -1; // rebuild options in the new mode
+      renderQuiz();
+    });
+  }
 
   const fb = document.getElementById('sound-feedback');
   for (const btn of main.querySelectorAll('.sound-opt')) {
@@ -360,35 +403,68 @@ function renderQuiz() {
       s.answered = true;
       const correct = Number(btn.dataset.rank) === w.rank;
       review(String(w.rank), correct);
+      s.log = [...(s.log || []), correct];
       if (correct) s.got += 1;
+      else s.missed = [...(s.missed || []), w];
       for (const b of main.querySelectorAll('.sound-opt')) {
         if (Number(b.dataset.rank) === w.rank) b.classList.add('correct');
         else if (b === btn) b.classList.add('wrong');
         b.disabled = true;
       }
+      const dotsNow = main.querySelector('.q-dots');
+      if (dotsNow) {
+        const cur = dotsNow.querySelector('.q-dot.now');
+        if (cur) {
+          cur.classList.remove('now');
+          cur.classList.add(correct ? 'good' : 'bad');
+          cur.insertAdjacentHTML('afterend', '<span class="q-dot now"></span>');
+        }
+      }
       fb.innerHTML = `${correct ? '✓' : '✗ It was'} <span lang="ar" dir="rtl">${esc(w.ar)}</span> — ${esc(w.translit)} · ${esc(w.gloss)}`;
-      setTimeout(() => {
-        s.i += 1;
-        s.heard = false;
-        s.optionsFor = -1;
-        renderQuiz();
-      }, correct ? 900 : 1700);
+      setTimeout(
+        () => {
+          s.i += 1;
+          s.optionsFor = -1;
+          renderQuiz();
+        },
+        correct ? 1000 : 1900,
+      );
     });
   }
 }
 
 function renderQuizDone() {
   const s = state.sound;
+  const missed = s.missed || [];
   shell('quiz', `
     <section class="card center">
       <h2>Round done</h2>
-      <p>${s.got} of ${s.round.length} heard correctly. Missed words come back first in review.</p>
+      <p>${s.got} of ${s.round.length} correct.</p>
+      ${
+        missed.length
+          ? `<p class="muted">Missed words come back first in review. Tap one to hear it again:</p>
+             <div class="q-missed">
+               ${missed
+                 .map(
+                   (w) =>
+                     `<button type="button" class="q-miss-row" data-rank="${w.rank}"><span lang="ar" dir="rtl">${esc(w.ar)}</span><span class="muted">${esc(w.translit)} — ${esc(w.gloss)}</span></button>`,
+                 )
+                 .join('')}
+             </div>`
+          : '<p class="muted">No misses — clean round.</p>'
+      }
       <div class="row" style="justify-content:center">
         <button type="button" class="btn" id="again">Another round</button>
       </div>
     </section>`);
+  for (const b of main.querySelectorAll('.q-miss-row')) {
+    b.addEventListener('click', () => {
+      const w = state.vocab.find((x) => String(x.rank) === b.dataset.rank);
+      if (w) play(wbwFromRef(w.audio), 'Missed word');
+    });
+  }
   document.getElementById('again').addEventListener('click', () => {
-    state.sound = { round: [], i: 0, answered: false, got: 0 };
+    state.sound = { round: [], i: 0, answered: false, got: 0, log: [], missed: [] };
     renderQuiz();
   });
 }

@@ -31,3 +31,47 @@ export function pickOptions(answer, pool, n = 4, rng = Math.random) {
 export function buildRound(pool, size = 10, rng = Math.random) {
   return shuffle(pool, rng).slice(0, Math.min(size, pool.length));
 }
+
+// ---------- meaning mode (hear the word → pick its English gloss) ----------
+
+// Gloss tokens that carry no meaning for disambiguation.
+const GLOSS_STOP = new Set([
+  'the', 'a', 'an', 'of', 'to', 'in', 'on', 'at', 'by', 'for', 'with', 'from', 'into', 'upon',
+  'and', 'or', 'nor', 'not', 'no', 'nor', 'but', 'so', 'as', 'than', 'that', 'this', 'these',
+  'those', 'there', 'here', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'am', 'do',
+  'does', 'did', 'has', 'have', 'had', 'will', 'would', 'shall', 'should', 'may', 'might',
+  'can', 'could', 'he', 'she', 'it', 'they', 'we', 'you', 'i', 'his', 'her', 'its', 'their',
+  'our', 'your', 'my', 'them', 'him', 'us', 'me', 'who', 'whom', 'whose', 'which', 'what',
+  'all', 'any', 'some', 'each', 'every', 'both', 'few', 'many', 'much', 'more', 'most',
+  'other', 'another', 'such', 'own', 'same', 'too', 'very', 'also', 'only', 'just', 'ever',
+  'never', 'again', 'then', 'when', 'where', 'while', 'because', 'if', 'though', 'yet',
+]);
+
+export const glossTokens = (gloss) =>
+  String(gloss || '')
+    .toLowerCase()
+    .replace(/[^a-z\s'-]/g, ' ')
+    .split(/\s+/)
+    .filter((t) => t && !GLOSS_STOP.has(t));
+
+// The four options for a meaning question: the answer's gloss + three glosses that
+// share NO significant word with it — so a distractor can never also "fit".
+// Returns null when there aren't enough clean distractors (caller skips the word).
+export function glossOptions(answer, pool, n = 4, rng = Math.random) {
+  const aTokens = new Set(glossTokens(answer.gloss));
+  if (!aTokens.size) return null;
+  const seen = new Set([String(answer.gloss).toLowerCase()]);
+  const clean = [];
+  for (const w of pool) {
+    if (w.rank === answer.rank) continue;
+    const key = String(w.gloss || '').toLowerCase();
+    if (!key || seen.has(key)) continue;
+    const toks = glossTokens(w.gloss);
+    if (!toks.length) continue;
+    if (toks.some((t) => aTokens.has(t))) continue; // shares a meaning word → ambiguous
+    seen.add(key);
+    clean.push(w);
+  }
+  if (clean.length < n - 1) return null;
+  return shuffle([answer, ...shuffle(clean, rng).slice(0, n - 1)], rng);
+}
