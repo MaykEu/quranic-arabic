@@ -135,35 +135,22 @@ function syncWhenText() {
   return `Synced ${fmtDate(new Date(t).toISOString())}`;
 }
 
-// Optional cloud sync — the app stays fully usable without it.
-function syncCard() {
+// Cloud sync status line — folded into the "Your data" card. The header account
+// button (chrome.js, top-right) is the primary sign-in control.
+function syncLine() {
   if (!configured()) return '';
   const s = session();
-
   if (!s) {
-    return `<section class="card" id="sync-card">
-      <h3>Cloud sync <span class="muted">· optional</span></h3>
-      <p class="muted">Keep one progress across your phone and your computer. Until you sign in,
-      everything stays on this device — signing in only merges your progress with your own account.</p>
-      <div class="row"><button type="button" class="btn" id="sync-in">Continue with Google</button></div>
-      <p class="muted" id="sync-status"></p>
-    </section>`;
+    return `<p class="muted" id="sync-line">Cloud sync (optional):
+    <button type="button" class="btn-link" id="sync-in">sign in with Google</button>
+    to keep one progress across your devices.</p>`;
   }
-
-  const email = (s.user && s.user.email) || 'your Google account';
-  return `<section class="card" id="sync-card">
-    <h3>Cloud sync</h3>
-    <div class="row" style="justify-content:space-between;align-items:baseline">
-      <strong>${esc(email)}</strong>
-      <span class="muted" id="sync-when">${esc(syncWhenText())}</span>
-    </div>
-    <p class="muted">Your progress is merged — nothing is ever overwritten by an older copy.</p>
-    <div class="row">
-      <button type="button" class="btn" id="sync-now">Sync now</button>
-      <button type="button" class="btn btn-ghost" id="sync-out">Sign out</button>
-    </div>
-    <p class="muted" id="sync-status"></p>
-  </section>`;
+  const email = (s.user && s.user.email) || 'your account';
+  return `<p class="muted" id="sync-line">Cloud sync: <strong>${esc(email)}</strong> ·
+    <span id="sync-when">${esc(syncWhenText())}</span> ·
+    <button type="button" class="btn-link" id="sync-now">Sync now</button> ·
+    <button type="button" class="btn-link" id="sync-out">Sign out</button>
+    <span id="sync-status"></span></p>`;
 }
 
 function render() {
@@ -201,12 +188,11 @@ function render() {
 
     ${memorisedCard()}
 
-    ${syncCard()}
-
     <section class="card">
       <h3>Your data</h3>
       <p class="muted">Your progress lives on this device. The two ways it ever leaves: the backup file
-      below, and cloud sync above (only if you sign in). Nothing else is uploaded, and there is no tracking.</p>
+      below, and cloud sync — sign in from the account button (top-right). Nothing else is uploaded, and there is no tracking.</p>
+      ${syncLine()}
       <p class="muted" id="last-backup">${esc(lastBackupText())}</p>
       <div class="row">
         <button type="button" class="btn" id="export">Download backup</button>

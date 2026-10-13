@@ -334,6 +334,9 @@ export async function syncNow() {
     applyDoc(merged);
     await pushRemote(s, merged);
     set('sync.lastSync', Date.now());
+    if (typeof document !== 'undefined') {
+      document.dispatchEvent(new CustomEvent('qa:sync', { detail: { ok: true } }));
+    }
     return { ok: true, hadRemote: !!remote, keys: Object.keys(merged.data).length };
   } catch (e) {
     return { ok: false, reason: String((e && e.message) || e) };

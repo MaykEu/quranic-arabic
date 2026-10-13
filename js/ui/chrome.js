@@ -1,9 +1,9 @@
-// Shared UI chrome: sticky header (brand + theme toggle), bottom navigation,
-// player bar mount, and service-worker registration.
-// Included by every page as a module side-effect (no exports needed).
+// Shared UI chrome: sticky header (brand + theme toggle + account), bottom
+// navigation, player bar mount, service-worker registration, and cloud-sync
+// bootstrap. Included by every page as a module side-effect (no exports needed).
 import { get, set } from '../lib/store.js';
 import { mountPlayer } from './player.js';
-import { captureSession, signedIn, syncNow } from '../lib/sync.js';
+import { captureSession, signedIn, session, signIn, signOut, syncNow } from '../lib/sync.js';
 
 const NAV = [
   ['index.html', 'Home', 'home'],
@@ -21,6 +21,7 @@ const ICONS = {
   practice: '<svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="10" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>',
   moon: '<svg viewBox="0 0 24 24"><path d="M21 13A8.5 8.5 0 1 1 11 3a6.5 6.5 0 0 0 10 10z"/></svg>',
   sun: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>',
+  account: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c1.2-3.4 3.9-5 7-5s5.8 1.6 7 5"/></svg>',
 };
 
 function buildHeader() {
@@ -84,16 +85,146 @@ function registerSW() {
   }
 }
 
+// ---------- account (header, top-right) ----------
+
+let refreshAccountUI = () => {};
+
+const initials = (email) => String(email || '?').trim().charAt(0).toUpperCase();
+
+// green = synced in the last 10 minutes; amber = signed in but stale/no sync yet
+function syncDot() {
+  if (!signedIn()) return 'none';
+  const t = get('sync.lastSync', null);
+  return t && Date.now() - t < 10 * 60000 ? 'green' : 'amber';
+}
+
+function whenText() {
+  const t = get('sync.lastSync', null);
+  if (!t) return 'Not synced yet';
+  const m = Math.round((Date.now() - t) / 60000);
+  if (m < 1) return 'Synced just now';
+  if (m < 60) return `Synced ${m} min ago`;
+  const h = Math.round(m / 60);
+  return h < 24 ? `Synced ${h} h ago` : `Synced ${Math.round(h / 24)} d ago`;
+}
+
+function buildAccount() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+
+  const wrap = document.createElement('div');
+  wrap.className = 'header-account';
+  wrap.innerHTML = `
+    <button type="button" class="btn-icon account-btn" id="account-btn" aria-haspopup="true" aria-expanded="false"></button>
+    <div class="account-panel" id="account-panel" hidden></div>`;
+  header.appendChild(wrap);
+
+  const btn = wrap.querySelector('#account-btn');
+  const panel = wrap.querySelector('#account-panel');
+  let status = '';
+
+  const close = () => {
+    panel.hidden = true;
+    btn.setAttribute('aria-expanded', 'false');
+  };
+
+  const renderButton = () => {
+    const s = session();
+    if (!s) {
+      btn.innerHTML = ICONS.account;
+      btn.setAttribute('aria-label', 'Sign in');
+      btn.classList.remove('has-avatar');
+      return;
+    }
+    const dot = syncDot();
+    btn.innerHTML = `<span class="avatar">${initials(s.user && s.user.email)}</span>${
+      dot === 'none' ? '' : `<span class="account-dot dot-${dot}"></span>`
+    }`;
+    btn.setAttribute('aria-label', 'Account and sync');
+    btn.classList.add('has-avatar');
+  };
+
+  const renderPanel = () => {
+    const s = session();
+    if (!s) {
+      panel.innerHTML = `
+        <strong>Cloud sync</strong>
+        <p class="muted">Optional — keep one progress across your phone and computer. Everything
+        stays on this device until you sign in; signing in only merges your progress with your own account.</p>
+        <div class="row"><button type="button" class="btn" id="acc-signin">Continue with Google</button></div>
+        <a class="btn-link" href="progress.html">Progress &amp; backup →</a>`;
+      panel.querySelector('#acc-signin').addEventListener('click', () => signIn());
+      return;
+    }
+    const dot = syncDot();
+    panel.innerHTML = `
+      <div class="row" style="justify-content:space-between;align-items:baseline">
+        <strong class="acc-email">${(s.user && s.user.email) || 'Signed in'}</strong>
+        <span class="account-dot dot-${dot}"></span>
+      </div>
+      <p class="muted" id="acc-when">${whenText()}</p>
+      <div class="row">
+        <button type="button" class="btn" id="acc-sync">Sync now</button>
+        <button type="button" class="btn btn-ghost" id="acc-out">Sign out</button>
+      </div>
+      <p class="muted" id="acc-status">${status}</p>
+      <a class="btn-link" href="progress.html">Progress &amp; backup →</a>`;
+    panel.querySelector('#acc-sync').addEventListener('click', async () => {
+      status = 'Syncing…';
+      renderPanel();
+      const res = await syncNow();
+      status = res && res.ok ? 'Synced ✓' : 'Could not reach the server — it will retry.';
+      renderButton();
+      renderPanel();
+    });
+    panel.querySelector('#acc-out').addEventListener('click', () => {
+      signOut();
+      status = '';
+      renderButton();
+      renderPanel();
+    });
+  };
+
+  const open = () => {
+    renderPanel();
+    panel.hidden = false;
+    btn.setAttribute('aria-expanded', 'true');
+    const first = panel.querySelector('button, a');
+    if (first) first.focus();
+  };
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (panel.hidden) open();
+    else close();
+  });
+  document.addEventListener('click', (e) => {
+    if (!panel.hidden && !wrap.contains(e.target)) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !panel.hidden) close();
+  });
+
+  refreshAccountUI = () => {
+    renderButton();
+    if (!panel.hidden) renderPanel();
+  };
+  refreshAccountUI();
+}
+
+// ---------- boot ----------
+
 buildHeader();
 buildNav();
 mountPlayer();
 initTheme();
 registerSW();
 
-// Cloud sync (optional layer — the app works fully without it):
-// pick up a fresh Google sign-in from the URL, then reconcile in the background
-// on load, when the tab becomes visible again, and when the network comes back.
+// Cloud sync (optional layer — the app works fully without it): pick up a fresh
+// Google sign-in from the URL, then reconcile in the background on load, when the
+// tab becomes visible again, and when the network comes back.
 captureSession();
+buildAccount();
 if (signedIn()) {
   const kick = () => syncNow().catch(() => {});
   kick();
@@ -102,3 +233,4 @@ if (signedIn()) {
   });
   window.addEventListener('online', kick);
 }
+document.addEventListener('qa:sync', () => refreshAccountUI());

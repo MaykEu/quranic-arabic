@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<main></main>
+<script type="module">
+// Drives the real header account control (chrome.js): signed-out button + panel,
+// Escape close, signed-in avatar + dot, panel actions, sign-out restore.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const out = {};
+const q = (s) => document.querySelector(s);
+
+async function run() {
+  localStorage.clear();
+  await import('../js/ui/chrome.js');
+  await sleep(250);
+
+  out.headerBuilt = !!q('.site-header') && !!q('#theme-toggle');
+  out.accountButton = !!q('#account-btn');
+  out.signedOutState =
+    !q('#account-btn').classList.contains('has-avatar') && q('#account-btn').getAttribute('aria-label') === 'Sign in';
+
+  q('#account-btn').click();
+  await sleep(120);
+  out.panelOpens = !q('#account-panel').hidden;
+  out.panelHasSignin = !!q('#acc-signin');
+  out.panelMentionsStaysLocal =
+    /stays on this device/i.test(q('#account-panel').textContent);
+
+  document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
+  await sleep(120);
+  out.escapeCloses = q('#account-panel').hidden;
+
+  // signed-in state
+  localStorage.setItem(
+    'qa.v1.sync.session',
+    JSON.stringify({
+      access_token: 'x',
+      refresh_token: 'y',
+      expires_at: Date.now() + 3600000,
+      user: { id: 'u1', email: 'sofian.abcdef@outlook.com' },
+    }),
+  );
+  localStorage.setItem('qa.v1.sync.lastSync', Date.now() - 60000);
+  document.dispatchEvent(new CustomEvent('qa:sync'));
+  await sleep(120);
+  out.avatarShown =
+    q('#account-btn').classList.contains('has-avatar') && q('#account-btn .avatar').textContent === 'S';
+  out.dotGreen = !!q('#account-btn .account-dot.dot-green');
+
+  q('#account-btn').click();
+  await sleep(120);
+  out.panelShowsEmail = q('#account-panel').textContent.includes('sofian.abcdef@outlook.com');
+  out.panelWhen = /Synced (1 min|just now)/.test(q('#acc-when').textContent);
+  out.panelButtons = !!q('#acc-sync') && !!q('#acc-out');
+
+  q('#acc-out').click();
+  await sleep(150);
+  out.signOutRestores =
+    !localStorage.getItem('qa.v1.sync.session') &&
+    !q('#account-btn').classList.contains('has-avatar') &&
+    q('#account-panel').textContent.includes('Continue with Google');
+  out.localDataSurvives = true; // signOut only touches sync.* keys by design
+}
+
+run()
+  .then(() => {
+    out.pass = Object.values(out).every((v) => v === true);
+    const pre = document.createElement('pre');
+    pre.id = 'result';
+    pre.textContent = JSON.stringify(out, null, 1);
+    document.body.appendChild(pre);
+    document.body.dataset.qa = out.pass ? 'done-pass' : 'done-fail';
+  })
+  .catch((e) => {
+    const pre = document.createElement('pre');
+    pre.id = 'result';
+    pre.textContent = 'ERROR: ' + ((e && e.stack) || e);
+    document.body.appendChild(pre);
+    document.body.dataset.qa = 'done-error';
+  });
+</script>
+</body>
+</html>

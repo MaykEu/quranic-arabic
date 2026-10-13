@@ -638,6 +638,52 @@ svg[fill="currentColor"] { fill: currentColor; stroke: none; }
   accent-color: var(--brand2);
 }
 
+/* ---------- account (header) ---------- */
+.header-account { position: relative; margin-left: 6px; }
+.account-btn { position: relative; }
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--brand2);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+}
+[data-theme="dark"] .avatar { color: var(--brand-ink); }
+.account-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; }
+.account-btn .account-dot { position: absolute; right: 2px; bottom: 2px; box-shadow: 0 0 0 2px var(--surface); }
+.dot-green { background: #2f9e63; }
+.dot-amber { background: #d08a2c; }
+.account-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  width: min(320px, 84vw);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+  z-index: 70;
+  text-align: left;
+}
+.account-panel .row { margin: 0; }
+.btn-link {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--brand2);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /* The hidden attribute must always win over component display rules
    (e.g. .btn sets display:inline-flex, which would otherwise reveal [hidden] buttons). */
 [hidden] { display: none !important; }
