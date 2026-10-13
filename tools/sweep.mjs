@@ -70,6 +70,13 @@ const EDGE = 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
 // (which then looks exactly like "CDP unreachable").
 const UD = resolve(OUT_DIR, `sweep-profile-${PORT}`);
 
+// Kill the WHOLE browser tree: child.kill() only stops the launcher, and the
+// renderer/GPU children keep the profile dir locked for the next run.
+const killEdge = () => {
+  try { edge.kill(); } catch {}
+  try { spawn('taskkill', ['/PID', String(edge.pid), '/T', '/F'], { stdio: 'ignore' }); } catch {}
+};
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const edge = spawn(
   EDGE,
@@ -79,7 +86,7 @@ const edge = spawn(
 
 const die = (m) => {
   console.error('FATAL: ' + m);
-  edge.kill();
+  killEdge();
   process.exit(1);
 };
 
@@ -306,13 +313,17 @@ try {
     for (const [hash, marker, note] of ROUTES[page] || []) {
       clearEvents();
       await evalJs(`location.hash = '${hash}'`);
-      await sleep(1700);
-      const found = await evalJs(
-        marker.startsWith('text:')
-          ? `document.body.innerText.includes(${JSON.stringify(marker.slice(5))})`
-          : `!!document.querySelector('${marker}')`,
-      );
-      rec.routes[hash] = { marker, found: !!found, note };
+      // Poll for the marker (surah data is fetched async; a fixed wait made this
+      // flaky on a cold server). Up to ~7 s, then it is a real failure.
+      const probe = marker.startsWith('text:')
+        ? `document.body.innerText.includes(${JSON.stringify(marker.slice(5))})`
+        : `!!document.querySelector('${marker}')`;
+      let found = false;
+      for (let attempt = 0; attempt < 18 && !found; attempt++) {
+        await sleep(400);
+        found = !!(await evalJs(probe));
+      }
+      rec.routes[hash] = { marker, found, note };
       if (!found) report.failures.push(`${page}: route ${hash} (${note}) → marker '${marker}' not found`);
       if (events.exceptions.length) report.failures.push(`${page}: route ${hash} threw → ${events.exceptions[0].slice(0, 120)}`);
     }
@@ -330,7 +341,7 @@ try {
 } catch (e) {
   report.failures.push('sweep crashed: ' + e.message);
 } finally {
-  edge.kill();
+  killEdge();
 }
 
 writeFileSync(`${OUT_DIR}/sweep-report.json`, JSON.stringify(report, null, 1));

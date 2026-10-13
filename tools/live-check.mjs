@@ -24,6 +24,13 @@ const PORT = 9333 + Math.floor(Math.random() * 400);
 const EDGE = 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
 const UD = resolve(OUT_DIR, `live-profile-${PORT}`);
 
+// Kill the WHOLE browser tree: child.kill() only stops the launcher, and the
+// renderer/GPU children keep the profile dir locked for the next run.
+const killEdge = () => {
+  try { edge.kill(); } catch {}
+  try { spawn('taskkill', ['/PID', String(edge.pid), '/T', '/F'], { stdio: 'ignore' }); } catch {}
+};
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const edge = spawn(
   EDGE,
@@ -146,7 +153,7 @@ try {
 } catch (e) {
   out.failures.push('live-check crashed: ' + e.message);
 } finally {
-  edge.kill();
+  killEdge();
 }
 
 writeFileSync(`${OUT_DIR}/live-check.json`, JSON.stringify(out, null, 1));

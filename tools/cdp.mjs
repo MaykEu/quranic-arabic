@@ -33,10 +33,17 @@ const edge = spawn(
   { stdio: 'ignore' },
 );
 
+// Kill the WHOLE browser tree: child.kill() only stops the launcher, and the
+// renderer/GPU children keep the profile dir locked for the next run.
+const killEdge = () => {
+  try { edge.kill(); } catch {}
+  try { spawn('taskkill', ['/PID', String(edge.pid), '/T', '/F'], { stdio: 'ignore' }); } catch {}
+};
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const die = (msg) => {
   console.error('ERROR: ' + msg);
-  edge.kill();
+  killEdge();
   process.exit(1);
 };
 
@@ -117,5 +124,5 @@ try {
   die(e.message);
 } finally {
   if (ws) try { ws.close(); } catch {}
-  edge.kill();
+  killEdge();
 }
