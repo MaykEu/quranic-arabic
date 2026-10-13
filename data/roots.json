@@ -1,0 +1,699 @@
+{
+ "generated": "2026-10-13T13:11:14.729Z",
+ "count": 24,
+ "roots": [
+  {
+   "id": "ktb",
+   "root": "ك ت ب",
+   "note": "writing",
+   "members": [
+    {
+     "ar": "كِتَابِ",
+     "translit": "kitābi",
+     "gloss": "the Book",
+     "ref": "18:27",
+     "audio": "wbw/018_027_006.mp3"
+    },
+    {
+     "ar": "كَاتِبٌۢ",
+     "translit": "kātibun",
+     "gloss": "a scribe",
+     "ref": "2:282",
+     "audio": "wbw/002_282_013.mp3"
+    },
+    {
+     "ar": "يَكْتُبَ",
+     "translit": "yaktuba",
+     "gloss": "he writes",
+     "ref": "2:282",
+     "audio": "wbw/002_282_019.mp3"
+    },
+    {
+     "ar": "كَتَبْنَا",
+     "translit": "katabnā",
+     "gloss": "(had) decreed",
+     "ref": "4:66",
+     "audio": "wbw/004_066_003.mp3"
+    }
+   ]
+  },
+  {
+   "id": "elm",
+   "root": "ع ل م",
+   "note": "knowledge",
+   "members": [
+    {
+     "ar": "عِلْمَ",
+     "translit": "ʿil'ma",
+     "gloss": "knowledge",
+     "ref": "2:32",
+     "audio": "wbw/002_032_004.mp3"
+    },
+    {
+     "ar": "عَلِيمٌۭ",
+     "translit": "ʿalīmun",
+     "gloss": "(is) All-Knowing",
+     "ref": "2:29",
+     "audio": "wbw/002_029_019.mp3"
+    },
+    {
+     "ar": "يَعْلَمُ",
+     "translit": "yaʿlamu",
+     "gloss": "knows",
+     "ref": "2:77",
+     "audio": "wbw/002_077_005.mp3"
+    },
+    {
+     "ar": "مَّعْلُومٌۭ",
+     "translit": "maʿlūmun",
+     "gloss": "known",
+     "ref": "15:4",
+     "audio": "wbw/015_004_008.mp3"
+    }
+   ]
+  },
+  {
+   "id": "qwl",
+   "root": "ق و ل",
+   "note": "speech, saying",
+   "members": [
+    {
+     "ar": "قَالَ",
+     "translit": "qāla",
+     "gloss": "said",
+     "ref": "2:30",
+     "audio": "wbw/002_030_002.mp3"
+    },
+    {
+     "ar": "يَقُولُ",
+     "translit": "yaqūlu",
+     "gloss": "say",
+     "ref": "2:8",
+     "audio": "wbw/002_008_004.mp3"
+    },
+    {
+     "ar": "قَوْلَ",
+     "translit": "qawla",
+     "gloss": "(the) saying",
+     "ref": "3:181",
+     "audio": "wbw/003_181_004.mp3"
+    },
+    {
+     "ar": "قَالُوٓا۟",
+     "translit": "qālū",
+     "gloss": "they say",
+     "ref": "2:11",
+     "audio": "wbw/002_011_008.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kwn",
+   "root": "ك و ن",
+   "note": "being",
+   "members": [
+    {
+     "ar": "كَانَ",
+     "translit": "kāna",
+     "gloss": "(there) has been",
+     "ref": "2:75",
+     "audio": "wbw/002_075_006.mp3"
+    },
+    {
+     "ar": "يَكُونَ",
+     "translit": "yakūna",
+     "gloss": "will be",
+     "ref": "2:150",
+     "audio": "wbw/002_150_016.mp3"
+    },
+    {
+     "ar": "كُونُوا۟",
+     "translit": "kūnū",
+     "gloss": "Be",
+     "ref": "2:65",
+     "audio": "wbw/002_065_010.mp3"
+    }
+   ]
+  },
+  {
+   "id": "amn",
+   "root": "أ م ن",
+   "note": "faith, safety",
+   "members": [
+    {
+     "ar": "ءَامَنُوا۟",
+     "translit": "āmanū",
+     "gloss": "believe[d]",
+     "ref": "2:9",
+     "audio": "wbw/002_009_004.mp3"
+    },
+    {
+     "ar": "ٱلْإِيمَـٰنِ",
+     "translit": "l-īmāni",
+     "gloss": "the faith",
+     "ref": "40:10",
+     "audio": "wbw/040_010_014.mp3"
+    },
+    {
+     "ar": "مُؤْمِنُونَ",
+     "translit": "mu'minūna",
+     "gloss": "believers",
+     "ref": "5:88",
+     "audio": "wbw/005_088_012.mp3"
+    },
+    {
+     "ar": "مُّؤْمِنِينَ",
+     "translit": "mu'minīna",
+     "gloss": "believers",
+     "ref": "2:91",
+     "audio": "wbw/002_091_030.mp3"
+    }
+   ]
+  },
+  {
+   "id": "rbb",
+   "root": "ر ب ب",
+   "note": "lord, nurturing",
+   "members": [
+    {
+     "ar": "رَبِّ",
+     "translit": "rabbi",
+     "gloss": "the Lord",
+     "ref": "1:2",
+     "audio": "wbw/001_002_003.mp3"
+    },
+    {
+     "ar": "رَبُّكَ",
+     "translit": "rabbuka",
+     "gloss": "your Lord",
+     "ref": "2:30",
+     "audio": "wbw/002_030_003.mp3"
+    },
+    {
+     "ar": "رَبَّنَا",
+     "translit": "rabbanā",
+     "gloss": "Our Lord",
+     "ref": "2:128",
+     "audio": "wbw/002_128_001.mp3"
+    }
+   ]
+  },
+  {
+   "id": "elh",
+   "root": "إ ل ه",
+   "note": "divinity",
+   "members": [
+    {
+     "ar": "إِلَـٰهٌۭ",
+     "translit": "ilāhun",
+     "gloss": "(is) God",
+     "ref": "2:163",
+     "audio": "wbw/002_163_002.mp3"
+    },
+    {
+     "ar": "إِلَـٰهَكَ",
+     "translit": "ilāhaka",
+     "gloss": "your God",
+     "ref": "2:133",
+     "audio": "wbw/002_133_017.mp3"
+    },
+    {
+     "ar": "إِلَـٰهَهُۥ",
+     "translit": "ilāhahu",
+     "gloss": "(as) his god",
+     "ref": "25:43",
+     "audio": "wbw/025_043_004.mp3"
+    }
+   ]
+  },
+  {
+   "id": "dyn",
+   "root": "د ي ن",
+   "note": "religion, judgment",
+   "members": [
+    {
+     "ar": "دِينِ",
+     "translit": "dīni",
+     "gloss": "(the) religion",
+     "ref": "3:83",
+     "audio": "wbw/003_083_002.mp3"
+    },
+    {
+     "ar": "دِينِكُمْ",
+     "translit": "dīnikum",
+     "gloss": "your religion",
+     "ref": "2:217",
+     "audio": "wbw/002_217_035.mp3"
+    },
+    {
+     "ar": "دِينِهِم",
+     "translit": "dīnihim",
+     "gloss": "their religion",
+     "ref": "3:24",
+     "audio": "wbw/003_024_012.mp3"
+    }
+   ]
+  },
+  {
+   "id": "ywm",
+   "root": "ي و م",
+   "note": "day",
+   "members": [
+    {
+     "ar": "يَوْمِ",
+     "translit": "yawmi",
+     "gloss": "(of the) Day",
+     "ref": "1:4",
+     "audio": "wbw/001_004_002.mp3"
+    },
+    {
+     "ar": "يَوْمًۭا",
+     "translit": "yawman",
+     "gloss": "a day",
+     "ref": "2:48",
+     "audio": "wbw/002_048_002.mp3"
+    },
+    {
+     "ar": "يَوْمَئِذٍ",
+     "translit": "yawma-idhin",
+     "gloss": "that day",
+     "ref": "3:167",
+     "audio": "wbw/003_167_020.mp3"
+    }
+   ]
+  },
+  {
+   "id": "ard",
+   "root": "أ ر ض",
+   "note": "earth, land",
+   "members": [
+    {
+     "ar": "أَرْضُ",
+     "translit": "arḍu",
+     "gloss": "(the) earth",
+     "ref": "4:97",
+     "audio": "wbw/004_097_018.mp3"
+    },
+    {
+     "ar": "أَرْضًۭا",
+     "translit": "arḍan",
+     "gloss": "(to) a land",
+     "ref": "12:9",
+     "audio": "wbw/012_009_005.mp3"
+    },
+    {
+     "ar": "أَرْضَهُمْ",
+     "translit": "arḍahum",
+     "gloss": "their land",
+     "ref": "33:27",
+     "audio": "wbw/033_027_002.mp3"
+    }
+   ]
+  },
+  {
+   "id": "nwr",
+   "root": "ن و ر",
+   "note": "light",
+   "members": [
+    {
+     "ar": "نُورٌۭ",
+     "translit": "nūrun",
+     "gloss": "a light",
+     "ref": "5:15",
+     "audio": "wbw/005_015_021.mp3"
+    },
+    {
+     "ar": "نُورَهُۥ",
+     "translit": "nūrahu",
+     "gloss": "His Light",
+     "ref": "9:32",
+     "audio": "wbw/009_032_012.mp3"
+    },
+    {
+     "ar": "مُّنِيرٍۢ",
+     "translit": "munīrin",
+     "gloss": "enlightening",
+     "ref": "22:8",
+     "audio": "wbw/022_008_013.mp3"
+    }
+   ]
+  },
+  {
+   "id": "zlm",
+   "root": "ظ ل م",
+   "note": "wrongdoing, darkness",
+   "members": [
+    {
+     "ar": "ظَلَمَ",
+     "translit": "ẓalama",
+     "gloss": "he wronged",
+     "ref": "2:231",
+     "audio": "wbw/002_231_019.mp3"
+    },
+    {
+     "ar": "ظَلَمُوا۟",
+     "translit": "ẓalamū",
+     "gloss": "wronged",
+     "ref": "2:59",
+     "audio": "wbw/002_059_003.mp3"
+    },
+    {
+     "ar": "يَظْلِمُ",
+     "translit": "yaẓlimu",
+     "gloss": "wrong",
+     "ref": "4:40",
+     "audio": "wbw/004_040_004.mp3"
+    }
+   ]
+  },
+  {
+   "id": "ebd",
+   "root": "ع ب د",
+   "note": "serving, worship",
+   "members": [
+    {
+     "ar": "عَبْدُ",
+     "translit": "ʿabdu",
+     "gloss": "a slave",
+     "ref": "19:30",
+     "audio": "wbw/019_030_003.mp3"
+    },
+    {
+     "ar": "عَبْدًۭا",
+     "translit": "ʿabdan",
+     "gloss": "a slave",
+     "ref": "4:172",
+     "audio": "wbw/004_172_006.mp3"
+    },
+    {
+     "ar": "عِبَادٌ",
+     "translit": "ʿibādun",
+     "gloss": "(are) slaves",
+     "ref": "7:194",
+     "audio": "wbw/007_194_007.mp3"
+    }
+   ]
+  },
+  {
+   "id": "smE",
+   "root": "س م ع",
+   "note": "hearing",
+   "members": [
+    {
+     "ar": "سَمِعَ",
+     "translit": "samiʿa",
+     "gloss": "heard",
+     "ref": "3:181",
+     "audio": "wbw/003_181_002.mp3"
+    },
+    {
+     "ar": "يَسْمَعُ",
+     "translit": "yasmaʿu",
+     "gloss": "(does) hear",
+     "ref": "2:171",
+     "audio": "wbw/002_171_009.mp3"
+    },
+    {
+     "ar": "سَمِيعٌ",
+     "translit": "sami'un",
+     "gloss": "(is) All-Hearing",
+     "ref": "2:181",
+     "audio": "wbw/002_181_012.mp3"
+    }
+   ]
+  },
+  {
+   "id": "hdy",
+   "root": "ه د ي",
+   "note": "guidance",
+   "members": [
+    {
+     "ar": "هُدًۭى",
+     "translit": "hudan",
+     "gloss": "a Guidance",
+     "ref": "2:2",
+     "audio": "wbw/002_002_006.mp3"
+    },
+    {
+     "ar": "يَهْدِى",
+     "translit": "yahdī",
+     "gloss": "He guides",
+     "ref": "2:142",
+     "audio": "wbw/002_142_016.mp3"
+    }
+   ]
+  },
+  {
+   "id": "dll",
+   "root": "ض ل ل",
+   "note": "going astray",
+   "members": [
+    {
+     "ar": "ضَلَّ",
+     "translit": "ḍalla",
+     "gloss": "he went astray (from)",
+     "ref": "2:108",
+     "audio": "wbw/002_108_016.mp3"
+    },
+    {
+     "ar": "ضَلَـٰلٍۢ",
+     "translit": "ḍalālin",
+     "gloss": "(the) error",
+     "ref": "3:164",
+     "audio": "wbw/003_164_024.mp3"
+    },
+    {
+     "ar": "يُضِلُّ",
+     "translit": "yuḍillu",
+     "gloss": "He lets go astray",
+     "ref": "2:26",
+     "audio": "wbw/002_026_029.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kfr",
+   "root": "ك ف ر",
+   "note": "covering, disbelief",
+   "members": [
+    {
+     "ar": "كَفَرَ",
+     "translit": "kafara",
+     "gloss": "disbelieved",
+     "ref": "2:102",
+     "audio": "wbw/002_102_009.mp3"
+    },
+    {
+     "ar": "كَفَرُوا۟",
+     "translit": "kafarū",
+     "gloss": "disbelieve[d]",
+     "ref": "2:6",
+     "audio": "wbw/002_006_003.mp3"
+    },
+    {
+     "ar": "كَـٰفِرُونَ",
+     "translit": "kāfirūna",
+     "gloss": "disbelievers",
+     "ref": "7:45",
+     "audio": "wbw/007_045_010.mp3"
+    }
+   ]
+  },
+  {
+   "id": "sbr",
+   "root": "ص ب ر",
+   "note": "patience",
+   "members": [
+    {
+     "ar": "ٱصْبِرْ",
+     "translit": "iṣ'bir",
+     "gloss": "Be patient",
+     "ref": "38:17",
+     "audio": "wbw/038_017_001.mp3"
+    },
+    {
+     "ar": "ٱصْبِرُوا۟",
+     "translit": "iṣ'birū",
+     "gloss": "Be steadfast",
+     "ref": "3:200",
+     "audio": "wbw/003_200_004.mp3"
+    },
+    {
+     "ar": "صَبْرًۭا",
+     "translit": "ṣabran",
+     "gloss": "patience",
+     "ref": "2:250",
+     "audio": "wbw/002_250_009.mp3"
+    }
+   ]
+  },
+  {
+   "id": "škr",
+   "root": "ش ك ر",
+   "note": "thankfulness",
+   "members": [
+    {
+     "ar": "شَكَرَ",
+     "translit": "shakara",
+     "gloss": "(is) grateful",
+     "ref": "27:40",
+     "audio": "wbw/027_040_029.mp3"
+    },
+    {
+     "ar": "شَكُورٍۢ",
+     "translit": "shakūrin",
+     "gloss": "and thankful",
+     "ref": "14:5",
+     "audio": "wbw/014_005_021.mp3"
+    },
+    {
+     "ar": "شَكَرْتُمْ",
+     "translit": "shakartum",
+     "gloss": "you are grateful",
+     "ref": "4:147",
+     "audio": "wbw/004_147_006.mp3"
+    }
+   ]
+  },
+  {
+   "id": "nzl",
+   "root": "ن ز ل",
+   "note": "sending down",
+   "members": [
+    {
+     "ar": "نَزَّلَ",
+     "translit": "nazzala",
+     "gloss": "revealed",
+     "ref": "2:176",
+     "audio": "wbw/002_176_004.mp3"
+    },
+    {
+     "ar": "أُنزِلَ",
+     "translit": "unzila",
+     "gloss": "(is) sent down",
+     "ref": "2:4",
+     "audio": "wbw/002_004_004.mp3"
+    },
+    {
+     "ar": "أَنزَلْنَآ",
+     "translit": "anzalnā",
+     "gloss": "We revealed",
+     "ref": "2:99",
+     "audio": "wbw/002_099_002.mp3"
+    }
+   ]
+  },
+  {
+   "id": "rsl",
+   "root": "ر س ل",
+   "note": "messengers",
+   "members": [
+    {
+     "ar": "رَسُولٌۢ",
+     "translit": "rasūlun",
+     "gloss": "a Messenger",
+     "ref": "2:87",
+     "audio": "wbw/002_087_019.mp3"
+    },
+    {
+     "ar": "رُسُلٌۭ",
+     "translit": "rusulun",
+     "gloss": "Messengers",
+     "ref": "3:183",
+     "audio": "wbw/003_183_018.mp3"
+    },
+    {
+     "ar": "أَرْسَلْنَا",
+     "translit": "arsalnā",
+     "gloss": "We sent",
+     "ref": "2:151",
+     "audio": "wbw/002_151_002.mp3"
+    }
+   ]
+  },
+  {
+   "id": "xlq",
+   "root": "خ ل ق",
+   "note": "creation",
+   "members": [
+    {
+     "ar": "خَلَقَ",
+     "translit": "khalaqa",
+     "gloss": "created",
+     "ref": "2:29",
+     "audio": "wbw/002_029_003.mp3"
+    },
+    {
+     "ar": "خَلَقْنَآ",
+     "translit": "khalaqnā",
+     "gloss": "We have created",
+     "ref": "7:181",
+     "audio": "wbw/007_181_002.mp3"
+    },
+    {
+     "ar": "يَخْلُقُ",
+     "translit": "yakhluqu",
+     "gloss": "creates",
+     "ref": "3:47",
+     "audio": "wbw/003_047_013.mp3"
+    }
+   ]
+  },
+  {
+   "id": "jEl",
+   "root": "ج ع ل",
+   "note": "making",
+   "members": [
+    {
+     "ar": "جَعَلَ",
+     "translit": "jaʿala",
+     "gloss": "made",
+     "ref": "2:22",
+     "audio": "wbw/002_022_002.mp3"
+    },
+    {
+     "ar": "جَعَلْنَا",
+     "translit": "jaʿalnā",
+     "gloss": "We made",
+     "ref": "2:125",
+     "audio": "wbw/002_125_002.mp3"
+    },
+    {
+     "ar": "يَجْعَلَ",
+     "translit": "yajʿala",
+     "gloss": "makes",
+     "ref": "4:15",
+     "audio": "wbw/004_015_019.mp3"
+    }
+   ]
+  },
+  {
+   "id": "kdb",
+   "root": "ك ذ ب",
+   "note": "lying",
+   "members": [
+    {
+     "ar": "كُذِّبَ",
+     "translit": "kudhiba",
+     "gloss": "were rejected",
+     "ref": "3:184",
+     "audio": "wbw/003_184_004.mp3"
+    },
+    {
+     "ar": "كَذَّبُوا۟",
+     "translit": "kadhabū",
+     "gloss": "They denied",
+     "ref": "3:11",
+     "audio": "wbw/003_011_007.mp3"
+    },
+    {
+     "ar": "يَكْذِبُونَ",
+     "translit": "yakdhibūna",
+     "gloss": "[they] lie",
+     "ref": "2:10",
+     "audio": "wbw/002_010_012.mp3"
+    }
+   ]
+  }
+ ]
+}

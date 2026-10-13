@@ -92,6 +92,16 @@ for (const w of vocab.words) {
   ok(w.ar && w.translit && w.gloss && w.audio, `vocabulary.json: rank ${w.rank} missing fields`);
 }
 
+const rootsData = await readJson(path.join(ROOT, 'data', 'roots.json'));
+ok(rootsData.count >= 20, `roots.json: expected >= 20 families, got ${rootsData.count}`);
+for (const f of rootsData.roots) {
+  ok(f.id && f.root && f.note, `roots.json: family ${f.id} missing fields`);
+  ok(f.members.length >= 2, `roots.json: family ${f.id} has < 2 members`);
+  for (const m of f.members) {
+    ok(m.ar && m.translit && m.gloss && /^\d{1,3}:\d{1,3}$/.test(m.ref) && m.audio, `roots.json: ${f.id} member fields bad`);
+  }
+}
+
 const reciters = await readJson(path.join(ROOT, 'data', 'reciters.json'));
 ok(reciters.length >= 3, `reciters.json: expected >= 3, got ${reciters.length}`);
 for (const r of reciters) ok(r.edition && r.bitrate, `reciters.json: ${r.id} missing edition/bitrate`);
@@ -110,4 +120,4 @@ if (errs.length) {
   for (const e of errs.slice(0, 40)) console.error(' -', e);
   process.exit(1);
 }
-console.log(`OK: 114 surahs / ${expectedGlobal} ayahs / 28 letters / 8 harakat / ${vocab.words.length} words / ${reciters.length} reciters`);
+console.log(`OK: 114 surahs / ${expectedGlobal} ayahs / 28 letters / 8 harakat / ${vocab.words.length} words / ${rootsData.count} roots / ${reciters.length} reciters`);

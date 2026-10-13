@@ -1,22 +1,22 @@
 // Service worker: offline app shell + runtime caches.
 // Bump VERSION whenever shipped files change (forces a clean re-cache).
-const VERSION = 'qa-v13';
+const VERSION = 'qa-v14';
 const AUDIO_CACHE = 'qa-audio-v2';
 const AUDIO_HOSTS = ['audio.qurancdn.com', 'cdn.islamic.network', 'everyayah.com'];
 const AUDIO_MAX_ENTRIES = 300;
 
 const SHELL = [
   './',
-  'index.html', 'letters.html', 'words.html', 'verses.html', 'practice.html', 'progress.html', 'about.html', 'guide.html', 'basics.html',
+  'index.html', 'letters.html', 'words.html', 'verses.html', 'practice.html', 'progress.html', 'about.html', 'guide.html', 'basics.html', 'roots.html',
   'css/styles.css', 'css/build.css', 'css/reading.css', 'css/path.css', 'css/basics.css',
   'js/lib/store.js', 'js/lib/audio.js', 'js/lib/srs.js', 'js/lib/progress.js', 'js/lib/hash.js', 'js/lib/data.js', 'js/lib/shaping.js', 'js/lib/backup.js', 'js/lib/quiz.js',
   'js/ui/chrome.js', 'js/ui/player.js', 'js/ui/toast.js', 'js/ui/trace.js', 'js/ui/build-game.js', 'js/ui/verse-picker.js',
-  'js/pages/home.js', 'js/pages/letters.js', 'js/pages/words.js', 'js/pages/verses.js', 'js/pages/practice.js', 'js/pages/progress.js', 'js/pages/about.js', 'js/pages/guide.js', 'js/pages/basics.js',
+  'js/pages/home.js', 'js/pages/letters.js', 'js/pages/words.js', 'js/pages/verses.js', 'js/pages/practice.js', 'js/pages/progress.js', 'js/pages/about.js', 'js/pages/guide.js', 'js/pages/basics.js', 'js/pages/roots.js',
   'manifest.json',
   'assets/fonts/amiri-arabic-400.woff2', 'assets/fonts/amiri-arabic-700.woff2',
   'assets/icons/icon-192.png', 'assets/icons/icon-512.png', 'assets/icons/apple-touch-icon.png', 'assets/icons/favicon.ico',
   'data/letters.json', 'data/harakat.json', 'data/reciters.json', 'data/grammar-terms.json', 'data/verse-notes.json',
-  'data/vocabulary.json', 'data/build-words.json', 'data/quran/index.json',
+  'data/vocabulary.json', 'data/build-words.json', 'data/roots.json', 'data/quran/index.json',
 ];
 
 self.addEventListener('install', (event) => {

@@ -108,3 +108,22 @@
   .mark-row { grid-template-columns: 52px 1fr; }
   .mark-row > .muted { grid-column: 2; }
 }
+
+/* ---------- roots page ---------- */
+.root-filter {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 12px;
+  min-height: var(--touch);
+  border-radius: var(--radius-s);
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+  padding: 0 12px;
+  font: inherit;
+}
+.root-card { margin-bottom: 10px; }
+.root-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+.root-letters { font-family: var(--font-ar); font-size: 26px; font-weight: 700; }
+.root-ref { font-size: 12px; }
+.root-card.hidden { display: none; }

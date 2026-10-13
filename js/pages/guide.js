@@ -27,7 +27,7 @@ const STEPS = [
     where: 'Words + Build',
     body: 'The 500 most frequent words cover 56% of every word in the Qur’an — the top 150 alone give you 41%. Learn them with flashcards (spaced review) and Build — assembling words from letters teaches how Arabic words are actually made.',
     why: 'Frequency-first maximises comprehension per word learned. Spaced retrieval: Cepeda 2006; Roediger & Karpicke 2006.',
-    see: '<a href="basics.html#words">How words are made (roots &amp; patterns)</a>',
+    see: '<a href="basics.html#words">How words are made</a> · <a href="roots.html">Root families browser</a>',
   },
   {
     n: 4,

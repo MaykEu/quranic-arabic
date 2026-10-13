@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roots QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/basics.css">
+</head>
+<body>
+<main></main>
+<script type="module">
+// Load the real roots page module, check cards + filter + play wiring.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const out = {};
+
+localStorage.clear();
+await import('../js/pages/roots.js');
+await sleep(1000);
+
+const q = (s) => document.querySelector(s);
+out.cards = document.querySelectorAll('.root-card').length;
+out.playButtons = document.querySelectorAll('.fam-play').length;
+
+// filter: 'light' should isolate the نور family
+const filter = q('#root-filter');
+filter.value = 'light';
+filter.dispatchEvent(new Event('input'));
+await sleep(200);
+out.visibleLight = [...document.querySelectorAll('.root-card')].filter((c) => !c.classList.contains('hidden')).length;
+out.lightIsNur = [...document.querySelectorAll('.root-card')].find((c) => !c.classList.contains('hidden'))?.dataset.search.includes('light');
+
+// filter by Arabic root letters
+filter.value = 'كتب';
+filter.dispatchEvent(new Event('input'));
+await sleep(200);
+out.visibleArabic = [...document.querySelectorAll('.root-card')].filter((c) => !c.classList.contains('hidden')).length;
+
+// clear filter
+filter.value = '';
+filter.dispatchEvent(new Event('input'));
+await sleep(200);
+out.visibleAll = [...document.querySelectorAll('.root-card')].filter((c) => !c.classList.contains('hidden')).length;
+
+// play a word (must not throw)
+let playOk = true;
+try {
+  document.querySelector('.fam-play').click();
+} catch {
+  playOk = false;
+}
+out.playOk = playOk;
+await sleep(300);
+out.playerLabel = document.querySelector('#player-label')?.textContent?.slice(0, 40) || '';
+
+out.pass =
+  out.cards === 24 && out.playButtons >= 70 &&
+  out.visibleLight === 1 && out.lightIsNur === true &&
+  out.visibleArabic === 1 && out.visibleAll === 24 && out.playOk;
+
+const pre = document.createElement('pre');
+pre.id = 'result';
+pre.textContent = JSON.stringify(out, null, 1);
+document.body.appendChild(pre);
+document.body.dataset.qa = out.pass ? 'done-pass' : 'done-fail';
+</script>
+</body>
+</html>
