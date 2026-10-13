@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basics QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/basics.css">
+</head>
+<body>
+<main></main>
+<script type="module" src="../js/pages/basics.js"></script>
+<script type="module">
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+await sleep(800);
+const q = (s) => document.querySelector(s);
+const out = {};
+
+out.sections = ['#join', '#marks', '#words'].map((id) => !!q(id));
+out.markRows = document.querySelectorAll('.mark-row').length;
+out.familyRows = document.querySelectorAll('.family-row').length;
+out.formsRow = document.querySelectorAll('.forms-row > div').length;
+
+// tap ك ت ب
+const keys = [...document.querySelectorAll('.demo-key')];
+const tap = (ch) => keys.find((k) => k.textContent.trim() === ch).click();
+tap('ك'); await sleep(60);
+tap('ت'); await sleep(60);
+tap('ب'); await sleep(100);
+out.ribbon = q('#ribbon').textContent.trim();
+out.chips = [...document.querySelectorAll('.chip-form')].map((c) => c.textContent.replace(/\s+/g, ' ').trim());
+
+q('#undo').click(); await sleep(60);
+out.afterUndo = q('#ribbon').textContent.trim();
+out.afterUndoChips = document.querySelectorAll('.chip-form').length;
+
+q('#clear').click(); await sleep(60);
+out.afterClear = !!q('#ribbon .empty');
+
+const pre = document.createElement('pre');
+pre.id = 'result';
+pre.textContent = JSON.stringify(out, null, 1);
+document.body.appendChild(pre);
+document.body.dataset.qa = 'done';
+</script>
+</body>
+</html>

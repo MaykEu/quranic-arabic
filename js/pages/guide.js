@@ -1,6 +1,5 @@
 // Guide page — "How to learn": the path in order, the daily template, the
-// evidence behind it, and FAQ. Content is static; the Today card on Home does
-// the live planning.
+// evidence behind it, and FAQ. Static content; the app sections map to it.
 const main = document.querySelector('main');
 const esc = (s) =>
   String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -12,6 +11,7 @@ const STEPS = [
     where: 'Letters',
     body: 'Learn all 28 letters — sound, the four shapes, and trace each one. The app starts with the most frequent letters so real words unlock early.',
     why: 'Writing by hand helps recognition (Longcamp 2005; James & Engelhardt 2012).',
+    see: '<a href="basics.html#join">Why letters change shape as they join</a>',
   },
   {
     n: 2,
@@ -19,6 +19,7 @@ const STEPS = [
     where: 'Letters → Harakat',
     body: 'Short vowels, sukūn, shadda and tanwīn. Once letters + marks are solid you can sound out any fully vowelled word.',
     why: 'New systems land best just-in-time, not front-loaded (expertise-reversal, Kalyuga 2003).',
+    see: '<a href="basics.html#marks">How the marks work</a>',
   },
   {
     n: 3,
@@ -26,13 +27,15 @@ const STEPS = [
     where: 'Words + Build',
     body: 'The 150 most frequent words cover 41.3% of every word in the Qur’an. Learn them with flashcards (spaced review) and Build — assembling words from letters teaches how Arabic words are actually made.',
     why: 'Frequency-first maximises comprehension per word learned. Spaced retrieval: Cepeda 2006; Roediger & Karpicke 2006.',
+    see: '<a href="basics.html#words">How words are made (roots &amp; patterns)</a>',
   },
   {
     n: 4,
     title: 'Read verses',
     where: 'Verses',
-    body: 'Read one or two verses a day. Tap any word you don’t know — you hear it, see its meaning, and it comes back in review. Keep the translation hidden first, then reveal to check.',
+    body: 'Once you can sound out words, read one or two verses a day with the audio. Tap any word you don’t know — you hear it, see its meaning, and it comes back in review.',
     why: 'Learner-paced segments + audio + text (Mayer: segmenting ≈ .79, modality ≈ .76).',
+    see: '',
   },
   {
     n: 5,
@@ -40,6 +43,7 @@ const STEPS = [
     where: 'Practice',
     body: 'Listen & repeat, read aloud against the reciter, and trace words. Saying things aloud is part of remembering them.',
     why: 'Production effect (MacLeod 2010) — speaking strengthens memory.',
+    see: '',
   },
   {
     n: 6,
@@ -47,22 +51,23 @@ const STEPS = [
     where: 'Review (throughout)',
     body: 'Review is always first and always expands: 1 · 3 · 7 · 14 · 30 days. New material shrinks as your base grows — that’s the system working.',
     why: 'Spacing effect (Cepeda et al. 2006) — review timing beats review volume.',
+    see: '',
   },
 ];
 
 const FAQ = [
-  ['How long should I practise each day?', 'About 15–20 minutes: review 3–5, learn 5–7, read 4–6, practise 3–5. Ten focused minutes daily beats an hour on Sunday.'],
+  ['How long should I practise each day?', 'About 15–20 minutes: a few minutes of review, a few learning something new, a minute or two reading with the audio, and a short drill. Ten focused minutes daily beats an hour on Sunday.'],
   ['What if I miss a day?', 'Nothing breaks. Your reviews just pile up gently — clear them first on your return and continue where you stopped.'],
-  ['Do I have to follow the order?', 'No. Nothing is locked. The order is a recommendation — jump anywhere, any time, and set your Focus on the Home card to match what you want to work on.'],
+  ['Do I have to follow the order?', 'No. Nothing is locked. The order is a recommendation — jump anywhere, any time, and come back to this guide whenever you need it.'],
   ['Why words before grammar?', 'Grammar notes appear in context on the verses that need them — right when they help, instead of years before.'],
   ['What does “learned” mean?', 'A word counts as known once its review box reaches 3 (roughly two weeks of successful recalls). Letters get marked when you trace them well.'],
   ['Why is there no speaking score?', 'Automatic pronunciation scoring would be guessing. Your ears are the judge — compare your recording with the reciter, side by side.'],
 ];
 
 main.innerHTML = `
-  <h2>How to learn <span class="muted">· the path</span></h2>
-  <p class="muted">Six steps, each unlocking the next — but nothing is locked. Go at your level;
-  the <a href="index.html">Today card</a> composes each day for you, and <em>Focus</em> lets you override it.</p>
+  <p class="muted">Six steps, in order — but nothing is locked. Move at your own pace; each step has its
+  own section in the app. If the writing system feels confusing,
+  <a href="basics.html">How Arabic works</a> explains joining and vowels in plain language.</p>
 
   <div class="steps">
     ${STEPS.map(
@@ -74,20 +79,21 @@ main.innerHTML = `
           <span class="step-where muted">${esc(s.where)}</span>
         </div>
         <p>${s.body}</p>
+        ${s.see ? `<p class="step-see muted">See: ${s.see}</p>` : ''}
         <p class="step-why muted">Why: ${esc(s.why)}</p>
       </section>`,
     ).join('')}
   </div>
 
   <section class="card">
-    <h3>The daily template — about 15–20 minutes</h3>
+    <h3>The daily routine — about 15–20 minutes</h3>
     <ol class="template-list">
-      <li><strong>Review</strong> (3–5 min) — clear what’s due. Always first.</li>
-      <li><strong>Learn</strong> (5–7 min) — the next new things at your stage.</li>
-      <li><strong>Read</strong> (4–6 min) — one verse, tapping unknown words.</li>
+      <li><strong>Review</strong> (3–5 min) — clear what’s due in Words › Review. Always first.</li>
+      <li><strong>Learn</strong> (5–7 min) — a few new letters or words at your level.</li>
+      <li><strong>Read</strong> (4–6 min) — one verse with the audio, tapping unknown words.</li>
       <li><strong>Practice</strong> (3–5 min) — one drill: listen, read aloud, recall, or trace.</li>
     </ol>
-    <p class="muted">The Home page turns this into four buttons that know exactly where you are.</p>
+    <p class="muted">That’s the whole routine. You can always come back here from Home.</p>
   </section>
 
   <section class="card">

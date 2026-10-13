@@ -57,7 +57,8 @@ export async function mountBuild(container, { firstLetter = null } = {}) {
     container.innerHTML = `
       <section class="card">
         <h2>Build <span class="muted">· make words from letters</span></h2>
-        <p class="muted">Tap the letters in the right order. Watch each letter change shape as the next one joins.</p>
+        <p class="muted">Tap the letters in the right order. Watch each letter change shape as the next one joins.
+        <a href="basics.html#join">How joining works →</a></p>
         <div class="progbar" aria-hidden="true"><i style="width:${Math.round((built / all.length) * 100)}%"></i></div>
         <p class="muted center">${built} of ${all.length} words built${dueList.length ? ` · ${dueList.length} ready for review` : ''}</p>
         ${

@@ -1,0 +1,110 @@
+/* "How Arabic works" page (basics.html). */
+
+/* section 1 — joining */
+.forms-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 10px 0;
+}
+.forms-row > div {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  padding: 10px 4px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+}
+.fr-glyph {
+  font-family: var(--font-ar);
+  font-size: 34px;
+  line-height: 1.4;
+}
+.fr-label { font-size: 12px; color: var(--muted); }
+
+.demo { margin: 12px 0 4px; }
+.demo-rack { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.demo-key {
+  font-family: var(--font-ar);
+  font-size: 26px;
+  min-width: 52px;
+  min-height: 52px;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+.demo-key:active { transform: scale(0.94); }
+.ribbon {
+  font-family: var(--font-ar);
+  font-size: 42px;
+  direction: rtl;
+  text-align: center;
+  min-height: 64px;
+  padding: 8px;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-s);
+}
+.ribbon .empty { font-size: 16px; }
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 8px;
+  min-height: 26px;
+}
+.chip-form {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 13px;
+}
+.cf-glyph { font-family: var(--font-ar); font-size: 18px; }
+.demo-actions { justify-content: center; margin-top: 8px; }
+
+/* section 2 — marks */
+.mark-table { display: grid; gap: 6px; margin: 10px 0; }
+.mark-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 1.3fr;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+}
+.mr-glyph {
+  font-family: var(--font-ar);
+  font-size: 28px;
+  text-align: center;
+}
+.mr-name { font-weight: 600; font-size: 14px; }
+
+/* section 3 — root families */
+.family-list { display: grid; gap: 6px; margin: 10px 0; }
+.family-row {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+}
+.fam-play { min-width: 40px; min-height: 40px; padding: 0; }
+.fam-ar { font-family: var(--font-ar); font-size: 28px; }
+.fam-text { font-size: 14.5px; }
+
+@media (max-width: 380px) {
+  .mark-row { grid-template-columns: 52px 1fr; }
+  .mark-row > .muted { grid-column: 2; }
+}

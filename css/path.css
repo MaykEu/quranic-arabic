@@ -1,47 +1,5 @@
-/* Learning path: the Home "Today" card + the Guide page. */
+/* The Guide page (guide.html). */
 
-/* ---------- today card ---------- */
-.today-card { border-left: 4px solid var(--brand2); }
-.tb-head { justify-content: space-between; align-items: baseline; }
-.stage-chip {
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--brand);
-  background: var(--brand-soft);
-  padding: 4px 10px;
-  border-radius: 999px;
-  white-space: nowrap;
-}
-.today-blocks { list-style: none; margin: 10px 0; padding: 0; display: grid; gap: 8px; }
-.today-block {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 10px;
-  align-items: center;
-  padding: 8px 10px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-s);
-  background: var(--surface);
-}
-.tb-text { display: grid; gap: 2px; font-size: 14.5px; }
-.tb-text strong { font-size: 15px; }
-.tb-cta { white-space: nowrap; }
-.today-foot { justify-content: space-between; flex-wrap: wrap; gap: 8px; align-items: center; }
-.focus-wrap { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-.chip-btn {
-  border: 1px solid var(--line-strong);
-  background: var(--surface);
-  color: var(--ink);
-  border-radius: 999px;
-  padding: 4px 12px;
-  font: inherit;
-  font-size: 13.5px;
-  cursor: pointer;
-  text-transform: capitalize;
-}
-.chip-btn.on { background: var(--brand2); border-color: var(--brand2); color: #fff; }
-[data-theme="dark"] .chip-btn.on { color: var(--brand-ink); }
 .small { font-size: 13px; }
 
 /* ---------- guide ---------- */
@@ -63,6 +21,7 @@
 [data-theme="dark"] .step-n { color: var(--brand-ink); }
 .step-where { margin-left: auto; font-size: 12.5px; }
 .step-why { font-size: 13.5px; }
+.step-see { font-size: 13.5px; }
 .template-list { margin: 6px 0 4px; padding-left: 20px; display: grid; gap: 4px; }
 .evidence-list { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 6px; }
 .faq-item { border-bottom: 1px dashed var(--line); padding: 8px 0; }

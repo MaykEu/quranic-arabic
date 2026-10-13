@@ -26,9 +26,10 @@ function renderGrid() {
   main.innerHTML = `
     <h2>Letters <span class="muted">· ${count('letters')}/28 learned</span></h2>
     <p class="muted">Tap a letter to see its forms, hear its sound, and practice writing it.</p>
+    <p class="muted">New to the script? <a href="basics.html">See how letters join and how the marks work →</a></p>
     <div class="letter-grid" id="letter-grid"></div>
 
-    <h2 class="section-title">Harakat — vowels &amp; marks</h2>
+    <h2 class="section-title">Harakat — vowels &amp; marks <a class="muted" href="basics.html#marks">how they work →</a></h2>
     <div class="harakat-grid" id="harakat-grid"></div>
 
     <h2 class="section-title">Connected letters</h2>
@@ -37,7 +38,7 @@ function renderGrid() {
       <p class="muted">Most letters change shape with their position in a word — those are the four
       forms you see on every letter page. Six letters
       <span class="ar" lang="ar" dir="rtl">ا د ذ ر ز و</span> never join the letter that follows,
-      which is what creates the small gaps inside words.</p>
+      which is what creates the small gaps inside words. <a href="basics.html#join">See it step by step →</a></p>
     </section>`;
 
   const grid = main.querySelector('#letter-grid');
