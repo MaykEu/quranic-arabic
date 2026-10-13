@@ -121,7 +121,6 @@ function buildAccount() {
 
   const btn = wrap.querySelector('#account-btn');
   const panel = wrap.querySelector('#account-panel');
-  let status = '';
 
   const close = () => {
     panel.hidden = true;
@@ -163,23 +162,11 @@ function buildAccount() {
         <span class="account-dot dot-${dot}"></span>
       </div>
       <p class="muted" id="acc-when">${whenText()}</p>
-      <div class="row">
-        <button type="button" class="btn" id="acc-sync">Sync now</button>
-        <button type="button" class="btn btn-ghost" id="acc-out">Sign out</button>
-      </div>
-      <p class="muted" id="acc-status">${status}</p>
+      <p class="muted">Syncs automatically — every change is saved to your account in the background.</p>
+      <div class="row"><button type="button" class="btn btn-ghost" id="acc-out">Sign out</button></div>
       <a class="btn-link" href="progress.html">Progress &amp; backup →</a>`;
-    panel.querySelector('#acc-sync').addEventListener('click', async () => {
-      status = 'Syncing…';
-      renderPanel();
-      const res = await syncNow();
-      status = res && res.ok ? 'Synced ✓' : 'Could not reach the server — it will retry.';
-      renderButton();
-      renderPanel();
-    });
     panel.querySelector('#acc-out').addEventListener('click', () => {
       signOut();
-      status = '';
       renderButton();
       renderPanel();
     });
@@ -228,9 +215,8 @@ buildAccount();
 if (signedIn()) {
   const kick = () => syncNow().catch(() => {});
   kick();
-  document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') kick();
-  });
+  document.addEventListener('visibilitychange', () => kick()); // flush when leaving, catch up when returning
   window.addEventListener('online', kick);
+  setInterval(kick, 5 * 60 * 1000); // and every few minutes while the app stays open
 }
 document.addEventListener('qa:sync', () => refreshAccountUI());

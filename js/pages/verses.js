@@ -164,10 +164,9 @@ function renderBrowser() {
         <a class="surah-row" href="#${s.id}">
           <span class="sr-num">${s.id}</span>
           <span>
-            <span class="sr-name">${esc(s.name_simple)}</span>
+            <span class="sr-name">${esc(s.name_simple)}${isLearned('surahs', String(s.id)) ? ' <span class="sr-done" title="Memorised">✓</span>' : ''}</span>
             <span class="sr-meta">${esc(s.name_translit)} · ${s.verses_count} verses · ${esc(s.revelation_place)}</span>
           </span>
-          ${isLearned('surahs', String(s.id)) ? '<span class="sr-done" title="Memorised">✓</span>' : ''}
           <span class="sr-ar" lang="ar" dir="rtl">${esc(s.name_arabic)}</span>
         </a>`)
         .join('')}

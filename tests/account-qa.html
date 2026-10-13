@@ -57,7 +57,8 @@ async function run() {
   await sleep(120);
   out.panelShowsEmail = q('#account-panel').textContent.includes('sofian.abcdef@outlook.com');
   out.panelWhen = /Synced (1 min|just now)/.test(q('#acc-when').textContent);
-  out.panelButtons = !!q('#acc-sync') && !!q('#acc-out');
+  out.panelAutoNote = /Syncs automatically/i.test(q('#account-panel').textContent);
+  out.panelNoManualSync = !!q('#acc-out') && !q('#acc-sync'); // automatic sync only — no Sync now button
 
   q('#acc-out').click();
   await sleep(150);

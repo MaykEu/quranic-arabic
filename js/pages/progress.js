@@ -147,8 +147,7 @@ function syncLine() {
   }
   const email = (s.user && s.user.email) || 'your account';
   return `<p class="muted" id="sync-line">Cloud sync: <strong>${esc(email)}</strong> ·
-    <span id="sync-when">${esc(syncWhenText())}</span> ·
-    <button type="button" class="btn-link" id="sync-now">Sync now</button> ·
+    <span id="sync-when">${esc(syncWhenText())}</span> · syncs automatically ·
     <button type="button" class="btn-link" id="sync-out">Sign out</button>
     <span id="sync-status"></span></p>`;
 }
@@ -354,12 +353,15 @@ async function init() {
   }
   render();
 
-  // Reconcile in the background; refresh the "synced" line when it lands.
+  // Reconcile in the background; keep the "synced" line fresh afterwards.
   if (configured() && signedIn()) {
-    syncNow().then((res) => {
-      if (!res || !res.ok) return;
+    const stampWhen = () => {
       const when = document.getElementById('sync-when');
       if (when) when.textContent = syncWhenText();
+    };
+    document.addEventListener('qa:sync', stampWhen);
+    syncNow().then((res) => {
+      if (res && res.ok) stampWhen();
     });
   }
 }

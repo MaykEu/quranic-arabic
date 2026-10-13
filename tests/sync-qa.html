@@ -130,7 +130,14 @@ async function run() {
   await sleep(700);
 
   out.cardSignedIn = document.body.innerText.includes('qa@example.com');
-  out.cardHasButtons = !!q('#sync-now') && !!q('#sync-out') && !q('#sync-in');
+  out.cardHasButtons = !!q('#sync-out') && !q('#sync-in') && !q('#sync-now'); // auto-sync only
+
+  // automatic path: a local write must schedule a background sync on its own
+  const postsBefore = calls.filter((c) => c.startsWith('POST /rest/v1/progress')).length;
+  const { mark } = await import('../js/lib/progress.js');
+  mark('verses', '9:9');
+  await sleep(8000); // the debounce is 4 s
+  out.autoSyncOnWrite = calls.filter((c) => c.startsWith('POST /rest/v1/progress')).length > postsBefore;
 
   q('#sync-out').click();
   await sleep(300);

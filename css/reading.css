@@ -302,5 +302,5 @@ button.surah-row {
 .memo-on { background: var(--brand2); border-color: var(--brand2); color: #fff; }
 [data-theme="dark"] .memo-on { color: var(--brand-ink); }
 .ay-memo:disabled { opacity: 0.4; cursor: default; }
-.sr-done { color: var(--brand2); font-weight: 700; }
+.sr-done { color: var(--brand2); font-weight: 700; font-size: 13px; }
 .whole-tag { color: var(--brand2); font-weight: 600; font-size: 12px; }
