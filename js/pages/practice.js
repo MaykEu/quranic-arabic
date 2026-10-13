@@ -235,7 +235,7 @@ function renderTrace() {
         <button type="button" class="btn btn-ghost" id="erase">Erase</button>
         <button type="button" class="btn btn-ghost" id="nextw">Next word →</button>
       </div>
-      <p class="center muted" id="trace-msg">Trace over the dashed ${esc(w.bare)} with your finger or mouse.</p>
+      <p class="center muted" id="trace-msg">Trace the dashed word — stay on the line, dots included.</p>
     </section>`);
 
   const trace = mountTrace(document.getElementById('trace-slot'), w.bare);
