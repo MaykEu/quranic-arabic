@@ -573,3 +573,45 @@ main {
 
 /* Filled icons (player play/pause) must beat the outline defaults above. */
 svg[fill="currentColor"] { fill: currentColor; stroke: none; }
+
+/* ---------- progress page ---------- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 4px 0 10px;
+}
+.stat {
+  display: grid;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+}
+.stat b { font-size: 22px; font-weight: 700; }
+.stat span { font-size: 13px; }
+.week-strip { display: flex; gap: 6px; justify-content: center; margin: 6px 0; }
+.day-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  background: var(--surface);
+}
+.day-dot.on { background: var(--brand2); border-color: var(--brand2); color: #fff; }
+[data-theme="dark"] .day-dot.on { color: var(--brand-ink); }
+.confirm-box {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+}
+.confirm-box p { margin: 0 0 8px; }
+.danger-text { color: #B0413E; margin: 8px 0 0; }
+.danger-btn { background: #B0413E; border-color: #B0413E; color: #fff; }

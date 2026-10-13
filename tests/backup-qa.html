@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Backup QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<main></main>
+<script type="module">
+// Seed state, build the real Progress page, then drive export/import/reset UI.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const out = {};
+
+localStorage.clear();
+localStorage.setItem('qa.v1.progress', JSON.stringify({ letters: { a: {}, b: {}, c: {} }, verses: { '1:1': {} }, days: ['2026-10-12', '2026-10-13'] }));
+localStorage.setItem('qa.v1.srs', JSON.stringify({ 1: { box: 3, due: 0, at: 1 }, 2: { box: 1, due: 0, at: 1 }, 'b:40': { box: 2, due: 0, at: 1 } }));
+localStorage.setItem('qa.v1.theme', JSON.stringify('dark'));
+
+await import('../js/pages/progress.js');
+await sleep(400);
+
+// 1. renders with seeded stats
+out.statsShown = document.body.innerText.includes('3/28');
+out.dayDots = document.querySelectorAll('.day-dot.on').length;
+
+// 2. build a backup object from current data (same as export), then wipe and import it
+const { exportData } = await import('../js/lib/backup.js');
+const backup = JSON.stringify(exportData());
+
+// export click must not throw; swallow the actual file download in automated runs
+const realAnchorClick = HTMLAnchorElement.prototype.click;
+HTMLAnchorElement.prototype.click = function () {
+  if (this.download) return; // pretend the browser saved the file
+  return realAnchorClick.apply(this, arguments);
+};
+document.getElementById('export').click();
+HTMLAnchorElement.prototype.click = realAnchorClick;
+out.exportClicked = true;
+
+localStorage.clear();
+const file = document.getElementById('file');
+const dt = new DataTransfer();
+dt.items.add(new File([backup], 'backup.json', { type: 'application/json' }));
+file.files = dt.files;
+file.dispatchEvent(new Event('change'));
+await sleep(400);
+out.confirmShown = !document.getElementById('import-box').hidden &&
+  document.getElementById('import-box').innerText.includes('3 letters');
+
+document.getElementById('do-import').click();
+await sleep(400);
+out.afterImport = JSON.parse(localStorage.getItem('qa.v1.progress')).letters && Object.keys(JSON.parse(localStorage.getItem('qa.v1.progress')).letters).length;
+out.themeAfterImport = JSON.parse(localStorage.getItem('qa.v1.theme'));
+out.statsShownAfter = document.body.innerText.includes('3/28');
+
+// 3. invalid file → friendly error (re-query: render() rebuilds the DOM)
+const errs = [];
+window.addEventListener('unhandledrejection', (e) => errs.push('rej:' + (e.reason && e.reason.message ? e.reason.message : String(e.reason))));
+window.addEventListener('error', (e) => errs.push('err:' + e.message));
+
+const file2 = document.getElementById('file');
+out.debugInputs = document.querySelectorAll('#file').length;
+let probeFired = false;
+file2.addEventListener('change', () => { probeFired = true; });
+const dt2 = new DataTransfer();
+dt2.items.add(new File(['not json at all'], 'junk.json', { type: 'application/json' }));
+try {
+  file2.files = dt2.files;
+  out.debugSetFiles = file2.files.length;
+  file2.dispatchEvent(new Event('change'));
+  out.debugDispatched = true;
+} catch (e) {
+  out.debugErr = String(e);
+}
+await sleep(800);
+out.debugProbe = probeFired;
+out.debugErrs = errs;
+out.invalidMsg = document.getElementById('import-box').innerText.includes('not valid JSON');
+out.debugBox = document.getElementById('import-box').innerText.slice(0, 120);
+
+// 4. reset flow: confirm → wipe, theme kept
+document.getElementById('reset').click();
+await sleep(150);
+document.getElementById('do-reset').click();
+await sleep(400);
+out.afterReset = localStorage.getItem('qa.v1.progress') === null || Object.keys(JSON.parse(localStorage.getItem('qa.v1.progress')).letters).length === 0;
+out.themeAfterReset = JSON.parse(localStorage.getItem('qa.v1.theme'));
+
+out.pass =
+  out.statsShown && out.dayDots === 2 && out.exportClicked && out.confirmShown &&
+  out.afterImport === 3 && out.themeAfterImport === 'dark' && out.statsShownAfter &&
+  out.invalidMsg && out.afterReset && out.themeAfterReset === 'dark';
+
+const pre = document.createElement('pre');
+pre.id = 'result';
+pre.textContent = JSON.stringify(out, null, 1);
+document.body.appendChild(pre);
+document.body.dataset.qa = out.pass ? 'done-pass' : 'done-fail';
+</script>
+</body>
+</html>
