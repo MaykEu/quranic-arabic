@@ -153,7 +153,7 @@ function syncLine() {
   }
   const email = (s.user && s.user.email) || 'your account';
   return `<p class="muted" id="sync-line">Cloud sync: <strong>${esc(email)}</strong> ·
-    <span id="sync-when">${esc(syncWhenText())}</span> · syncs automatically ·
+    <span id="sync-when">${esc(syncWhenText())}</span> ·
     <button type="button" class="btn-link" id="sync-out">Sign out</button>
     <span id="sync-status"></span></p>`;
 }

@@ -162,7 +162,6 @@ function buildAccount() {
         <span class="account-dot dot-${dot}"></span>
       </div>
       <p class="muted" id="acc-when">${whenText()}</p>
-      <p class="muted">Syncs automatically — every change is saved to your account in the background.</p>
       <div class="row"><button type="button" class="btn btn-ghost" id="acc-out">Sign out</button></div>
       <a class="btn-link" href="progress.html">Progress &amp; backup →</a>`;
     panel.querySelector('#acc-out').addEventListener('click', () => {
