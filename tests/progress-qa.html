@@ -133,9 +133,10 @@ async function run() {
   out.stForecastWeek = /3 in the next 7 days/.test(document.body.textContent);
   out.stForecastBars = qa('.forecast i').length === 30;
   const rows = qa('.drill-table tr').map((r) => r.textContent.replace(/\s+/g, ' ').trim());
-  out.stDrillRows = rows.length === 5 && /Read it/.test(rows[0]) && /Understand it/.test(rows[1]);
+  out.stDrillRows = rows.length === 7 && /Read it/.test(rows[0]) && /Understand it/.test(rows[1]);
   out.stReadRow = /1 round/.test(rows[0]) && /best 8\/10/.test(rows[0]) && /10 answers · 70%/.test(rows[0]);
   out.stTraceRow = /12 checks/.test(rows[2]) && /9 passed/.test(rows[2]);
+  out.stLetterRows = /Letters/.test(rows[5]) && /Vowels/.test(rows[6]);
   out.stOverall = /73%/.test(document.body.textContent) && /22/.test(document.body.textContent);
   out.stLetters = qa('.ltr-chip').length === 28 && qa('.ltr-chip.on').length === 3;
   const heatSpans = qa('.heat .heat-col span');

@@ -1,0 +1,14 @@
+{
+  "note": "Visually confusable letter families — used to pick drill distractors so the learner discriminates between letters that actually look alike (ب ت ث ن ي), which is the skill reading demands. A letter may appear in more than one family; all families containing a letter count when choosing distractors. Keep ids identical to data/letters.json.",
+  "groups": [
+    ["ba", "ta", "tha", "nun", "ya"],
+    ["jim", "ha", "kha"],
+    ["haa", "jim", "ha", "kha"],
+    ["dal", "dhal", "ra", "zay"],
+    ["sin", "shin", "sad", "dad"],
+    ["tta", "zaa", "ayn", "ghayn"],
+    ["fa", "qaf", "waw"],
+    ["kaf", "lam", "mim"],
+    ["alif", "lam"]
+  ]
+}

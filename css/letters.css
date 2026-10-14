@@ -1,0 +1,203 @@
+/* Letters page: drills (quiz options, recall card, tracing from memory) and the
+   strength shading on the letter grid. */
+
+/* ---- strength shading on the browse grid ---- */
+.letter-cell.w {
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, #C98A2B 55%, transparent), var(--shadow-1);
+}
+.letter-cell.m {
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--brand2) 45%, transparent), var(--shadow-1);
+}
+.letter-cell.s {
+  box-shadow: inset 0 0 0 2px var(--brand2), var(--shadow-1);
+  background: color-mix(in srgb, var(--brand2) 7%, var(--surface));
+}
+.letters-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
+  font-size: 0.78rem;
+  opacity: 0.8;
+  margin: 0.35rem 0 0.2rem;
+}
+.letters-legend i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  margin-right: 0.35rem;
+  vertical-align: -2px;
+}
+.letters-legend i.w {
+  border-color: color-mix(in srgb, #C98A2B 70%, transparent);
+}
+.letters-legend i.m {
+  border-color: color-mix(in srgb, var(--brand2) 55%, transparent);
+}
+.letters-legend i.s {
+  border-color: var(--brand2);
+  background: color-mix(in srgb, var(--brand2) 12%, transparent);
+}
+
+/* ---- drills: shared layout ---- */
+.lq-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.lq-prompt {
+  text-align: center;
+  margin: 0.4rem 0 0.9rem;
+}
+.lq-prompt .lq-big {
+  font-family: var(--font-ar);
+  direction: rtl;
+  font-size: 58px;
+  line-height: 1.5;
+}
+.lq-prompt .lq-sub {
+  opacity: 0.75;
+  font-size: 0.85rem;
+}
+
+/* ---- quiz options: big, tappable, room for tall marks ---- */
+.lq-opts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+.lq-opt {
+  font-family: var(--font-ar);
+  direction: rtl;
+  font-size: 40px;
+  line-height: 1.6;
+  min-height: 92px;
+  padding: 0.4rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-1);
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.1s ease;
+}
+.lq-opt:hover {
+  border-color: color-mix(in srgb, var(--brand2) 45%, var(--line));
+}
+.lq-opt.correct {
+  border-color: var(--brand2);
+  box-shadow: inset 0 0 0 2px var(--brand2);
+}
+.lq-opt.wrong {
+  border-color: #B0413E;
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, #B0413E 70%, transparent);
+}
+.lq-opt:disabled {
+  cursor: default;
+  opacity: 0.85;
+}
+.lq-opt .lq-name {
+  font-family: inherit;
+  font-size: 0.8rem;
+  direction: ltr;
+  opacity: 0.7;
+  margin-inline-start: 0.5rem;
+}
+
+/* ---- the learn card shown after answering ---- */
+.learn-card {
+  margin-top: 0.9rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: color-mix(in srgb, var(--brand2) 5%, var(--surface));
+  display: grid;
+  gap: 0.35rem;
+}
+.learn-card .lc-top {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+}
+.learn-card .lc-glyph {
+  font-family: var(--font-ar);
+  direction: rtl;
+  font-size: 34px;
+  line-height: 1.4;
+}
+.mini-forms {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.35rem;
+  text-align: center;
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+.mini-forms b {
+  display: block;
+  font-family: var(--font-ar);
+  direction: rtl;
+  font-size: 24px;
+  font-weight: 400;
+}
+.mini-forms .muted {
+  font-size: 0.66rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* ---- recall ---- */
+.lr-card {
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  gap: 0.4rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+  text-align: center;
+}
+.lr-card .lr-glyph {
+  font-family: var(--font-ar);
+  direction: rtl;
+  font-size: 84px;
+  line-height: 1.4;
+}
+.lr-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+
+/* ---- dotted options / dots row (shared with the words quiz look) ---- */
+.q-dots {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.q-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--muted) 30%, transparent);
+}
+.q-dot.good {
+  background: var(--brand2);
+}
+.q-dot.bad {
+  background: #B0413E;
+}
+.q-dot.now {
+  outline: 2px solid color-mix(in srgb, var(--brand2) 55%, transparent);
+  outline-offset: 1px;
+}

@@ -259,8 +259,11 @@ function renderTrace() {
       msg.textContent = `Nice — ${pct}% covered.`;
       toast(`${w.bare} traced`);
       setTimeout(() => {
-        state.traceIdx += 1;
-        renderTrace();
+        // don't pull the learner back into Trace if they already switched drill
+        if (parsePracticeHash().mode === 'trace') {
+          state.traceIdx += 1;
+          renderTrace();
+        }
       }, 800);
     } else if (missedParts > 0) {
       msg.textContent = 'Some parts are missing — check the dots and trace every stroke of the word.';

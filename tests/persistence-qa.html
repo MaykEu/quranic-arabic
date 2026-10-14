@@ -54,6 +54,7 @@ async function run() {
   unmark('memorised', '112:2'); // unmark → must leave a tombstone
   review('7', true); // Review/Quiz: SRS good
   review('v:112:1', false); // Recall: SRS miss
+  review('L:ba', true); // Letters drill: SRS in its own id space
   set('practice', { listens: { '2026-10-13': 3 }, recallSingle: true }); // legacy listen map (absorbed by activity.migrate) + a selection key
   // Activity log (qa-v32) — the REAL helpers the pages call
   A.bump('listens'); // Listen drill: "I said it — next"
@@ -102,6 +103,7 @@ async function run() {
   out.surahInDoc = !!doc.data.progress.surahs['112'];
   out.tombstoneInDoc = doc.tombstones['memorised:112:2'] > 0;
   out.srsInDoc = !!doc.data.srs['7'] && !!doc.data.srs['v:112:1'];
+  out.letterSrsInDoc = !!doc.data.srs['L:ba'];
   out.practiceInDoc = doc.data.practice.listens['2026-10-13'] === 3;
   out.activityInDoc =
     doc.data.activity.days[dk].listens === 1 &&

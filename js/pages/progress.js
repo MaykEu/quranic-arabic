@@ -197,6 +197,8 @@ function drillsCard() {
       ${row('Trace', [`${t.traces || 0} check${t.traces === 1 ? '' : 's'}`, `${t.tracesOk || 0} passed`, pct(acc.per.traces.pct)])}
       ${row('Listen', [`${t.listens || 0} reps`, `${activity.day().listens || 0} today`, '—'])}
       ${row('Recall', [`${t.recalls || 0} answered`, pct(acc.per.recalls.pct), '—'])}
+      ${row('Letters', [`${t.letters || 0} answers`, pct(acc.per.letters.pct), '—'])}
+      ${row('Vowels', [`${t.vowels || 0} answers`, pct(acc.per.vowels.pct), '—'])}
     </table>
     <p class="muted">${acc.n ? `Graded answers: <strong>${acc.pct}%</strong> correct of ${fmt(acc.n)} across all drills.` : 'Nothing graded in the last 30 days — the drills will fill this in.'}</p>
   </section>`;

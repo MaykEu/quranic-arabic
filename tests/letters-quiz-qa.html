@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Letters drills QA — Quranic Arabic</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/letters.css">
+</head>
+<body>
+<main></main>
+<script type="module">
+// Drives the REAL Letters page: Quiz (Letters · Forms · Vowels) and Recall
+// (Say it · Trace it), plus the strength shading on the browse grid.
+// Assertions are about behaviour: SRS writes in the L:/M: spaces, due-first
+// ordering, options that always include the answer once, no autoplay, deep links.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const q = (s) => document.querySelector(s);
+const qa = (s) => [...document.querySelectorAll(s)];
+const out = {};
+let pageError = null;
+window.addEventListener('error', (e) => {
+  pageError = String((e && e.error && e.error.message) || e.message || e);
+});
+window.addEventListener('unhandledrejection', (e) => {
+  pageError = String((e && e.reason && e.reason.message) || e.reason || e);
+});
+
+let plays = 0;
+const realPlay = HTMLMediaElement.prototype.play;
+HTMLMediaElement.prototype.play = function () {
+  plays += 1;
+  return realPlay.call(this).catch(() => {});
+};
+
+const srs = () => JSON.parse(localStorage.getItem('qa.v1.srs') || '{}');
+const act = () => JSON.parse(localStorage.getItem('qa.v1.activity') || '{"days":{}}');
+const dayFields = (f) => (act().days[Object.keys(act().days)[0]] || {})[f] || 0;
+
+async function run() {
+  localStorage.clear();
+  const { review } = await import('../js/lib/srs.js');
+  // Seed: ba DUE now (a miss resets it → due), jim fresh (box 1 → 'w' shading),
+  // ta mid (box 3 → 'm'), tha strong (box 5 → 's').
+  review('L:ba', false); // box 0 → due now → must be asked first
+  review('L:jim', true);
+  review('L:ta', true);
+  review('L:ta', true);
+  review('L:ta', true);
+  for (let i = 0; i < 5; i++) review('L:tha', true);
+
+  history.replaceState(null, '', '#quiz');
+  await import('../js/pages/letters.js');
+  await sleep(1200);
+
+  // ---------- browse shading (hash first, then go to browse) ----------
+  location.hash = '#browse';
+  await sleep(600);
+  out.browseGrid = qa('.letter-cell').length === 28;
+  const cellFor = (name) => qa('.letter-cell').find((c) => c.textContent.includes(name));
+  out.shadeWeak = cellFor('jīm').classList.contains('w');
+  out.shadeMid = cellFor('tāʾ').classList.contains('m');
+  out.shadeStrong = cellFor('thāʾ').classList.contains('s');
+  out.practiseCta = !!q('a[href="#quiz"]');
+
+  // ---------- quiz: letters ----------
+  location.hash = '#quiz';
+  await sleep(900);
+  out.quizTabs = qa('.seg')[0].querySelectorAll('a').length === 3 &&
+    [...qa('.seg')[0].querySelectorAll('a')].map((a) => a.textContent.trim()).join(',') === 'Browse,Quiz,Recall';
+  out.quizSubModes = qa('[data-qmode]').map((a) => a.textContent.trim()).join(',') === 'Letters,Forms,Vowels';
+  out.quizFourOptions = qa('.lq-opt').length === 4;
+  out.quizOptionsArabic = qa('.lq-opt').every((b) => /[\u0600-\u06FF]/.test(b.textContent) && b.textContent.trim().length > 0);
+  out.quizCounter = q('.counter-chip').textContent.trim() === '1 / 10';
+  out.quizDots = qa('.q-dot').length === 10;
+  out.noAutoplay = plays === 0;
+  q('#hear').click();
+  await sleep(300);
+  out.hearPlays = plays === 1;
+  // answer (the first option — right or wrong, it must grade and teach)
+  const first = qa('.lq-opt')[0];
+  first.click();
+  await sleep(500);
+  out.quizGraded = !!q('.learn-card');
+  out.quizFeedback = /Correct|Not quite/.test(q('#fb').textContent);
+  out.dueFirst = srs()['L:ba'].seen === 2; // ba was the due card → asked first
+  out.activityLetters = dayFields('letters') >= 1;
+  // advance: 900 ms if the answer was right, 2100 ms if wrong — poll for it
+  let advanced = false;
+  for (let i = 0; i < 12 && !advanced; i++) {
+    await sleep(300);
+    advanced = q('.counter-chip').textContent.trim() === '2 / 10';
+  }
+  out.advanced = advanced;
+
+  // ---------- quiz: forms ----------
+  location.hash = '#quiz/forms';
+  await sleep(900);
+  const promptGlyph = q('.lq-prompt .lq-big').textContent.trim();
+  const optGlyphs = qa('.lq-opt').map((b) => b.textContent.trim());
+  out.formsPrompt = promptGlyph.length > 0;
+  out.formsOptionsContainAnswer = optGlyphs.includes(promptGlyph); // all shown in the same position
+  out.formsAllFour = optGlyphs.length === 4 && new Set(optGlyphs).size === 4 && optGlyphs.every((g) => g && g !== '—');
+
+  // ---------- quiz: vowels ----------
+  location.hash = '#quiz/vowels';
+  await sleep(900);
+  const vPrompt = q('.lq-prompt .lq-big').textContent.trim();
+  out.vowelsPrompt = /ب/.test(vPrompt); // marks are shown on bāʾ
+  out.vowelsFour = qa('.lq-opt').length === 4;
+  const before = dayFields('vowels');
+  qa('.lq-opt')[0].click();
+  await sleep(500); // read the learn card BEFORE a correct answer advances (900 ms)
+  out.vowelsGraded = dayFields('vowels') === before + 1;
+  out.vowelsLearnCard = !!q('.learn-card');
+
+  // ---------- recall: say it ----------
+  location.hash = '#recall';
+  await sleep(900);
+  out.recallSubModes = qa('[data-rmode]').map((a) => a.textContent.trim()).join(',') === 'Say it,Trace it';
+  out.recallCard = !!q('.lr-card .lr-glyph');
+  out.recallNoRevealYet = !q('.learn-card');
+  q('#reveal').click();
+  await sleep(300);
+  out.recallReveal = !!q('.learn-card') && /Got it/.test(document.body.textContent);
+  const before2 = Object.keys(srs()).length;
+  q('#got2').click();
+  await sleep(500);
+  out.recallGraded = Object.keys(srs()).length >= before2;
+
+  // ---------- recall: trace from memory ----------
+  location.hash = '#recall/trace';
+  await sleep(900);
+  out.traceSlot = !!q('#trace-slot .trace-canvas');
+  out.traceGuideHidden = getComputedStyle(q('.trace-guide')).visibility === 'hidden';
+  q('#show').click();
+  await sleep(300);
+  out.traceGuideShown = getComputedStyle(q('.trace-guide')).visibility === 'visible';
+  out.traceGrade = !!q('#got2');
+  q('#got2').click();
+  await sleep(500);
+  out.traceAdvanced = q('.counter-chip') && /2 \/ 10/.test(q('.counter-chip').textContent);
+
+  out.noError = !pageError;
+}
+
+run()
+  .then(() => {
+    out.pass = Object.values(out).every((v) => v === true);
+    const pre = document.createElement('pre');
+    pre.id = 'result';
+    pre.textContent = JSON.stringify(out, null, 1);
+    document.body.appendChild(pre);
+    document.body.dataset.qa = out.pass ? 'done-pass' : 'done-fail';
+  })
+  .catch((e) => {
+    const pre = document.createElement('pre');
+    pre.id = 'result';
+    pre.textContent = 'ERROR: ' + ((e && e.stack) || e) + '\nwindow.__err: ' + (pageError || 'none');
+    document.body.appendChild(pre);
+    document.body.dataset.qa = 'done-error';
+  });
+</script>
+</body>
+</html>

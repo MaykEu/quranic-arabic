@@ -33,6 +33,7 @@ const WAITS = {
   'build-play-qa.html': 45000,
   'audio-probe.html': 60000,
   'letters-audition.html': 30000,
+  'letters-quiz-qa.html': 60000,
   'trace-check.html': 35000,
   'roots-qa.html': 35000,
   'basics-qa.html': 30000,

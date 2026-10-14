@@ -71,6 +71,8 @@ const GRADED = [
   ['quizMeaning', 'quizMeaningOk'],
   ['traces', 'tracesOk'],
   ['recalls', 'recallsOk'],
+  ['letters', 'lettersOk'],
+  ['vowels', 'vowelsOk'],
 ];
 // Everything that counts as one "rep" towards the daily goal.
 export const REP_FIELDS = GRADED.map(([a]) => a).concat(['listens']);

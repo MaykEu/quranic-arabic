@@ -54,6 +54,13 @@ const ROUTES = {
     ['#memorised', 'section.card', 'memorised'],
     ['#data', '#export', 'data'],
   ],
+  'letters.html': [
+    ['#quiz', '.lq-opts', 'letter quiz'],
+    ['#quiz/forms', '.lq-opts', 'form quiz'],
+    ['#quiz/vowels', '.lq-opts', 'vowel quiz'],
+    ['#recall', '.lr-card', 'recall: say it'],
+    ['#recall/trace', '.trace-canvas', 'recall: trace from memory'],
+  ],
   'verses.html': [
     ['#1', '.ayah', 'surah 1'],
     ['#2:255', '.ayah', 'deep-link ayah'],
