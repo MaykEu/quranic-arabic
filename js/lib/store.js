@@ -46,10 +46,17 @@ export const remove = (key) => {
 
 // Wipe user data. Keeps `sync.*` keys, so a reset or backup import never signs
 // the user out.
+//
+// Take the key list FIRST, then remove: mutating localStorage while walking it
+// by index makes `key(i)` skip entries (a full reset left `qa.v1.srs` behind).
 export const clearAll = () => {
-  for (let i = localStorage.length - 1; i >= 0; i--) {
-    const k = localStorage.key(i);
-    if (k && k.startsWith(NS) && !k.slice(NS.length).startsWith('sync.')) localStorage.removeItem(k);
+  for (const k of keys()) {
+    if (k.startsWith('sync.')) continue;
+    try {
+      localStorage.removeItem(NS + k);
+    } catch {
+      /* ignore */
+    }
   }
 };
 

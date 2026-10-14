@@ -147,6 +147,33 @@ async function run() {
   await sleep(8000); // the debounce is 4 s
   out.autoSyncOnWrite = calls.filter((c) => c.startsWith('POST /rest/v1/progress')).length > postsBefore;
 
+  // ---------- Reset all progress: it must erase the ACCOUNT copy too ----------
+  // The account still holds letters/surahs/reviews (remoteDoc above). Before the
+  // fix, Reset only wiped this device, so the next automatic sync merged every
+  // letter, surah and review straight back in — "erase all" looked like a no-op.
+  const { resetAll } = await import('../js/lib/progress.js');
+  const { clearAll } = await import('../js/lib/store.js');
+  const empty = (o) => Object.keys(o || {}).length === 0;
+  // the sign-out assertions below need data to survive, so keep a copy
+  const keep = { progress: localStorage.getItem('qa.v1.progress'), srs: localStorage.getItem('qa.v1.srs') };
+  resetAll();
+  clearAll();
+  pushed = null;
+  await S.syncNow();
+  const rdoc = (pushed && pushed[0] && pushed[0].doc) || {};
+  const rdata = rdoc.data || {};
+  out.resetPushedStamp = rdoc.resetAt > 0;
+  out.resetAccountMemorisedGone = empty((rdata.progress || {}).memorised) && empty((rdata.progress || {}).letters);
+  out.resetAccountSrsGone = empty(rdata.srs);
+  // the fake server keeps serving the OLD account copy: it must not come back
+  pushed = null;
+  await S.syncNow();
+  const localSrs = JSON.parse(localStorage.getItem('qa.v1.srs') || '{}');
+  const localProg = JSON.parse(localStorage.getItem('qa.v1.progress') || '{}');
+  out.resetStaleRemoteIgnored = empty(localSrs) && empty(localProg.memorised) && empty(localProg.letters);
+  if (keep.progress) localStorage.setItem('qa.v1.progress', keep.progress);
+  if (keep.srs) localStorage.setItem('qa.v1.srs', keep.srs);
+
   q('#sync-out').click();
   await sleep(300);
   out.signOutClearsSession = !localStorage.getItem('qa.v1.sync.session');

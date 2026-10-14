@@ -225,3 +225,38 @@ test('surah marks merge like any other bucket (union + tombstone)', () => {
   assert.equal(m2.data.progress.surahs['9'], undefined); // tombstoned on the other device
   assert.ok(m2.data.progress.surahs['1']);
 });
+
+// The reported bug: “Erase all progress” wiped the device, but the account’s copy
+// was all “newer than 0”, so the next automatic sync merged every letter, surah
+// and review straight back in. The fix is stamping sync.resetAt on the reset —
+// this test fails if that stamp is ever dropped again.
+test('resetAll erases this device AND the account copy (the reset stamp is the fix)', async () => {
+  const { resetAll } = await import('../js/lib/progress.js');
+  const { clearAll } = await import('../js/lib/store.js');
+  const T1 = D('2026-10-01');
+
+  // This device has progress, and the account holds the same copy.
+  set('progress', prog({ letters: { ba: { at: T1 } }, surahs: { 1: { at: T1 } }, memorised: { '1:1': { at: T1 } } }));
+  set('srs', { '7': { box: 3, seen: 2, right: 2, at: T1 } });
+  set('activity', { days: { '2026-10-01': { reviews: 9 } } });
+  const account = collectDoc(T1);
+
+  // “Erase all progress”
+  resetAll();
+  clearAll();
+  const local = collectDoc();
+  assert.ok(local.resetAt > T1, 'the reset must be stamped (sync.resetAt)');
+  assert.equal(Object.keys(local.data).filter((k) => k !== '_meta').length, 0, 'nothing left on the device');
+
+  // The next automatic sync pulls the account copy and merges it back in.
+  const merged = mergeDocs(local, account);
+  assert.equal(Object.keys((merged.data.progress || {}).letters || {}).length, 0, 'letter marks came back');
+  assert.equal(Object.keys((merged.data.progress || {}).surahs || {}).length, 0, 'memorised surahs came back');
+  assert.equal(Object.keys(merged.data.srs || {}).length, 0, 'SRS cards came back');
+  assert.equal(merged.resetAt, local.resetAt);
+
+  // …and that merged doc is what gets pushed, so the other devices drop it too.
+  applyDoc(merged);
+  assert.equal(Object.keys((get('progress') || {}).letters || {}).length, 0);
+  assert.equal(get('sync.resetAt'), local.resetAt);
+});

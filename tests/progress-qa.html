@@ -161,6 +161,29 @@ async function run() {
   location.hash = '#stats';
   await sleep(700);
   out.deepLinkStats = !!q('.drill-table') && tab('stats').classList.contains('active');
+
+  // ---------- Reset all progress: wipes this device AND stamps the account reset ----------
+  await go('data'); // the reset control only exists on the Data tab
+  localStorage.setItem('qa.v1.theme', JSON.stringify('dark'));
+  q('#reset').click();
+  await sleep(300);
+  out.resetConfirm = !!q('#do-reset') && /Erase everything\?/.test(document.body.textContent);
+  q('#do-reset').click();
+  await sleep(900);
+  const leftKeys = Object.keys(localStorage).filter((k) => k.startsWith('qa.v1.'));
+  // only presentation + sync bookkeeping may survive
+  out.resetWipedKeys = leftKeys.every(
+    (k) => k === 'qa.v1.theme' || k === 'qa.v1._meta' || k.startsWith('qa.v1.sync.'),
+  );
+  // …and specifically: no progress/SRS/activity/practice data (the reported bug:
+  // qa.v1.srs survived the reset, so every review came straight back)
+  out.resetNoData = !leftKeys.some((k) =>
+    ['qa.v1.progress', 'qa.v1.srs', 'qa.v1.activity', 'qa.v1.practice', 'qa.v1.prefs', 'qa.v1.tomb'].includes(k),
+  );
+  out.resetStamp = Number(JSON.parse(localStorage.getItem('qa.v1.sync.resetAt') || '0')) > Date.now() - 120000;
+  out.resetKeptTheme = localStorage.getItem('qa.v1.theme') === JSON.stringify('dark');
+  await go('stats');
+  out.resetUiClear = qa('.ltr-chip.on').length === 0; // letters no longer marked as learned
 }
 
 run()

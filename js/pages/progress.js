@@ -4,7 +4,7 @@
 // Everything lives on this device only (localStorage, qa.v1. namespace).
 import { loadData } from '../lib/data.js';
 import { load as loadSRS, dueIds } from '../lib/srs.js';
-import { count as progressCount, isLearned, unmark } from '../lib/progress.js';
+import { count as progressCount, isLearned, unmark, resetAll } from '../lib/progress.js';
 import { get, set, clearAll } from '../lib/store.js';
 import { downloadBackup, validateImport, applyImport, summarize, collect } from '../lib/backup.js';
 import { configured, signedIn, session, signIn, signOut, syncNow, captureSession } from '../lib/sync.js';
@@ -436,7 +436,7 @@ function dataCards() {
 
     <section class="card">
       <h3>Reset</h3>
-      <p class="muted">Erase all progress on this device — letters, reviews, verses. This cannot be undone.</p>
+      <p class="muted">Erase all progress — letters, reviews, verses.${signedIn() ? ' This also clears your synced copy, so your other devices are wiped too.' : ''} This cannot be undone.</p>
       <div class="row"><button type="button" class="btn btn-ghost" id="reset">Reset all progress</button></div>
       <div id="reset-box" hidden></div>
     </section>`;
@@ -563,21 +563,35 @@ function wire() {
   const resetBtn = document.getElementById('reset');
   if (resetBtn) resetBtn.addEventListener('click', () => {
     rbox.hidden = false;
+    const synced = signedIn();
     rbox.innerHTML = `
       <div class="confirm-box">
-        <p><strong>Erase everything?</strong> All letters, reviews and verses — gone from this device.</p>
+        <p><strong>Erase everything?</strong> All letters, reviews and verses — gone from this device${synced ? ' <strong>and from your account</strong> (your other devices follow)' : ''}.</p>
         <p class="muted">Tip: download a backup first if you might come back.</p>
         <div class="row">
           <button type="button" class="btn danger-btn" id="do-reset">Erase all progress</button>
           <button type="button" class="btn btn-ghost" id="cancel-reset">Cancel</button>
         </div>
       </div>`;
-    document.getElementById('do-reset').addEventListener('click', () => {
+    document.getElementById('do-reset').addEventListener('click', async () => {
       const theme = get('theme', null);
+      // Stamp the reset BEFORE clearing: `clearAll` keeps `sync.*` keys, and the
+      // stamp is what makes cloud sync drop everything older than this moment on
+      // BOTH sides. Without it the account's copy is "newer than 0", so the next
+      // automatic sync merged every letter, surah and review straight back in —
+      // which made "erase all progress" look like it did nothing.
+      resetAll();
       clearAll();
-      if (theme) set('theme', theme);
-      toast('Progress erased');
+      if (theme) set('theme', theme); // the reset never costs you your theme
       render();
+      if (signedIn()) {
+        toast('Progress erased — clearing your account…');
+        const r = await syncNow();
+        toast(r && r.ok ? 'Erased here and in your account' : 'Erased here — your account clears on the next sync');
+        render();
+      } else {
+        toast('Progress erased');
+      }
     });
     document.getElementById('cancel-reset').addEventListener('click', () => {
       rbox.hidden = true;
