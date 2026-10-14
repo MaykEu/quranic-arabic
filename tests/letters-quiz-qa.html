@@ -34,6 +34,14 @@ HTMLMediaElement.prototype.play = function () {
 };
 
 const srs = () => JSON.parse(localStorage.getItem('qa.v1.srs') || '{}');
+// the outer tab bar (Browse · Quiz · Recall) — labels + which one is active
+const tabs = () => [...(qa('.seg')[0] ? qa('.seg')[0].querySelectorAll('a') : [])].map((a) => a.textContent.trim());
+const activeTab = () => {
+  const s = qa('.seg')[0];
+  const a = s ? s.querySelector('a.active') : null;
+  return a ? a.textContent.trim() : 'none';
+};
+const pageTitle = () => (q('main h2') ? q('main h2').textContent.replace(/\s+/g, ' ').trim() : 'none');
 const act = () => JSON.parse(localStorage.getItem('qa.v1.activity') || '{"days":{}}');
 const dayFields = (f) => (act().days[Object.keys(act().days)[0]] || {})[f] || 0;
 
@@ -62,6 +70,9 @@ async function run() {
   out.shadeMid = cellFor('tāʾ').classList.contains('m');
   out.shadeStrong = cellFor('thāʾ').classList.contains('s');
   out.practiseCta = !!q('a[href="#quiz"]');
+  // the page header + the tab bar must exist in EVERY view of the page
+  out.browseTitle = /^Letters ·/.test(pageTitle());
+  out.browseTabBar = tabs().join(',') === 'Browse,Quiz,Recall' && activeTab() === 'Browse';
 
   // ---------- quiz: letters ----------
   location.hash = '#quiz';
@@ -69,10 +80,18 @@ async function run() {
   out.quizTabs = qa('.seg')[0].querySelectorAll('a').length === 3 &&
     [...qa('.seg')[0].querySelectorAll('a')].map((a) => a.textContent.trim()).join(',') === 'Browse,Quiz,Recall';
   out.quizSubModes = qa('[data-qmode]').map((a) => a.textContent.trim()).join(',') === 'Letters,Forms,Vowels';
+  out.quizTitle = /^Letters ·/.test(pageTitle()) && activeTab() === 'Quiz';
   out.quizFourOptions = qa('.lq-opt').length === 4;
   out.quizOptionsArabic = qa('.lq-opt').every((b) => /[\u0600-\u06FF]/.test(b.textContent) && b.textContent.trim().length > 0);
   out.quizCounter = q('.counter-chip').textContent.trim() === '1 / 10';
-  out.quizDots = qa('.q-dot').length === 10;
+  // dots = one per ANSWERED question + the current one (the words-quiz language)
+  out.quizDots = qa('.q-dot').length === 1 && qa('.q-dot')[0].classList.contains('now');
+  // dots must be actually STYLED (an unstyled span would be width:auto / radius 0)
+  out.quizDotsStyled = (() => {
+    const cs = getComputedStyle(qa('.q-dot')[0]);
+    const ds = getComputedStyle(q('.q-dots'));
+    return cs.borderRadius === '50%' && cs.width === '9px' && ds.gap === '5px';
+  })();
   out.noAutoplay = plays === 0;
   q('#hear').click();
   await sleep(300);
@@ -82,6 +101,8 @@ async function run() {
   first.click();
   await sleep(500);
   out.quizGraded = !!q('.learn-card');
+  out.dotsAfterAnswer =
+    qa('.q-dot').length === 2 && /good|bad/.test(qa('.q-dot')[0].className) && qa('.q-dot')[1].classList.contains('now');
   out.quizFeedback = /Correct|Not quite/.test(q('#fb').textContent);
   out.dueFirst = srs()['L:ba'].seen === 2; // ba was the due card → asked first
   out.activityLetters = dayFields('letters') >= 1;
@@ -118,6 +139,7 @@ async function run() {
   location.hash = '#recall';
   await sleep(900);
   out.recallSubModes = qa('[data-rmode]').map((a) => a.textContent.trim()).join(',') === 'Say it,Trace it';
+  out.recallTitle = /^Letters ·/.test(pageTitle()) && activeTab() === 'Recall';
   out.recallCard = !!q('.lr-card .lr-glyph');
   out.recallNoRevealYet = !q('.learn-card');
   q('#reveal').click();

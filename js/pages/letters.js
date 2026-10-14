@@ -80,6 +80,18 @@ const subSeg = (items, active, attr) => `<nav class="seg" aria-label="Drill type
   ${items.map(([id, label]) => `<a href="#" data-${attr}="${id}" class="${id === active ? 'active' : ''}">${label}</a>`).join('')}
 </nav>`;
 
+// The page's own header. It sits above the tab bar in ALL THREE views: the title
+// used to live only in Browse and the tab bar only in the drills, so switching
+// tabs made both the page's identity and its navigation appear and disappear.
+const TAB_DESC = {
+  browse: 'Tap a letter to see its forms, hear its sound, and practise writing it.',
+  quiz: 'Test yourself — hear it, then pick it. Rounds of 10; letters you are shaky on come back sooner.',
+  recall: 'Say it out loud, or write it from memory, then check yourself. Your voice is never scored.',
+};
+const pageHead = (tab) => `
+  <h2>Letters <span class="muted">· ${count('letters')}/28 learned</span></h2>
+  <p class="muted">${TAB_DESC[tab] || TAB_DESC.browse}</p>`;
+
 // ---------- letter strength (from the SRS boxes) ----------
 
 const boxOf = (id) => (loadSRS()[letterKey(id)] || {}).box || 0;
@@ -98,10 +110,9 @@ const strengthLegend = `<div class="letters-legend">
 
 function renderGrid() {
   main.innerHTML = `
-    <h2>Letters <span class="muted">· ${count('letters')}/28 learned</span></h2>
-    <p class="muted">Tap a letter to see its forms, hear its sound, and practise writing it.</p>
+    ${pageHead('browse')}
+    ${tabBar('browse')}
     <p class="muted">New to the script? <a href="basics.html">See how letters join and how the marks work →</a></p>
-    <div class="row"><a class="btn" href="#quiz">Test yourself →</a><a class="btn btn-ghost" href="#recall">Recall practice</a></div>
     <div class="letter-grid" id="letter-grid"></div>
     ${strengthLegend}
 
@@ -259,12 +270,12 @@ function roundFor(items, keyFn) {
   return letterRound(items, dueIds(all), Object.keys(all), ROUND, Math.random, keyFn);
 }
 
-const dots = (s) => `<div class="q-dots" aria-hidden="true">${[...Array(s.order.length)]
-  .map((_, k) => {
-    const state = k < s.log.length ? (s.log[k] ? 'good' : 'bad') : k === s.log.length ? 'now' : '';
-    return `<span class="q-dot ${state}"></span>`;
-  })
-  .join('')}</div>`;
+// One dot per ANSWERED question (green/red) plus the dot for the question you
+// are on — the same language as the words quiz (`js/pages/practice.js`), so the
+// two drills read the same way.
+const dots = (s) => `<div class="q-dots" aria-hidden="true">${(s.log || [])
+  .map((ok) => `<span class="q-dot ${ok ? 'good' : 'bad'}"></span>`)
+  .join('')}<span class="q-dot now"></span></div>`;
 
 function roundDone(s, labels, onAgain, extra = '') {
   const missed = s.missed;
@@ -295,11 +306,11 @@ function renderQuiz() {
 
   if (!s.order.length) s.order = roundFor(pool, keyFn);
   if (!s.order.length) {
-    main.innerHTML = `${tabBar('quiz')}<section class="card"><p class="muted">No data loaded.</p></section>`;
+    main.innerHTML = `${pageHead('quiz')}${tabBar('quiz')}<section class="card"><p class="muted">No data loaded.</p></section>`;
     return;
   }
 
-  const head = `${tabBar('quiz')}${subSeg(QUIZ_MODES, mode, 'qmode')}`;
+  const head = `${pageHead('quiz')}${tabBar('quiz')}${subSeg(QUIZ_MODES, mode, 'qmode')}`;
 
   if (s.i >= s.order.length) {
     const labels = {
@@ -422,6 +433,10 @@ function renderQuiz() {
       s.log = [...s.log, correct];
       if (correct) s.got += 1;
       else s.missed = [...s.missed, item];
+      // this answer's dot + the moving "now" dot appear immediately — the same
+      // behaviour as the words quiz (practice.js), not on the next question.
+      const dotsEl = main.querySelector('.q-dots');
+      if (dotsEl) dotsEl.outerHTML = dots(s);
       for (const b of main.querySelectorAll('.lq-opt')) {
         const o = s.opts[Number(b.dataset.k)];
         if (o.id === item.id) b.classList.add('correct');
@@ -462,7 +477,7 @@ function renderRecall() {
   const keyFn = (x) => letterKey(x.id);
 
   if (!s.order.length) s.order = roundFor(letters, keyFn);
-  const head = `${tabBar('recall')}${subSeg(RECALL_MODES, mode, 'rmode')}`;
+  const head = `${pageHead('recall')}${tabBar('recall')}${subSeg(RECALL_MODES, mode, 'rmode')}`;
 
   if (s.i >= s.order.length) {
     const labels = {

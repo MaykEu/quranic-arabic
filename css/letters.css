@@ -73,9 +73,9 @@
 .lq-opt {
   font-family: var(--font-ar);
   direction: rtl;
-  font-size: 40px;
+  font-size: 50px;
   line-height: 1.6;
-  min-height: 92px;
+  min-height: 84px;
   padding: 0.4rem 0.5rem;
   display: flex;
   align-items: center;
@@ -179,25 +179,5 @@
   margin-top: 0.8rem;
 }
 
-/* ---- dotted options / dots row (shared with the words quiz look) ---- */
-.q-dots {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
-.q-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--muted) 30%, transparent);
-}
-.q-dot.good {
-  background: var(--brand2);
-}
-.q-dot.bad {
-  background: #B0413E;
-}
-.q-dot.now {
-  outline: 2px solid color-mix(in srgb, var(--brand2) 55%, transparent);
-  outline-offset: 1px;
-}
+/* ---- option tiles: one glyph each (letters, forms, vowel marks) ---- */
+

@@ -768,6 +768,30 @@ svg[fill="currentColor"] { fill: currentColor; stroke: none; }
   font-family: var(--font-ar);
   font-size: 20px;
 }
+/* Round-progress dots (canonical — the Letters drills and the words quiz must
+   read identically; letters.css used to define its own ring variant). */
+.q-dots {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+}
+.q-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line);
+  display: inline-block;
+}
+.q-dot.good {
+  background: #2f9b63;
+}
+.q-dot.bad {
+  background: #b0413e;
+}
+.q-dot.now {
+  background: var(--brand2);
+  box-shadow: 0 0 0 2px var(--brand2);
+}
 /* Account menu rows: full-width destinations with a live hint line (Android's
    account list pattern — label + secondary status text). */
 .acc-sep {
