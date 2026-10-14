@@ -271,7 +271,7 @@ function roundFor(items, keyFn) {
 }
 
 // One dot per ANSWERED question (green/red) plus the dot for the question you
-// are on — the same language as the words quiz (`js/pages/practice.js`), so the
+// are on — the same language as the words quiz on the Practice page, so the
 // two drills read the same way.
 const dots = (s) => `<div class="q-dots" aria-hidden="true">${(s.log || [])
   .map((ok) => `<span class="q-dot ${ok ? 'good' : 'bad'}"></span>`)

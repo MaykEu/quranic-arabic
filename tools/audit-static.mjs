@@ -122,7 +122,28 @@ for (const p of htmlFiles) {
 }
 if (broken.length) problems.push(`broken html refs:\n    ${broken.join('\n    ')}`);
 
-// ---------- report ----------
+// ---------- 5. theme bootstrap: first paint must already be themed ----------
+// The theme is stored JSON-encoded ("dark" WITH quotes). Copying the raw string
+// into data-theme produced `data-theme='"dark"'`, which never matches the
+// `[data-theme="dark"]` rules — so every page painted light first and flipped to
+// dark once the modules had loaded (the "white flash" on page switches). The
+// inline background + bootstrap must also sit BEFORE the stylesheets.
+const htmlPages = all.filter((p) => rel(p).endsWith('.html') && !rel(p).startsWith('tests/'));
+for (const p of htmlPages) {
+  const t = read(p);
+  const f = rel(p);
+  const styleAt = t.search(/<style>[^<]*color-scheme/);
+  const bootAt = t.search(/JSON\.parse\(localStorage\.getItem\('qa\.v1\.theme'\)/);
+  const cssAt = t.search(/<link rel="stylesheet"/);
+  if (styleAt < 0) problems.push(`theme bootstrap: ${f} has no inline background/color-scheme block`);
+  if (bootAt < 0) problems.push(`theme bootstrap: ${f} does not parse the stored theme (raw copy = light flash)`);
+  if (/setAttribute\('data-theme', localStorage\.getItem/.test(t))
+    problems.push(`theme bootstrap: ${f} still copies the raw stored value into data-theme`);
+  if (cssAt >= 0 && (styleAt < 0 || bootAt < 0 || styleAt > cssAt || bootAt > cssAt))
+    problems.push(`theme bootstrap: ${f} sets the theme after its stylesheets (first paint would be unthemed)`);
+}
+
+
 console.log('=== static audit ===');
 console.log('shipped files scanned:', shipped.length, '| js:', jsFiles.length, '| css:', cssFiles.length, '| html:', htmlFiles.length);
 if (problems.length) {

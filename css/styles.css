@@ -67,6 +67,31 @@
 /* ---------- base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 
+/* Cross-document VIEW TRANSITIONS: a real HTML page load (these are separate
+   documents) gets a short crossfade instead of a hard cut. Chrome/Edge honour the
+   rule; browsers without support ignore it and switch exactly as before. */
+@view-transition {
+  navigation: auto;
+}
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    animation: 130ms ease-out both vt-out;
+  }
+  ::view-transition-new(root) {
+    animation: 170ms ease-in both vt-in;
+  }
+}
+@keyframes vt-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes vt-in {
+  from {
+    opacity: 0;
+  }
+}
+
 html { -webkit-text-size-adjust: 100%; }
 
 body {

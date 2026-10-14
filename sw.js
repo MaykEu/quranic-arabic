@@ -1,6 +1,6 @@
 // Service worker: offline app shell + runtime caches.
 // Bump VERSION whenever shipped files change (forces a clean re-cache).
-const VERSION = 'qa-v37';
+const VERSION = 'qa-v38';
 const AUDIO_CACHE = 'qa-audio-v2';
 const AUDIO_HOSTS = ['audio.qurancdn.com', 'cdn.islamic.network', 'everyayah.com'];
 const AUDIO_MAX_ENTRIES = 300;
@@ -98,6 +98,15 @@ self.addEventListener('fetch', (event) => {
   }
 
   if (url.origin === location.origin) {
+    // Page navigations: paint from the cached copy at once and refresh it in the
+    // background. Waiting on the network for the HTML shell is what made
+    // switching pages feel slow and unclean. A deploy still lands immediately,
+    // because each build gets its own cache name — a fresh VERSION starts with an
+    // empty cache, so the first navigation of a new version goes to the network.
+    if (request.mode === 'navigate') {
+      event.respondWith(staleWhileRevalidate(request, VERSION));
+      return;
+    }
     // Per-surah data files: cached copy is fine (they never change), avoid re-downloading.
     if (url.pathname.includes('/data/quran/')) {
       event.respondWith(staleWhileRevalidate(request, VERSION));
