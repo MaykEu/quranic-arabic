@@ -54,6 +54,30 @@ Commands: `node --test tests/*.test.js` · `node tools/audit-static.mjs` · `nod
 
 ---
 
+## 2b. Re-verification pass — qa-v35 (letters drills)
+
+Run on request after the letters-drill release (“verify everything is correct once again”). Same battery, fresh results, nothing excluded:
+
+| Check | Result |
+|---|---|
+| Repo state | working tree clean · `HEAD = origin/main = 4d5e4c0` · local `sw.js` = live `sw.js` = **qa-v35** |
+| Unit + property tests | **98/98 pass** — incl. 7 new `letters-drill` tests and the randomised merge property tests |
+| Static audit (`audit-static.mjs`) | 213 files scanned — **PROBLEMS: none** |
+| Local references (`verify-links.mjs`) | **ALL LOCAL REFERENCES RESOLVE** |
+| Data integrity | 114 surahs / 6,236 ayahs / 28 letters / 8 harakat / 500 words / 24 roots / 4 reciters · all 40 build words verified |
+| Audio CDN | **540/540 clips OK** |
+| QA batteries (`qa-run.mjs`) | **20/20 judged PASS** + `letters-audition` (Mayk's ear-check) — incl. the new `letters-quiz-qa`, run twice, green both times |
+| Browser sweep | **0 failures** — 10 pages, 138 controls clicked, **20/20 routes** (incl. the 5 new letters routes). The 4 “no observable change” items are the documented by-design ones (player toggle with nothing queued; the basics demo's 7-letter cap) |
+| Persistence | every write path — incl. the new **`L:` letter SRS** — reaches localStorage, the sync doc and backup files |
+| Sync + RLS | merge rules re-proven by the property tests + `sync-qa`; anonymous read `200 []`, anonymous insert `401` blocked |
+| Live PWA | SW **activated + controlling** on the deployment; **all 10 pages render with the network cut**; About = `sw.js` = qa-v35 |
+| Deploy parity | 14/14 shipped files byte-identical local ↔ live |
+| Machine hygiene | 0 leftover headless browsers, 0 node processes after the run |
+
+Feature delivered in this cycle (not a fix): the **letters drills** — `Browse · Quiz · Recall` with confusable-family distractors, `L:`/`M:` SRS spaces and grid strength shading (README, *letters drills*). The one app-code defect it surfaced: a queued “advance to the next question” timer could pull a learner back into a drill they had left — now cancelled on navigation, same guard added to the practice tracer.
+
+---
+
 ## 3. What only Mayk can confirm
 
 1. **Real Google sign-in** (I never handle credentials) — sign in once on the laptop.
